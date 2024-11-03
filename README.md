@@ -35,10 +35,10 @@ To train JointDiff of JointDiff-x, go to the folder **src/** and run:
 python train_jointdiff.py \
 --config <path of the configuration file> \
 --logdir <path to save the checkoints> \
---centralize <whether centralization; 0 or 1, 1 for True> \
---random_mask <whether do random masking; 0 or 1, 1 for True> \
---with_dist_loss <whether add the pairwise distance loss; 0 or 1, 1 for True> \
---with_clash <whether add the clash loss; 0 or 1, 1 for True> 
+--centralize <whether to do centralization; 0 or 1, 1 for True> \
+--random_mask <whether to do random masking; 0 or 1, 1 for True> \
+--with_dist_loss <whether to add the pairwise distance loss; 0 or 1, 1 for True> \
+--with_clash <whether to add the clash loss; 0 or 1, 1 for True> 
 ```
 
 Example:
@@ -60,3 +60,34 @@ python train_jointdiff.py \
 ***
 
 ## Inference
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). To do the inference sampling, go to the folder **src/** and run:
+```
+python infer_jointdiff.py \
+--model_path <path of the checkpoint> \
+--result_path <path to save the samples> \
+--size_range <list of length_min, length_max, length_interval> \
+--num <sampling amount for each length> \
+--save_type <'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
+```
+
+Example:
+```
+mkdir ../checkpoints/
+# then download the models and save them in the folder ../checkpoints/
+mkdir ../samples/
+
+# Inference with our JointDiff-x;
+# for each protein size in {100, 120, 140, 160, 180, 200}, get 5 samples;
+# save the while trajectory, i.e. (T+1) pdb files for each sample;
+# the samples will be saved as ../samples/len<l>_<t>_<idx>.pdb, while l is the length,
+# t is the diffusion step and idx is the sample index;
+# e.g. len100_0_1.pdb refers to sample #1 of protein size 100 at t=0.
+
+python infer_jointdiff.py \
+--model_path ../checkpoints/JointDiff-x_model.pt \
+--result_path ../samples/ \
+--size_range [100, 200, 20] \
+--num 5 \
+--save_type 'all'
+
+```
