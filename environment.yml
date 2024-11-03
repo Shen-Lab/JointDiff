@@ -182,5 +182,4 @@ dependencies:
     - httpcore==0.17.0
     - httpx==0.24.0
     - sniffio==1.3.0
-prefix: /scratch/user/shaowen1994/.conda/envs/diffab
 
