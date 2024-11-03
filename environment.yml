@@ -1,4 +1,4 @@
-name: diffab
+name: jointdiff
 channels:
   - pytorch
   - anaconda
