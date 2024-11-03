@@ -5,3 +5,4 @@ data/structures.lmdb-lock
 checkpoints/
 Logs/
 oracles/
+samples/
