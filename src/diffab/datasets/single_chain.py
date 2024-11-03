@@ -172,11 +172,11 @@ class SingleChainDataset(Dataset):
         ### check the input paths
         self.summary_path = summary_path
         self.pdb_dir = pdb_dir
-        if not os.path.exists(pdb_dir):
-            raise FileNotFoundError(
-                f"PDB structures not found in {pdb_dir}. "
-                #"Please download them from http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/archive/all/"
-            )
+        # if not os.path.exists(pdb_dir):
+        #     raise FileNotFoundError(
+        #         f"PDB structures not found in {pdb_dir}. "
+        #         #"Please download them from http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/archive/all/"
+        #     )
 
         ### check the output paths
         self.processed_dir = processed_dir
