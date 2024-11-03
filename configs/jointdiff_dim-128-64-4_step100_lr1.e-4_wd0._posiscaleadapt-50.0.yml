@@ -1,0 +1,69 @@
+model:
+  type: diffab
+  res_feat_dim: 128
+  pair_feat_dim: 64
+  diffusion:
+    num_steps: 100
+    eps_net_opt:
+      num_layers: 6
+      decoder_version: mlp
+    position_scale: adapt
+    seq_diff_version: multinomial
+    seq_model_opt:
+      d_embedding: 8
+      d_model: 1024
+      activation: gelu
+      slim: true
+      n_layers: 16
+      kernel_size: 5
+      r: 128
+      causal: false
+      dropout: 0.0
+      tie_weights: false
+      final_ln: false
+    remember_padding: false
+    reweighting_term: 0.001
+    modality: joint
+    ps_adapt_scale: 50.0
+  train_structure: true
+  train_sequence: true
+  gen_version: complete_gen
+  encode_share: true
+  train_version: noise
+
+train:
+  loss_weights:
+    rot: 1.0
+    pos: 1.0
+    seq: 1.0
+  max_iters: 1000000
+  val_freq: 1000
+  batch_size: 4
+  seed: 2022
+  max_grad_norm: 100.0
+  optimizer:
+    type: adam
+    lr: 1.e-4
+    weight_decay: 0.0
+    beta1: 0.9
+    beta2: 0.999
+  scheduler:
+    type: plateau
+    factor: 0.8
+    patience: 10
+    min_lr: 5.e-6
+
+dataset:
+  train:
+    type: single_chain
+    summary_path: ../data/cath_summary_all.tsv
+    chothia_dir: ../data/pdb_all/
+    processed_dir: ../data/
+    split: train
+  val:
+    type: single_chain
+    summary_path: ../data/cath_summary_all.tsv
+    chothia_dir: ../data/pdb_all/
+    processed_dir: ../data/
+    split: val
+

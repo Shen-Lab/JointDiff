@@ -1,0 +1,7 @@
+data/cath-domain-list-v4_2_0.txt
+data/structures.lmdb
+data/structures.lmdb-ids
+data/structures.lmdb-lock
+checkpoints/
+Logs/
+oracles/
