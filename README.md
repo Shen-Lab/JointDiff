@@ -5,8 +5,8 @@
 ## Introduction
 
 Computational design of functional proteins is of fundamental and applied interests.  Data-driven methods, especially generative deep learning, has seen a surge recently.  In this study, we aim at learning joint distribution of protein sequence and structure for their simultaneous co-design. To that end, we treat protein sequence and structure as three distinct modalities (amino-acid type plus positions and orientations of backbone residue frames) and learn three distinct diffusion processes (multinomial, Cartesian, and $SO(3)$ diffusions).  To bridge the three modalities, we introduce a graph attention encoder shared across modalities, whose inputs include all modalities and outputs are projected to predict individual modalities. 
-%We also introduce noise-prediction and ground truth-prediction noises together with structure regularization as losses to train the diffusion models. The resulting JointDiff and JointDiff-x was benchmarked over a CATH dataset of various folds and families and compared to state-of-the-art two    
-Benchmark evaluations indicate that resulting JointDiff simultaneously generates protein sequence--structure pairs of better functional consistency compared to popular two-stage protein designers   Chroma (structure first) and ProteinGenerator (sequence first), while being more than $10$-times faster.  Meanwhile, they show room to improve in certain self- and cross-consistency. 
+
+Benchmark evaluations indicate that resulting JointDiff simultaneously generates protein sequence-structure pairs of better functional consistency compared to popular two-stage protein designers   Chroma (structure first) and ProteinGenerator (sequence first), while being more than $10$-times faster.  Meanwhile, they show room to improve in certain self- and cross-consistency. 
 
 ![architecture](/Architecture_JointDiff.png)
 
