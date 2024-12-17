@@ -111,6 +111,8 @@ python infer_motif-scaffolding.py \
 --attempts <int; sampling amount for task> 
 ```
 
+***
+
 ## Evaluation
 To evaluate model performance with our published metrics, go to the folder **src/** and follow the instructions below:
 
