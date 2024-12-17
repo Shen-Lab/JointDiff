@@ -36,7 +36,7 @@ To train the model with you own data, please get the *.tsv file ready following 
 
 ## Training
 
-To train JointDiff of JointDiff-x, go to the folder **src/** and run:
+To train JointDiff of JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
 ```
 python train_jointdiff.py \
 --config <path of the configuration file> \
@@ -97,3 +97,24 @@ python infer_jointdiff.py \
 --save_type 'all'
 
 ```
+
+## Evaluation
+To evaluate model performance with our published metrics, go to the folder **src/** and follow the instructions below:
+
+### Biological features (torsional angles and clashes)
+```
+python parse pdb_feature_cal.py \
+--in_path <path of the pdb file> \
+--out_path <path to save the output pickle dictionary>
+```
+
+### Amino acid repeating rate
+```
+python repeating_rate.py --in_path <fasta file> 
+```
+
+### Sequence-centered consistency & Foldability
+
+### Structure-centered consistency & Designability
+
+
