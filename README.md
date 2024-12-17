@@ -39,8 +39,8 @@ To train the model with you own data, please get the *.tsv file ready following 
 To train JointDiff of JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
 ```
 python train_jointdiff.py \
---config <path of the configuration file> \
---logdir <path to save the checkoints> \
+--config <str; path of the configuration file> \
+--logdir <str; path to save the checkoints> \
 --centralize <whether to do centralization; 0 or 1, 1 for True> \
 --random_mask <whether to do random masking; 0 or 1, 1 for True> \
 --with_dist_loss <whether to add the pairwise distance loss; 0 or 1, 1 for True> \
@@ -66,14 +66,17 @@ python train_jointdiff.py \
 ***
 
 ## Inference
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). To do the inference sampling, go to the folder **src/** and run:
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). 
+
+### Unconditional sampling
+To do the unconditional sampling, go to the folder **src/** and run:
 ```
 python infer_jointdiff.py \
---model_path <path of the checkpoint> \
---result_path <path to save the samples> \
+--model_path <str; path of the checkpoint> \
+--result_path <str; path to save the samples> \
 --size_range <list of length_min, length_max, length_interval> \
---num <sampling amount for each length> \
---save_type <'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
+--num <int; sampling amount for each length> \
+--save_type <str; 'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
 ```
 
 Example:
@@ -95,7 +98,17 @@ python infer_jointdiff.py \
 --size_range [100, 200, 20] \
 --num 5 \
 --save_type 'all'
+```
 
+### Motif-scaffolding
+```
+python infer_motif-scaffolding.py \
+--model_path <str; path of the checkpoint> \
+--data_path ../data/motif-scaffolding_benchmark/benchmark.csv \
+--pdb_path ../data/motif-scaffolding_benchmark/pdbs_processed/ \
+--info_dict_path ../data/motif-scaffolding_benchmark/benchmark_data.pkl \
+--result_path <str; path to save the samples> \
+--attempts <int; sampling amount for task> 
 ```
 
 ## Evaluation
@@ -103,18 +116,43 @@ To evaluate model performance with our published metrics, go to the folder **src
 
 ### Biological features (torsional angles and clashes)
 ```
-python parse pdb_feature_cal.py \
---in_path <path of the pdb file> \
---out_path <path to save the output pickle dictionary>
+python pdb_feature_cal.py \
+--in_path <str; path of the pdb file> \
+--out_path <str; path to save the output pickle dictionary>
 ```
 
 ### Amino acid repeating rate
 ```
-python repeating_rate.py --in_path <fasta file> 
+python repeating_rate.py --in_path <str; fasta file> 
 ```
 
 ### Sequence-centered consistency & Foldability
+For sequence and structure predictions, please refer to [ProteinMPNN](https://github.com/dauparas/ProteinMPNN) and [ESMFold](https://github.com/facebookresearch/esm) to get the corresponding intermediate files.
+```
+python consistency-seq_cal.py \
+--seq_path <str; fasta file of MPNN predictions> \
+--gt_path <str; fasta file of the designed sequences> \
+--out_path <str; path to save the output pickle dictionary>
+```
+* For sequence-centered consistency, MPNN predictions are based on designed structures.
+* For foldability, MPNN predictions are based on ESMFold-predicted structures of the designed sequences.
 
 ### Structure-centered consistency & Designability
+```
+python consistency-struc_cal.py \
+--ref_path <str; directory of designed structures/pdbs> \
+--pred_path <str; directory of the ESMFold predictions> \
+--out_path <str; path to save the output pickle dictionary>
+```
+* For structure-centered consistency, ESMFold predictions are based on designed sequences.
+* For designability, ESMFold predictions are based on MPNN-infered sequences of the designed structures.
 
-
+### Functional consistency
+For the sequence and structure embeddings, please follow [ProTrek](https://github.com/westlake-repl/ProTrek) and save the results as dictionaries with key to be sample names and value to be embedding tensors.
+```
+python protrek_similarity.py \
+--go_emb ../data/mf_go_all_emb.pkl  # dictionary containing GO terms embeddings \
+--seq_emb  <str; path of the dictionary containing sequence embeddings> \
+--struc_emb  <str; path of the dictionary containing structure embeddings> \
+--out_path <str; path to save the output pickle dictionary>
+```
