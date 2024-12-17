@@ -23,7 +23,7 @@ import torch.nn.functional as F  # SZ
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
-from models.networks_proteinMPNN import ProteinMPNN
+from networks_proteinMPNN import ProteinMPNN
 
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
