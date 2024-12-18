@@ -28,7 +28,7 @@ conda activate jointdiff
 
 ## Data Process 
 
-Our processed training data (3 *.lmdb files) can be downloaded with this [link](https://drive.google.com/drive/folders/1DaITD4DOu7EJt6Me1lgffOprv39U2ltw?usp=drive_link). To train JointDiff with our data, please download the files and move them to the folder **data/**.
+Our processed training data (3 *.lmdb files) can be downloaded with this [link](https://zenodo.org/records/14517175). To train JointDiff with our data, please download the files and move them to the folder **data/**.
 
 To train the model with you own data, please get the *.tsv file ready following the format of **data/cath_summary_all.tsv**, and then update the paths of the dataset in the configuration file (e.g. **configs/jointdiff-x_dim-128-64-4_step100_lr1.e-4_wd0._posiscale50.0.yml**).
 
@@ -85,7 +85,7 @@ python train_jointdiff_binder.py \
 ***
 
 ## Inference
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). 
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://zenodo.org/records/14517175). 
 
 ### Unconditional sampling
 For unconditional sampling, go to the folder **src/** and run:
