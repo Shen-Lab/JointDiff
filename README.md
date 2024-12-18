@@ -36,7 +36,9 @@ To train the model with you own data, please get the *.tsv file ready following 
 
 ## Training
 
-To train JointDiff of JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
+### Unconditional model
+
+To train JointDiff or JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
 ```
 python train_jointdiff.py \
 --config <str; path of the configuration file> \
@@ -63,17 +65,37 @@ python train_jointdiff.py \
 --with_clash 1
 ```
 
+### Unconditional model
+
+To train JointDiff-binder or JointDiff-x-binder for binder design, run:
+```
+python train_jointdiff_binder.py \
+--config <str; path of the configuration file> \
+--logdir <str; path to save the checkoints> \
+--centralize <whether to do centralization; 0 or 1, 1 for True> \
+--with_epitope <whether to indicate epitopes; 0 or 1, 1 for True> \
+--with_scaffold <whether to incorporate scaffolds; 0 or 1, 1 for True> \
+--with_monomer <whether load monomer samples; 0 or 1, 1 for True> \
+--random_mask <whether to do random masking; 0 or 1, 1 for True> \
+--with_dist <whether to add the pairwise distance loss; 0 or 1, 1 for True> \
+--with_clash_loss <whether to add the clash loss; 0 or 1, 1 for True> \
+--with_center_loss <whether to add the chain center loss; 0 or 1, 1 for True> 
+```
+
 ***
 
 ## Inference
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). For unconditional sampling, go to the folder **src/** and run:
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). 
+
+### Unconditional sampling
+For unconditional sampling, go to the folder **src/** and run:
 ```
 python infer_jointdiff.py \
 --model_path <str; path of the checkpoint> \
 --result_path <str; path to save the samples> \
 --size_range <list of length_min, length_max, length_interval> \
 --num <int; sampling amount for each length> \
---save_type <str; 'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
+--save_type <str; 'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory>
 ```
 
 Example:
@@ -95,6 +117,29 @@ python infer_jointdiff.py \
 --size_range [100, 200, 20] \
 --num 5 \
 --save_type 'all'
+```
+
+### Motif-scaffolding
+```
+python infer_motif-scaffolding.py \
+--model_path <str; path of the checkpoint> \
+--data_path ../data/motif-scaffolding_benchmark/benchmark.csv \
+--pdb_path ../data/motif-scaffolding_benchmark/pdbs_processed/ \
+--info_dict_path ../data/motif-scaffolding_benchmark/benchmark_data.pkl \
+--result_path <str; path to save the samples> \
+--attempts <int; sampling amount for task>
+```
+
+### Binder-design
+```
+python infer_binder-design.py \
+--model_path <str; path of the checkpoint> \
+--summary_path ../data/Protein_MPNN/mpnn_data_info.pkl \
+--pdb_dir ../data/Protein_MPNN/pdb_2021aug02/pdb/ \
+--processed_dir ../data/Protein_MPNN/ \
+--interface_path ../data/Protein_MPNN/interface_dict_all.pt \
+--result_path <str; path to save the samples dictionary> \
+--attempts <int; sampling amount for task>
 ```
 
 ***
@@ -144,3 +189,14 @@ python protrek_similarity.py \
 --struc_emb  <str; path of the dictionary containing structure embeddings> \
 --out_path <str; path to save the output pickle dictionary>
 ```
+
+### Binder-design evalution
+To transformer the binder-design samples to pdb and FASTA files and calculate the RMSD and sequence recovery, run:
+```
+python eval_binder-design.py \
+--in_path <str; path of the generated dictionary> \
+--out_path <str; path of the directory to store the pdb and FASTA files> \
+--result_path <str; path of performance dictionary> \
+--with_scaffold <whether to load the scaffold information; 0 or 1, 1 for True> 
+```
+
