@@ -66,11 +66,7 @@ python train_jointdiff.py \
 ***
 
 ## Inference
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). 
-
-### Unconditional sampling
-To do the unconditional sampling, go to the folder **src/** and run:
-```
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). For unconditional sampling, go to the folder **src/** and run:```
 python infer_jointdiff.py \
 --model_path <str; path of the checkpoint> \
 --result_path <str; path to save the samples> \
@@ -98,17 +94,6 @@ python infer_jointdiff.py \
 --size_range [100, 200, 20] \
 --num 5 \
 --save_type 'all'
-```
-
-### Motif-scaffolding
-```
-python infer_motif-scaffolding.py \
---model_path <str; path of the checkpoint> \
---data_path ../data/motif-scaffolding_benchmark/benchmark.csv \
---pdb_path ../data/motif-scaffolding_benchmark/pdbs_processed/ \
---info_dict_path ../data/motif-scaffolding_benchmark/benchmark_data.pkl \
---result_path <str; path to save the samples> \
---attempts <int; sampling amount for task> 
 ```
 
 ***
