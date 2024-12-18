@@ -10,7 +10,7 @@ from diffab.modules.diffusion.dpm_full import FullDPM, seq_recover
 from diffab.utils.protein.constants import max_num_heavyatoms, BBHeavyAtom
 from ._base import register_model
 
-from models.networks_proteinMPNN import ProteinMPNN  # added by SZ
+from networks_proteinMPNN import ProteinMPNN  # added by SZ
 
 resolution_to_num_atoms = {
     'backbone+CB': 5,  # N, CA, C, O, CB

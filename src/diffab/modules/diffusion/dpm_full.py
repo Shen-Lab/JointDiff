@@ -23,18 +23,18 @@ from evodiff.collaters import OAMaskCollaterSingleSeq, D3PMCollaterSingleSeq
 from evodiff.losses import OAMaskedCrossEntropyLoss, D3PMCELoss, D3PMLVBLoss
 
 ### for advanced structure decoder
-try:
-    from models.utils_modules import TriangularSelfAttentionNetwork
-    from esm.esmfold.v1.trunk import (
-        StructureModuleConfig,
-        FoldingTrunkConfig,
-        FoldingTrunk
-    )
-except Exception as e:
-    print('Failed to load ESMFold decoder! (%s)' % e)
+# try:
+#     from utils_modules import TriangularSelfAttentionNetwork
+#     from esm.esmfold.v1.trunk import (
+#         StructureModuleConfig,
+#         FoldingTrunkConfig,
+#         FoldingTrunk
+#     )
+# except Exception as e:
+#     print('Failed to load ESMFold decoder! (%s)' % e)
 
 ### for losses 
-from models.losses import distance_loss, consistency_loss, energy_guided_loss
+from losses import distance_loss, consistency_loss, energy_guided_loss
 
 
 ##########################################################################################
