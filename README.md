@@ -65,7 +65,7 @@ python train_jointdiff.py \
 --with_clash 1
 ```
 
-### Unconditional model
+### Conditional model
 
 To train JointDiff-binder or JointDiff-x-binder for binder design, run:
 ```
