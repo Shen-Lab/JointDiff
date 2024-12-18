@@ -311,13 +311,11 @@ class BinderProcess(object):
             for chain in structure['chains']:
                 # only retrain
                 if chain != chain_sele:
-                    if chain in structure['interface']:
-                        del structure['interface'][chain]
+                    del structure['interface'][chain]
                     continue
 
                 binder_size = len(structure['interface'][chain])
-                #idx_min = min(structure['interface'][chain])
-                idx_min = min(structure['interface'][chain]) - 1
+                idx_min = min(structure['interface'][chain])
                 idx_max = max(structure['interface'][chain])
                 if self.random_masking and binder_size > self.mask_threshold:
                     # maximum start: idx_max - self.mask_threshold + 1
@@ -330,8 +328,7 @@ class BinderProcess(object):
             if self.with_epitope and (not self.with_bindingsite):
                 for chain in structure['chains']:
                     if chain == chain_sele:
-                        if chain in structure['epitope']:
-                            del structure['epitope'][chain]
+                        del structure['epitope'][chain]
                         continue
                     structure['epitope'][chain] = range(
                         min(structure['epitope'][chain]),
@@ -426,7 +423,7 @@ class BinderProcess(object):
                 )  # (N,L), 3 for scaffold
                 start_idx = int(structure['interface'][chain][0])
                 end_idx = int(structure['interface'][chain][1])
-                print(start_idx, end_idx)
+                #print(start_idx, end_idx)
 
                 fragment_map[start_idx : end_idx] = 2  # design region
                 generate_flag[start_idx : end_idx] = 1
@@ -450,8 +447,7 @@ class BinderProcess(object):
                 for idx in structure['epitope'][chain]:
                     if idx >= L:
                         continue
-                    #fragment_map[idx] = 4  # epitope
-                    fragment_map[idx-1] = 4  # epitope
+                    fragment_map[idx] = 4  # epitope
 
             ### others 
             else:
@@ -525,8 +521,7 @@ class ProteinMPNNDataset(Dataset):
         with_bindingsite = False,
         with_scaffold = True,
         random_masking = False, 
-        mask_threshold = 80,
-        dimer_only = False
+        mask_threshold = 80
     ):
         """
         Args:
@@ -552,7 +547,6 @@ class ProteinMPNNDataset(Dataset):
         self.length_min = length_min
         self.length_max = length_max
         self.with_monomer = with_monomer
-        self.dimer_only = dimer_only
 
         if with_monomer:
             self.structure_data_path = os.path.join(
@@ -665,9 +659,6 @@ class ProteinMPNNDataset(Dataset):
                     continue
 
                 if self.load_interface and (not self.with_monomer) and pdb not in self.interface_dict:
-                    continue
-
-                if self.dimer_only and len(self.info_dict['all'][clus][pdb]['chains']) != 2:
                     continue
 
                 ###### selected entry ######
@@ -876,7 +867,7 @@ class FineTuningDataset(Dataset):
             ####################### feature process ############################
             ignore = False
             sample_processed = {
-                'antigen': sample['cd20_chain'],
+                'antigen': set(sample['cd20_chain']),
                 'interface': sample['interface'],
                 'epitope': sample['epitope'],
                 'name': sample['ID'].split('/')[-1],
