@@ -1,0 +1,45 @@
+000-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_updated_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1671; macro-SR=0.1671
+
+003-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_updated_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1879; macro-SR=0.1879
+
+005-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_updated_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1794; macro-SR=0.1794
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1840; macro-SR=0.1840
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2192; macro-SR=0.2192
+
+008-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling-smote_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1785; macro-SR=0.1785
+
+008-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling-smote_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2075; macro-SR=0.2075
+
+010-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.1995; macro-SR=0.1995
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2014; macro-SR=0.2014
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1842; macro-SR=0.1842
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2074; macro-SR=0.2074
+
+012-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2099; macro-SR=0.2099
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.1907; macro-SR=0.1907
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide
+488 samples in all: micro-SR=0.1689; macro-SR=0.1689
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide_last
+488 samples in all: micro-SR=0.2146; macro-SR=0.2146
+

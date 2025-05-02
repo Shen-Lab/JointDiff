@@ -1,0 +1,281 @@
+Baseline protein_generator
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+Baseline Chroma
+Query and target loaded for sequence.
+Query and target loaded for structure.
+451 samples in all.
+ave-score=0.103625 for 451 samples.
+
+############################################################
+JointDiff codesign_diffab_complete_gen_share-true_dim-256_step100_lr1.e-4_wd0.0_posiscale100.0_sc_center_2024_09_10__13_06_07
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+JointDiff codesign_diffab_complete_gen_share-true_dim-256_step100_lr1.e-4_wd0.0_posiscale50.0_center_2024_09_10__11_30_09
+Query and target loaded for sequence.
+Query and target loaded for structure.
+56 samples in all.
+ave-score=0.009164 for 56 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_dim-256_step100_lr1.e-4_wd0.0_posiscale50.0_sc_center_2024_09_10__13_06_07
+Query and target loaded for sequence.
+Query and target loaded for structure.
+45 samples in all.
+ave-score=0.000000 for 45 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_2023_05_01__17_05_48
+Query and target loaded for sequence.
+Query and target loaded for structure.
+66 samples in all.
+ave-score=0.004076 for 66 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_2024_01_20__16_37_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+59 samples in all.
+ave-score=0.005414 for 59 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_2024_09_02__21_08_51
+Query and target loaded for sequence.
+Query and target loaded for structure.
+55 samples in all.
+ave-score=0.005526 for 55 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_sc_center_2024_09_08__22_02_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+43 samples in all.
+ave-score=0.000000 for 43 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale10.0_2024_09_02__20_50_44
+Query and target loaded for sequence.
+Query and target loaded for structure.
+69 samples in all.
+ave-score=0.011001 for 69 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale10.0_sc_center_2024_09_08__22_02_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+59 samples in all.
+ave-score=0.001064 for 59 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale1.0_2024_01_20__16_37_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+29 samples in all.
+ave-score=0.000000 for 29 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale1.0_2024_09_02__20_50_44
+Query and target loaded for sequence.
+Query and target loaded for structure.
+41 samples in all.
+ave-score=0.000000 for 41 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale1.0_sc_center_2024_09_08__22_02_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale200.0_2024_09_08__21_29_34
+Query and target loaded for sequence.
+Query and target loaded for structure.
+51 samples in all.
+ave-score=0.005187 for 51 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale20.0_2024_01_20__16_37_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+67 samples in all.
+ave-score=0.010517 for 67 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale20.0_2024_09_02__20_50_44
+Query and target loaded for sequence.
+Query and target loaded for structure.
+53 samples in all.
+ave-score=0.012469 for 53 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale20.0_sc_center_2024_09_08__22_02_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+53 samples in all.
+ave-score=0.000000 for 53 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale500.0_2024_09_08__21_29_34
+Query and target loaded for sequence.
+Query and target loaded for structure.
+14 samples in all.
+ave-score=0.001401 for 14 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale50.0_2024_01_20__16_37_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+73 samples in all.
+ave-score=0.011015 for 73 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale50.0_2024_09_02__21_08_49
+Query and target loaded for sequence.
+Query and target loaded for structure.
+77 samples in all.
+ave-score=0.020776 for 77 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale50.0_sc_center_2024_09_08__22_02_11
+Query and target loaded for sequence.
+Query and target loaded for structure.
+55 samples in all.
+ave-score=0.000000 for 55 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt-10.0_center_2024_09_09__22_25_01
+Query and target loaded for sequence.
+Query and target loaded for structure.
+72 samples in all.
+ave-score=0.008627 for 72 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt-20.0_center_2024_09_09__22_25_17
+Query and target loaded for sequence.
+Query and target loaded for structure.
+52 samples in all.
+ave-score=0.002040 for 52 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt_2024_09_02__19_14_48
+Query and target loaded for sequence.
+Query and target loaded for structure.
+70 samples in all.
+ave-score=0.002224 for 70 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt_2024_09_02__20_24_39
+Query and target loaded for sequence.
+Query and target loaded for structure.
+68 samples in all.
+ave-score=0.004484 for 68 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt-50.0_center_2024_09_09__22_24_59
+Query and target loaded for sequence.
+Query and target loaded for structure.
+18 samples in all.
+ave-score=0.000145 for 18 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt-5.0_center_2024_09_09__22_25_01
+Query and target loaded for sequence.
+Query and target loaded for structure.
+59 samples in all.
+ave-score=0.015569 for 59 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt_all_2024_09_02__19_14_48
+Query and target loaded for sequence.
+Query and target loaded for structure.
+74 samples in all.
+ave-score=0.002082 for 74 samples.
+
+JointDiff codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscaleadapt_all_2024_09_02__20_50_44
+Query and target loaded for sequence.
+Query and target loaded for structure.
+67 samples in all.
+ave-score=0.006851 for 67 samples.
+
+############################################################
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+4 samples in all.
+ave-score=0.000000 for 4 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+2 samples in all.
+ave-score=0.000000 for 2 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+7 samples in all.
+ave-score=0.000000 for 7 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+7 samples in all.
+ave-score=0.000000 for 7 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+18 samples in all.
+ave-score=0.000000 for 18 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster
+Query and target loaded for sequence.
+Query and target loaded for structure.
+3 samples in all.
+ave-score=0.000000 for 3 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster_transformer-12
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_noise_Faster
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+24 samples in all.
+ave-score=0.000000 for 24 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-linear_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+29 samples in all.
+ave-score=0.000000 for 29 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-mha_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_noise_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+35 samples in all.
+ave-score=0.000076 for 35 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+10 samples in all.
+ave-score=0.000365 for 10 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-linear_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+23 samples in all.
+ave-score=0.000000 for 23 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-mha_Faster_100steps
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_gt_Faster
+Query and target loaded for sequence.
+Query and target loaded for structure.
+9 samples in all.
+ave-score=0.000000 for 9 samples.
+
+LaDiff latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_noise_Faster
+Query and target loaded for sequence.
+Query and target loaded for structure.
+0 samples in all.
+

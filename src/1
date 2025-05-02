@@ -1,0 +1,1231 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch import Tensor
+from einops import einsum
+import functools
+from tqdm.auto import tqdm
+from typing import Dict, Union
+
+### diffusion in the original space based on diffab
+from jointdiff.modules.common.geometry import (
+    apply_rotation_to_vector, 
+    quaternion_1ijk_to_rotation_matrix, 
+    construct_3d_basis,
+    reconstruct_backbone
+)
+from jointdiff.modules.common.so3 import (
+    so3vec_to_rotation, 
+    rotation_to_so3vec, 
+    random_uniform_so3
+)
+from jointdiff.modules.encoders.ga import GAEncoder
+from .transition import (
+    RotationTransition, 
+    PositionTransition, 
+    AminoacidCategoricalTransition,
+    PositionNormalizer
+)
+from jointdiff.modules.encoders.residue import ResidueEmbedding 
+from jointdiff.modules.encoders.pair import PairEmbedding   
+from jointdiff.modules.data.constants import ressymb_order, max_num_heavyatoms, BBHeavyAtom
+# diffab restypes: 'ACDEFGHIKLMNPQRSTVWYX'
+
+### for losses 
+from jointdiff.loss import (
+    sequence_loss, structure_loss, distance_loss, distogram_loss 
+)
+
+
+##########################################################################################
+# Auxiliary Functions
+##########################################################################################
+
+def seq_recover(aa:torch.Tensor, length:int = None) -> str:
+    """Recover sequence from the tensor.
+
+    Args:
+        aa: embedded sequence tensor; (L,).
+        length: length of the sequence; if None consider the paddings.
+
+    Return:
+        seq: recovered sequence string. 
+    """
+
+    length = aa.shape[0] if length is None else min(length, aa.shape[0])
+    seq = ''
+    for i in range(length):
+        idx = int(aa[i])
+        if idx > 20:
+            print('Error! Index %d is larger than 20.'%idx)
+            break
+        seq += ressymb_order[idx]
+    return seq
+
+
+def aa_sampling(c, seq_sample_method = 'multinomial'):
+    """
+    Args:
+        c:    probalility sample; (N, L, K).
+    Returns:
+        x:    (N, L).
+    """
+    if seq_sample_method == 'multinomial':
+        N, L, K = c.size()
+        c = c.view(N*L, K) + 1e-8
+        x = torch.multinomial(c, 1).view(N, L)
+    else:
+        x = torch.max(c, dim = -1).indices
+    return x
+
+
+##########################################################################################
+# Distogram Predictor
+##########################################################################################
+
+class DistogramModule(nn.Module):
+    """Distogram Module."""
+
+    def __init__(self, token_z: int, num_bins: int) -> None:
+        """Initialize the distogram module.
+
+        Parameters
+        ----------
+        token_z : int
+            The token pairwise embedding size.
+        num_bins : int
+            The number of bins.
+
+        """
+        super().__init__()
+        self.distogram = nn.Linear(token_z, num_bins)
+
+    def forward(self, z: Tensor) -> Tensor:
+        """Perform the forward pass.
+
+        Parameters
+        ----------
+        z : Tensor
+            The pairwise embeddings
+
+        Returns
+        -------
+        Tensor
+            The predicted distogram.
+
+        """
+        z = z + z.transpose(1, 2)
+        return self.distogram(z)
+
+
+##########################################################################################
+# Epsilon Network
+##########################################################################################
+
+class SequenceEncoderDiffab(nn.Module):
+    def __init__(self, res_feat_dim):
+        super().__init__()
+
+        ### embedding layer
+        self.current_sequence_embedding = nn.Embedding(
+            25, res_feat_dim
+        )  # 22 is padding
+
+        ### residue-wise feature mixer
+        self.res_feat_mixer = nn.Sequential(
+            #nn.Linear(res_feat_dim * 2, res_feat_dim), nn.ReLU(),
+            nn.Linear(res_feat_dim, res_feat_dim), nn.ReLU(),
+            nn.Linear(res_feat_dim, res_feat_dim),
+        )
+
+    def forward(self, seq, **args):
+        """Sequence embedding.
+
+        Args:
+          seq: (B, L)
+       
+        Return:
+          res_feat: (B, L, res_feat_dim)
+        """
+        # seq = seq.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
+        res_feat = self.res_feat_mixer(
+            #torch.cat([res_feat, self.current_sequence_embedding(seq)], dim=-1)
+            self.current_sequence_embedding(seq)
+        ) # [Important] Incorporate sequence at the current step.
+
+        return res_feat
+
+
+class EpsilonNet(nn.Module):
+    def __init__(self, 
+        res_feat_dim: int, 
+        pair_feat_dim: int, 
+        num_layers: int, 
+        encoder_opt: Dict = {},
+        num_atoms: int = 4, 
+        residue_embed: Union[str, torch.Tensor] = 'same', 
+        pair_embed: torch.Tensor = None,
+        modality = 'joint',
+        with_seq_ddpm = False,
+        with_type_emb = False,
+        emb_first = False,
+        all_bb_atom = False,
+        self_conditioning = False,
+        max_relpos = 32,
+        update_pair_feat = True,
+    ):
+        super().__init__()
+        """Encoder of the sample states.
+        
+        Args:
+            res_feat_dim: dimension of residue-wise embedding features. 
+            pair_feat_dim: dimension of pair-wise embedding features. 
+            num_layers: number of layers.
+            encoder_opt: other hyper-parameters of GAEncoder; if empty use the 
+                default values.
+
+            ### the arguments below were added by SZ.
+            num_atoms: atoms considered for embedding.
+            residue_embed: sequence encoder.
+            pair_embed: edge feature encoder.
+            max_relpos: maximum relative position embedding range.
+        """
+
+        self.modality = modality
+        self.with_seq_ddpm = with_seq_ddpm
+        self.emb_first = emb_first
+        self.with_type_emb = with_type_emb
+
+        self.update_pair_feat = update_pair_feat
+        self.all_bb_atom = all_bb_atom
+        self.self_conditioning = self_conditioning
+
+        #######################################################################
+        # feature embedding module 
+        #######################################################################
+
+        ###### struture (edge) embedding ######
+        if pair_embed is not None:
+            self.pair_embed = pair_embed
+            self.num_atoms = self.pair_embed.max_num_atoms
+        else:
+            self.pair_embed = PairEmbedding(
+                pair_feat_dim, num_atoms, 
+                with_seq_ddpm = self.with_seq_ddpm,
+                seq_ddpm_dim = res_feat_dim,
+                max_relpos = max_relpos
+            )
+            self.num_atoms = num_atoms
+
+        ###### residue (node) embeddding ######
+        if not isinstance(residue_embed, str) and residue_embed is not None:  
+            ### utilize the sequence encoder from the encoder
+            self.residue_embed = residue_embed
+        elif residue_embed == 'same':
+            ### same architecture as the encoder 
+            self.residue_embed = ResidueEmbedding(
+                res_feat_dim, self.num_atoms, with_type_emb = with_type_emb,
+                with_sequence = True, with_structure = True,
+                with_seq_ddpm = with_seq_ddpm,
+            )
+        elif residue_embed == 'same-seqonly':
+            ### same architecture as the encoder 
+            self.residue_embed = ResidueEmbedding(
+                res_feat_dim, self.num_atoms, with_type_emb = with_type_emb,
+                with_sequence = True, with_structure = False,
+                with_seq_ddpm = with_seq_ddpm,
+            )
+        else:
+            ### same architecture as diffab
+            self.residue_embed = None
+            self.res_feat_encode = SequenceEncoderDiffab(res_feat_dim)
+
+        #######################################################################
+        # massage passing module 
+        #######################################################################
+
+        ###### embed the current features rather than the groundtruth ######
+        self.encoder = GAEncoder(
+            res_feat_dim, pair_feat_dim, num_layers, **encoder_opt
+        )
+
+        #######################################################################
+        # prediction projector
+        #######################################################################
+
+        ##################### for structure prediction ########################
+        if self.modality in {'joint', 'structure', 'stru_pred'}:
+
+            ###### position decoder ######
+            pos_out_dim = 12 if self.all_bb_atom else 3
+            self.eps_crd_net = nn.Sequential(
+                nn.Linear(res_feat_dim+3, res_feat_dim), nn.ReLU(),
+                nn.Linear(res_feat_dim, res_feat_dim), nn.ReLU(),
+                nn.Linear(res_feat_dim, pos_out_dim)
+            )
+
+            ###### rotation decoder ######
+            if not self.all_bb_atom:
+                self.eps_rot_net = nn.Sequential(
+                    nn.Linear(res_feat_dim+3, res_feat_dim), nn.ReLU(),
+                    nn.Linear(res_feat_dim, res_feat_dim), nn.ReLU(),
+                    nn.Linear(res_feat_dim, 3)
+                )
+
+        ######################### sequence decoder ########################
+        if self.modality in {'joint', 'sequence', 'seq_pred'}:
+            self.eps_seq_net = nn.Sequential(
+                nn.Linear(res_feat_dim+3, res_feat_dim), nn.ReLU(),
+                nn.Linear(res_feat_dim, res_feat_dim), nn.ReLU(),
+                nn.Linear(res_feat_dim, 20), nn.Softmax(dim=-1)
+            )
+
+
+    #######################################################################
+    # Embedding Function
+    #######################################################################
+
+    def res_embedding(self, R, p_t, s_t, batch, mask_res):
+
+        #################### backbone atom construction ###################
+        if self.modality != 'sequence' and self.all_bb_atom:
+            p_t_backbone = p_t  # (N, L, 4, 3)
+            R = construct_3d_basis(
+                p_t[:, :, BBHeavyAtom.CA],
+                p_t[:, :, BBHeavyAtom.C],
+                p_t[:, :, BBHeavyAtom.N],
+            )  # (N, L, 3, 3)
+        elif self.modality != 'sequence':
+            ### backbone atom construction
+            p_t_backbone = reconstruct_backbone(
+                R = R, t = p_t, aa = s_t,
+                chain_nb = batch['chain_nb'],
+                res_nb = batch['res_nb'],
+                mask = mask_res
+            )  # (N, L, 4, 3)
+        else:
+            p_t_backbone = torch.zeros(N, L, 4, 3).to(device)
+
+        ######################## Residue info #############################
+        if self.residue_embed is not None:
+            ### The residue embedding module is the same as the context 
+            ### embedding module from diffab which requires both the 
+            ### sequence and the structure.
+            res_feat = self.residue_embed(
+                aa = s_t,
+                res_nb = batch['res_nb'],
+                chain_nb = batch['chain_nb'],
+                pos_atoms = p_t_backbone,
+                mask_atoms = batch['mask_heavyatom'][:, :, :self.num_atoms],  # (N, L, 4)
+            )
+        else:
+            res_feat = self.res_feat_encode(s_t)
+
+        return res_feat, p_t_backbone, R
+
+
+    #######################################################################
+    # Forward Function
+    #######################################################################
+
+    def forward(self, 
+        v_t, p_t, s_t, beta, 
+        mask_res, mask_gen, 
+        res_feat = None, 
+        pair_feat = None, 
+        batch = None,
+        seq_sample_method = 'multinomial',
+        v_0 = None, p_0 = None, s_0 = None
+    ):
+        """Embedding of state[t].
+
+        Args:
+            v_t: orienation vectors at t; (N, L, 3).
+            p_t: position vectors at t; (N, L, 3).
+            s_t: sequence at time t; (N, L).
+            beta: Beta_t; (N,).
+            mask_res: mask with True for valid tokens (N, L).
+            mask_gen: mask with True for target tokens (N, L).
+            res_feat: None or (N, L, res_dim).
+            pair_feat: None or (N, L, L, pair_dim).
+
+        Returns:
+            v_next: UPDATED (not epsilon) SO3-vector of orietnations, (N, L, 3).
+            eps_pos: (N, L, 3).
+        """
+        N, L = mask_res.size()
+        device = mask_res.device
+        ### orientation vector to rotation matrix
+        R = None if self.all_bb_atom else so3vec_to_rotation(v_t) # (N, L, 3, 3)
+
+        #######################################################################
+        # embedding the background first (similar to diffab; res_feat is not None)
+        #######################################################################
+
+        if self.emb_first:
+            # s_t = s_t.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
+            res_feat = self.res_feat_mixer(
+                torch.cat([res_feat, self.current_sequence_embedding(s_t)], dim=-1)
+            ) # [Important] Incorporate sequence at the current step.
+
+        #######################################################################
+        # monomer design only; no res_feat and pair_feat input
+        #######################################################################
+
+        else:
+            res_feat, p_t_backbone, R = self.res_embedding(R, p_t, s_t, batch, mask_res)
+  
+        #if self.self_conditioning: 
+
+        ################################ pair info ############################
+        if self.update_pair_feat:
+            pair_feat = self.pair_embed(
+                aa = s_t,
+                res_nb = batch['res_nb'],
+                chain_nb = batch['chain_nb'],
+                pos_atoms = p_t_backbone,
+                mask_atoms = batch['mask_heavyatom'][:, :, :self.num_atoms],
+            )
+
+        ########################### message passing ###########################
+        if self.all_bb_atom:
+            res_feat = self.encoder(
+                R, p_t[:, :, BBHeavyAtom.CA], res_feat, pair_feat, mask_res
+            )  # (N, L, res_dim)
+        else: 
+            res_feat = self.encoder(R, p_t, res_feat, pair_feat, mask_res)
+            # res_feat: (N, L, res_dim)
+
+        ########################### concatenation #############################
+        t_embed = torch.stack(
+            [beta, torch.sin(beta), torch.cos(beta)], dim=-1
+        )[:, None, :].expand(N, L, 3)  # (N, L, 3)
+        in_feat = torch.cat([res_feat, t_embed], dim=-1)  # (N, L, res_dim+3)
+
+        #######################################################################
+        # decoding
+        #######################################################################
+
+        if self.modality in {'joint', 'structure', 'stru_pred'}:
+            ###### Position ######
+            eps_crd = self.eps_crd_net(in_feat)    # (N, L, 3) or (N, L, 12)
+            if self.all_bb_atom:
+                eps_pos = torch.where(
+                    mask_gen[:, :, None].expand_as(eps_crd), eps_crd, torch.zeros_like(eps_crd)
+                )  # (N, L, 12)
+                eps_pos = eps_pos.view(N, L, 4, 3)  # (N, L, 4, 3)
+            else:
+                eps_pos = apply_rotation_to_vector(R, eps_crd)  # (N, L, 3)
+                eps_pos = torch.where(
+                    mask_gen[:, :, None].expand_as(eps_pos), eps_pos, torch.zeros_like(eps_pos)
+                )  # (N, L, 3)
+
+            ###### New orientation ######
+            if not self.all_bb_atom:
+                eps_rot = self.eps_rot_net(in_feat)    # (N, L, 3)
+                U = quaternion_1ijk_to_rotation_matrix(eps_rot) # (N, L, 3, 3)
+                R_next = R @ U
+                v_next = rotation_to_so3vec(R_next)     # (N, L, 3)
+                v_next = torch.where(mask_gen[:, :, None].expand_as(v_next), v_next, v_t)
+            else:
+                v_next, R_next = None, None 
+ 
+        else:
+            v_next, R_next, eps_pos = None, None, None
+
+        ###### New sequence categorical distributions ######
+        if self.modality in {'joint', 'sequence', 'seq_pred'}:
+            c_denoised = self.eps_seq_net(in_feat)  # Already softmax-ed, (N, L, 20)
+        else:
+            c_denoised = None
+
+        return v_next, R_next, eps_pos, c_denoised, pair_feat
+
+
+##########################################################################################
+# Diffusion Module
+##########################################################################################
+
+class FullDPM(nn.Module):
+
+    def __init__(self,
+        ### architecture 
+        res_feat_dim, 
+        pair_feat_dim, 
+        num_steps,
+        num_atoms = 4, 
+        ### versions
+        residue_embed = 'same',
+        pair_embed = None,  
+        with_distogram = False, 
+        eps_net_opt={}, 
+        trans_rot_opt={}, 
+        trans_pos_opt={}, 
+        trans_seq_opt={},
+        ### hyper-parameters
+        position_mean=[0.0, 0.0, 0.0],
+        position_scale=[10.0],
+        seq_diff_version = 'multinomial',
+        remember_padding = False,
+        token_size = 21,
+        ps_adapt_scale = 1.0,
+        modality='joint',
+        train_version = 'jointdiff',
+        all_bb_atom = False,
+        with_type_emb = False,
+        emb_first = False,
+        max_relpos = 32
+    ):
+        super().__init__()
+
+        ########################### settings ##################################
+        self.num_steps = num_steps
+        self.token_size = token_size
+        self.train_version = train_version
+        self.all_bb_atom = all_bb_atom
+
+        ### for ablation study
+        self.modality = modality
+        if self.modality not in {'joint', 'sequence', 'structure', 'seq_pred', 'stru_pred'}:
+            # joint: codesign
+            # sequence: sequence only
+            # structure: structure only
+            # seq_pred: sequence design given backbone structure 
+            # stru_pred: sequence design given sequence
+            raise Exception('No modality version named %s!' % self.modality)
+
+        ### for sequence diffusion 
+        self.seq_diff_version = seq_diff_version
+        self.seq_diff_name = self.seq_diff_version.split('-')[0]
+        self.remember_padding = remember_padding
+        self.ps_adapt_scale = ps_adapt_scale
+
+        ### whether distogram
+        self.with_distogram = with_distogram
+        if self.with_distogram:
+            self.disto_predictor = DistogramModule(
+                token_z = pair_feat_dim, num_bins = 64
+            )
+
+        ########################### status encoder ############################
+
+        self.eps_net = EpsilonNet(
+            res_feat_dim, pair_feat_dim, 
+            num_atoms = num_atoms,
+            modality = self.modality,
+            residue_embed = residue_embed, pair_embed = pair_embed,
+            with_seq_ddpm = (self.seq_diff_version == 'ddpm'), 
+            with_type_emb = with_type_emb,
+            emb_first = emb_first,
+            max_relpos = max_relpos,
+            all_bb_atom = all_bb_atom,
+            **eps_net_opt
+        )
+
+        ########################### modules ###################################
+
+        ###### rotation diffusion ######
+        if not all_bb_atom:
+            self.trans_rot = RotationTransition(num_steps, **trans_rot_opt)
+
+        ###### position diffusion ######
+        self.trans_pos = PositionTransition(num_steps, **trans_pos_opt)
+
+        ###### sequence diffsuion  ######
+ 
+        ### multinomial diffusion
+        if self.seq_diff_version == 'multinomial':
+            self.trans_seq = AminoacidCategoricalTransition(num_steps, **trans_seq_opt)
+
+        ### DDPM
+        elif self.seq_diff_version == 'ddpm':  # ddpm
+            if self.train_version != 'gt':
+                raise Exception('Seq-DDPM only works for JointDiff-x!') 
+            if self.modality != 'sequence':
+                raise Exception('Seq-DDPM only works for sequence-only model!') 
+            self.trans_seq = PositionTransition(num_steps, **trans_pos_opt)
+            self.seq_ddpm_emb = nn.Linear(self.token_size + 1, res_feat_dim)
+
+        else:
+            raise Exception('No sequence diffusion named %s!' % self.seq_diff_version)
+
+        ################################# buffer ##############################
+        self.register_buffer('position_mean', torch.FloatTensor(position_mean).view(1, 1, -1))
+        if isinstance(position_scale, str):
+            self.position_scale =  position_scale
+        else:
+            self.register_buffer(
+                'position_scale', torch.FloatTensor(position_scale).view(1, 1, -1)
+            )  # (1, 1, 1)
+        self.register_buffer('_dummy', torch.empty([0, ]))
+
+        ########################### normalizer ################################
+        self.normalizer = PositionNormalizer(
+            position_mean = self.position_mean, 
+            position_scale = self.position_scale
+        )
+
+
+    ###########################################################################
+    # Position scale and unscale, and other transformations
+    ###########################################################################
+
+    def gt_noise_transfer(self, feat, eps_pred, t):
+        alpha_bar = self.trans_pos.var_sched.alpha_bars[t]  # (N,) 
+        c0 = 1 / (1 - alpha_bar + 1e-8).view(-1, 1, 1)
+        c1 = torch.sqrt(alpha_bar).view(-1, 1, 1)
+        eps_pred = c0 * (feat - c1 * eps_pred) 
+        return eps_pred
+
+
+    ###########################################################################
+    # Losses
+    ###########################################################################
+
+    def loss_cal(self,
+        R_pred, R_ref, p_pred, p_ref, p_ref_ori, s_noisy, c_denoised, s_ref, t, 
+        mask_res, mask_gen, protein_size = None, 
+        denoise_structure = True, denoise_sequence = True,
+        micro = True, posi_loss_version = 'mse',
+        ### distance loss
+        with_dist_loss = False, dist_loss_version = 'mse', threshold_dist = 15.0, dist_clamp = 20.,
+        ### clash loss
+        with_clash = False, threshold_clash = 3.6,
+        ### gap loss
+        with_gap = False, threshold_gap = 3.9,
+        ### distogram loss
+        pair_logit = None,
+        ### random masking
+        motif_factor = 0.0,
+    ):
+        """Loss calculation."""
+
+        loss_dict = {}
+
+        ############ mask generation ##################
+        if motif_factor > 0.0:
+            mask_loss = mask_res
+            mask_motif = mask_gen ^ mask_res  # 1 for motif anf 0 for others
+            mask_factor = mask_gen + motif_factor * mask_motif
+            #print(mask_factor.max(dim=-1))
+        else:
+            mask_loss = mask_gen
+            mask_factor = None
+
+        ############ sequence losses ####################
+        if denoise_sequence:
+            loss_dict['seq'] = sequence_loss(
+                s_noisy, s_ref, c_denoised, t, mask_loss, 
+                micro = micro, version = self.train_version, trans_seq = self.trans_seq,
+                mask_factor = mask_factor,
+            )
+
+        ########### structure losses ####################
+
+        ###### mask process ######
+        N, L = mask_loss.shape
+        if self.all_bb_atom:
+            ### (N, L) to (N, L * 4)
+            mask_loss_pos = mask_loss[:, :, None].expand(-1, -1, 4).reshape(N, -1)
+            mask_factor = mask_factor[:, :, None].expand(-1, -1, 4).reshape(N, -1) if mask_factor is not None else None
+            R_pred, R_ref = None, None
+        else:
+            mask_loss_pos = mask_loss
+
+        ###### loss cal ######
+        if denoise_structure:
+            loss_rot, loss_pos = structure_loss(
+                p_pred, p_ref, R_pred, R_ref, mask_res = mask_loss_pos,
+                version = posi_loss_version, micro = micro,
+                mask_factor = mask_factor,
+            )
+            if loss_rot is not None:
+                loss_dict['rot'] = loss_rot
+            loss_dict['pos'] = loss_pos
+ 
+        ########### distance losses #####################
+        if with_dist_loss or with_clash or with_gap: 
+            if self.all_bb_atom:
+                p_pred = p_pred.reshape(N, L, 4, 3)[:, :, BBHeavyAtom.CA]  # (N, L, 3)
+                p_ref = p_ref.reshape(N, L, 4, 3)[:, :, BBHeavyAtom.CA]  # (N, L, 3)
+
+            loss_dist, loss_clash, loss_gap = distance_loss(
+                coor_pred = p_pred, dist_ref = None, coor_ref = p_ref, mask_res = mask_loss,
+                loss_version = dist_loss_version, threshold_dist = threshold_dist, dist_clamp = dist_clamp,
+                with_clash = with_clash, threshold_clash = threshold_clash,
+                with_gap = with_gap, threshold_gap = threshold_gap,
+            )
+            if with_dist_loss:
+                loss_dict['dist'] = loss_dist
+            if with_clash:
+                loss_dict['clash'] = loss_clash
+            if with_gap:
+                loss_dict['gap'] = loss_gap
+
+        ########### distogram losses ####################
+        if self.with_distogram:
+            loss_dict['distogram'] = distogram_loss(
+                logits = pair_logit,
+                pseudo_beta = p_ref_ori,
+                pseudo_beta_mask = mask_res
+            )
+
+        return loss_dict
+
+
+    ###########################################################################
+    # forward function (get the loss)
+    ###########################################################################
+
+    def forward(self, 
+        v_0, p_0, s_0, 
+        mask_res, mask_gen,
+        protein_size = None,t = None, batch = None,
+        res_feat = None,  pair_feat = None, 
+        denoise_structure = True, denoise_sequence = True, 
+        ###### for losses ######
+        micro = True, posi_loss_version = 'mse', unnorm_first = True,
+        ### distance loss
+        with_dist_loss = False, dist_loss_version = 'mse', threshold_dist = 15.0, dist_clamp = 20.,
+        ### clash loss
+        with_clash = False, threshold_clash = 3.6,
+        ### gap loss
+        with_gap = False, threshold_gap = 3.9,
+        ### random masking
+        motif_factor = 0.0,
+    ):
+        """
+        Args:
+            ### basic inputs
+            v_0: orientation vector, (N, L, 3)
+            p_0: CA coordinates, (N, L, 3)
+            s_0: aa sequence, (N, L) 
+            res_feat: residue feature, (N, L, res_feat_dim) or None
+            pair_feat: pair-wise edge feature, (N, L, L, pair_feat_dim) or None
+            mask_res: True for valid tokens other than paddings; (N, L)
+            mask_gen: True for target tokens; (N, L)
+            protein_size: True for valid tokens other than paddings; (N, L)
+            denoise_structure: whether do the structure diffusion; bool
+            denoise_sequence: whether do the sequence diffusion; bool
+            t: None (than will do the random sampling) or (N, )
+
+        """
+
+        N, L = p_0.shape[:2]
+        device = p_0.device
+        if protein_size is None:
+            protein_size = mask_res.sum(dim=1)  # (N,) 
+
+        denoise_structure = denoise_structure and (self.modality in {'joint', 'structure', 'stru_pred'})
+        denoise_sequence = denoise_sequence and (self.modality in {'joint', 'sequence', 'seq_pred'})
+
+        #############################################
+        # data preprocess 
+        #############################################
+
+        ###### step sampling, t ~ U[0, step] ######
+        if t is None:  # t: None or (N,)
+            t = torch.randint(
+                0, self.num_steps, (N,), dtype=torch.long, device=device
+            )
+
+        ###### initialization ######
+        if self.modality == 'sequence':
+            ### only sequence is needed
+            if not self.all_bb_atom:
+                v_0 = torch.zeros(v_0.shape, device = device)
+            p_0 = torch.zeros(p_0.shape, device = device)
+        elif self.modality == 'structure':
+            ### only structure is needed 
+            s_0 = torch.zeros(s_0.shape, device = device).long()
+
+        ###### position and rotation mat  ######
+        ### normalize position
+        p_0 = self.normalizer._normalize_position(
+            p_0, protein_size = protein_size
+        )
+        ### position mask and 
+        if self.all_bb_atom:
+            # (N, L) to (N, L, 4)
+            mask_pos_gen = mask_gen[:, :, None].expand(-1, -1, 4)
+            R_0 = None
+        else:
+            mask_pos_gen = mask_gen
+            ### transform orientation vector to SO(3)
+            R_0 = so3vec_to_rotation(v_0)  # (N, L, 3, 3)
+
+        #############################################
+        # forward (add noise, 0 to t) 
+        #############################################
+
+        ############## for structure ################
+
+        ###### add noise to structure (orientation and CA-coor) ######
+        if denoise_structure:
+            ### Add noise to rotation
+            v_noisy = None
+            if not self.all_bb_atom:
+                v_noisy, _ = self.trans_rot.add_noise(
+                    v_0, t, mask_generate = mask_gen
+                )   # noised orientation vector; (N, L, 3) 
+            
+            ### Add noise to positions 
+            p_noisy, eps_p = self.trans_pos.add_noise(
+                p_0.reshape(N, -1, 3), t, mask_generate = mask_pos_gen.reshape(N, -1)
+            )
+            if self.all_bb_atom:
+                p_noisy = p_noisy.reshape(N, L, 4, 3)
+            # p_noisy: noised position, (N, L, 3) or (N, L, 4, 3); 
+            #     ~ N(sqrt(alpha_bar[t]) * p_0, (1 - alpha_bar[t]))
+            # eps_p: Gaussian noise, (N, L, 3)
+
+        ###### fix the structure ######
+        else:
+            v_noisy = v_0.clone()
+            p_noisy = p_0.clone()
+            eps_p = torch.zeros_like(p_noisy)
+
+        ################# for sequence ##############
+
+        ###### multinomial diffusion ######
+        if denoise_sequence and self.seq_diff_version == 'multinomial':
+            ### Add noise to sequence (multinomial diffusion)
+            # s_noise_prob: noised sequence distribution; (N, L, K = 20)
+            #     s_noise_prob = alpha_bar * onehot(s_0) + ((1 - alpha_bar) / K); 
+            # s_noisy: noised sequence, s_noisy = sample(s_noise_prob); (N, L)
+            s_noise_prob, s_noisy = self.trans_seq.add_noise(
+                s_0, t, method = 'multinomial', mask_generate = mask_gen
+            )
+
+        ###### DDPM ######
+        elif denoise_sequence and self.seq_diff_name == 'ddpm':
+            s_onehot = F.one_hot(s_0, num_classes=self.token_size + 1)  # one-hot encoding: (N, L, 21)
+            s_onehot = s_onehot.float() * 2 - 1
+            s_emb = self.seq_ddpm_emb(s_onehot)  # (N, L, emb)
+            s_noisy, _ = self.trans_seq.add_noise(s_emb, t, mask_generate = mask_gen)
+           
+        ###### exception
+        elif denoise_sequence:
+            raise Exception('Error! No sequencediffusion named %s!' % self.seq_diff_name)
+
+        ###### fix the sequence ######
+        else:
+            s_noisy = s_0.clone()
+
+        #############################################
+        # reverse (denoise, t to t-1)
+        #############################################
+
+        ################# sequence diffusion ###################################
+        if denoise_sequence and self.remember_padding:
+            s_noisy[~mask_res] = s_0[~mask_res]
+
+        ############################## joint diffusion #########################
+        beta = self.trans_pos.var_sched.betas[t]  # (N,)
+        v_pred, R_pred, p_pred, c_denoised, pair_feat = self.eps_net(
+            v_noisy, p_noisy, s_noisy, beta, mask_res, mask_gen, 
+            res_feat = res_feat, pair_feat = pair_feat, batch = batch
+        )   
+        # v_pred: dire_(t-1); (N, L, 3)
+        # R_pred: O_(t-1); (N, L, 3, 3)
+        # eps_p_pred: G(R_t); (N, L, 3) or (N, L, 4, 3);
+        #     mu_(t-1) = (1/sqrt(alpha_t)) * (x_t - (beta_t / sqrt(1 - alpha_bar_t)) * G(R_t))
+        # c_denoised: F(R_t), predicted multinomial distribution; (N, L, K); s_(t-1) ~ F(R_t)
+
+        #############################################
+        # distogram
+        #############################################
+
+        if self.with_distogram:
+            pair_logit = self.disto_predictor(pair_feat)
+        else:
+            pair_logit = None
+
+        #############################################
+        # Loss Calculation
+        #############################################
+
+        ###### label process ######
+        p_ref = p_0 if self.train_version == 'jointdiff-x' else eps_p
+        if self.all_bb_atom:
+            p_ref = p_ref.reshape(N, -1, 3)  # (N, L*4, 3)
+            p_pred = p_pred.reshape(N, -1, 3)  # (N, L*4, 3)
+
+        if unnorm_first:
+            p_pred, p_ref, protein_size = self.normalizer.unnormalize_for_loss(
+                p_pred, p_ref, protein_size, mask_res
+            )
+            p_ref_ori = p_ref  # (N, L, 3) or (N, L*4, 3)
+        else:
+            p_ref_ori = self.normalizer._unnormalize_position(
+                p_ref, protein_size = protein_size
+            )  # (N, L, 3) or (N, L*4, 3)
+
+        if self.all_bb_atom:
+            p_ref_ori = p_ref_ori.reshape(N, L, 4, 3)[:, :, BBHeavyAtom.CA]  # (N, L, 3)
+            
+        ###### loss caculation ######
+        loss_dict = self.loss_cal(
+            R_pred = R_pred, R_ref = R_0, 
+            p_pred = p_pred, p_ref = p_ref, p_ref_ori = p_ref_ori, 
+            s_noisy = s_noisy, c_denoised = c_denoised, s_ref = s_0, t = t,
+            mask_res = mask_res, mask_gen = mask_gen, protein_size = protein_size, 
+            denoise_structure = denoise_structure, denoise_sequence = denoise_sequence,
+            micro = micro, posi_loss_version = posi_loss_version,
+            with_dist_loss = with_dist_loss, dist_loss_version = dist_loss_version,
+            threshold_dist = threshold_dist, dist_clamp = dist_clamp, 
+            with_clash = with_clash, threshold_clash = threshold_clash,
+            with_gap = with_gap, threshold_gap = threshold_gap,
+            pair_logit = pair_logit, motif_factor = motif_factor,
+        )
+
+        return loss_dict
+
+
+    ###########################################################################
+    # sampling functions
+    ###########################################################################
+
+    @torch.no_grad()
+    def sample(self, 
+        mask_res, mask_gen,
+        v = None, p = None, s = None, 
+        res_feat = None, pair_feat = None, 
+        protein_size = None,
+        sample_structure=True, sample_sequence=True,
+        batch = None, 
+        t_bias = -1,
+        seq_sample_method = 'multinomial',
+        pbar=False,
+        fix_motif = True,
+    ):
+        """
+        Args:
+            v: Orientations of contextual residues, (N, L, 3).
+            p: Positions of contextual residues, (N, L, 3).
+            s: Sequence of contextual residues, (N, L).
+        """
+
+        #######################################################################
+        # Preprocess
+        #######################################################################
+
+        N, L = mask_res.shape
+        device = mask_res.device
+        if protein_size is None:
+            protein_size = mask_res.sum(dim=1)  # (N,)
+
+        ### normalization (for motif-scaffolding)
+        if p is not None:
+            p = self.normalizer._normalize_position(
+                p, protein_size = protein_size
+            )
+
+        #######################################################################
+        # Initialization 
+        #######################################################################
+
+        batch, traj = self.sample_init(
+            mask_res = mask_res, 
+            mask_generate = mask_gen, 
+            protein_size = protein_size,
+            v = v, p = p, s = s,
+            sample_structure = sample_structure, 
+            sample_sequence = sample_sequence,
+            batch = batch
+        )
+
+        ######################################################################## 
+        # denoising steps 
+        ########################################################################
+
+        if pbar:
+            pbar = functools.partial(tqdm, total=self.num_steps, desc='Sampling')
+        else:
+            pbar = lambda x: x
+
+        for t in pbar(range(self.num_steps, 0, -1)): # from T to 1
+            if self.all_bb_atom:
+                v_t = None
+                p_t, s_t = traj[t]
+            else:
+                v_t, p_t, s_t = traj[t]
+            p_t = self.normalizer._normalize_position(
+                p_t, protein_size = protein_size
+            )
+           
+            ############### beta coefficient calculation ######################
+            beta = self.trans_pos.var_sched.betas[t + t_bias].expand([N, ])  # (N,)
+            t_tensor = torch.full(
+                [N, ], fill_value=t + t_bias, dtype=torch.long, device=device
+            )
+
+            ################## score prediction ###############################
+            v_next, R_next, eps_p, c_denoised, _ = self.eps_net(
+                v_t, p_t, s_t, beta, mask_res = mask_res, mask_gen = mask_gen,
+                res_feat = res_feat, pair_feat = pair_feat, batch = batch
+            )   # (N, L, 3), (N, L, 3, 3), (N, L, 3)
+
+            ######################## denoising ################################
+
+            ###### structure ######
+            ### fix the structure
+            if not sample_structure:
+                v_next = v_t 
+                p_next = p_t
+            ### jointdiff-x
+            elif self.train_version == 'jointdiff-x':
+                ### rotation
+                if not self.all_bb_atom:
+                    v_next = self.trans_rot.denoise(v_t, v_next, t_tensor)
+                ### position
+                if t > 1:
+                    p_next, _ = self.trans_pos.add_noise(
+                        eps_p.reshape(N, -1, 3), t_tensor - 1, mask_generate = mask_pos_gen.reshape(N, -1)
+                    )
+                    if self.all_bb_atom:
+                        p_next = p_next.reshape(N, L, -1, 3)
+                else:
+                    p_next = eps_p
+            ### jointdiff
+            else:
+                v_next = self.trans_rot.denoise(v_t, v_next, t_tensor)
+                p_next = self.trans_pos.denoise(p_t, eps_p, t_tensor)
+
+            ### fix the un-targeted region
+            if fix_motif or t > 1:
+                if not self.all_bb_atom:
+                    v_next = torch.where(
+                        mask_gen[:, :, None].expand_as(v_next), v_next, v_t
+                    )
+                    p_next = torch.where(
+                        mask_gen[:, :, None].expand_as(p_next), p_next, p_t
+                    )
+                else:
+                    p_next = torch.where(
+                        mask_gen[:, :, None, None].expand_as(p_next), p_next, p_t
+                    )
+
+            ###### sequence ######
+            ### fix the sequence
+            if not sample_sequence:
+                s_next = s_t
+            ### jointdiff-x
+            elif self.train_version == 'jointdiff-x':
+                s_next = aa_sampling(
+                    c_denoised, seq_sample_method = seq_sample_method
+                )
+                if t > 1:
+                    _, s_next = self.trans_seq.add_noise(
+                        s_next, t_tensor - 1, method = seq_sample_method,
+                        mask_generate = mask_gen
+                    )
+            ### jointdiff
+            else:
+                _, s_next = self.trans_seq.denoise(s_t, c_denoised, t_tensor)
+
+            ### fix the un-targeted region
+            s_next = torch.where(mask_gen, s_next, s_t)
+
+            ############################ save the states ######################
+
+            traj[t-1] = (
+                v_next, 
+                self.normalizer._unnormalize_position(
+                    p_next, protein_size = protein_size
+                ), 
+                s_next
+            )
+            traj[t] = tuple(x.cpu() for x in traj[t] if x is not None)    # Move previous states to cpu memory.
+
+        #### Move last states to cpu memory.
+        traj[0] = tuple(x.cpu() for x in traj[0] if x is not None)
+
+        return batch, traj
+
+
+    def backbone_gen(self, 
+        mask_res, mask_gen,
+        protein_size = None, 
+        res_feat = None, pair_feat = None, 
+        v = None, p = None, s = None,
+        sample_structure=True, sample_sequence=True,
+        batch = None,
+        pbar=False, t_bias = -1,
+    ):
+        """
+        Generate the backbone structure given the size.
+
+        Args:
+            res_feat:  (N, L_max); True for valid tokens and False for the others.
+        Return:
+            dict: t: {coor: (L, 4, 3); seq: str} x N
+        """
+        N, L = mask_res.shape
+        if protein_size is None:
+            protein_size = mask_res.sum(dim=1)  # (N,)
+
+        ###### sampling ######
+        batch, traj = self.sample(
+            mask_res = mask_res, mask_gen = mask_gen,
+            v = v, p = p, s = s,
+            res_feat = res_feat, pair_feat = pair_feat,
+            protein_size = protein_size,
+            sample_structure = sample_structure, 
+            sample_sequence = sample_sequence,
+            batch = batch,
+            pbar = pbar,  
+            t_bias = t_bias
+        )
+
+        ###### backbone structure ######
+        out_dict = {}
+        for t in traj.keys():
+            out_dict[t] = []
+
+            ### structure
+            if self.all_bb_atom:
+                bb_coor_batch = traj[t][0]
+            else:
+                R = so3vec_to_rotation(traj[t][0])
+                bb_coor_batch = reconstruct_backbone(
+                    R, traj[t][1], traj[t][2], 
+                    batch['chain_nb'].cpu(), 
+                    batch['res_nb'].cpu(), 
+                    mask_res.cpu()
+                )  # (N, L_max, 4, 3)
+
+            ### save the results
+            for i, bb_coor in enumerate(bb_coor_batch):
+                length = int(protein_size[i])
+                seq = seq_recover(traj[t][-1][i], length = length)
+                out_dict[t].append(
+                    {'coor': bb_coor[:length], 'seq': seq}
+                )
+
+        return out_dict, traj
+
+
+    ###########################################################################
+    # utility functions
+    ###########################################################################
+
+    def sample_init(self,
+        mask_res, mask_generate, protein_size,
+        v = None, p = None, s = None,
+        sample_structure = True, sample_sequence = True,
+        batch = None,
+    ):
+        """Initialization for diffusion sampling. """
+
+        N, L = mask_res.shape
+        device = mask_res.device
+
+        if batch is None:
+            batch = {}
+        if 'res_nb' not in batch:
+            res_nb = torch.zeros(N, L).int().to(device)
+            res_nb[:] = torch.arange(1, L+1).to(device)
+            batch['res_nb'] =  res_nb
+        if 'chain_nb' not in batch:
+            batch['chain_nb'] = mask_res.int()
+        if 'mask_heavyatom' not in batch:
+            batch['mask_heavyatom'] = mask_res[:,:,None].repeat(1, 1, 4)
+
+        ####### structure ######
+        # Set the orientation and position of residues to be predicted to random values
+        if sample_structure and self.all_bb_atom:
+            v_init = None
+            p_init = torch.randn(N, L, 4, 3).to(device)
+            if p is not None:
+                p_init = torch.where(
+                    mask_generate[:, :, None, None].expand_as(p), p_init, p
+                )
+        elif sample_structure:
+            v_init = random_uniform_so3([N, L], device = device)
+            p_init = torch.randn(N, L, 3).to(device)
+            ### motif-scaffolding
+            if p is not None:
+                v_init = torch.where(
+                    mask_generate[:, :, None].expand_as(v), v_init, v
+                )
+                p_init = torch.where(
+                    mask_generate[:, :, None].expand_as(p), p_init, p
+                )
+        elif (v is not None) and (p is not None):
+            v_init, p_init = v, p
+        else:
+            raise ValueError(
+                'Structure (v, p) needed when fixing the structure!'
+            )
+
+        ###### sequence ######
+        if sample_sequence:
+            s_init = torch.randint(
+                low=0, high=20, size = (N, L), device = device
+            )
+            if self.remember_padding:
+                s_init[~mask_res] = self.token_size
+            ### motif-scaffolding  
+            if s is not None:
+                s_init = torch.where(mask_generate, s_init, s)
+        elif s is not None:
+            s_init = s
+        else:
+            raise ValueError('Sequence (s) needed when fixing the sequence!')
+
+        ###### container ######
+        traj = {self.num_steps: (
+            v_init,
+            self.normalizer._unnormalize_position(
+                p_init, protein_size = protein_size
+            ),
+            s_init
+        )}
+        traj[self.num_steps] = (x for x in traj[self.num_steps] if x is not None)
+
+        return batch, traj
+
+    ########################### from RFdiffusion ##############################
+ 
+    def reverse_step(self, s_t, p_t, r_t, s_0, p_0, r_0, mask_gen, t):
+        #p_t = 
+
+        ### rotation score 
+        #s = 
+
+        epsilon_1 = torch.randn(r_t.shape)
+        epsilon_2 = torch.randn(r_t.shape)
+        epsilon_3 = torch.randn(r_t.shape)
+ 
+        #r_update = 
+
+        return None
+
+    ########################### from BOLTZ-1 (AF3, EDM) #######################
+
+    def edm_schedule(self, num_sampling_steps=None):
+        if num_sampling_steps:
+            num_sampling_steps = self.num_steps
+
+        num_sampling_steps = default(num_sampling_steps, self.num_sampling_steps)
+        inv_rho = 1 / self.rho
+
+        steps = torch.arange(
+            num_sampling_steps, device=self.device, dtype=torch.float32
+        )
+        sigmas = (
+            self.sigma_max**inv_rho
+            + steps
+            / (num_sampling_steps - 1)
+            * (self.sigma_min**inv_rho - self.sigma_max**inv_rho)
+        ) ** self.rho
+
+        sigmas = sigmas * self.sigma_data
+        sigmas = F.pad(sigmas, (0, 1), value=0.0)  # last step is sigma value of 0.
+
+        return sigmas
+
+
+    def edm_sampling(self, num_sampling_steps=None):
+        return None

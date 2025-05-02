@@ -1,0 +1,54 @@
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.0111; macro-SR=0.0111
+
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.0581; macro-SR=0.0581
+
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.1141; macro-SR=0.1141
+
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.1225; macro-SR=0.1225
+
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.1312; macro-SR=0.1312
+
+latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps_v2
+############################################################
+python foldability_cal.py --seq_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps_v2/seq_ems-if/ --gt_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//samples/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps_v2/files_sample_gen/ --out_path /scratch/user/shaowen1994/DiffCodesign_local/Results/latentDiff//foldability//latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps_v2_esm-if.pkl --mpnn_format 0
+
+****************************************************
+100 reference sequences.
+1000 target sequences.
+100 samples in all: micro-SR=0.1500; macro-SR=0.1500
+

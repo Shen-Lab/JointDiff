@@ -1,0 +1,78 @@
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-100.0_micro-posi+mse
+TM-score
+TM-score: macro=0.295346; micro=0.295346
+RMSD
+RMSD: macro=3.738704; micro=3.738704
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-10.0_micro-posi+mse
+TM-score
+TM-score: macro=0.279905; micro=0.279905
+RMSD
+RMSD: macro=4.280614; micro=4.280614
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-1.0_micro-posi+mse
+TM-score
+TM-score: macro=0.296937; micro=0.296937
+RMSD
+RMSD: macro=4.183092; micro=4.183092
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-20.0_micro-posi+mse
+TM-score
+TM-score: macro=0.356830; micro=0.356830
+RMSD
+RMSD: macro=3.737965; micro=3.737965
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram
+TM-score
+TM-score: macro=0.376904; micro=0.376904
+RMSD
+RMSD: macro=3.633379; micro=3.633379
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash
+TM-score
+TM-score: macro=0.348271; micro=0.348271
+RMSD
+RMSD: macro=3.866922; micro=3.866922
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1
+TM-score
+TM-score: macro=0.346838; micro=0.346838
+RMSD
+RMSD: macro=3.829439; micro=3.829439
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse
+TM-score
+TM-score: macro=0.419418; micro=0.419418
+RMSD
+RMSD: macro=3.148784; micro=3.148784
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram
+TM-score
+TM-score: macro=0.414727; micro=0.414727
+RMSD
+RMSD: macro=3.425308; micro=3.425308
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+TM-score
+TM-score: macro=0.388358; micro=0.388358
+RMSD
+RMSD: macro=3.282803; micro=3.282803
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+TM-score
+TM-score: macro=0.368665; micro=0.368665
+RMSD
+RMSD: macro=3.294227; micro=3.294227
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt
+TM-score
+TM-score: macro=0.379766; micro=0.379766
+RMSD
+RMSD: macro=3.645134; micro=3.645134
+
+Output/output_consist-struc_jointdiff-x_joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+TM-score
+TM-score: macro=0.270201; micro=0.270201
+RMSD
+RMSD: macro=3.797979; micro=3.797979
+

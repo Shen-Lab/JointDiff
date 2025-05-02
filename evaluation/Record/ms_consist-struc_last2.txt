@@ -1,0 +1,119 @@
+micro-posi+fape
+************************************************************
+TM-score
+TM-score: macro=0.309264; micro=0.309264
+RMSD
+RMSD: macro=5.235352; micro=5.235352
+
+micro-posi+mse
+************************************************************
+TM-score
+TM-score: macro=0.352615; micro=0.352615
+RMSD
+RMSD: macro=4.776882; micro=4.776882
+
+micro-posi+mse-align
+************************************************************
+TM-score
+TM-score: macro=0.225150; micro=0.225150
+RMSD
+RMSD: macro=5.509670; micro=5.509670
+
+micro-posi+mse-align-detach
+************************************************************
+TM-score
+TM-score: macro=0.214741; micro=0.214741
+RMSD
+RMSD: macro=5.417941; micro=5.417941
+
+micro-posi+mse-align-dist+l1
+************************************************************
+TM-score
+TM-score: macro=0.263064; micro=0.263064
+RMSD
+RMSD: macro=5.517615; micro=5.517615
+
+micro-posi+mse-align-dist+mse
+************************************************************
+TM-score
+TM-score: macro=0.278294; micro=0.278294
+RMSD
+RMSD: macro=5.362431; micro=5.362431
+
+micro-posi+mse-align-dist+mse-distogram
+************************************************************
+TM-score
+TM-score: macro=0.354556; micro=0.354556
+RMSD
+RMSD: macro=4.784188; micro=4.784188
+
+micro-posi+mse-align-dist+mse-distogram-clash
+************************************************************
+TM-score
+TM-score: macro=0.325500; micro=0.325500
+RMSD
+RMSD: macro=5.091141; micro=5.091141
+
+micro-posi+mse-align-distogram
+************************************************************
+TM-score
+TM-score: macro=0.311883; micro=0.311883
+RMSD
+RMSD: macro=4.903178; micro=4.903178
+
+micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+TM-score
+TM-score: macro=0.260435; micro=0.260435
+RMSD
+RMSD: macro=5.649670; micro=5.649670
+
+rm_micro-posi+fape
+************************************************************
+TM-score
+TM-score: macro=0.313867; micro=0.313867
+RMSD
+RMSD: macro=5.182537; micro=5.182537
+
+rm_micro-posi+mse
+************************************************************
+TM-score
+TM-score: macro=0.312171; micro=0.312171
+RMSD
+RMSD: macro=5.080782; micro=5.080782
+
+rm_micro-posi+mse-align
+************************************************************
+TM-score
+TM-score: macro=0.176416; micro=0.176416
+RMSD
+RMSD: macro=5.552795; micro=5.552795
+
+rm_micro-posi+mse-align-detach
+************************************************************
+TM-score
+TM-score: macro=0.272568; micro=0.272568
+RMSD
+RMSD: macro=5.277093; micro=5.277093
+
+rm_micro-posi+mse-align-dist+l1
+************************************************************
+TM-score
+TM-score: macro=0.277701; micro=0.277701
+RMSD
+RMSD: macro=5.566565; micro=5.566565
+
+rm_micro-posi+mse-align-dist+mse
+************************************************************
+TM-score
+TM-score: macro=0.272178; micro=0.272178
+RMSD
+RMSD: macro=5.462003; micro=5.462003
+
+rm_micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+TM-score
+TM-score: macro=0.239944; micro=0.239944
+RMSD
+RMSD: macro=5.232901; micro=5.232901
+

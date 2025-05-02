@@ -1,0 +1,72 @@
+codesign_RememberPadding_2024_01_29__20_57_00
+1806 sample dictionaries in all.
+137930 angles tuples in all.
+Clash: mean=8.0354, min=0, median=5, max=57, std=8.5426
+Size: mean=137.3599, min=20, median=145, max=200, std=44.2865
+phi: JSD=0.8847; KLD=3.2743
+psi: JSD=1.0560; KLD=4.1975
+omega: JSD=0.2625; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale5.0_2024_01_20__16_37_11
+1810 sample dictionaries in all.
+133518 angles tuples in all.
+Clash: mean=10.1547, min=0, median=9, max=54, std=7.6566
+Size: mean=139.6452, min=20, median=147, max=200, std=43.2546
+phi: JSD=0.7184; KLD=2.8840
+psi: JSD=0.6355; KLD=2.4451
+omega: JSD=0.4349; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_2024_01_20__16_37_11
+732 sample dictionaries in all.
+24471 angles tuples in all.
+Clash: mean=110.2077, min=5, median=91, max=604, std=83.3805
+Size: mean=143.8387, min=20, median=155, max=200, std=42.9752
+phi: JSD=2.2321; KLD=13.0629
+psi: JSD=4.6365; KLD=25.9211
+omega: JSD=0.8683; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step2_lr1.e-4_wd0.0_2023_12_15__00_50_03
+1810 sample dictionaries in all.
+122888 angles tuples in all.
+Clash: mean=523.5901, min=50, median=521, max=1233, std=251.7043
+Size: mean=135.5408, min=20, median=143, max=200, std=45.3278
+phi: JSD=2.8589; KLD=15.8439
+psi: JSD=3.0399; KLD=14.5847
+omega: JSD=3.8166; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step10_lr1.e-4_wd0.0_2023_05_01__17_18_33
+1810 sample dictionaries in all.
+142919 angles tuples in all.
+Clash: mean=40.2133, min=0, median=33, max=199, std=33.4429
+Size: mean=136.6853, min=20, median=145, max=200, std=45.4541
+phi: JSD=0.7523; KLD=2.8513
+psi: JSD=0.6682; KLD=2.6597
+omega: JSD=0.1068; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step50_lr1.e-4_wd0.0_2023_05_01__17_18_33
+1809 sample dictionaries in all.
+141128 angles tuples in all.
+Clash: mean=8.5141, min=0, median=6, max=69, std=9.4022
+Size: mean=135.6387, min=20, median=143, max=200, std=45.2856
+phi: JSD=0.6054; KLD=2.2278
+psi: JSD=0.8162; KLD=3.2715
+omega: JSD=0.2018; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step500_lr1.e-4_wd0.0_2023_05_01__17_18_33
+1207 sample dictionaries in all.
+9552 angles tuples in all.
+Clash: mean=8.8343, min=0, median=7, max=57, std=7.5560
+Size: mean=122.2559, min=20, median=124, max=200, std=46.8926
+phi: JSD=1.2018; KLD=4.7577
+psi: JSD=1.8578; KLD=7.7068
+omega: JSD=0.6446; KLD=inf
+
+codesign_diffab_complete_gen_share-true_step1000_lr1.e-4_wd0.0_2023_05_01__17_05_48
+574 sample dictionaries in all.
+12899 angles tuples in all.
+Clash: mean=22.0383, min=0, median=19, max=105, std=16.4312
+Size: mean=135.0916, min=20, median=146, max=200, std=47.1535
+phi: JSD=1.9996; KLD=7.4997
+psi: JSD=4.0419; KLD=15.4690
+omega: JSD=2.6019; KLD=inf
+

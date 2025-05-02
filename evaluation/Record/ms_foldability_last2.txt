@@ -1,0 +1,56 @@
+micro-posi+fape
+************************************************************
+300 samples in all: micro-SR=0.2079; macro-SR=0.2079
+
+micro-posi+mse
+************************************************************
+300 samples in all: micro-SR=0.1938; macro-SR=0.1938
+
+micro-posi+mse-align
+************************************************************
+300 samples in all: micro-SR=0.2292; macro-SR=0.2292
+
+micro-posi+mse-align-detach
+************************************************************
+300 samples in all: micro-SR=0.2364; macro-SR=0.2364
+
+micro-posi+mse-align-dist+l1
+************************************************************
+300 samples in all: micro-SR=0.2423; macro-SR=0.2423
+
+micro-posi+mse-align-dist+mse
+************************************************************
+300 samples in all: micro-SR=0.2422; macro-SR=0.2422
+
+micro-posi+mse-align-dist+mse-distogram
+************************************************************
+300 samples in all: micro-SR=0.2374; macro-SR=0.2374
+
+micro-posi+mse-align-dist+mse-distogram-clash
+************************************************************
+300 samples in all: micro-SR=0.2767; macro-SR=0.2767
+
+micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+300 samples in all: micro-SR=0.2452; macro-SR=0.2452
+
+rm_micro-posi+fape
+************************************************************
+300 samples in all: micro-SR=0.2160; macro-SR=0.2160
+
+rm_micro-posi+mse-align
+************************************************************
+300 samples in all: micro-SR=0.3284; macro-SR=0.3284
+
+rm_micro-posi+mse-align-dist+l1
+************************************************************
+300 samples in all: micro-SR=0.2390; macro-SR=0.2390
+
+rm_micro-posi+mse-align-dist+mse
+************************************************************
+300 samples in all: micro-SR=0.2360; macro-SR=0.2360
+
+rm_micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+300 samples in all: micro-SR=0.2669; macro-SR=0.2669
+

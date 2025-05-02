@@ -1,0 +1,51 @@
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last
+300 samples in all: micro-SR=0.2123; macro-SR=0.2123
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.2081; macro-SR=0.2081
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2268; macro-SR=0.2268
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.2330; macro-SR=0.2330
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2384; macro-SR=0.2384
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.1989; macro-SR=0.1989
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2372; macro-SR=0.2372
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2794; macro-SR=0.2794
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2331; macro-SR=0.2331
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2662; macro-SR=0.2662
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape_2025_04_08__22_17_21_last
+300 samples in all: micro-SR=0.1913; macro-SR=0.1913
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2148; macro-SR=0.2148
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.3312; macro-SR=0.3312
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-detach_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2353; macro-SR=0.2353
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+l1_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.2393; macro-SR=0.2393
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.2353; macro-SR=0.2353
+
+output_ms_foldability_jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.2608; macro-SR=0.2608
+

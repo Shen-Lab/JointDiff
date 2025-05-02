@@ -1,0 +1,85 @@
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1445; macro-SR=0.1445
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0504; macro-SR=0.0504
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1096; macro-SR=0.1096
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1141; macro-SR=0.1141
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0963; macro-SR=0.0963
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1345; macro-SR=0.1345
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1154; macro-SR=0.1154
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster_transformer-12
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1088; macro-SR=0.1088
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster_transformer-24
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0069; macro-SR=0.0069
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster_transformer-48
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0051; macro-SR=0.0051
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_noise_Faster
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0782; macro-SR=0.0782
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1501; macro-SR=0.1501
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_noise_Faster_100steps
+720 reference sequences.
+7200 target sequences.
+720 samples in all: micro-SR=0.1357; macro-SR=0.1357
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_Faster_100steps
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1609; macro-SR=0.1609
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-mha_Faster_100steps
+20 reference sequences.
+200 target sequences.
+20 samples in all: micro-SR=0.3963; macro-SR=0.3963
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_gt_Faster
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.1370; macro-SR=0.1370
+
+../Results/latentDiff/SampleBackup/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_noise_Faster
+740 reference sequences.
+7400 target sequences.
+740 samples in all: micro-SR=0.0587; macro-SR=0.0587
+

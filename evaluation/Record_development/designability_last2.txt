@@ -1,0 +1,348 @@
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last_2
+TM-score
+TM-score: macro=0.570446; micro=0.570446
+RMSD
+RMSD: macro=2.943734; micro=2.943734
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_last
+TM-score
+TM-score: macro=0.642767; micro=0.642767
+RMSD
+RMSD: macro=2.635270; micro=2.635270
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_last2
+TM-score
+TM-score: macro=0.619726; micro=0.619726
+RMSD
+RMSD: macro=2.728328; micro=2.728328
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_last
+TM-score
+TM-score: macro=0.598697; micro=0.598697
+RMSD
+RMSD: macro=2.713414; micro=2.713414
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_last2
+TM-score
+TM-score: macro=0.660143; micro=0.660143
+RMSD
+RMSD: macro=2.552726; micro=2.552726
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_50_28_last2
+TM-score
+TM-score: macro=0.569661; micro=0.569661
+RMSD
+RMSD: macro=2.970881; micro=2.970881
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.607092; micro=0.607092
+RMSD
+RMSD: macro=2.823552; micro=2.823552
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.184148; micro=0.184148
+RMSD
+RMSD: macro=4.424029; micro=4.424029
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.187260; micro=0.187260
+RMSD
+RMSD: macro=4.261188; micro=4.261188
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.194903; micro=0.194903
+RMSD
+RMSD: macro=4.416623; micro=4.416623
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.204627; micro=0.204627
+RMSD
+RMSD: macro=4.375205; micro=4.375205
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.531440; micro=0.531440
+RMSD
+RMSD: macro=3.020988; micro=3.020988
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.526618; micro=0.526618
+RMSD
+RMSD: macro=2.955413; micro=2.955413
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.436245; micro=0.436245
+RMSD
+RMSD: macro=3.300102; micro=3.300102
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.198063; micro=0.198063
+RMSD
+RMSD: macro=4.504975; micro=4.504975
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.542004; micro=0.542004
+RMSD
+RMSD: macro=3.135709; micro=3.135709
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.584459; micro=0.584459
+RMSD
+RMSD: macro=2.709615; micro=2.709615
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_last
+TM-score
+TM-score: macro=0.592351; micro=0.592351
+RMSD
+RMSD: macro=2.733773; micro=2.733773
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_last2
+TM-score
+TM-score: macro=0.647140; micro=0.647140
+RMSD
+RMSD: macro=2.571546; micro=2.571546
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_last
+TM-score
+TM-score: macro=0.573645; micro=0.573645
+RMSD
+RMSD: macro=2.653371; micro=2.653371
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_last2
+TM-score
+TM-score: macro=0.648574; micro=0.648574
+RMSD
+RMSD: macro=2.498203; micro=2.498203
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_last
+TM-score
+TM-score: macro=0.400016; micro=0.400016
+RMSD
+RMSD: macro=3.111514; micro=3.111514
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_last2
+TM-score
+TM-score: macro=0.472976; micro=0.472976
+RMSD
+RMSD: macro=3.126212; micro=3.126212
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_last
+TM-score
+TM-score: macro=0.578675; micro=0.578675
+RMSD
+RMSD: macro=2.847935; micro=2.847935
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_last2
+TM-score
+TM-score: macro=0.552356; micro=0.552356
+RMSD
+RMSD: macro=2.816980; micro=2.816980
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.547870; micro=0.547870
+RMSD
+RMSD: macro=3.175822; micro=3.175822
+
+joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_last
+TM-score
+TM-score: macro=0.446167; micro=0.446167
+RMSD
+RMSD: macro=3.251322; micro=3.251322
+
+joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_last2
+TM-score
+TM-score: macro=0.481355; micro=0.481355
+RMSD
+RMSD: macro=3.056147; micro=3.056147
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last_2
+TM-score
+TM-score: macro=0.357429; micro=0.357429
+RMSD
+RMSD: macro=4.833784; micro=4.833784
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.350724; micro=0.350724
+RMSD
+RMSD: macro=4.812436; micro=4.812436
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.234620; micro=0.234620
+RMSD
+RMSD: macro=5.412988; micro=5.412988
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.229402; micro=0.229402
+RMSD
+RMSD: macro=5.211503; micro=5.211503
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.275294; micro=0.275294
+RMSD
+RMSD: macro=5.404916; micro=5.404916
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.280908; micro=0.280908
+RMSD
+RMSD: macro=5.403135; micro=5.403135
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.355905; micro=0.355905
+RMSD
+RMSD: macro=4.817020; micro=4.817020
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.354945; micro=0.354945
+RMSD
+RMSD: macro=4.812391; micro=4.812391
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.304656; micro=0.304656
+RMSD
+RMSD: macro=5.023516; micro=5.023516
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.275139; micro=0.275139
+RMSD
+RMSD: macro=5.438893; micro=5.438893
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1_2025_04_19__01_42_02_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1_2025_04_19__01_42_02/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse_2025_04_19__01_42_02_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse_2025_04_19__01_42_02/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28/motifscaffolding__last'
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt_2025_04_19__01_42_02_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt_2025_04_19__01_42_02/motifscaffolding__last'
+
+joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_last
+Traceback (most recent call last):
+  File "consistency-struc_cal.py", line 66, in <module>
+    sample_set = {p[:-4] for p in os.listdir(args.ref_path) if p.endswith('.pdb')}
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/user/shaowen1994/JointDiff_development/Results/jointDiff_development//jointdiff-x_joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36/motifscaffolding__last'
+

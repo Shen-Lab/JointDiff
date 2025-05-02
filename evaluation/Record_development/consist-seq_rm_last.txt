@@ -1,0 +1,126 @@
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape_2025_04_08__22_17_21_last
+1810 samples in all: micro-SR=0.1351; macro-SR=0.1351
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape_2025_04_08__22_17_21_last_2
+1810 samples in all: micro-SR=0.1486; macro-SR=0.1486
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse_2025_04_07__23_31_02_last
+1810 samples in all: micro-SR=0.1622; macro-SR=0.1622
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse_2025_04_07__23_31_02_last_2
+1810 samples in all: micro-SR=0.1456; macro-SR=0.1456
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align_2025_04_07__23_31_02_last
+1810 samples in all: micro-SR=0.0549; macro-SR=0.0549
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+1810 samples in all: micro-SR=0.0552; macro-SR=0.0552
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-detach_2025_04_07__23_31_02_last
+1810 samples in all: micro-SR=0.0814; macro-SR=0.0814
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-detach_2025_04_07__23_31_02_last_2
+1810 samples in all: micro-SR=0.0876; macro-SR=0.0876
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+l1_2025_04_07__23_31_18_last
+1809 samples in all: micro-SR=0.0770; macro-SR=0.0770
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+l1_2025_04_07__23_31_18_last_2
+1810 samples in all: micro-SR=0.0722; macro-SR=0.0722
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+1809 samples in all: micro-SR=0.0720; macro-SR=0.0720
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+1810 samples in all: micro-SR=0.0809; macro-SR=0.0809
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_18_last
+1809 samples in all: micro-SR=0.0785; macro-SR=0.0785
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_18_last_2
+1810 samples in all: micro-SR=0.0923; macro-SR=0.0923
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape_2025_04_08__22_17_21_last
+300 samples in all: micro-SR=0.1329; macro-SR=0.1329
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape_2025_04_08__22_17_21_last_2
+300 samples in all: micro-SR=0.1721; macro-SR=0.1721
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram_2025_04_23__07_15_18_last
+300 samples in all: micro-SR=0.1822; macro-SR=0.1822
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_15_18_last
+300 samples in all: micro-SR=0.1593; macro-SR=0.1593
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-0.0-mc_2025_04_23__23_55_34_last
+300 samples in all: micro-SR=0.1937; macro-SR=0.1937
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-10.0-mc_2025_04_23__23_55_34_last
+300 samples in all: micro-SR=0.1827; macro-SR=0.1827
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-1.0-mc_2025_04_23__23_55_34_last
+300 samples in all: micro-SR=0.1923; macro-SR=0.1923
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-0.0_2025_04_23__17_41_15_last
+300 samples in all: micro-SR=0.1892; macro-SR=0.1892
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-10.0_2025_04_23__17_41_15_last
+30 samples in all: micro-SR=0.1990; macro-SR=0.1990
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram_rm-10.0-mc_2025_04_23__23_55_34_last
+300 samples in all: micro-SR=0.1792; macro-SR=0.1792
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-1.0_2025_04_23__17_41_15_last
+300 samples in all: micro-SR=0.1798; macro-SR=0.1798
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.1704; macro-SR=0.1704
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse_2025_04_07__23_31_02_last_2
+300 samples in all: micro-SR=0.1651; macro-SR=0.1651
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.0529; macro-SR=0.0529
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+300 samples in all: micro-SR=0.0528; macro-SR=0.0528
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-detach_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.0695; macro-SR=0.0695
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-detach_2025_04_07__23_31_02_last_2
+300 samples in all: micro-SR=0.0792; macro-SR=0.0792
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+l1_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.0623; macro-SR=0.0623
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+l1_2025_04_07__23_31_18_last_2
+300 samples in all: micro-SR=0.0596; macro-SR=0.0596
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+300 samples in all: micro-SR=0.0675; macro-SR=0.0675
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+300 samples in all: micro-SR=0.0679; macro-SR=0.0679
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_18_last
+300 samples in all: micro-SR=0.0695; macro-SR=0.0695
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_18_last_2
+300 samples in all: micro-SR=0.0891; macro-SR=0.0891
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogram_2025_04_23__07_15_18_last
+300 samples in all: micro-SR=0.2339; macro-SR=0.2339
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_33_16_last
+300 samples in all: micro-SR=0.2527; macro-SR=0.2527
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-0.0_2025_04_23__17_41_15_last
+300 samples in all: micro-SR=0.2099; macro-SR=0.2099
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-10.0_2025_04_23__17_41_15_last
+300 samples in all: micro-SR=0.2155; macro-SR=0.2155
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-1.0_2025_04_23__17_41_15_last
+300 samples in all: micro-SR=0.2234; macro-SR=0.2234
+

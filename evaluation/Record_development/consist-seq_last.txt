@@ -1,0 +1,39 @@
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-100.0_micro-posi+mse
+1810 samples in all: micro-SR=0.1452; macro-SR=0.1452
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-10.0_micro-posi+mse
+1810 samples in all: micro-SR=0.1541; macro-SR=0.1541
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-1.0_micro-posi+mse
+1810 samples in all: micro-SR=0.1919; macro-SR=0.1919
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-20.0_micro-posi+mse
+1810 samples in all: micro-SR=0.1614; macro-SR=0.1614
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram
+1810 samples in all: micro-SR=0.1723; macro-SR=0.1723
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash
+1810 samples in all: micro-SR=0.1324; macro-SR=0.1324
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1
+1810 samples in all: micro-SR=0.1464; macro-SR=0.1464
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse
+1810 samples in all: micro-SR=0.1606; macro-SR=0.1606
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram
+1810 samples in all: micro-SR=0.2033; macro-SR=0.2033
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+1810 samples in all: micro-SR=0.1782; macro-SR=0.1782
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+1810 samples in all: micro-SR=0.2090; macro-SR=0.2090
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt
+1810 samples in all: micro-SR=0.1988; macro-SR=0.1988
+
+jointdiff-x_joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash
+1810 samples in all: micro-SR=0.1477; macro-SR=0.1477
+

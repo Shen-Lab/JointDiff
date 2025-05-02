@@ -1,0 +1,3618 @@
+len100_0_10
+1200 clashes detected (out of 400 atoms).
+len100_0_1
+1134 clashes detected (out of 400 atoms).
+len100_0_2
+1220 clashes detected (out of 400 atoms).
+len100_0_3
+1218 clashes detected (out of 400 atoms).
+len100_0_4
+1160 clashes detected (out of 400 atoms).
+len100_0_5
+1203 clashes detected (out of 400 atoms).
+len100_0_6
+1083 clashes detected (out of 400 atoms).
+len100_0_7
+1219 clashes detected (out of 400 atoms).
+len100_0_8
+1178 clashes detected (out of 400 atoms).
+len100_0_9
+1143 clashes detected (out of 400 atoms).
+len101_0_10
+1156 clashes detected (out of 404 atoms).
+len101_0_1
+1212 clashes detected (out of 404 atoms).
+len101_0_2
+1186 clashes detected (out of 404 atoms).
+len101_0_3
+1177 clashes detected (out of 404 atoms).
+len101_0_4
+1208 clashes detected (out of 404 atoms).
+len101_0_5
+1189 clashes detected (out of 404 atoms).
+len101_0_6
+1232 clashes detected (out of 404 atoms).
+len101_0_7
+1229 clashes detected (out of 404 atoms).
+len101_0_8
+1162 clashes detected (out of 404 atoms).
+len101_0_9
+1161 clashes detected (out of 404 atoms).
+len102_0_10
+1238 clashes detected (out of 408 atoms).
+len102_0_1
+1121 clashes detected (out of 408 atoms).
+len102_0_2
+1192 clashes detected (out of 408 atoms).
+len102_0_3
+1159 clashes detected (out of 408 atoms).
+len102_0_4
+1228 clashes detected (out of 408 atoms).
+len102_0_5
+1234 clashes detected (out of 408 atoms).
+len102_0_6
+1094 clashes detected (out of 408 atoms).
+len102_0_7
+1171 clashes detected (out of 408 atoms).
+len102_0_8
+1232 clashes detected (out of 408 atoms).
+len102_0_9
+1182 clashes detected (out of 408 atoms).
+len103_0_10
+1167 clashes detected (out of 412 atoms).
+len103_0_1
+1184 clashes detected (out of 412 atoms).
+len103_0_2
+1243 clashes detected (out of 412 atoms).
+len103_0_3
+1236 clashes detected (out of 412 atoms).
+len103_0_4
+1140 clashes detected (out of 412 atoms).
+len103_0_5
+1252 clashes detected (out of 412 atoms).
+len103_0_6
+1140 clashes detected (out of 412 atoms).
+len103_0_7
+1247 clashes detected (out of 412 atoms).
+len103_0_8
+1160 clashes detected (out of 412 atoms).
+len103_0_9
+1228 clashes detected (out of 412 atoms).
+len104_0_10
+1240 clashes detected (out of 416 atoms).
+len104_0_1
+1256 clashes detected (out of 416 atoms).
+len104_0_2
+1171 clashes detected (out of 416 atoms).
+len104_0_3
+1245 clashes detected (out of 416 atoms).
+len104_0_4
+1235 clashes detected (out of 416 atoms).
+len104_0_5
+1214 clashes detected (out of 416 atoms).
+len104_0_6
+1254 clashes detected (out of 416 atoms).
+len104_0_7
+1258 clashes detected (out of 416 atoms).
+len104_0_8
+1204 clashes detected (out of 416 atoms).
+len104_0_9
+1251 clashes detected (out of 416 atoms).
+len105_0_10
+1251 clashes detected (out of 420 atoms).
+len105_0_1
+1251 clashes detected (out of 420 atoms).
+len105_0_2
+1276 clashes detected (out of 420 atoms).
+len105_0_3
+1262 clashes detected (out of 420 atoms).
+len105_0_4
+1261 clashes detected (out of 420 atoms).
+len105_0_5
+1273 clashes detected (out of 420 atoms).
+len105_0_6
+1244 clashes detected (out of 420 atoms).
+len105_0_7
+1289 clashes detected (out of 420 atoms).
+len105_0_8
+1267 clashes detected (out of 420 atoms).
+len105_0_9
+1253 clashes detected (out of 420 atoms).
+len106_0_10
+1286 clashes detected (out of 424 atoms).
+len106_0_1
+1254 clashes detected (out of 424 atoms).
+len106_0_2
+1299 clashes detected (out of 424 atoms).
+len106_0_3
+1271 clashes detected (out of 424 atoms).
+len106_0_4
+1278 clashes detected (out of 424 atoms).
+len106_0_5
+1217 clashes detected (out of 424 atoms).
+len106_0_6
+1208 clashes detected (out of 424 atoms).
+len106_0_7
+1240 clashes detected (out of 424 atoms).
+len106_0_8
+1229 clashes detected (out of 424 atoms).
+len106_0_9
+1248 clashes detected (out of 424 atoms).
+len107_0_10
+1290 clashes detected (out of 428 atoms).
+len107_0_1
+1265 clashes detected (out of 428 atoms).
+len107_0_2
+1222 clashes detected (out of 428 atoms).
+len107_0_3
+1306 clashes detected (out of 428 atoms).
+len107_0_4
+1297 clashes detected (out of 428 atoms).
+len107_0_5
+1182 clashes detected (out of 428 atoms).
+len107_0_6
+1159 clashes detected (out of 428 atoms).
+len107_0_7
+1246 clashes detected (out of 428 atoms).
+len107_0_8
+1290 clashes detected (out of 428 atoms).
+len107_0_9
+1288 clashes detected (out of 428 atoms).
+len108_0_10
+1290 clashes detected (out of 432 atoms).
+len108_0_1
+1275 clashes detected (out of 432 atoms).
+len108_0_2
+1290 clashes detected (out of 432 atoms).
+len108_0_3
+1230 clashes detected (out of 432 atoms).
+len108_0_4
+1330 clashes detected (out of 432 atoms).
+len108_0_5
+1282 clashes detected (out of 432 atoms).
+len108_0_6
+1235 clashes detected (out of 432 atoms).
+len108_0_7
+1307 clashes detected (out of 432 atoms).
+len108_0_8
+1227 clashes detected (out of 432 atoms).
+len108_0_9
+1272 clashes detected (out of 432 atoms).
+len109_0_10
+1341 clashes detected (out of 436 atoms).
+len109_0_1
+1293 clashes detected (out of 436 atoms).
+len109_0_2
+1299 clashes detected (out of 436 atoms).
+len109_0_3
+1312 clashes detected (out of 436 atoms).
+len109_0_4
+1273 clashes detected (out of 436 atoms).
+len109_0_5
+1275 clashes detected (out of 436 atoms).
+len109_0_6
+1270 clashes detected (out of 436 atoms).
+len109_0_7
+1236 clashes detected (out of 436 atoms).
+len109_0_8
+1292 clashes detected (out of 436 atoms).
+len109_0_9
+1327 clashes detected (out of 436 atoms).
+len110_0_10
+1305 clashes detected (out of 440 atoms).
+len110_0_1
+1333 clashes detected (out of 440 atoms).
+len110_0_2
+1330 clashes detected (out of 440 atoms).
+len110_0_3
+1284 clashes detected (out of 440 atoms).
+len110_0_4
+1303 clashes detected (out of 440 atoms).
+len110_0_5
+1360 clashes detected (out of 440 atoms).
+len110_0_6
+1307 clashes detected (out of 440 atoms).
+len110_0_7
+1275 clashes detected (out of 440 atoms).
+len110_0_8
+1317 clashes detected (out of 440 atoms).
+len110_0_9
+1345 clashes detected (out of 440 atoms).
+len111_0_10
+1325 clashes detected (out of 444 atoms).
+len111_0_1
+1323 clashes detected (out of 444 atoms).
+len111_0_2
+1322 clashes detected (out of 444 atoms).
+len111_0_3
+1351 clashes detected (out of 444 atoms).
+len111_0_4
+1292 clashes detected (out of 444 atoms).
+len111_0_5
+1258 clashes detected (out of 444 atoms).
+len111_0_6
+1308 clashes detected (out of 444 atoms).
+len111_0_7
+1312 clashes detected (out of 444 atoms).
+len111_0_8
+1318 clashes detected (out of 444 atoms).
+len111_0_9
+1331 clashes detected (out of 444 atoms).
+len112_0_10
+1336 clashes detected (out of 448 atoms).
+len112_0_1
+1282 clashes detected (out of 448 atoms).
+len112_0_2
+1296 clashes detected (out of 448 atoms).
+len112_0_3
+1287 clashes detected (out of 448 atoms).
+len112_0_4
+1350 clashes detected (out of 448 atoms).
+len112_0_5
+1359 clashes detected (out of 448 atoms).
+len112_0_6
+1324 clashes detected (out of 448 atoms).
+len112_0_7
+1320 clashes detected (out of 448 atoms).
+len112_0_8
+1346 clashes detected (out of 448 atoms).
+len112_0_9
+1281 clashes detected (out of 448 atoms).
+len113_0_10
+1361 clashes detected (out of 452 atoms).
+len113_0_1
+1351 clashes detected (out of 452 atoms).
+len113_0_2
+1343 clashes detected (out of 452 atoms).
+len113_0_3
+1355 clashes detected (out of 452 atoms).
+len113_0_4
+1263 clashes detected (out of 452 atoms).
+len113_0_5
+1316 clashes detected (out of 452 atoms).
+len113_0_6
+1349 clashes detected (out of 452 atoms).
+len113_0_7
+1349 clashes detected (out of 452 atoms).
+len113_0_8
+1358 clashes detected (out of 452 atoms).
+len113_0_9
+1322 clashes detected (out of 452 atoms).
+len114_0_10
+1389 clashes detected (out of 456 atoms).
+len114_0_1
+1270 clashes detected (out of 456 atoms).
+len114_0_2
+1388 clashes detected (out of 456 atoms).
+len114_0_3
+1320 clashes detected (out of 456 atoms).
+len114_0_4
+1366 clashes detected (out of 456 atoms).
+len114_0_5
+1354 clashes detected (out of 456 atoms).
+len114_0_6
+1306 clashes detected (out of 456 atoms).
+len114_0_7
+1342 clashes detected (out of 456 atoms).
+len114_0_8
+1300 clashes detected (out of 456 atoms).
+len114_0_9
+1363 clashes detected (out of 456 atoms).
+len115_0_10
+1357 clashes detected (out of 460 atoms).
+len115_0_1
+1322 clashes detected (out of 460 atoms).
+len115_0_2
+1373 clashes detected (out of 460 atoms).
+len115_0_3
+1387 clashes detected (out of 460 atoms).
+len115_0_4
+1350 clashes detected (out of 460 atoms).
+len115_0_5
+1397 clashes detected (out of 460 atoms).
+len115_0_6
+1357 clashes detected (out of 460 atoms).
+len115_0_7
+1423 clashes detected (out of 460 atoms).
+len115_0_8
+1385 clashes detected (out of 460 atoms).
+len115_0_9
+1369 clashes detected (out of 460 atoms).
+len116_0_10
+1366 clashes detected (out of 464 atoms).
+len116_0_1
+1375 clashes detected (out of 464 atoms).
+len116_0_2
+1401 clashes detected (out of 464 atoms).
+len116_0_3
+1332 clashes detected (out of 464 atoms).
+len116_0_4
+1371 clashes detected (out of 464 atoms).
+len116_0_5
+1420 clashes detected (out of 464 atoms).
+len116_0_6
+1387 clashes detected (out of 464 atoms).
+len116_0_7
+1369 clashes detected (out of 464 atoms).
+len116_0_8
+1380 clashes detected (out of 464 atoms).
+len116_0_9
+1404 clashes detected (out of 464 atoms).
+len117_0_10
+1326 clashes detected (out of 468 atoms).
+len117_0_1
+1434 clashes detected (out of 468 atoms).
+len117_0_2
+1379 clashes detected (out of 468 atoms).
+len117_0_3
+1374 clashes detected (out of 468 atoms).
+len117_0_4
+1397 clashes detected (out of 468 atoms).
+len117_0_5
+1374 clashes detected (out of 468 atoms).
+len117_0_6
+1407 clashes detected (out of 468 atoms).
+len117_0_7
+1406 clashes detected (out of 468 atoms).
+len117_0_8
+1382 clashes detected (out of 468 atoms).
+len117_0_9
+1406 clashes detected (out of 468 atoms).
+len118_0_10
+1422 clashes detected (out of 472 atoms).
+len118_0_1
+1406 clashes detected (out of 472 atoms).
+len118_0_2
+1373 clashes detected (out of 472 atoms).
+len118_0_3
+1438 clashes detected (out of 472 atoms).
+len118_0_4
+1382 clashes detected (out of 472 atoms).
+len118_0_5
+1426 clashes detected (out of 472 atoms).
+len118_0_6
+1387 clashes detected (out of 472 atoms).
+len118_0_7
+1422 clashes detected (out of 472 atoms).
+len118_0_8
+1331 clashes detected (out of 472 atoms).
+len118_0_9
+1385 clashes detected (out of 472 atoms).
+len119_0_10
+1462 clashes detected (out of 476 atoms).
+len119_0_1
+1448 clashes detected (out of 476 atoms).
+len119_0_2
+1444 clashes detected (out of 476 atoms).
+len119_0_3
+1435 clashes detected (out of 476 atoms).
+len119_0_4
+1379 clashes detected (out of 476 atoms).
+len119_0_5
+1435 clashes detected (out of 476 atoms).
+len119_0_6
+1431 clashes detected (out of 476 atoms).
+len119_0_7
+1375 clashes detected (out of 476 atoms).
+len119_0_8
+1435 clashes detected (out of 476 atoms).
+len119_0_9
+1344 clashes detected (out of 476 atoms).
+len120_0_10
+1376 clashes detected (out of 480 atoms).
+len120_0_1
+1411 clashes detected (out of 480 atoms).
+len120_0_2
+1464 clashes detected (out of 480 atoms).
+len120_0_3
+1414 clashes detected (out of 480 atoms).
+len120_0_4
+1425 clashes detected (out of 480 atoms).
+len120_0_5
+1436 clashes detected (out of 480 atoms).
+len120_0_6
+1424 clashes detected (out of 480 atoms).
+len120_0_7
+1375 clashes detected (out of 480 atoms).
+len120_0_8
+1410 clashes detected (out of 480 atoms).
+len120_0_9
+1441 clashes detected (out of 480 atoms).
+len121_0_10
+1460 clashes detected (out of 484 atoms).
+len121_0_1
+1491 clashes detected (out of 484 atoms).
+len121_0_2
+1401 clashes detected (out of 484 atoms).
+len121_0_3
+1433 clashes detected (out of 484 atoms).
+len121_0_4
+1439 clashes detected (out of 484 atoms).
+len121_0_5
+1459 clashes detected (out of 484 atoms).
+len121_0_6
+1362 clashes detected (out of 484 atoms).
+len121_0_7
+1438 clashes detected (out of 484 atoms).
+len121_0_8
+1450 clashes detected (out of 484 atoms).
+len121_0_9
+1447 clashes detected (out of 484 atoms).
+len122_0_10
+1466 clashes detected (out of 488 atoms).
+len122_0_1
+1268 clashes detected (out of 488 atoms).
+len122_0_2
+1474 clashes detected (out of 488 atoms).
+len122_0_3
+1402 clashes detected (out of 488 atoms).
+len122_0_4
+1430 clashes detected (out of 488 atoms).
+len122_0_5
+1443 clashes detected (out of 488 atoms).
+len122_0_6
+1391 clashes detected (out of 488 atoms).
+len122_0_7
+1448 clashes detected (out of 488 atoms).
+len122_0_8
+1432 clashes detected (out of 488 atoms).
+len122_0_9
+1407 clashes detected (out of 488 atoms).
+len123_0_10
+1452 clashes detected (out of 492 atoms).
+len123_0_1
+1486 clashes detected (out of 492 atoms).
+len123_0_2
+1486 clashes detected (out of 492 atoms).
+len123_0_3
+1407 clashes detected (out of 492 atoms).
+len123_0_4
+1447 clashes detected (out of 492 atoms).
+len123_0_5
+1432 clashes detected (out of 492 atoms).
+len123_0_6
+1482 clashes detected (out of 492 atoms).
+len123_0_7
+1486 clashes detected (out of 492 atoms).
+len123_0_8
+1481 clashes detected (out of 492 atoms).
+len123_0_9
+1377 clashes detected (out of 492 atoms).
+len124_0_10
+1483 clashes detected (out of 496 atoms).
+len124_0_1
+1408 clashes detected (out of 496 atoms).
+len124_0_2
+1473 clashes detected (out of 496 atoms).
+len124_0_3
+1465 clashes detected (out of 496 atoms).
+len124_0_4
+1469 clashes detected (out of 496 atoms).
+len124_0_5
+1478 clashes detected (out of 496 atoms).
+len124_0_6
+1453 clashes detected (out of 496 atoms).
+len124_0_7
+1495 clashes detected (out of 496 atoms).
+len124_0_8
+1493 clashes detected (out of 496 atoms).
+len124_0_9
+1482 clashes detected (out of 496 atoms).
+len125_0_10
+1468 clashes detected (out of 500 atoms).
+len125_0_1
+1475 clashes detected (out of 500 atoms).
+len125_0_2
+1460 clashes detected (out of 500 atoms).
+len125_0_3
+1434 clashes detected (out of 500 atoms).
+len125_0_4
+1469 clashes detected (out of 500 atoms).
+len125_0_5
+1494 clashes detected (out of 500 atoms).
+len125_0_6
+1511 clashes detected (out of 500 atoms).
+len125_0_7
+1431 clashes detected (out of 500 atoms).
+len125_0_8
+1492 clashes detected (out of 500 atoms).
+len125_0_9
+1472 clashes detected (out of 500 atoms).
+len126_0_10
+1565 clashes detected (out of 504 atoms).
+len126_0_1
+1496 clashes detected (out of 504 atoms).
+len126_0_2
+1404 clashes detected (out of 504 atoms).
+len126_0_3
+1550 clashes detected (out of 504 atoms).
+len126_0_4
+1494 clashes detected (out of 504 atoms).
+len126_0_5
+1510 clashes detected (out of 504 atoms).
+len126_0_6
+1512 clashes detected (out of 504 atoms).
+len126_0_7
+1500 clashes detected (out of 504 atoms).
+len126_0_8
+1513 clashes detected (out of 504 atoms).
+len126_0_9
+1402 clashes detected (out of 504 atoms).
+len127_0_10
+1520 clashes detected (out of 508 atoms).
+len127_0_1
+1489 clashes detected (out of 508 atoms).
+len127_0_2
+1522 clashes detected (out of 508 atoms).
+len127_0_3
+1497 clashes detected (out of 508 atoms).
+len127_0_4
+1485 clashes detected (out of 508 atoms).
+len127_0_5
+1559 clashes detected (out of 508 atoms).
+len127_0_6
+1546 clashes detected (out of 508 atoms).
+len127_0_7
+1496 clashes detected (out of 508 atoms).
+len127_0_8
+1491 clashes detected (out of 508 atoms).
+len127_0_9
+1517 clashes detected (out of 508 atoms).
+len128_0_10
+1543 clashes detected (out of 512 atoms).
+len128_0_1
+1513 clashes detected (out of 512 atoms).
+len128_0_2
+1519 clashes detected (out of 512 atoms).
+len128_0_3
+1558 clashes detected (out of 512 atoms).
+len128_0_4
+1514 clashes detected (out of 512 atoms).
+len128_0_5
+1531 clashes detected (out of 512 atoms).
+len128_0_6
+1508 clashes detected (out of 512 atoms).
+len128_0_7
+1507 clashes detected (out of 512 atoms).
+len128_0_8
+1502 clashes detected (out of 512 atoms).
+len128_0_9
+1497 clashes detected (out of 512 atoms).
+len129_0_10
+1561 clashes detected (out of 516 atoms).
+len129_0_1
+1510 clashes detected (out of 516 atoms).
+len129_0_2
+1488 clashes detected (out of 516 atoms).
+len129_0_3
+1543 clashes detected (out of 516 atoms).
+len129_0_4
+1485 clashes detected (out of 516 atoms).
+len129_0_5
+1523 clashes detected (out of 516 atoms).
+len129_0_6
+1529 clashes detected (out of 516 atoms).
+len129_0_7
+1520 clashes detected (out of 516 atoms).
+len129_0_8
+1532 clashes detected (out of 516 atoms).
+len129_0_9
+1553 clashes detected (out of 516 atoms).
+len130_0_10
+1545 clashes detected (out of 520 atoms).
+len130_0_1
+1563 clashes detected (out of 520 atoms).
+len130_0_2
+1572 clashes detected (out of 520 atoms).
+len130_0_3
+1561 clashes detected (out of 520 atoms).
+len130_0_4
+1576 clashes detected (out of 520 atoms).
+len130_0_5
+1559 clashes detected (out of 520 atoms).
+len130_0_6
+1524 clashes detected (out of 520 atoms).
+len130_0_7
+1487 clashes detected (out of 520 atoms).
+len130_0_8
+1460 clashes detected (out of 520 atoms).
+len130_0_9
+1588 clashes detected (out of 520 atoms).
+len131_0_10
+1585 clashes detected (out of 524 atoms).
+len131_0_1
+1555 clashes detected (out of 524 atoms).
+len131_0_2
+1565 clashes detected (out of 524 atoms).
+len131_0_3
+1594 clashes detected (out of 524 atoms).
+len131_0_4
+1553 clashes detected (out of 524 atoms).
+len131_0_5
+1535 clashes detected (out of 524 atoms).
+len131_0_6
+1525 clashes detected (out of 524 atoms).
+len131_0_7
+1547 clashes detected (out of 524 atoms).
+len131_0_8
+1499 clashes detected (out of 524 atoms).
+len131_0_9
+1581 clashes detected (out of 524 atoms).
+len132_0_10
+1581 clashes detected (out of 528 atoms).
+len132_0_1
+1603 clashes detected (out of 528 atoms).
+len132_0_2
+1587 clashes detected (out of 528 atoms).
+len132_0_3
+1404 clashes detected (out of 528 atoms).
+len132_0_4
+1620 clashes detected (out of 528 atoms).
+len132_0_5
+1606 clashes detected (out of 528 atoms).
+len132_0_6
+1531 clashes detected (out of 528 atoms).
+len132_0_7
+1529 clashes detected (out of 528 atoms).
+len132_0_8
+1589 clashes detected (out of 528 atoms).
+len132_0_9
+1514 clashes detected (out of 528 atoms).
+len133_0_10
+1626 clashes detected (out of 532 atoms).
+len133_0_1
+1609 clashes detected (out of 532 atoms).
+len133_0_2
+1591 clashes detected (out of 532 atoms).
+len133_0_3
+1586 clashes detected (out of 532 atoms).
+len133_0_4
+1574 clashes detected (out of 532 atoms).
+len133_0_5
+1558 clashes detected (out of 532 atoms).
+len133_0_6
+1599 clashes detected (out of 532 atoms).
+len133_0_7
+1592 clashes detected (out of 532 atoms).
+len133_0_8
+1575 clashes detected (out of 532 atoms).
+len133_0_9
+1619 clashes detected (out of 532 atoms).
+len134_0_10
+1590 clashes detected (out of 536 atoms).
+len134_0_1
+1574 clashes detected (out of 536 atoms).
+len134_0_2
+1553 clashes detected (out of 536 atoms).
+len134_0_3
+1543 clashes detected (out of 536 atoms).
+len134_0_4
+1626 clashes detected (out of 536 atoms).
+len134_0_5
+1615 clashes detected (out of 536 atoms).
+len134_0_6
+1632 clashes detected (out of 536 atoms).
+len134_0_7
+1602 clashes detected (out of 536 atoms).
+len134_0_8
+1604 clashes detected (out of 536 atoms).
+len134_0_9
+1572 clashes detected (out of 536 atoms).
+len135_0_10
+1605 clashes detected (out of 540 atoms).
+len135_0_1
+1664 clashes detected (out of 540 atoms).
+len135_0_2
+1657 clashes detected (out of 540 atoms).
+len135_0_3
+1595 clashes detected (out of 540 atoms).
+len135_0_4
+1616 clashes detected (out of 540 atoms).
+len135_0_5
+1624 clashes detected (out of 540 atoms).
+len135_0_6
+1537 clashes detected (out of 540 atoms).
+len135_0_7
+1605 clashes detected (out of 540 atoms).
+len135_0_8
+1632 clashes detected (out of 540 atoms).
+len135_0_9
+1599 clashes detected (out of 540 atoms).
+len136_0_10
+1625 clashes detected (out of 544 atoms).
+len136_0_1
+1583 clashes detected (out of 544 atoms).
+len136_0_2
+1634 clashes detected (out of 544 atoms).
+len136_0_3
+1615 clashes detected (out of 544 atoms).
+len136_0_4
+1575 clashes detected (out of 544 atoms).
+len136_0_5
+1638 clashes detected (out of 544 atoms).
+len136_0_6
+1611 clashes detected (out of 544 atoms).
+len136_0_7
+1626 clashes detected (out of 544 atoms).
+len136_0_8
+1580 clashes detected (out of 544 atoms).
+len136_0_9
+1645 clashes detected (out of 544 atoms).
+len137_0_10
+1643 clashes detected (out of 548 atoms).
+len137_0_1
+1615 clashes detected (out of 548 atoms).
+len137_0_2
+1653 clashes detected (out of 548 atoms).
+len137_0_3
+1662 clashes detected (out of 548 atoms).
+len137_0_4
+1679 clashes detected (out of 548 atoms).
+len137_0_5
+1643 clashes detected (out of 548 atoms).
+len137_0_6
+1625 clashes detected (out of 548 atoms).
+len137_0_7
+1636 clashes detected (out of 548 atoms).
+len137_0_8
+1654 clashes detected (out of 548 atoms).
+len137_0_9
+1627 clashes detected (out of 548 atoms).
+len138_0_10
+1656 clashes detected (out of 552 atoms).
+len138_0_1
+1646 clashes detected (out of 552 atoms).
+len138_0_2
+1651 clashes detected (out of 552 atoms).
+len138_0_3
+1662 clashes detected (out of 552 atoms).
+len138_0_4
+1653 clashes detected (out of 552 atoms).
+len138_0_5
+1647 clashes detected (out of 552 atoms).
+len138_0_6
+1624 clashes detected (out of 552 atoms).
+len138_0_7
+1569 clashes detected (out of 552 atoms).
+len138_0_8
+1580 clashes detected (out of 552 atoms).
+len138_0_9
+1613 clashes detected (out of 552 atoms).
+len139_0_10
+1649 clashes detected (out of 556 atoms).
+len139_0_1
+1623 clashes detected (out of 556 atoms).
+len139_0_2
+1605 clashes detected (out of 556 atoms).
+len139_0_3
+1725 clashes detected (out of 556 atoms).
+len139_0_4
+1715 clashes detected (out of 556 atoms).
+len139_0_5
+1667 clashes detected (out of 556 atoms).
+len139_0_6
+1608 clashes detected (out of 556 atoms).
+len139_0_7
+1660 clashes detected (out of 556 atoms).
+len139_0_8
+1622 clashes detected (out of 556 atoms).
+len139_0_9
+1649 clashes detected (out of 556 atoms).
+len140_0_10
+1669 clashes detected (out of 560 atoms).
+len140_0_1
+1587 clashes detected (out of 560 atoms).
+len140_0_2
+1658 clashes detected (out of 560 atoms).
+len140_0_3
+1677 clashes detected (out of 560 atoms).
+len140_0_4
+1651 clashes detected (out of 560 atoms).
+len140_0_5
+1574 clashes detected (out of 560 atoms).
+len140_0_6
+1701 clashes detected (out of 560 atoms).
+len140_0_7
+1694 clashes detected (out of 560 atoms).
+len140_0_8
+1616 clashes detected (out of 560 atoms).
+len140_0_9
+1707 clashes detected (out of 560 atoms).
+len141_0_10
+1669 clashes detected (out of 564 atoms).
+len141_0_1
+1727 clashes detected (out of 564 atoms).
+len141_0_2
+1664 clashes detected (out of 564 atoms).
+len141_0_3
+1658 clashes detected (out of 564 atoms).
+len141_0_4
+1722 clashes detected (out of 564 atoms).
+len141_0_5
+1678 clashes detected (out of 564 atoms).
+len141_0_6
+1630 clashes detected (out of 564 atoms).
+len141_0_7
+1695 clashes detected (out of 564 atoms).
+len141_0_8
+1696 clashes detected (out of 564 atoms).
+len141_0_9
+1594 clashes detected (out of 564 atoms).
+len142_0_10
+1694 clashes detected (out of 568 atoms).
+len142_0_1
+1700 clashes detected (out of 568 atoms).
+len142_0_2
+1741 clashes detected (out of 568 atoms).
+len142_0_3
+1633 clashes detected (out of 568 atoms).
+len142_0_4
+1638 clashes detected (out of 568 atoms).
+len142_0_5
+1721 clashes detected (out of 568 atoms).
+len142_0_6
+1718 clashes detected (out of 568 atoms).
+len142_0_7
+1741 clashes detected (out of 568 atoms).
+len142_0_8
+1700 clashes detected (out of 568 atoms).
+len142_0_9
+1658 clashes detected (out of 568 atoms).
+len143_0_10
+1684 clashes detected (out of 572 atoms).
+len143_0_1
+1728 clashes detected (out of 572 atoms).
+len143_0_2
+1649 clashes detected (out of 572 atoms).
+len143_0_3
+1725 clashes detected (out of 572 atoms).
+len143_0_4
+1711 clashes detected (out of 572 atoms).
+len143_0_5
+1705 clashes detected (out of 572 atoms).
+len143_0_6
+1717 clashes detected (out of 572 atoms).
+len143_0_7
+1689 clashes detected (out of 572 atoms).
+len143_0_8
+1693 clashes detected (out of 572 atoms).
+len143_0_9
+1678 clashes detected (out of 572 atoms).
+len144_0_10
+1739 clashes detected (out of 576 atoms).
+len144_0_1
+1717 clashes detected (out of 576 atoms).
+len144_0_2
+1733 clashes detected (out of 576 atoms).
+len144_0_3
+1725 clashes detected (out of 576 atoms).
+len144_0_4
+1716 clashes detected (out of 576 atoms).
+len144_0_5
+1657 clashes detected (out of 576 atoms).
+len144_0_6
+1728 clashes detected (out of 576 atoms).
+len144_0_7
+1696 clashes detected (out of 576 atoms).
+len144_0_8
+1691 clashes detected (out of 576 atoms).
+len144_0_9
+1744 clashes detected (out of 576 atoms).
+len145_0_10
+1706 clashes detected (out of 580 atoms).
+len145_0_1
+1709 clashes detected (out of 580 atoms).
+len145_0_2
+1739 clashes detected (out of 580 atoms).
+len145_0_3
+1673 clashes detected (out of 580 atoms).
+len145_0_4
+1659 clashes detected (out of 580 atoms).
+len145_0_5
+1703 clashes detected (out of 580 atoms).
+len145_0_6
+1690 clashes detected (out of 580 atoms).
+len145_0_7
+1741 clashes detected (out of 580 atoms).
+len145_0_8
+1732 clashes detected (out of 580 atoms).
+len145_0_9
+1741 clashes detected (out of 580 atoms).
+len146_0_10
+1689 clashes detected (out of 584 atoms).
+len146_0_1
+1726 clashes detected (out of 584 atoms).
+len146_0_2
+1720 clashes detected (out of 584 atoms).
+len146_0_3
+1670 clashes detected (out of 584 atoms).
+len146_0_4
+1577 clashes detected (out of 584 atoms).
+len146_0_5
+1731 clashes detected (out of 584 atoms).
+len146_0_6
+1756 clashes detected (out of 584 atoms).
+len146_0_7
+1626 clashes detected (out of 584 atoms).
+len146_0_8
+1787 clashes detected (out of 584 atoms).
+len146_0_9
+1755 clashes detected (out of 584 atoms).
+len147_0_10
+1776 clashes detected (out of 588 atoms).
+len147_0_1
+1748 clashes detected (out of 588 atoms).
+len147_0_2
+1731 clashes detected (out of 588 atoms).
+len147_0_3
+1753 clashes detected (out of 588 atoms).
+len147_0_4
+1741 clashes detected (out of 588 atoms).
+len147_0_5
+1745 clashes detected (out of 588 atoms).
+len147_0_6
+1725 clashes detected (out of 588 atoms).
+len147_0_7
+1698 clashes detected (out of 588 atoms).
+len147_0_8
+1744 clashes detected (out of 588 atoms).
+len147_0_9
+1759 clashes detected (out of 588 atoms).
+len148_0_10
+1722 clashes detected (out of 592 atoms).
+len148_0_1
+1772 clashes detected (out of 592 atoms).
+len148_0_2
+1772 clashes detected (out of 592 atoms).
+len148_0_3
+1810 clashes detected (out of 592 atoms).
+len148_0_4
+1774 clashes detected (out of 592 atoms).
+len148_0_5
+1783 clashes detected (out of 592 atoms).
+len148_0_6
+1758 clashes detected (out of 592 atoms).
+len148_0_7
+1746 clashes detected (out of 592 atoms).
+len148_0_8
+1768 clashes detected (out of 592 atoms).
+len148_0_9
+1824 clashes detected (out of 592 atoms).
+len149_0_10
+1811 clashes detected (out of 596 atoms).
+len149_0_1
+1769 clashes detected (out of 596 atoms).
+len149_0_2
+1791 clashes detected (out of 596 atoms).
+len149_0_3
+1796 clashes detected (out of 596 atoms).
+len149_0_4
+1801 clashes detected (out of 596 atoms).
+len149_0_5
+1822 clashes detected (out of 596 atoms).
+len149_0_6
+1776 clashes detected (out of 596 atoms).
+len149_0_7
+1779 clashes detected (out of 596 atoms).
+len149_0_8
+1785 clashes detected (out of 596 atoms).
+len149_0_9
+1778 clashes detected (out of 596 atoms).
+len150_0_10
+1799 clashes detected (out of 600 atoms).
+len150_0_1
+1733 clashes detected (out of 600 atoms).
+len150_0_2
+1798 clashes detected (out of 600 atoms).
+len150_0_3
+1850 clashes detected (out of 600 atoms).
+len150_0_4
+1690 clashes detected (out of 600 atoms).
+len150_0_5
+1759 clashes detected (out of 600 atoms).
+len150_0_6
+1828 clashes detected (out of 600 atoms).
+len150_0_7
+1799 clashes detected (out of 600 atoms).
+len150_0_8
+1818 clashes detected (out of 600 atoms).
+len150_0_9
+1805 clashes detected (out of 600 atoms).
+len151_0_10
+1775 clashes detected (out of 604 atoms).
+len151_0_1
+1697 clashes detected (out of 604 atoms).
+len151_0_2
+1827 clashes detected (out of 604 atoms).
+len151_0_3
+1794 clashes detected (out of 604 atoms).
+len151_0_4
+1793 clashes detected (out of 604 atoms).
+len151_0_5
+1836 clashes detected (out of 604 atoms).
+len151_0_6
+1754 clashes detected (out of 604 atoms).
+len151_0_7
+1821 clashes detected (out of 604 atoms).
+len151_0_8
+1785 clashes detected (out of 604 atoms).
+len151_0_9
+1748 clashes detected (out of 604 atoms).
+len152_0_10
+1803 clashes detected (out of 608 atoms).
+len152_0_1
+1860 clashes detected (out of 608 atoms).
+len152_0_2
+1828 clashes detected (out of 608 atoms).
+len152_0_3
+1803 clashes detected (out of 608 atoms).
+len152_0_4
+1830 clashes detected (out of 608 atoms).
+len152_0_5
+1778 clashes detected (out of 608 atoms).
+len152_0_6
+1828 clashes detected (out of 608 atoms).
+len152_0_7
+1839 clashes detected (out of 608 atoms).
+len152_0_8
+1771 clashes detected (out of 608 atoms).
+len152_0_9
+1799 clashes detected (out of 608 atoms).
+len153_0_10
+1801 clashes detected (out of 612 atoms).
+len153_0_1
+1844 clashes detected (out of 612 atoms).
+len153_0_2
+1801 clashes detected (out of 612 atoms).
+len153_0_3
+1778 clashes detected (out of 612 atoms).
+len153_0_4
+1901 clashes detected (out of 612 atoms).
+len153_0_5
+1852 clashes detected (out of 612 atoms).
+len153_0_6
+1746 clashes detected (out of 612 atoms).
+len153_0_7
+1807 clashes detected (out of 612 atoms).
+len153_0_8
+1840 clashes detected (out of 612 atoms).
+len153_0_9
+1801 clashes detected (out of 612 atoms).
+len154_0_10
+1824 clashes detected (out of 616 atoms).
+len154_0_1
+1823 clashes detected (out of 616 atoms).
+len154_0_2
+1826 clashes detected (out of 616 atoms).
+len154_0_3
+1837 clashes detected (out of 616 atoms).
+len154_0_4
+1820 clashes detected (out of 616 atoms).
+len154_0_5
+1863 clashes detected (out of 616 atoms).
+len154_0_6
+1877 clashes detected (out of 616 atoms).
+len154_0_7
+1881 clashes detected (out of 616 atoms).
+len154_0_8
+1856 clashes detected (out of 616 atoms).
+len154_0_9
+1847 clashes detected (out of 616 atoms).
+len155_0_10
+1813 clashes detected (out of 620 atoms).
+len155_0_1
+1861 clashes detected (out of 620 atoms).
+len155_0_2
+1795 clashes detected (out of 620 atoms).
+len155_0_3
+1862 clashes detected (out of 620 atoms).
+len155_0_4
+1888 clashes detected (out of 620 atoms).
+len155_0_5
+1842 clashes detected (out of 620 atoms).
+len155_0_6
+1851 clashes detected (out of 620 atoms).
+len155_0_7
+1849 clashes detected (out of 620 atoms).
+len155_0_8
+1879 clashes detected (out of 620 atoms).
+len155_0_9
+1859 clashes detected (out of 620 atoms).
+len156_0_10
+1846 clashes detected (out of 624 atoms).
+len156_0_1
+1829 clashes detected (out of 624 atoms).
+len156_0_2
+1848 clashes detected (out of 624 atoms).
+len156_0_3
+1803 clashes detected (out of 624 atoms).
+len156_0_4
+1798 clashes detected (out of 624 atoms).
+len156_0_5
+1884 clashes detected (out of 624 atoms).
+len156_0_6
+1844 clashes detected (out of 624 atoms).
+len156_0_7
+1872 clashes detected (out of 624 atoms).
+len156_0_8
+1843 clashes detected (out of 624 atoms).
+len156_0_9
+1816 clashes detected (out of 624 atoms).
+len157_0_10
+1784 clashes detected (out of 628 atoms).
+len157_0_1
+1843 clashes detected (out of 628 atoms).
+len157_0_2
+1895 clashes detected (out of 628 atoms).
+len157_0_3
+1918 clashes detected (out of 628 atoms).
+len157_0_4
+1850 clashes detected (out of 628 atoms).
+len157_0_5
+1875 clashes detected (out of 628 atoms).
+len157_0_6
+1894 clashes detected (out of 628 atoms).
+len157_0_7
+1847 clashes detected (out of 628 atoms).
+len157_0_8
+1886 clashes detected (out of 628 atoms).
+len157_0_9
+1873 clashes detected (out of 628 atoms).
+len158_0_10
+1891 clashes detected (out of 632 atoms).
+len158_0_1
+1909 clashes detected (out of 632 atoms).
+len158_0_2
+1892 clashes detected (out of 632 atoms).
+len158_0_3
+1893 clashes detected (out of 632 atoms).
+len158_0_4
+1869 clashes detected (out of 632 atoms).
+len158_0_5
+1913 clashes detected (out of 632 atoms).
+len158_0_6
+1876 clashes detected (out of 632 atoms).
+len158_0_7
+1899 clashes detected (out of 632 atoms).
+len158_0_8
+1882 clashes detected (out of 632 atoms).
+len158_0_9
+1891 clashes detected (out of 632 atoms).
+len159_0_10
+1858 clashes detected (out of 636 atoms).
+len159_0_1
+1884 clashes detected (out of 636 atoms).
+len159_0_2
+1905 clashes detected (out of 636 atoms).
+len159_0_3
+1862 clashes detected (out of 636 atoms).
+len159_0_4
+1888 clashes detected (out of 636 atoms).
+len159_0_5
+1826 clashes detected (out of 636 atoms).
+len159_0_6
+1901 clashes detected (out of 636 atoms).
+len159_0_7
+1873 clashes detected (out of 636 atoms).
+len159_0_8
+1885 clashes detected (out of 636 atoms).
+len159_0_9
+1926 clashes detected (out of 636 atoms).
+len160_0_10
+1856 clashes detected (out of 640 atoms).
+len160_0_1
+1901 clashes detected (out of 640 atoms).
+len160_0_2
+1861 clashes detected (out of 640 atoms).
+len160_0_3
+1836 clashes detected (out of 640 atoms).
+len160_0_4
+1884 clashes detected (out of 640 atoms).
+len160_0_5
+1953 clashes detected (out of 640 atoms).
+len160_0_6
+1918 clashes detected (out of 640 atoms).
+len160_0_7
+1887 clashes detected (out of 640 atoms).
+len160_0_8
+1918 clashes detected (out of 640 atoms).
+len160_0_9
+1883 clashes detected (out of 640 atoms).
+len161_0_10
+1892 clashes detected (out of 644 atoms).
+len161_0_1
+1918 clashes detected (out of 644 atoms).
+len161_0_2
+1936 clashes detected (out of 644 atoms).
+len161_0_3
+1919 clashes detected (out of 644 atoms).
+len161_0_4
+1900 clashes detected (out of 644 atoms).
+len161_0_5
+1943 clashes detected (out of 644 atoms).
+len161_0_6
+1928 clashes detected (out of 644 atoms).
+len161_0_7
+1927 clashes detected (out of 644 atoms).
+len161_0_8
+1877 clashes detected (out of 644 atoms).
+len161_0_9
+1961 clashes detected (out of 644 atoms).
+len162_0_10
+1941 clashes detected (out of 648 atoms).
+len162_0_1
+1935 clashes detected (out of 648 atoms).
+len162_0_2
+1902 clashes detected (out of 648 atoms).
+len162_0_3
+1916 clashes detected (out of 648 atoms).
+len162_0_4
+1916 clashes detected (out of 648 atoms).
+len162_0_5
+1897 clashes detected (out of 648 atoms).
+len162_0_6
+1921 clashes detected (out of 648 atoms).
+len162_0_7
+1895 clashes detected (out of 648 atoms).
+len162_0_8
+1935 clashes detected (out of 648 atoms).
+len162_0_9
+1908 clashes detected (out of 648 atoms).
+len163_0_10
+1958 clashes detected (out of 652 atoms).
+len163_0_1
+1890 clashes detected (out of 652 atoms).
+len163_0_2
+1896 clashes detected (out of 652 atoms).
+len163_0_3
+1967 clashes detected (out of 652 atoms).
+len163_0_4
+1952 clashes detected (out of 652 atoms).
+len163_0_5
+1922 clashes detected (out of 652 atoms).
+len163_0_6
+1931 clashes detected (out of 652 atoms).
+len163_0_7
+1919 clashes detected (out of 652 atoms).
+len163_0_8
+1965 clashes detected (out of 652 atoms).
+len163_0_9
+1959 clashes detected (out of 652 atoms).
+len164_0_10
+1951 clashes detected (out of 656 atoms).
+len164_0_1
+2002 clashes detected (out of 656 atoms).
+len164_0_2
+1963 clashes detected (out of 656 atoms).
+len164_0_3
+1931 clashes detected (out of 656 atoms).
+len164_0_4
+1974 clashes detected (out of 656 atoms).
+len164_0_5
+1997 clashes detected (out of 656 atoms).
+len164_0_6
+1999 clashes detected (out of 656 atoms).
+len164_0_7
+1980 clashes detected (out of 656 atoms).
+len164_0_8
+1916 clashes detected (out of 656 atoms).
+len164_0_9
+1963 clashes detected (out of 656 atoms).
+len165_0_10
+1946 clashes detected (out of 660 atoms).
+len165_0_1
+1979 clashes detected (out of 660 atoms).
+len165_0_2
+1996 clashes detected (out of 660 atoms).
+len165_0_3
+1937 clashes detected (out of 660 atoms).
+len165_0_4
+1971 clashes detected (out of 660 atoms).
+len165_0_5
+1954 clashes detected (out of 660 atoms).
+len165_0_6
+1969 clashes detected (out of 660 atoms).
+len165_0_7
+1968 clashes detected (out of 660 atoms).
+len165_0_8
+1985 clashes detected (out of 660 atoms).
+len165_0_9
+1979 clashes detected (out of 660 atoms).
+len166_0_10
+2025 clashes detected (out of 664 atoms).
+len166_0_1
+2006 clashes detected (out of 664 atoms).
+len166_0_2
+2006 clashes detected (out of 664 atoms).
+len166_0_3
+1965 clashes detected (out of 664 atoms).
+len166_0_4
+1930 clashes detected (out of 664 atoms).
+len166_0_5
+1917 clashes detected (out of 664 atoms).
+len166_0_6
+1964 clashes detected (out of 664 atoms).
+len166_0_7
+2028 clashes detected (out of 664 atoms).
+len166_0_8
+2008 clashes detected (out of 664 atoms).
+len166_0_9
+1999 clashes detected (out of 664 atoms).
+len167_0_10
+1912 clashes detected (out of 668 atoms).
+len167_0_1
+2028 clashes detected (out of 668 atoms).
+len167_0_2
+2010 clashes detected (out of 668 atoms).
+len167_0_3
+2030 clashes detected (out of 668 atoms).
+len167_0_4
+2028 clashes detected (out of 668 atoms).
+len167_0_5
+1991 clashes detected (out of 668 atoms).
+len167_0_6
+1996 clashes detected (out of 668 atoms).
+len167_0_7
+2019 clashes detected (out of 668 atoms).
+len167_0_8
+2014 clashes detected (out of 668 atoms).
+len167_0_9
+2034 clashes detected (out of 668 atoms).
+len168_0_10
+2090 clashes detected (out of 672 atoms).
+len168_0_1
+1972 clashes detected (out of 672 atoms).
+len168_0_2
+2054 clashes detected (out of 672 atoms).
+len168_0_3
+2004 clashes detected (out of 672 atoms).
+len168_0_4
+2030 clashes detected (out of 672 atoms).
+len168_0_5
+2017 clashes detected (out of 672 atoms).
+len168_0_6
+2026 clashes detected (out of 672 atoms).
+len168_0_7
+1992 clashes detected (out of 672 atoms).
+len168_0_8
+2042 clashes detected (out of 672 atoms).
+len168_0_9
+1923 clashes detected (out of 672 atoms).
+len169_0_10
+1940 clashes detected (out of 676 atoms).
+len169_0_1
+2030 clashes detected (out of 676 atoms).
+len169_0_2
+2050 clashes detected (out of 676 atoms).
+len169_0_3
+2001 clashes detected (out of 676 atoms).
+len169_0_4
+1997 clashes detected (out of 676 atoms).
+len169_0_5
+2048 clashes detected (out of 676 atoms).
+len169_0_6
+1900 clashes detected (out of 676 atoms).
+len169_0_7
+2008 clashes detected (out of 676 atoms).
+len169_0_8
+2035 clashes detected (out of 676 atoms).
+len169_0_9
+2052 clashes detected (out of 676 atoms).
+len170_0_10
+2038 clashes detected (out of 680 atoms).
+len170_0_1
+2103 clashes detected (out of 680 atoms).
+len170_0_2
+2019 clashes detected (out of 680 atoms).
+len170_0_3
+1981 clashes detected (out of 680 atoms).
+len170_0_4
+2039 clashes detected (out of 680 atoms).
+len170_0_5
+2024 clashes detected (out of 680 atoms).
+len170_0_6
+2071 clashes detected (out of 680 atoms).
+len170_0_7
+2019 clashes detected (out of 680 atoms).
+len170_0_8
+2017 clashes detected (out of 680 atoms).
+len170_0_9
+2018 clashes detected (out of 680 atoms).
+len171_0_10
+1988 clashes detected (out of 684 atoms).
+len171_0_1
+2046 clashes detected (out of 684 atoms).
+len171_0_2
+2012 clashes detected (out of 684 atoms).
+len171_0_3
+2058 clashes detected (out of 684 atoms).
+len171_0_4
+2037 clashes detected (out of 684 atoms).
+len171_0_5
+1979 clashes detected (out of 684 atoms).
+len171_0_6
+2019 clashes detected (out of 684 atoms).
+len171_0_7
+2084 clashes detected (out of 684 atoms).
+len171_0_8
+1969 clashes detected (out of 684 atoms).
+len171_0_9
+2062 clashes detected (out of 684 atoms).
+len172_0_10
+1978 clashes detected (out of 688 atoms).
+len172_0_1
+2067 clashes detected (out of 688 atoms).
+len172_0_2
+2071 clashes detected (out of 688 atoms).
+len172_0_3
+1970 clashes detected (out of 688 atoms).
+len172_0_4
+2074 clashes detected (out of 688 atoms).
+len172_0_5
+2062 clashes detected (out of 688 atoms).
+len172_0_6
+2032 clashes detected (out of 688 atoms).
+len172_0_7
+2080 clashes detected (out of 688 atoms).
+len172_0_8
+1902 clashes detected (out of 688 atoms).
+len172_0_9
+2101 clashes detected (out of 688 atoms).
+len173_0_10
+2062 clashes detected (out of 692 atoms).
+len173_0_1
+2150 clashes detected (out of 692 atoms).
+len173_0_2
+2023 clashes detected (out of 692 atoms).
+len173_0_3
+2024 clashes detected (out of 692 atoms).
+len173_0_4
+1984 clashes detected (out of 692 atoms).
+len173_0_5
+2059 clashes detected (out of 692 atoms).
+len173_0_6
+2077 clashes detected (out of 692 atoms).
+len173_0_7
+2056 clashes detected (out of 692 atoms).
+len173_0_8
+2069 clashes detected (out of 692 atoms).
+len173_0_9
+2090 clashes detected (out of 692 atoms).
+len174_0_10
+2039 clashes detected (out of 696 atoms).
+len174_0_1
+2058 clashes detected (out of 696 atoms).
+len174_0_2
+2062 clashes detected (out of 696 atoms).
+len174_0_3
+2016 clashes detected (out of 696 atoms).
+len174_0_4
+2057 clashes detected (out of 696 atoms).
+len174_0_5
+2056 clashes detected (out of 696 atoms).
+len174_0_6
+2065 clashes detected (out of 696 atoms).
+len174_0_7
+2146 clashes detected (out of 696 atoms).
+len174_0_8
+2148 clashes detected (out of 696 atoms).
+len174_0_9
+2129 clashes detected (out of 696 atoms).
+len175_0_10
+2081 clashes detected (out of 700 atoms).
+len175_0_1
+2147 clashes detected (out of 700 atoms).
+len175_0_2
+2053 clashes detected (out of 700 atoms).
+len175_0_3
+2108 clashes detected (out of 700 atoms).
+len175_0_4
+2075 clashes detected (out of 700 atoms).
+len175_0_5
+2078 clashes detected (out of 700 atoms).
+len175_0_6
+2058 clashes detected (out of 700 atoms).
+len175_0_7
+2090 clashes detected (out of 700 atoms).
+len175_0_8
+2090 clashes detected (out of 700 atoms).
+len175_0_9
+2026 clashes detected (out of 700 atoms).
+len176_0_10
+2103 clashes detected (out of 704 atoms).
+len176_0_1
+2102 clashes detected (out of 704 atoms).
+len176_0_2
+2068 clashes detected (out of 704 atoms).
+len176_0_3
+2079 clashes detected (out of 704 atoms).
+len176_0_4
+2126 clashes detected (out of 704 atoms).
+len176_0_5
+2107 clashes detected (out of 704 atoms).
+len176_0_6
+2082 clashes detected (out of 704 atoms).
+len176_0_7
+2135 clashes detected (out of 704 atoms).
+len176_0_8
+2137 clashes detected (out of 704 atoms).
+len176_0_9
+2063 clashes detected (out of 704 atoms).
+len177_0_10
+2050 clashes detected (out of 708 atoms).
+len177_0_1
+2099 clashes detected (out of 708 atoms).
+len177_0_2
+2117 clashes detected (out of 708 atoms).
+len177_0_3
+2109 clashes detected (out of 708 atoms).
+len177_0_4
+2141 clashes detected (out of 708 atoms).
+len177_0_5
+2095 clashes detected (out of 708 atoms).
+len177_0_6
+2046 clashes detected (out of 708 atoms).
+len177_0_7
+2042 clashes detected (out of 708 atoms).
+len177_0_8
+2175 clashes detected (out of 708 atoms).
+len177_0_9
+2007 clashes detected (out of 708 atoms).
+len178_0_10
+2124 clashes detected (out of 712 atoms).
+len178_0_1
+2162 clashes detected (out of 712 atoms).
+len178_0_2
+2112 clashes detected (out of 712 atoms).
+len178_0_3
+2074 clashes detected (out of 712 atoms).
+len178_0_4
+2103 clashes detected (out of 712 atoms).
+len178_0_5
+2145 clashes detected (out of 712 atoms).
+len178_0_6
+2138 clashes detected (out of 712 atoms).
+len178_0_7
+2156 clashes detected (out of 712 atoms).
+len178_0_8
+2202 clashes detected (out of 712 atoms).
+len178_0_9
+2083 clashes detected (out of 712 atoms).
+len179_0_10
+2158 clashes detected (out of 716 atoms).
+len179_0_1
+2166 clashes detected (out of 716 atoms).
+len179_0_2
+2133 clashes detected (out of 716 atoms).
+len179_0_3
+2013 clashes detected (out of 716 atoms).
+len179_0_4
+2104 clashes detected (out of 716 atoms).
+len179_0_5
+2135 clashes detected (out of 716 atoms).
+len179_0_6
+2128 clashes detected (out of 716 atoms).
+len179_0_7
+2179 clashes detected (out of 716 atoms).
+len179_0_8
+2170 clashes detected (out of 716 atoms).
+len179_0_9
+2144 clashes detected (out of 716 atoms).
+len180_0_10
+2164 clashes detected (out of 720 atoms).
+len180_0_1
+2121 clashes detected (out of 720 atoms).
+len180_0_2
+2173 clashes detected (out of 720 atoms).
+len180_0_3
+2190 clashes detected (out of 720 atoms).
+len180_0_4
+2152 clashes detected (out of 720 atoms).
+len180_0_5
+2224 clashes detected (out of 720 atoms).
+len180_0_6
+2147 clashes detected (out of 720 atoms).
+len180_0_7
+2157 clashes detected (out of 720 atoms).
+len180_0_8
+2171 clashes detected (out of 720 atoms).
+len180_0_9
+2140 clashes detected (out of 720 atoms).
+len181_0_10
+2207 clashes detected (out of 724 atoms).
+len181_0_1
+2159 clashes detected (out of 724 atoms).
+len181_0_2
+2197 clashes detected (out of 724 atoms).
+len181_0_3
+2174 clashes detected (out of 724 atoms).
+len181_0_4
+2163 clashes detected (out of 724 atoms).
+len181_0_5
+2182 clashes detected (out of 724 atoms).
+len181_0_6
+2218 clashes detected (out of 724 atoms).
+len181_0_7
+2175 clashes detected (out of 724 atoms).
+len181_0_8
+2132 clashes detected (out of 724 atoms).
+len181_0_9
+2154 clashes detected (out of 724 atoms).
+len182_0_10
+2197 clashes detected (out of 728 atoms).
+len182_0_1
+2221 clashes detected (out of 728 atoms).
+len182_0_2
+2152 clashes detected (out of 728 atoms).
+len182_0_3
+2215 clashes detected (out of 728 atoms).
+len182_0_4
+2170 clashes detected (out of 728 atoms).
+len182_0_5
+2146 clashes detected (out of 728 atoms).
+len182_0_6
+2090 clashes detected (out of 728 atoms).
+len182_0_7
+2152 clashes detected (out of 728 atoms).
+len182_0_8
+2182 clashes detected (out of 728 atoms).
+len182_0_9
+2180 clashes detected (out of 728 atoms).
+len183_0_10
+2192 clashes detected (out of 732 atoms).
+len183_0_1
+2198 clashes detected (out of 732 atoms).
+len183_0_2
+2222 clashes detected (out of 732 atoms).
+len183_0_3
+2124 clashes detected (out of 732 atoms).
+len183_0_4
+2160 clashes detected (out of 732 atoms).
+len183_0_5
+2173 clashes detected (out of 732 atoms).
+len183_0_6
+2201 clashes detected (out of 732 atoms).
+len183_0_7
+2187 clashes detected (out of 732 atoms).
+len183_0_8
+2175 clashes detected (out of 732 atoms).
+len183_0_9
+2240 clashes detected (out of 732 atoms).
+len184_0_10
+2212 clashes detected (out of 736 atoms).
+len184_0_1
+2197 clashes detected (out of 736 atoms).
+len184_0_2
+2186 clashes detected (out of 736 atoms).
+len184_0_3
+2192 clashes detected (out of 736 atoms).
+len184_0_4
+2200 clashes detected (out of 736 atoms).
+len184_0_5
+2183 clashes detected (out of 736 atoms).
+len184_0_6
+2248 clashes detected (out of 736 atoms).
+len184_0_7
+2186 clashes detected (out of 736 atoms).
+len184_0_8
+2130 clashes detected (out of 736 atoms).
+len184_0_9
+2124 clashes detected (out of 736 atoms).
+len185_0_10
+2108 clashes detected (out of 740 atoms).
+len185_0_1
+2228 clashes detected (out of 740 atoms).
+len185_0_2
+2206 clashes detected (out of 740 atoms).
+len185_0_3
+2211 clashes detected (out of 740 atoms).
+len185_0_4
+2237 clashes detected (out of 740 atoms).
+len185_0_5
+2176 clashes detected (out of 740 atoms).
+len185_0_6
+2202 clashes detected (out of 740 atoms).
+len185_0_7
+2228 clashes detected (out of 740 atoms).
+len185_0_8
+2216 clashes detected (out of 740 atoms).
+len185_0_9
+2215 clashes detected (out of 740 atoms).
+len186_0_10
+2228 clashes detected (out of 744 atoms).
+len186_0_1
+2223 clashes detected (out of 744 atoms).
+len186_0_2
+2206 clashes detected (out of 744 atoms).
+len186_0_3
+2224 clashes detected (out of 744 atoms).
+len186_0_4
+2193 clashes detected (out of 744 atoms).
+len186_0_5
+2193 clashes detected (out of 744 atoms).
+len186_0_6
+2256 clashes detected (out of 744 atoms).
+len186_0_7
+2264 clashes detected (out of 744 atoms).
+len186_0_8
+2163 clashes detected (out of 744 atoms).
+len186_0_9
+2235 clashes detected (out of 744 atoms).
+len187_0_10
+2227 clashes detected (out of 748 atoms).
+len187_0_1
+2281 clashes detected (out of 748 atoms).
+len187_0_2
+2240 clashes detected (out of 748 atoms).
+len187_0_3
+2193 clashes detected (out of 748 atoms).
+len187_0_4
+2255 clashes detected (out of 748 atoms).
+len187_0_5
+2246 clashes detected (out of 748 atoms).
+len187_0_6
+2224 clashes detected (out of 748 atoms).
+len187_0_7
+2250 clashes detected (out of 748 atoms).
+len187_0_8
+2223 clashes detected (out of 748 atoms).
+len187_0_9
+2240 clashes detected (out of 748 atoms).
+len188_0_10
+2252 clashes detected (out of 752 atoms).
+len188_0_1
+2245 clashes detected (out of 752 atoms).
+len188_0_2
+2235 clashes detected (out of 752 atoms).
+len188_0_3
+2226 clashes detected (out of 752 atoms).
+len188_0_4
+2238 clashes detected (out of 752 atoms).
+len188_0_5
+2201 clashes detected (out of 752 atoms).
+len188_0_6
+2313 clashes detected (out of 752 atoms).
+len188_0_7
+2253 clashes detected (out of 752 atoms).
+len188_0_8
+2161 clashes detected (out of 752 atoms).
+len188_0_9
+2246 clashes detected (out of 752 atoms).
+len189_0_10
+2270 clashes detected (out of 756 atoms).
+len189_0_1
+2290 clashes detected (out of 756 atoms).
+len189_0_2
+2246 clashes detected (out of 756 atoms).
+len189_0_3
+2240 clashes detected (out of 756 atoms).
+len189_0_4
+2264 clashes detected (out of 756 atoms).
+len189_0_5
+2264 clashes detected (out of 756 atoms).
+len189_0_6
+2241 clashes detected (out of 756 atoms).
+len189_0_7
+2298 clashes detected (out of 756 atoms).
+len189_0_8
+2198 clashes detected (out of 756 atoms).
+len189_0_9
+2290 clashes detected (out of 756 atoms).
+len190_0_10
+2291 clashes detected (out of 760 atoms).
+len190_0_1
+2249 clashes detected (out of 760 atoms).
+len190_0_2
+2325 clashes detected (out of 760 atoms).
+len190_0_3
+2246 clashes detected (out of 760 atoms).
+len190_0_4
+2271 clashes detected (out of 760 atoms).
+len190_0_5
+2288 clashes detected (out of 760 atoms).
+len190_0_6
+2299 clashes detected (out of 760 atoms).
+len190_0_7
+2327 clashes detected (out of 760 atoms).
+len190_0_8
+2261 clashes detected (out of 760 atoms).
+len190_0_9
+2269 clashes detected (out of 760 atoms).
+len191_0_10
+2265 clashes detected (out of 764 atoms).
+len191_0_1
+2285 clashes detected (out of 764 atoms).
+len191_0_2
+2331 clashes detected (out of 764 atoms).
+len191_0_3
+2234 clashes detected (out of 764 atoms).
+len191_0_4
+2253 clashes detected (out of 764 atoms).
+len191_0_5
+2303 clashes detected (out of 764 atoms).
+len191_0_6
+2242 clashes detected (out of 764 atoms).
+len191_0_7
+2294 clashes detected (out of 764 atoms).
+len191_0_8
+2298 clashes detected (out of 764 atoms).
+len191_0_9
+2263 clashes detected (out of 764 atoms).
+len192_0_10
+2280 clashes detected (out of 768 atoms).
+len192_0_1
+2289 clashes detected (out of 768 atoms).
+len192_0_2
+2277 clashes detected (out of 768 atoms).
+len192_0_3
+2286 clashes detected (out of 768 atoms).
+len192_0_4
+2331 clashes detected (out of 768 atoms).
+len192_0_5
+2328 clashes detected (out of 768 atoms).
+len192_0_6
+2263 clashes detected (out of 768 atoms).
+len192_0_7
+2269 clashes detected (out of 768 atoms).
+len192_0_8
+2310 clashes detected (out of 768 atoms).
+len192_0_9
+2279 clashes detected (out of 768 atoms).
+len193_0_10
+2310 clashes detected (out of 772 atoms).
+len193_0_1
+2306 clashes detected (out of 772 atoms).
+len193_0_2
+2313 clashes detected (out of 772 atoms).
+len193_0_3
+2345 clashes detected (out of 772 atoms).
+len193_0_4
+2367 clashes detected (out of 772 atoms).
+len193_0_5
+2306 clashes detected (out of 772 atoms).
+len193_0_6
+2360 clashes detected (out of 772 atoms).
+len193_0_7
+2313 clashes detected (out of 772 atoms).
+len193_0_8
+2254 clashes detected (out of 772 atoms).
+len193_0_9
+2307 clashes detected (out of 772 atoms).
+len194_0_10
+2314 clashes detected (out of 776 atoms).
+len194_0_1
+2323 clashes detected (out of 776 atoms).
+len194_0_2
+2279 clashes detected (out of 776 atoms).
+len194_0_3
+2322 clashes detected (out of 776 atoms).
+len194_0_4
+2381 clashes detected (out of 776 atoms).
+len194_0_5
+2325 clashes detected (out of 776 atoms).
+len194_0_6
+2317 clashes detected (out of 776 atoms).
+len194_0_7
+2292 clashes detected (out of 776 atoms).
+len194_0_8
+2315 clashes detected (out of 776 atoms).
+len194_0_9
+2343 clashes detected (out of 776 atoms).
+len195_0_10
+2316 clashes detected (out of 780 atoms).
+len195_0_1
+2301 clashes detected (out of 780 atoms).
+len195_0_2
+2337 clashes detected (out of 780 atoms).
+len195_0_3
+2333 clashes detected (out of 780 atoms).
+len195_0_4
+2303 clashes detected (out of 780 atoms).
+len195_0_5
+2380 clashes detected (out of 780 atoms).
+len195_0_6
+2305 clashes detected (out of 780 atoms).
+len195_0_7
+2369 clashes detected (out of 780 atoms).
+len195_0_8
+2341 clashes detected (out of 780 atoms).
+len195_0_9
+2297 clashes detected (out of 780 atoms).
+len196_0_10
+2329 clashes detected (out of 784 atoms).
+len196_0_1
+2363 clashes detected (out of 784 atoms).
+len196_0_2
+2333 clashes detected (out of 784 atoms).
+len196_0_3
+2318 clashes detected (out of 784 atoms).
+len196_0_4
+2353 clashes detected (out of 784 atoms).
+len196_0_5
+2340 clashes detected (out of 784 atoms).
+len196_0_6
+2328 clashes detected (out of 784 atoms).
+len196_0_7
+2341 clashes detected (out of 784 atoms).
+len196_0_8
+2344 clashes detected (out of 784 atoms).
+len196_0_9
+2320 clashes detected (out of 784 atoms).
+len197_0_10
+2323 clashes detected (out of 788 atoms).
+len197_0_1
+2373 clashes detected (out of 788 atoms).
+len197_0_2
+2360 clashes detected (out of 788 atoms).
+len197_0_3
+2392 clashes detected (out of 788 atoms).
+len197_0_4
+2352 clashes detected (out of 788 atoms).
+len197_0_5
+2361 clashes detected (out of 788 atoms).
+len197_0_6
+2248 clashes detected (out of 788 atoms).
+len197_0_7
+2305 clashes detected (out of 788 atoms).
+len197_0_8
+2370 clashes detected (out of 788 atoms).
+len197_0_9
+2389 clashes detected (out of 788 atoms).
+len198_0_10
+2249 clashes detected (out of 792 atoms).
+len198_0_1
+2394 clashes detected (out of 792 atoms).
+len198_0_2
+2388 clashes detected (out of 792 atoms).
+len198_0_3
+2347 clashes detected (out of 792 atoms).
+len198_0_4
+2394 clashes detected (out of 792 atoms).
+len198_0_5
+2335 clashes detected (out of 792 atoms).
+len198_0_6
+2317 clashes detected (out of 792 atoms).
+len198_0_7
+2382 clashes detected (out of 792 atoms).
+len198_0_8
+len198_0_9
+2352 clashes detected (out of 792 atoms).
+len199_0_10
+2329 clashes detected (out of 796 atoms).
+len199_0_1
+2307 clashes detected (out of 796 atoms).
+len199_0_2
+2401 clashes detected (out of 796 atoms).
+len199_0_3
+2347 clashes detected (out of 796 atoms).
+len199_0_4
+2409 clashes detected (out of 796 atoms).
+len199_0_5
+2425 clashes detected (out of 796 atoms).
+len199_0_6
+2393 clashes detected (out of 796 atoms).
+len199_0_7
+2398 clashes detected (out of 796 atoms).
+len199_0_8
+2361 clashes detected (out of 796 atoms).
+len199_0_9
+2345 clashes detected (out of 796 atoms).
+len200_0_10
+2420 clashes detected (out of 800 atoms).
+len200_0_1
+2388 clashes detected (out of 800 atoms).
+len200_0_2
+2399 clashes detected (out of 800 atoms).
+len200_0_3
+2400 clashes detected (out of 800 atoms).
+len200_0_4
+2376 clashes detected (out of 800 atoms).
+len200_0_5
+2429 clashes detected (out of 800 atoms).
+len200_0_6
+2432 clashes detected (out of 800 atoms).
+len200_0_7
+2364 clashes detected (out of 800 atoms).
+len200_0_8
+len200_0_9
+2341 clashes detected (out of 800 atoms).
+len20_0_10
+232 clashes detected (out of 80 atoms).
+len20_0_1
+212 clashes detected (out of 80 atoms).
+len20_0_2
+231 clashes detected (out of 80 atoms).
+len20_0_3
+232 clashes detected (out of 80 atoms).
+len20_0_4
+234 clashes detected (out of 80 atoms).
+len20_0_5
+145 clashes detected (out of 80 atoms).
+len20_0_6
+234 clashes detected (out of 80 atoms).
+len20_0_7
+234 clashes detected (out of 80 atoms).
+len20_0_8
+240 clashes detected (out of 80 atoms).
+len20_0_9
+235 clashes detected (out of 80 atoms).
+len21_0_10
+252 clashes detected (out of 84 atoms).
+len21_0_1
+250 clashes detected (out of 84 atoms).
+len21_0_2
+220 clashes detected (out of 84 atoms).
+len21_0_3
+254 clashes detected (out of 84 atoms).
+len21_0_4
+263 clashes detected (out of 84 atoms).
+len21_0_5
+241 clashes detected (out of 84 atoms).
+len21_0_6
+251 clashes detected (out of 84 atoms).
+len21_0_7
+265 clashes detected (out of 84 atoms).
+len21_0_8
+235 clashes detected (out of 84 atoms).
+len21_0_9
+245 clashes detected (out of 84 atoms).
+len22_0_10
+264 clashes detected (out of 88 atoms).
+len22_0_1
+256 clashes detected (out of 88 atoms).
+len22_0_2
+257 clashes detected (out of 88 atoms).
+len22_0_3
+264 clashes detected (out of 88 atoms).
+len22_0_4
+275 clashes detected (out of 88 atoms).
+len22_0_5
+255 clashes detected (out of 88 atoms).
+len22_0_6
+273 clashes detected (out of 88 atoms).
+len22_0_7
+262 clashes detected (out of 88 atoms).
+len22_0_8
+264 clashes detected (out of 88 atoms).
+len22_0_9
+251 clashes detected (out of 88 atoms).
+len23_0_10
+265 clashes detected (out of 92 atoms).
+len23_0_1
+274 clashes detected (out of 92 atoms).
+len23_0_2
+273 clashes detected (out of 92 atoms).
+len23_0_3
+264 clashes detected (out of 92 atoms).
+len23_0_4
+262 clashes detected (out of 92 atoms).
+len23_0_5
+284 clashes detected (out of 92 atoms).
+len23_0_6
+268 clashes detected (out of 92 atoms).
+len23_0_7
+268 clashes detected (out of 92 atoms).
+len23_0_8
+268 clashes detected (out of 92 atoms).
+len23_0_9
+269 clashes detected (out of 92 atoms).
+len24_0_10
+298 clashes detected (out of 96 atoms).
+len24_0_1
+295 clashes detected (out of 96 atoms).
+len24_0_2
+277 clashes detected (out of 96 atoms).
+len24_0_3
+290 clashes detected (out of 96 atoms).
+len24_0_4
+292 clashes detected (out of 96 atoms).
+len24_0_5
+288 clashes detected (out of 96 atoms).
+len24_0_6
+287 clashes detected (out of 96 atoms).
+len24_0_7
+285 clashes detected (out of 96 atoms).
+len24_0_8
+289 clashes detected (out of 96 atoms).
+len24_0_9
+290 clashes detected (out of 96 atoms).
+len25_0_10
+318 clashes detected (out of 100 atoms).
+len25_0_1
+265 clashes detected (out of 100 atoms).
+len25_0_2
+205 clashes detected (out of 100 atoms).
+len25_0_3
+303 clashes detected (out of 100 atoms).
+len25_0_4
+308 clashes detected (out of 100 atoms).
+len25_0_5
+313 clashes detected (out of 100 atoms).
+len25_0_6
+314 clashes detected (out of 100 atoms).
+len25_0_7
+309 clashes detected (out of 100 atoms).
+len25_0_8
+296 clashes detected (out of 100 atoms).
+len25_0_9
+294 clashes detected (out of 100 atoms).
+len26_0_10
+279 clashes detected (out of 104 atoms).
+len26_0_1
+329 clashes detected (out of 104 atoms).
+len26_0_2
+192 clashes detected (out of 104 atoms).
+len26_0_3
+313 clashes detected (out of 104 atoms).
+len26_0_4
+298 clashes detected (out of 104 atoms).
+len26_0_5
+298 clashes detected (out of 104 atoms).
+len26_0_6
+308 clashes detected (out of 104 atoms).
+len26_0_7
+311 clashes detected (out of 104 atoms).
+len26_0_8
+311 clashes detected (out of 104 atoms).
+len26_0_9
+321 clashes detected (out of 104 atoms).
+len27_0_10
+332 clashes detected (out of 108 atoms).
+len27_0_1
+334 clashes detected (out of 108 atoms).
+len27_0_2
+335 clashes detected (out of 108 atoms).
+len27_0_3
+318 clashes detected (out of 108 atoms).
+len27_0_4
+293 clashes detected (out of 108 atoms).
+len27_0_5
+322 clashes detected (out of 108 atoms).
+len27_0_6
+333 clashes detected (out of 108 atoms).
+len27_0_7
+320 clashes detected (out of 108 atoms).
+len27_0_8
+331 clashes detected (out of 108 atoms).
+len27_0_9
+327 clashes detected (out of 108 atoms).
+len28_0_10
+350 clashes detected (out of 112 atoms).
+len28_0_1
+242 clashes detected (out of 112 atoms).
+len28_0_2
+332 clashes detected (out of 112 atoms).
+len28_0_3
+354 clashes detected (out of 112 atoms).
+len28_0_4
+327 clashes detected (out of 112 atoms).
+len28_0_5
+351 clashes detected (out of 112 atoms).
+len28_0_6
+349 clashes detected (out of 112 atoms).
+len28_0_7
+309 clashes detected (out of 112 atoms).
+len28_0_8
+334 clashes detected (out of 112 atoms).
+len28_0_9
+311 clashes detected (out of 112 atoms).
+len29_0_10
+317 clashes detected (out of 116 atoms).
+len29_0_1
+351 clashes detected (out of 116 atoms).
+len29_0_2
+348 clashes detected (out of 116 atoms).
+len29_0_3
+339 clashes detected (out of 116 atoms).
+len29_0_4
+356 clashes detected (out of 116 atoms).
+len29_0_5
+350 clashes detected (out of 116 atoms).
+len29_0_6
+353 clashes detected (out of 116 atoms).
+len29_0_7
+345 clashes detected (out of 116 atoms).
+len29_0_8
+331 clashes detected (out of 116 atoms).
+len29_0_9
+344 clashes detected (out of 116 atoms).
+len30_0_10
+354 clashes detected (out of 120 atoms).
+len30_0_1
+352 clashes detected (out of 120 atoms).
+len30_0_2
+355 clashes detected (out of 120 atoms).
+len30_0_3
+351 clashes detected (out of 120 atoms).
+len30_0_4
+357 clashes detected (out of 120 atoms).
+len30_0_5
+348 clashes detected (out of 120 atoms).
+len30_0_6
+366 clashes detected (out of 120 atoms).
+len30_0_7
+371 clashes detected (out of 120 atoms).
+len30_0_8
+358 clashes detected (out of 120 atoms).
+len30_0_9
+304 clashes detected (out of 120 atoms).
+len31_0_10
+341 clashes detected (out of 124 atoms).
+len31_0_1
+228 clashes detected (out of 124 atoms).
+len31_0_2
+362 clashes detected (out of 124 atoms).
+len31_0_3
+387 clashes detected (out of 124 atoms).
+len31_0_4
+257 clashes detected (out of 124 atoms).
+len31_0_5
+369 clashes detected (out of 124 atoms).
+len31_0_6
+369 clashes detected (out of 124 atoms).
+len31_0_7
+364 clashes detected (out of 124 atoms).
+len31_0_8
+391 clashes detected (out of 124 atoms).
+len31_0_9
+374 clashes detected (out of 124 atoms).
+len32_0_10
+395 clashes detected (out of 128 atoms).
+len32_0_1
+378 clashes detected (out of 128 atoms).
+len32_0_2
+381 clashes detected (out of 128 atoms).
+len32_0_3
+280 clashes detected (out of 128 atoms).
+len32_0_4
+387 clashes detected (out of 128 atoms).
+len32_0_5
+316 clashes detected (out of 128 atoms).
+len32_0_6
+388 clashes detected (out of 128 atoms).
+len32_0_7
+359 clashes detected (out of 128 atoms).
+len32_0_8
+368 clashes detected (out of 128 atoms).
+len32_0_9
+404 clashes detected (out of 128 atoms).
+len33_0_10
+395 clashes detected (out of 132 atoms).
+len33_0_1
+286 clashes detected (out of 132 atoms).
+len33_0_2
+380 clashes detected (out of 132 atoms).
+len33_0_3
+347 clashes detected (out of 132 atoms).
+len33_0_4
+402 clashes detected (out of 132 atoms).
+len33_0_5
+271 clashes detected (out of 132 atoms).
+len33_0_6
+396 clashes detected (out of 132 atoms).
+len33_0_7
+408 clashes detected (out of 132 atoms).
+len33_0_8
+401 clashes detected (out of 132 atoms).
+len33_0_9
+356 clashes detected (out of 132 atoms).
+len34_0_10
+386 clashes detected (out of 136 atoms).
+len34_0_1
+414 clashes detected (out of 136 atoms).
+len34_0_2
+356 clashes detected (out of 136 atoms).
+len34_0_3
+391 clashes detected (out of 136 atoms).
+len34_0_4
+407 clashes detected (out of 136 atoms).
+len34_0_5
+410 clashes detected (out of 136 atoms).
+len34_0_6
+416 clashes detected (out of 136 atoms).
+len34_0_7
+414 clashes detected (out of 136 atoms).
+len34_0_8
+411 clashes detected (out of 136 atoms).
+len34_0_9
+383 clashes detected (out of 136 atoms).
+len35_0_10
+434 clashes detected (out of 140 atoms).
+len35_0_1
+415 clashes detected (out of 140 atoms).
+len35_0_2
+384 clashes detected (out of 140 atoms).
+len35_0_3
+380 clashes detected (out of 140 atoms).
+len35_0_4
+428 clashes detected (out of 140 atoms).
+len35_0_5
+411 clashes detected (out of 140 atoms).
+len35_0_6
+411 clashes detected (out of 140 atoms).
+len35_0_7
+416 clashes detected (out of 140 atoms).
+len35_0_8
+392 clashes detected (out of 140 atoms).
+len35_0_9
+427 clashes detected (out of 140 atoms).
+len36_0_10
+401 clashes detected (out of 144 atoms).
+len36_0_1
+435 clashes detected (out of 144 atoms).
+len36_0_2
+425 clashes detected (out of 144 atoms).
+len36_0_3
+316 clashes detected (out of 144 atoms).
+len36_0_4
+399 clashes detected (out of 144 atoms).
+len36_0_5
+347 clashes detected (out of 144 atoms).
+len36_0_6
+440 clashes detected (out of 144 atoms).
+len36_0_7
+433 clashes detected (out of 144 atoms).
+len36_0_8
+420 clashes detected (out of 144 atoms).
+len36_0_9
+428 clashes detected (out of 144 atoms).
+len37_0_10
+462 clashes detected (out of 148 atoms).
+len37_0_1
+309 clashes detected (out of 148 atoms).
+len37_0_2
+412 clashes detected (out of 148 atoms).
+len37_0_3
+435 clashes detected (out of 148 atoms).
+len37_0_4
+440 clashes detected (out of 148 atoms).
+len37_0_5
+408 clashes detected (out of 148 atoms).
+len37_0_6
+442 clashes detected (out of 148 atoms).
+len37_0_7
+440 clashes detected (out of 148 atoms).
+len37_0_8
+424 clashes detected (out of 148 atoms).
+len37_0_9
+401 clashes detected (out of 148 atoms).
+len38_0_10
+465 clashes detected (out of 152 atoms).
+len38_0_1
+459 clashes detected (out of 152 atoms).
+len38_0_2
+328 clashes detected (out of 152 atoms).
+len38_0_3
+403 clashes detected (out of 152 atoms).
+len38_0_4
+392 clashes detected (out of 152 atoms).
+len38_0_5
+436 clashes detected (out of 152 atoms).
+len38_0_6
+445 clashes detected (out of 152 atoms).
+len38_0_7
+461 clashes detected (out of 152 atoms).
+len38_0_8
+430 clashes detected (out of 152 atoms).
+len38_0_9
+432 clashes detected (out of 152 atoms).
+len39_0_10
+414 clashes detected (out of 156 atoms).
+len39_0_1
+465 clashes detected (out of 156 atoms).
+len39_0_2
+423 clashes detected (out of 156 atoms).
+len39_0_3
+428 clashes detected (out of 156 atoms).
+len39_0_4
+456 clashes detected (out of 156 atoms).
+len39_0_5
+485 clashes detected (out of 156 atoms).
+len39_0_6
+385 clashes detected (out of 156 atoms).
+len39_0_7
+471 clashes detected (out of 156 atoms).
+len39_0_8
+460 clashes detected (out of 156 atoms).
+len39_0_9
+464 clashes detected (out of 156 atoms).
+len40_0_10
+437 clashes detected (out of 160 atoms).
+len40_0_1
+458 clashes detected (out of 160 atoms).
+len40_0_2
+464 clashes detected (out of 160 atoms).
+len40_0_3
+427 clashes detected (out of 160 atoms).
+len40_0_4
+470 clashes detected (out of 160 atoms).
+len40_0_5
+486 clashes detected (out of 160 atoms).
+len40_0_6
+446 clashes detected (out of 160 atoms).
+len40_0_7
+493 clashes detected (out of 160 atoms).
+len40_0_8
+483 clashes detected (out of 160 atoms).
+len40_0_9
+436 clashes detected (out of 160 atoms).
+len41_0_10
+513 clashes detected (out of 164 atoms).
+len41_0_1
+478 clashes detected (out of 164 atoms).
+len41_0_2
+451 clashes detected (out of 164 atoms).
+len41_0_3
+349 clashes detected (out of 164 atoms).
+len41_0_4
+488 clashes detected (out of 164 atoms).
+len41_0_5
+453 clashes detected (out of 164 atoms).
+len41_0_6
+431 clashes detected (out of 164 atoms).
+len41_0_7
+326 clashes detected (out of 164 atoms).
+len41_0_8
+475 clashes detected (out of 164 atoms).
+len41_0_9
+501 clashes detected (out of 164 atoms).
+len42_0_10
+515 clashes detected (out of 168 atoms).
+len42_0_1
+491 clashes detected (out of 168 atoms).
+len42_0_2
+493 clashes detected (out of 168 atoms).
+len42_0_3
+434 clashes detected (out of 168 atoms).
+len42_0_4
+494 clashes detected (out of 168 atoms).
+len42_0_5
+502 clashes detected (out of 168 atoms).
+len42_0_6
+513 clashes detected (out of 168 atoms).
+len42_0_7
+475 clashes detected (out of 168 atoms).
+len42_0_8
+429 clashes detected (out of 168 atoms).
+len42_0_9
+359 clashes detected (out of 168 atoms).
+len43_0_10
+518 clashes detected (out of 172 atoms).
+len43_0_1
+526 clashes detected (out of 172 atoms).
+len43_0_2
+514 clashes detected (out of 172 atoms).
+len43_0_3
+498 clashes detected (out of 172 atoms).
+len43_0_4
+503 clashes detected (out of 172 atoms).
+len43_0_5
+534 clashes detected (out of 172 atoms).
+len43_0_6
+528 clashes detected (out of 172 atoms).
+len43_0_7
+515 clashes detected (out of 172 atoms).
+len43_0_8
+494 clashes detected (out of 172 atoms).
+len43_0_9
+422 clashes detected (out of 172 atoms).
+len44_0_10
+488 clashes detected (out of 176 atoms).
+len44_0_1
+523 clashes detected (out of 176 atoms).
+len44_0_2
+535 clashes detected (out of 176 atoms).
+len44_0_3
+497 clashes detected (out of 176 atoms).
+len44_0_4
+504 clashes detected (out of 176 atoms).
+len44_0_5
+529 clashes detected (out of 176 atoms).
+len44_0_6
+424 clashes detected (out of 176 atoms).
+len44_0_7
+510 clashes detected (out of 176 atoms).
+len44_0_8
+545 clashes detected (out of 176 atoms).
+len44_0_9
+495 clashes detected (out of 176 atoms).
+len45_0_10
+451 clashes detected (out of 180 atoms).
+len45_0_1
+475 clashes detected (out of 180 atoms).
+len45_0_2
+511 clashes detected (out of 180 atoms).
+len45_0_3
+541 clashes detected (out of 180 atoms).
+len45_0_4
+545 clashes detected (out of 180 atoms).
+len45_0_5
+558 clashes detected (out of 180 atoms).
+len45_0_6
+510 clashes detected (out of 180 atoms).
+len45_0_7
+506 clashes detected (out of 180 atoms).
+len45_0_8
+555 clashes detected (out of 180 atoms).
+len45_0_9
+533 clashes detected (out of 180 atoms).
+len46_0_10
+541 clashes detected (out of 184 atoms).
+len46_0_1
+504 clashes detected (out of 184 atoms).
+len46_0_2
+566 clashes detected (out of 184 atoms).
+len46_0_3
+561 clashes detected (out of 184 atoms).
+len46_0_4
+529 clashes detected (out of 184 atoms).
+len46_0_5
+559 clashes detected (out of 184 atoms).
+len46_0_6
+559 clashes detected (out of 184 atoms).
+len46_0_7
+551 clashes detected (out of 184 atoms).
+len46_0_8
+328 clashes detected (out of 184 atoms).
+len46_0_9
+548 clashes detected (out of 184 atoms).
+len47_0_10
+570 clashes detected (out of 188 atoms).
+len47_0_1
+563 clashes detected (out of 188 atoms).
+len47_0_2
+558 clashes detected (out of 188 atoms).
+len47_0_3
+447 clashes detected (out of 188 atoms).
+len47_0_4
+519 clashes detected (out of 188 atoms).
+len47_0_5
+543 clashes detected (out of 188 atoms).
+len47_0_6
+574 clashes detected (out of 188 atoms).
+len47_0_7
+566 clashes detected (out of 188 atoms).
+len47_0_8
+540 clashes detected (out of 188 atoms).
+len47_0_9
+459 clashes detected (out of 188 atoms).
+len48_0_10
+568 clashes detected (out of 192 atoms).
+len48_0_1
+573 clashes detected (out of 192 atoms).
+len48_0_2
+559 clashes detected (out of 192 atoms).
+len48_0_3
+556 clashes detected (out of 192 atoms).
+len48_0_4
+581 clashes detected (out of 192 atoms).
+len48_0_5
+573 clashes detected (out of 192 atoms).
+len48_0_6
+564 clashes detected (out of 192 atoms).
+len48_0_7
+469 clashes detected (out of 192 atoms).
+len48_0_8
+575 clashes detected (out of 192 atoms).
+len48_0_9
+579 clashes detected (out of 192 atoms).
+len49_0_10
+542 clashes detected (out of 196 atoms).
+len49_0_1
+467 clashes detected (out of 196 atoms).
+len49_0_2
+536 clashes detected (out of 196 atoms).
+len49_0_3
+584 clashes detected (out of 196 atoms).
+len49_0_4
+595 clashes detected (out of 196 atoms).
+len49_0_5
+543 clashes detected (out of 196 atoms).
+len49_0_6
+552 clashes detected (out of 196 atoms).
+len49_0_7
+592 clashes detected (out of 196 atoms).
+len49_0_8
+567 clashes detected (out of 196 atoms).
+len49_0_9
+605 clashes detected (out of 196 atoms).
+len50_0_10
+621 clashes detected (out of 200 atoms).
+len50_0_1
+601 clashes detected (out of 200 atoms).
+len50_0_2
+599 clashes detected (out of 200 atoms).
+len50_0_3
+529 clashes detected (out of 200 atoms).
+len50_0_4
+490 clashes detected (out of 200 atoms).
+len50_0_5
+617 clashes detected (out of 200 atoms).
+len50_0_6
+594 clashes detected (out of 200 atoms).
+len50_0_7
+613 clashes detected (out of 200 atoms).
+len50_0_8
+619 clashes detected (out of 200 atoms).
+len50_0_9
+599 clashes detected (out of 200 atoms).
+len51_0_10
+621 clashes detected (out of 204 atoms).
+len51_0_1
+540 clashes detected (out of 204 atoms).
+len51_0_2
+589 clashes detected (out of 204 atoms).
+len51_0_3
+598 clashes detected (out of 204 atoms).
+len51_0_4
+593 clashes detected (out of 204 atoms).
+len51_0_5
+608 clashes detected (out of 204 atoms).
+len51_0_6
+618 clashes detected (out of 204 atoms).
+len51_0_7
+615 clashes detected (out of 204 atoms).
+len51_0_8
+607 clashes detected (out of 204 atoms).
+len51_0_9
+564 clashes detected (out of 204 atoms).
+len52_0_10
+644 clashes detected (out of 208 atoms).
+len52_0_1
+639 clashes detected (out of 208 atoms).
+len52_0_2
+609 clashes detected (out of 208 atoms).
+len52_0_3
+587 clashes detected (out of 208 atoms).
+len52_0_4
+630 clashes detected (out of 208 atoms).
+len52_0_5
+576 clashes detected (out of 208 atoms).
+len52_0_6
+623 clashes detected (out of 208 atoms).
+len52_0_7
+410 clashes detected (out of 208 atoms).
+len52_0_8
+632 clashes detected (out of 208 atoms).
+len52_0_9
+625 clashes detected (out of 208 atoms).
+len53_0_10
+636 clashes detected (out of 212 atoms).
+len53_0_1
+565 clashes detected (out of 212 atoms).
+len53_0_2
+614 clashes detected (out of 212 atoms).
+len53_0_3
+607 clashes detected (out of 212 atoms).
+len53_0_4
+412 clashes detected (out of 212 atoms).
+len53_0_5
+632 clashes detected (out of 212 atoms).
+len53_0_6
+641 clashes detected (out of 212 atoms).
+len53_0_7
+629 clashes detected (out of 212 atoms).
+len53_0_8
+648 clashes detected (out of 212 atoms).
+len53_0_9
+663 clashes detected (out of 212 atoms).
+len54_0_10
+627 clashes detected (out of 216 atoms).
+len54_0_1
+622 clashes detected (out of 216 atoms).
+len54_0_2
+625 clashes detected (out of 216 atoms).
+len54_0_3
+621 clashes detected (out of 216 atoms).
+len54_0_4
+658 clashes detected (out of 216 atoms).
+len54_0_5
+667 clashes detected (out of 216 atoms).
+len54_0_6
+625 clashes detected (out of 216 atoms).
+len54_0_7
+623 clashes detected (out of 216 atoms).
+len54_0_8
+663 clashes detected (out of 216 atoms).
+len54_0_9
+629 clashes detected (out of 216 atoms).
+len55_0_10
+654 clashes detected (out of 220 atoms).
+len55_0_1
+666 clashes detected (out of 220 atoms).
+len55_0_2
+665 clashes detected (out of 220 atoms).
+len55_0_3
+661 clashes detected (out of 220 atoms).
+len55_0_4
+659 clashes detected (out of 220 atoms).
+len55_0_5
+653 clashes detected (out of 220 atoms).
+len55_0_6
+639 clashes detected (out of 220 atoms).
+len55_0_7
+665 clashes detected (out of 220 atoms).
+len55_0_8
+602 clashes detected (out of 220 atoms).
+len55_0_9
+674 clashes detected (out of 220 atoms).
+len56_0_10
+676 clashes detected (out of 224 atoms).
+len56_0_1
+689 clashes detected (out of 224 atoms).
+len56_0_2
+679 clashes detected (out of 224 atoms).
+len56_0_3
+590 clashes detected (out of 224 atoms).
+len56_0_4
+666 clashes detected (out of 224 atoms).
+len56_0_5
+647 clashes detected (out of 224 atoms).
+len56_0_6
+679 clashes detected (out of 224 atoms).
+len56_0_7
+681 clashes detected (out of 224 atoms).
+len56_0_8
+449 clashes detected (out of 224 atoms).
+len56_0_9
+660 clashes detected (out of 224 atoms).
+len57_0_10
+690 clashes detected (out of 228 atoms).
+len57_0_1
+686 clashes detected (out of 228 atoms).
+len57_0_2
+670 clashes detected (out of 228 atoms).
+len57_0_3
+692 clashes detected (out of 228 atoms).
+len57_0_4
+682 clashes detected (out of 228 atoms).
+len57_0_5
+658 clashes detected (out of 228 atoms).
+len57_0_6
+684 clashes detected (out of 228 atoms).
+len57_0_7
+685 clashes detected (out of 228 atoms).
+len57_0_8
+691 clashes detected (out of 228 atoms).
+len57_0_9
+682 clashes detected (out of 228 atoms).
+len58_0_10
+696 clashes detected (out of 232 atoms).
+len58_0_1
+680 clashes detected (out of 232 atoms).
+len58_0_2
+717 clashes detected (out of 232 atoms).
+len58_0_3
+720 clashes detected (out of 232 atoms).
+len58_0_4
+697 clashes detected (out of 232 atoms).
+len58_0_5
+685 clashes detected (out of 232 atoms).
+len58_0_6
+675 clashes detected (out of 232 atoms).
+len58_0_7
+710 clashes detected (out of 232 atoms).
+len58_0_8
+673 clashes detected (out of 232 atoms).
+len58_0_9
+672 clashes detected (out of 232 atoms).
+len59_0_10
+710 clashes detected (out of 236 atoms).
+len59_0_1
+715 clashes detected (out of 236 atoms).
+len59_0_2
+654 clashes detected (out of 236 atoms).
+len59_0_3
+716 clashes detected (out of 236 atoms).
+len59_0_4
+671 clashes detected (out of 236 atoms).
+len59_0_5
+666 clashes detected (out of 236 atoms).
+len59_0_6
+715 clashes detected (out of 236 atoms).
+len59_0_7
+640 clashes detected (out of 236 atoms).
+len59_0_8
+716 clashes detected (out of 236 atoms).
+len59_0_9
+510 clashes detected (out of 236 atoms).
+len60_0_10
+695 clashes detected (out of 240 atoms).
+len60_0_1
+711 clashes detected (out of 240 atoms).
+len60_0_2
+707 clashes detected (out of 240 atoms).
+len60_0_3
+713 clashes detected (out of 240 atoms).
+len60_0_4
+747 clashes detected (out of 240 atoms).
+len60_0_5
+716 clashes detected (out of 240 atoms).
+len60_0_6
+693 clashes detected (out of 240 atoms).
+len60_0_7
+718 clashes detected (out of 240 atoms).
+len60_0_8
+691 clashes detected (out of 240 atoms).
+len60_0_9
+726 clashes detected (out of 240 atoms).
+len61_0_10
+724 clashes detected (out of 244 atoms).
+len61_0_1
+688 clashes detected (out of 244 atoms).
+len61_0_2
+693 clashes detected (out of 244 atoms).
+len61_0_3
+747 clashes detected (out of 244 atoms).
+len61_0_4
+732 clashes detected (out of 244 atoms).
+len61_0_5
+700 clashes detected (out of 244 atoms).
+len61_0_6
+717 clashes detected (out of 244 atoms).
+len61_0_7
+745 clashes detected (out of 244 atoms).
+len61_0_8
+711 clashes detected (out of 244 atoms).
+len61_0_9
+715 clashes detected (out of 244 atoms).
+len62_0_10
+753 clashes detected (out of 248 atoms).
+len62_0_1
+620 clashes detected (out of 248 atoms).
+len62_0_2
+687 clashes detected (out of 248 atoms).
+len62_0_3
+755 clashes detected (out of 248 atoms).
+len62_0_4
+730 clashes detected (out of 248 atoms).
+len62_0_5
+677 clashes detected (out of 248 atoms).
+len62_0_6
+751 clashes detected (out of 248 atoms).
+len62_0_7
+743 clashes detected (out of 248 atoms).
+len62_0_8
+762 clashes detected (out of 248 atoms).
+len62_0_9
+709 clashes detected (out of 248 atoms).
+len63_0_10
+690 clashes detected (out of 252 atoms).
+len63_0_1
+755 clashes detected (out of 252 atoms).
+len63_0_2
+752 clashes detected (out of 252 atoms).
+len63_0_3
+766 clashes detected (out of 252 atoms).
+len63_0_4
+763 clashes detected (out of 252 atoms).
+len63_0_5
+708 clashes detected (out of 252 atoms).
+len63_0_6
+770 clashes detected (out of 252 atoms).
+len63_0_7
+738 clashes detected (out of 252 atoms).
+len63_0_8
+776 clashes detected (out of 252 atoms).
+len63_0_9
+750 clashes detected (out of 252 atoms).
+len64_0_10
+769 clashes detected (out of 256 atoms).
+len64_0_1
+764 clashes detected (out of 256 atoms).
+len64_0_2
+760 clashes detected (out of 256 atoms).
+len64_0_3
+780 clashes detected (out of 256 atoms).
+len64_0_4
+758 clashes detected (out of 256 atoms).
+len64_0_5
+786 clashes detected (out of 256 atoms).
+len64_0_6
+755 clashes detected (out of 256 atoms).
+len64_0_7
+758 clashes detected (out of 256 atoms).
+len64_0_8
+775 clashes detected (out of 256 atoms).
+len64_0_9
+778 clashes detected (out of 256 atoms).
+len65_0_10
+771 clashes detected (out of 260 atoms).
+len65_0_1
+763 clashes detected (out of 260 atoms).
+len65_0_2
+792 clashes detected (out of 260 atoms).
+len65_0_3
+775 clashes detected (out of 260 atoms).
+len65_0_4
+770 clashes detected (out of 260 atoms).
+len65_0_5
+739 clashes detected (out of 260 atoms).
+len65_0_6
+784 clashes detected (out of 260 atoms).
+len65_0_7
+729 clashes detected (out of 260 atoms).
+len65_0_8
+735 clashes detected (out of 260 atoms).
+len65_0_9
+753 clashes detected (out of 260 atoms).
+len66_0_10
+791 clashes detected (out of 264 atoms).
+len66_0_1
+775 clashes detected (out of 264 atoms).
+len66_0_2
+782 clashes detected (out of 264 atoms).
+len66_0_3
+656 clashes detected (out of 264 atoms).
+len66_0_4
+750 clashes detected (out of 264 atoms).
+len66_0_5
+798 clashes detected (out of 264 atoms).
+len66_0_6
+801 clashes detected (out of 264 atoms).
+len66_0_7
+778 clashes detected (out of 264 atoms).
+len66_0_8
+767 clashes detected (out of 264 atoms).
+len66_0_9
+765 clashes detected (out of 264 atoms).
+len67_0_10
+802 clashes detected (out of 268 atoms).
+len67_0_1
+813 clashes detected (out of 268 atoms).
+len67_0_2
+810 clashes detected (out of 268 atoms).
+len67_0_3
+764 clashes detected (out of 268 atoms).
+len67_0_4
+801 clashes detected (out of 268 atoms).
+len67_0_5
+791 clashes detected (out of 268 atoms).
+len67_0_6
+816 clashes detected (out of 268 atoms).
+len67_0_7
+781 clashes detected (out of 268 atoms).
+len67_0_8
+737 clashes detected (out of 268 atoms).
+len67_0_9
+810 clashes detected (out of 268 atoms).
+len68_0_10
+814 clashes detected (out of 272 atoms).
+len68_0_1
+807 clashes detected (out of 272 atoms).
+len68_0_2
+719 clashes detected (out of 272 atoms).
+len68_0_3
+825 clashes detected (out of 272 atoms).
+len68_0_4
+814 clashes detected (out of 272 atoms).
+len68_0_5
+793 clashes detected (out of 272 atoms).
+len68_0_6
+820 clashes detected (out of 272 atoms).
+len68_0_7
+825 clashes detected (out of 272 atoms).
+len68_0_8
+773 clashes detected (out of 272 atoms).
+len68_0_9
+796 clashes detected (out of 272 atoms).
+len69_0_10
+830 clashes detected (out of 276 atoms).
+len69_0_1
+818 clashes detected (out of 276 atoms).
+len69_0_2
+834 clashes detected (out of 276 atoms).
+len69_0_3
+838 clashes detected (out of 276 atoms).
+len69_0_4
+809 clashes detected (out of 276 atoms).
+len69_0_5
+845 clashes detected (out of 276 atoms).
+len69_0_6
+760 clashes detected (out of 276 atoms).
+len69_0_7
+823 clashes detected (out of 276 atoms).
+len69_0_8
+757 clashes detected (out of 276 atoms).
+len69_0_9
+697 clashes detected (out of 276 atoms).
+len70_0_10
+835 clashes detected (out of 280 atoms).
+len70_0_1
+836 clashes detected (out of 280 atoms).
+len70_0_2
+824 clashes detected (out of 280 atoms).
+len70_0_3
+852 clashes detected (out of 280 atoms).
+len70_0_4
+769 clashes detected (out of 280 atoms).
+len70_0_5
+788 clashes detected (out of 280 atoms).
+len70_0_6
+841 clashes detected (out of 280 atoms).
+len70_0_7
+840 clashes detected (out of 280 atoms).
+len70_0_8
+774 clashes detected (out of 280 atoms).
+len70_0_9
+855 clashes detected (out of 280 atoms).
+len71_0_10
+856 clashes detected (out of 284 atoms).
+len71_0_1
+811 clashes detected (out of 284 atoms).
+len71_0_2
+848 clashes detected (out of 284 atoms).
+len71_0_3
+607 clashes detected (out of 284 atoms).
+len71_0_4
+794 clashes detected (out of 284 atoms).
+len71_0_5
+806 clashes detected (out of 284 atoms).
+len71_0_6
+870 clashes detected (out of 284 atoms).
+len71_0_7
+807 clashes detected (out of 284 atoms).
+len71_0_8
+521 clashes detected (out of 284 atoms).
+len71_0_9
+780 clashes detected (out of 284 atoms).
+len72_0_10
+872 clashes detected (out of 288 atoms).
+len72_0_1
+849 clashes detected (out of 288 atoms).
+len72_0_2
+910 clashes detected (out of 288 atoms).
+len72_0_3
+857 clashes detected (out of 288 atoms).
+len72_0_4
+901 clashes detected (out of 288 atoms).
+len72_0_5
+837 clashes detected (out of 288 atoms).
+len72_0_6
+855 clashes detected (out of 288 atoms).
+len72_0_7
+818 clashes detected (out of 288 atoms).
+len72_0_8
+861 clashes detected (out of 288 atoms).
+len72_0_9
+841 clashes detected (out of 288 atoms).
+len73_0_10
+837 clashes detected (out of 292 atoms).
+len73_0_1
+896 clashes detected (out of 292 atoms).
+len73_0_2
+852 clashes detected (out of 292 atoms).
+len73_0_3
+825 clashes detected (out of 292 atoms).
+len73_0_4
+846 clashes detected (out of 292 atoms).
+len73_0_5
+873 clashes detected (out of 292 atoms).
+len73_0_6
+867 clashes detected (out of 292 atoms).
+len73_0_7
+857 clashes detected (out of 292 atoms).
+len73_0_8
+886 clashes detected (out of 292 atoms).
+len73_0_9
+878 clashes detected (out of 292 atoms).
+len74_0_10
+867 clashes detected (out of 296 atoms).
+len74_0_1
+799 clashes detected (out of 296 atoms).
+len74_0_2
+913 clashes detected (out of 296 atoms).
+len74_0_3
+880 clashes detected (out of 296 atoms).
+len74_0_4
+844 clashes detected (out of 296 atoms).
+len74_0_5
+891 clashes detected (out of 296 atoms).
+len74_0_6
+892 clashes detected (out of 296 atoms).
+len74_0_7
+830 clashes detected (out of 296 atoms).
+len74_0_8
+889 clashes detected (out of 296 atoms).
+len74_0_9
+807 clashes detected (out of 296 atoms).
+len75_0_10
+899 clashes detected (out of 300 atoms).
+len75_0_1
+900 clashes detected (out of 300 atoms).
+len75_0_2
+883 clashes detected (out of 300 atoms).
+len75_0_3
+839 clashes detected (out of 300 atoms).
+len75_0_4
+910 clashes detected (out of 300 atoms).
+len75_0_5
+916 clashes detected (out of 300 atoms).
+len75_0_6
+904 clashes detected (out of 300 atoms).
+len75_0_7
+902 clashes detected (out of 300 atoms).
+len75_0_8
+902 clashes detected (out of 300 atoms).
+len75_0_9
+918 clashes detected (out of 300 atoms).
+len76_0_10
+880 clashes detected (out of 304 atoms).
+len76_0_1
+890 clashes detected (out of 304 atoms).
+len76_0_2
+921 clashes detected (out of 304 atoms).
+len76_0_3
+803 clashes detected (out of 304 atoms).
+len76_0_4
+895 clashes detected (out of 304 atoms).
+len76_0_5
+898 clashes detected (out of 304 atoms).
+len76_0_6
+914 clashes detected (out of 304 atoms).
+len76_0_7
+900 clashes detected (out of 304 atoms).
+len76_0_8
+878 clashes detected (out of 304 atoms).
+len76_0_9
+964 clashes detected (out of 304 atoms).
+len77_0_10
+939 clashes detected (out of 308 atoms).
+len77_0_1
+897 clashes detected (out of 308 atoms).
+len77_0_2
+935 clashes detected (out of 308 atoms).
+len77_0_3
+956 clashes detected (out of 308 atoms).
+len77_0_4
+935 clashes detected (out of 308 atoms).
+len77_0_5
+775 clashes detected (out of 308 atoms).
+len77_0_6
+925 clashes detected (out of 308 atoms).
+len77_0_7
+875 clashes detected (out of 308 atoms).
+len77_0_8
+893 clashes detected (out of 308 atoms).
+len77_0_9
+860 clashes detected (out of 308 atoms).
+len78_0_10
+876 clashes detected (out of 312 atoms).
+len78_0_1
+941 clashes detected (out of 312 atoms).
+len78_0_2
+831 clashes detected (out of 312 atoms).
+len78_0_3
+915 clashes detected (out of 312 atoms).
+len78_0_4
+949 clashes detected (out of 312 atoms).
+len78_0_5
+892 clashes detected (out of 312 atoms).
+len78_0_6
+937 clashes detected (out of 312 atoms).
+len78_0_7
+958 clashes detected (out of 312 atoms).
+len78_0_8
+911 clashes detected (out of 312 atoms).
+len78_0_9
+957 clashes detected (out of 312 atoms).
+len79_0_10
+941 clashes detected (out of 316 atoms).
+len79_0_1
+972 clashes detected (out of 316 atoms).
+len79_0_2
+912 clashes detected (out of 316 atoms).
+len79_0_3
+866 clashes detected (out of 316 atoms).
+len79_0_4
+959 clashes detected (out of 316 atoms).
+len79_0_5
+917 clashes detected (out of 316 atoms).
+len79_0_6
+917 clashes detected (out of 316 atoms).
+len79_0_7
+897 clashes detected (out of 316 atoms).
+len79_0_8
+915 clashes detected (out of 316 atoms).
+len79_0_9
+888 clashes detected (out of 316 atoms).
+len80_0_10
+986 clashes detected (out of 320 atoms).
+len80_0_1
+931 clashes detected (out of 320 atoms).
+len80_0_2
+933 clashes detected (out of 320 atoms).
+len80_0_3
+977 clashes detected (out of 320 atoms).
+len80_0_4
+966 clashes detected (out of 320 atoms).
+len80_0_5
+957 clashes detected (out of 320 atoms).
+len80_0_6
+951 clashes detected (out of 320 atoms).
+len80_0_7
+956 clashes detected (out of 320 atoms).
+len80_0_8
+967 clashes detected (out of 320 atoms).
+len80_0_9
+947 clashes detected (out of 320 atoms).
+len81_0_10
+995 clashes detected (out of 324 atoms).
+len81_0_1
+1010 clashes detected (out of 324 atoms).
+len81_0_2
+956 clashes detected (out of 324 atoms).
+len81_0_3
+913 clashes detected (out of 324 atoms).
+len81_0_4
+980 clashes detected (out of 324 atoms).
+len81_0_5
+868 clashes detected (out of 324 atoms).
+len81_0_6
+987 clashes detected (out of 324 atoms).
+len81_0_7
+986 clashes detected (out of 324 atoms).
+len81_0_8
+983 clashes detected (out of 324 atoms).
+len81_0_9
+943 clashes detected (out of 324 atoms).
+len82_0_10
+947 clashes detected (out of 328 atoms).
+len82_0_1
+985 clashes detected (out of 328 atoms).
+len82_0_2
+989 clashes detected (out of 328 atoms).
+len82_0_3
+961 clashes detected (out of 328 atoms).
+len82_0_4
+962 clashes detected (out of 328 atoms).
+len82_0_5
+954 clashes detected (out of 328 atoms).
+len82_0_6
+1004 clashes detected (out of 328 atoms).
+len82_0_7
+952 clashes detected (out of 328 atoms).
+len82_0_8
+984 clashes detected (out of 328 atoms).
+len82_0_9
+993 clashes detected (out of 328 atoms).
+len83_0_10
+927 clashes detected (out of 332 atoms).
+len83_0_1
+958 clashes detected (out of 332 atoms).
+len83_0_2
+977 clashes detected (out of 332 atoms).
+len83_0_3
+1007 clashes detected (out of 332 atoms).
+len83_0_4
+990 clashes detected (out of 332 atoms).
+len83_0_5
+1000 clashes detected (out of 332 atoms).
+len83_0_6
+979 clashes detected (out of 332 atoms).
+len83_0_7
+967 clashes detected (out of 332 atoms).
+len83_0_8
+935 clashes detected (out of 332 atoms).
+len83_0_9
+990 clashes detected (out of 332 atoms).
+len84_0_10
+993 clashes detected (out of 336 atoms).
+len84_0_1
+1007 clashes detected (out of 336 atoms).
+len84_0_2
+963 clashes detected (out of 336 atoms).
+len84_0_3
+1035 clashes detected (out of 336 atoms).
+len84_0_4
+937 clashes detected (out of 336 atoms).
+len84_0_5
+1010 clashes detected (out of 336 atoms).
+len84_0_6
+1017 clashes detected (out of 336 atoms).
+len84_0_7
+958 clashes detected (out of 336 atoms).
+len84_0_8
+978 clashes detected (out of 336 atoms).
+len84_0_9
+993 clashes detected (out of 336 atoms).
+len85_0_10
+993 clashes detected (out of 340 atoms).
+len85_0_1
+1016 clashes detected (out of 340 atoms).
+len85_0_2
+1010 clashes detected (out of 340 atoms).
+len85_0_3
+1024 clashes detected (out of 340 atoms).
+len85_0_4
+1030 clashes detected (out of 340 atoms).
+len85_0_5
+1031 clashes detected (out of 340 atoms).
+len85_0_6
+961 clashes detected (out of 340 atoms).
+len85_0_7
+971 clashes detected (out of 340 atoms).
+len85_0_8
+1034 clashes detected (out of 340 atoms).
+len85_0_9
+1004 clashes detected (out of 340 atoms).
+len86_0_10
+1046 clashes detected (out of 344 atoms).
+len86_0_1
+1028 clashes detected (out of 344 atoms).
+len86_0_2
+1016 clashes detected (out of 344 atoms).
+len86_0_3
+1011 clashes detected (out of 344 atoms).
+len86_0_4
+1020 clashes detected (out of 344 atoms).
+len86_0_5
+992 clashes detected (out of 344 atoms).
+len86_0_6
+977 clashes detected (out of 344 atoms).
+len86_0_7
+1025 clashes detected (out of 344 atoms).
+len86_0_8
+1016 clashes detected (out of 344 atoms).
+len86_0_9
+1061 clashes detected (out of 344 atoms).
+len87_0_10
+1042 clashes detected (out of 348 atoms).
+len87_0_1
+1042 clashes detected (out of 348 atoms).
+len87_0_2
+1029 clashes detected (out of 348 atoms).
+len87_0_3
+1030 clashes detected (out of 348 atoms).
+len87_0_4
+984 clashes detected (out of 348 atoms).
+len87_0_5
+891 clashes detected (out of 348 atoms).
+len87_0_6
+1049 clashes detected (out of 348 atoms).
+len87_0_7
+1016 clashes detected (out of 348 atoms).
+len87_0_8
+1044 clashes detected (out of 348 atoms).
+len87_0_9
+1038 clashes detected (out of 348 atoms).
+len88_0_10
+1079 clashes detected (out of 352 atoms).
+len88_0_1
+1067 clashes detected (out of 352 atoms).
+len88_0_2
+1031 clashes detected (out of 352 atoms).
+len88_0_3
+1006 clashes detected (out of 352 atoms).
+len88_0_4
+1080 clashes detected (out of 352 atoms).
+len88_0_5
+1069 clashes detected (out of 352 atoms).
+len88_0_6
+1062 clashes detected (out of 352 atoms).
+len88_0_7
+1064 clashes detected (out of 352 atoms).
+len88_0_8
+1004 clashes detected (out of 352 atoms).
+len88_0_9
+1046 clashes detected (out of 352 atoms).
+len89_0_10
+1036 clashes detected (out of 356 atoms).
+len89_0_1
+1052 clashes detected (out of 356 atoms).
+len89_0_2
+1053 clashes detected (out of 356 atoms).
+len89_0_3
+1079 clashes detected (out of 356 atoms).
+len89_0_4
+1024 clashes detected (out of 356 atoms).
+len89_0_5
+1010 clashes detected (out of 356 atoms).
+len89_0_6
+1016 clashes detected (out of 356 atoms).
+len89_0_7
+1067 clashes detected (out of 356 atoms).
+len89_0_8
+1063 clashes detected (out of 356 atoms).
+len89_0_9
+1009 clashes detected (out of 356 atoms).
+len90_0_10
+1059 clashes detected (out of 360 atoms).
+len90_0_1
+1043 clashes detected (out of 360 atoms).
+len90_0_2
+1023 clashes detected (out of 360 atoms).
+len90_0_3
+1053 clashes detected (out of 360 atoms).
+len90_0_4
+1039 clashes detected (out of 360 atoms).
+len90_0_5
+1063 clashes detected (out of 360 atoms).
+len90_0_6
+1083 clashes detected (out of 360 atoms).
+len90_0_7
+920 clashes detected (out of 360 atoms).
+len90_0_8
+1047 clashes detected (out of 360 atoms).
+len90_0_9
+1089 clashes detected (out of 360 atoms).
+len91_0_10
+1092 clashes detected (out of 364 atoms).
+len91_0_1
+1047 clashes detected (out of 364 atoms).
+len91_0_2
+1103 clashes detected (out of 364 atoms).
+len91_0_3
+1097 clashes detected (out of 364 atoms).
+len91_0_4
+1041 clashes detected (out of 364 atoms).
+len91_0_5
+1031 clashes detected (out of 364 atoms).
+len91_0_6
+1048 clashes detected (out of 364 atoms).
+len91_0_7
+1061 clashes detected (out of 364 atoms).
+len91_0_8
+1059 clashes detected (out of 364 atoms).
+len91_0_9
+1085 clashes detected (out of 364 atoms).
+len92_0_10
+1052 clashes detected (out of 368 atoms).
+len92_0_1
+1104 clashes detected (out of 368 atoms).
+len92_0_2
+1098 clashes detected (out of 368 atoms).
+len92_0_3
+1093 clashes detected (out of 368 atoms).
+len92_0_4
+1088 clashes detected (out of 368 atoms).
+len92_0_5
+1092 clashes detected (out of 368 atoms).
+len92_0_6
+1090 clashes detected (out of 368 atoms).
+len92_0_7
+1044 clashes detected (out of 368 atoms).
+len92_0_8
+1103 clashes detected (out of 368 atoms).
+len92_0_9
+1142 clashes detected (out of 368 atoms).
+len93_0_10
+1104 clashes detected (out of 372 atoms).
+len93_0_1
+1065 clashes detected (out of 372 atoms).
+len93_0_2
+1079 clashes detected (out of 372 atoms).
+len93_0_3
+1117 clashes detected (out of 372 atoms).
+len93_0_4
+1095 clashes detected (out of 372 atoms).
+len93_0_5
+1071 clashes detected (out of 372 atoms).
+len93_0_6
+1124 clashes detected (out of 372 atoms).
+len93_0_7
+1054 clashes detected (out of 372 atoms).
+len93_0_8
+1120 clashes detected (out of 372 atoms).
+len93_0_9
+1120 clashes detected (out of 372 atoms).
+len94_0_10
+1078 clashes detected (out of 376 atoms).
+len94_0_1
+1126 clashes detected (out of 376 atoms).
+len94_0_2
+1085 clashes detected (out of 376 atoms).
+len94_0_3
+1099 clashes detected (out of 376 atoms).
+len94_0_4
+1109 clashes detected (out of 376 atoms).
+len94_0_5
+1141 clashes detected (out of 376 atoms).
+len94_0_6
+1085 clashes detected (out of 376 atoms).
+len94_0_7
+1143 clashes detected (out of 376 atoms).
+len94_0_8
+1179 clashes detected (out of 376 atoms).
+len94_0_9
+1054 clashes detected (out of 376 atoms).
+len95_0_10
+1099 clashes detected (out of 380 atoms).
+len95_0_1
+1109 clashes detected (out of 380 atoms).
+len95_0_2
+1148 clashes detected (out of 380 atoms).
+len95_0_3
+1067 clashes detected (out of 380 atoms).
+len95_0_4
+1065 clashes detected (out of 380 atoms).
+len95_0_5
+1073 clashes detected (out of 380 atoms).
+len95_0_6
+1116 clashes detected (out of 380 atoms).
+len95_0_7
+1115 clashes detected (out of 380 atoms).
+len95_0_8
+1107 clashes detected (out of 380 atoms).
+len95_0_9
+1133 clashes detected (out of 380 atoms).
+len96_0_10
+1154 clashes detected (out of 384 atoms).
+len96_0_1
+1120 clashes detected (out of 384 atoms).
+len96_0_2
+1071 clashes detected (out of 384 atoms).
+len96_0_3
+1013 clashes detected (out of 384 atoms).
+len96_0_4
+1150 clashes detected (out of 384 atoms).
+len96_0_5
+1156 clashes detected (out of 384 atoms).
+len96_0_6
+1145 clashes detected (out of 384 atoms).
+len96_0_7
+1179 clashes detected (out of 384 atoms).
+len96_0_8
+1179 clashes detected (out of 384 atoms).
+len96_0_9
+1122 clashes detected (out of 384 atoms).
+len97_0_10
+1138 clashes detected (out of 388 atoms).
+len97_0_1
+1066 clashes detected (out of 388 atoms).
+len97_0_2
+1148 clashes detected (out of 388 atoms).
+len97_0_3
+1129 clashes detected (out of 388 atoms).
+len97_0_4
+1197 clashes detected (out of 388 atoms).
+len97_0_5
+1132 clashes detected (out of 388 atoms).
+len97_0_6
+1166 clashes detected (out of 388 atoms).
+len97_0_7
+1121 clashes detected (out of 388 atoms).
+len97_0_8
+1121 clashes detected (out of 388 atoms).
+len97_0_9
+1151 clashes detected (out of 388 atoms).
+len98_0_10
+1116 clashes detected (out of 392 atoms).
+len98_0_1
+1178 clashes detected (out of 392 atoms).
+len98_0_2
+1176 clashes detected (out of 392 atoms).
+len98_0_3
+1217 clashes detected (out of 392 atoms).
+len98_0_4
+1188 clashes detected (out of 392 atoms).
+len98_0_5
+1173 clashes detected (out of 392 atoms).
+len98_0_6
+1207 clashes detected (out of 392 atoms).
+len98_0_7
+1175 clashes detected (out of 392 atoms).
+len98_0_8
+1164 clashes detected (out of 392 atoms).
+len98_0_9
+1135 clashes detected (out of 392 atoms).
+len99_0_10
+1169 clashes detected (out of 396 atoms).
+len99_0_1
+1198 clashes detected (out of 396 atoms).
+len99_0_2
+1132 clashes detected (out of 396 atoms).
+len99_0_3
+1167 clashes detected (out of 396 atoms).
+len99_0_4
+1121 clashes detected (out of 396 atoms).
+len99_0_5
+1113 clashes detected (out of 396 atoms).
+len99_0_6
+1113 clashes detected (out of 396 atoms).
+len99_0_7
+1180 clashes detected (out of 396 atoms).
+len99_0_8
+1198 clashes detected (out of 396 atoms).
+len99_0_9
+1168 clashes detected (out of 396 atoms).

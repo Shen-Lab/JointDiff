@@ -1,0 +1,54 @@
+000-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_warm_updated_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.539977; micro=0.539977
+RMSD
+RMSD: macro=3.138662; micro=3.138662
+
+000-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_warm_updated_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.547476; micro=0.547476
+RMSD
+RMSD: macro=3.157882; micro=3.157882
+
+001-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_warm_updated_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.546344; micro=0.546344
+RMSD
+RMSD: macro=3.105656; micro=3.105656
+
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.529872; micro=0.529872
+RMSD
+RMSD: macro=3.120997; micro=3.120997
+
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.600943; micro=0.600943
+RMSD
+RMSD: macro=2.846033; micro=2.846033
+
+003-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling-smote_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.557973; micro=0.557973
+RMSD
+RMSD: macro=2.988439; micro=2.988439
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.572431; micro=0.572431
+RMSD
+RMSD: macro=2.979430; micro=2.979430
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.586890; micro=0.586890
+RMSD
+RMSD: macro=2.924872; micro=2.924872
+
+005-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.575245; micro=0.575245
+RMSD
+RMSD: macro=2.961889; micro=2.961889
+

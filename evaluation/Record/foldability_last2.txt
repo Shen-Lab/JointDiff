@@ -1,0 +1,68 @@
+micro-posi+fape
+************************************************************
+1810 samples in all: micro-SR=0.2020; macro-SR=0.2020
+
+micro-posi+mse
+************************************************************
+1810 samples in all: micro-SR=0.1749; macro-SR=0.1749
+
+micro-posi+mse-align
+************************************************************
+1810 samples in all: micro-SR=0.2036; macro-SR=0.2036
+
+micro-posi+mse-align-detach
+************************************************************
+1810 samples in all: micro-SR=0.2168; macro-SR=0.2168
+
+micro-posi+mse-align-dist+l1
+************************************************************
+1810 samples in all: micro-SR=0.2334; macro-SR=0.2334
+
+micro-posi+mse-align-dist+mse
+************************************************************
+1810 samples in all: micro-SR=0.2144; macro-SR=0.2144
+
+micro-posi+mse-align-dist+mse-distogram
+************************************************************
+1810 samples in all: micro-SR=0.2174; macro-SR=0.2174
+
+micro-posi+mse-align-dist+mse-distogram-clash
+************************************************************
+1810 samples in all: micro-SR=0.2606; macro-SR=0.2606
+
+micro-posi+mse-align-distogram
+************************************************************
+1810 samples in all: micro-SR=0.2174; macro-SR=0.2174
+
+micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+1810 samples in all: micro-SR=0.2298; macro-SR=0.2298
+
+rm_micro-posi+fape
+************************************************************
+1810 samples in all: micro-SR=0.1959; macro-SR=0.1959
+
+rm_micro-posi+mse
+************************************************************
+1810 samples in all: micro-SR=0.1799; macro-SR=0.1799
+
+rm_micro-posi+mse-align
+************************************************************
+1810 samples in all: micro-SR=0.2589; macro-SR=0.2589
+
+rm_micro-posi+mse-align-detach
+************************************************************
+1810 samples in all: micro-SR=0.2233; macro-SR=0.2233
+
+rm_micro-posi+mse-align-dist+l1
+************************************************************
+1810 samples in all: micro-SR=0.2289; macro-SR=0.2289
+
+rm_micro-posi+mse-align-dist+mse
+************************************************************
+1810 samples in all: micro-SR=0.2290; macro-SR=0.2290
+
+rm_micro-posi+mse-align-dist+smooth-lddt
+************************************************************
+1810 samples in all: micro-SR=0.2709; macro-SR=0.2709
+

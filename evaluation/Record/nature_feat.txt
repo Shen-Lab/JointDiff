@@ -1,0 +1,4 @@
+6017 sample dictionaries in all.
+623885 angles tuples in all.
+Clash: mean=0.0467, min=0, median=0, max=23, std=0.6199
+Size: mean=124.1209, min=13, median=122, max=200, std=38.5206

@@ -1,0 +1,72 @@
+codesign_RememberPadding_2024_01_29__20_57_00
+10 samples in all: micro-SR=0.1624; macro-SR=0.1624
+
+codesign_SingleChain_2023_10_06__00_47_00_diffab_max
+10 samples in all: micro-SR=0.0746; macro-SR=0.0746
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_2023_05_01__17_05_48
+10 samples in all: micro-SR=0.1665; macro-SR=0.1665
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_3layers_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1717; macro-SR=0.1717
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_9layers_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1664; macro-SR=0.1664
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_large-1_2024_01_13__14_21_50
+10 samples in all: micro-SR=0.1742; macro-SR=0.1742
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_large-2_2024_01_13__14_21_50
+10 samples in all: micro-SR=0.1868; macro-SR=0.1868
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_large-3_2024_01_13__14_21_50
+10 samples in all: micro-SR=0.1925; macro-SR=0.1925
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale1.0_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.2380; macro-SR=0.2380
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale2.2_2024_01_13__14_05_12
+10 samples in all: micro-SR=0.2056; macro-SR=0.2056
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale4.4_2024_01_13__14_05_12
+10 samples in all: micro-SR=0.1728; macro-SR=0.1728
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale5.0_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1829; macro-SR=0.1829
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale8.8_2024_01_13__14_05_12
+10 samples in all: micro-SR=0.1585; macro-SR=0.1585
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale17.6_2024_01_13__14_25_06
+10 samples in all: micro-SR=0.1668; macro-SR=0.1668
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale20.0_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1612; macro-SR=0.1612
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale50.0_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1094; macro-SR=0.1094
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_2024_01_20__16_37_11
+10 samples in all: micro-SR=0.1381; macro-SR=0.1381
+
+codesign_diffab_complete_gen_share-true_step1_lr1.e-4_wd0.0_2023_12_15__00_50_03
+10 samples in all: micro-SR=0.0497; macro-SR=0.0497
+
+codesign_diffab_complete_gen_share-true_step2_lr1.e-4_wd0.0_2023_12_15__00_50_03
+10 samples in all: micro-SR=0.0665; macro-SR=0.0665
+
+codesign_diffab_complete_gen_share-true_step5_lr1.e-4_wd0.0_2023_12_15__00_50_03
+10 samples in all: micro-SR=0.0912; macro-SR=0.0912
+
+codesign_diffab_complete_gen_share-true_step10_lr1.e-4_wd0.0_2023_05_01__17_18_33
+10 samples in all: micro-SR=0.1159; macro-SR=0.1159
+
+codesign_diffab_complete_gen_share-true_step50_lr1.e-4_wd0.0_2023_05_01__17_18_33
+10 samples in all: micro-SR=0.1714; macro-SR=0.1714
+
+codesign_diffab_complete_gen_share-true_step500_lr1.e-4_wd0.0_2023_05_01__17_18_33
+10 samples in all: micro-SR=0.1390; macro-SR=0.1390
+
+codesign_diffab_complete_gen_share-true_step1000_lr1.e-4_wd0.0_2023_05_01__17_05_48
+10 samples in all: micro-SR=0.0874; macro-SR=0.0874
+

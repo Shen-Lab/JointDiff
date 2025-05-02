@@ -1,0 +1,75 @@
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_2023_05_01__17_05_48
+seq0-str0
+100 reference sequences.
+1000 samples in all: micro-SR=0.1893; macro-SR=0.1893
+seq0-str1
+100 reference sequences.
+1000 samples in all: micro-SR=0.1865; macro-SR=0.1865
+
+seq1-str0
+100 reference sequences.
+1000 samples in all: micro-SR=0.1893; macro-SR=0.1893
+seq1-str1
+100 reference sequences.
+1000 samples in all: micro-SR=0.1865; macro-SR=0.1865
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale100.0_2024_01_20__16_37_11
+seq0-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1645; macro-SR=0.1645
+seq0-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.3912; macro-SR=0.3912
+
+seq1-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1645; macro-SR=0.1645
+seq1-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.3912; macro-SR=0.3912
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale1.0_2024_01_20__16_37_11
+seq0-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.2515; macro-SR=0.2515
+seq0-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.2520; macro-SR=0.2520
+
+seq1-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.2515; macro-SR=0.2515
+seq1-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.2520; macro-SR=0.2520
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale4.4_2024_01_13__14_05_12
+seq0-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1772; macro-SR=0.1772
+seq0-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.1745; macro-SR=0.1745
+
+seq1-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1770; macro-SR=0.1770
+seq1-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.1745; macro-SR=0.1745
+
+codesign_diffab_complete_gen_share-true_step100_lr1.e-4_wd0.0_posiscale50.0_2024_01_20__16_37_11
+seq0-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1369; macro-SR=0.1369
+seq0-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.2751; macro-SR=0.2751
+
+seq1-str0
+190 reference sequences.
+1900 samples in all: micro-SR=0.1369; macro-SR=0.1369
+seq1-str1
+190 reference sequences.
+1900 samples in all: micro-SR=0.2751; macro-SR=0.2751
+
