@@ -370,10 +370,12 @@ class EpsilonNet(nn.Module):
         #######################################################################
 
         if self.emb_first:
-            # s_t = s_t.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
-            res_feat = self.res_feat_mixer(
-                torch.cat([res_feat, self.current_sequence_embedding(s_t)], dim=-1)
-            ) # [Important] Incorporate sequence at the current step.
+            ## 050525?
+            # # s_t = s_t.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
+            # res_feat = self.res_feat_mixer(
+            #     torch.cat([res_feat, self.current_sequence_embedding(s_t)], dim=-1)
+            # ) # [Important] Incorporate sequence at the current step.
+            res_feat, p_t_backbone, R = self.res_embedding(R, p_t, s_t, batch, mask_res)
 
         #######################################################################
         # monomer design only; no res_feat and pair_feat input

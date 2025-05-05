@@ -374,28 +374,28 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     ###### paths ######
     parser.add_argument('--model_path', type=str, 
-     default='../../Documents/TrainedModels/JointDiff/logs_jointdiff_development/jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18/checkpoints/88000.pt'
+     default='../checkpoints/JointDiff-x_model.pt'
     )
     parser.add_argument('--data_path', type=str, 
-        default='../../Documents/Data/real_experiment/motif.csv'
+        default='../data/motif-scaffolding_design/motif.csv'
     )
     parser.add_argument('--pdb_path', type=str, 
-        default='../../Documents/Data/real_experiment/pdbs/'
+        default='../data/motif-scaffolding_design/motif_pdbs/'
     )
     parser.add_argument('--info_dict_path', type=str, 
-        default='../../Documents/Data/real_experiment/motif_data.pkl'
+        default='../data/motif-scaffolding_design/motif_data.pkl'
     )
     parser.add_argument('--flexible_data_path', type=str,
         default='none'
     )
     parser.add_argument('--result_path', type=str,
-        default='../Results/debug/'
+        default='../samples'
     )
     ###### devices ######
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--multi_gpu', type=int, default=1)
     ###### inference setting #####
-    parser.add_argument('--attempt', type=int, default=20)
+    parser.add_argument('--attempt', type=int, default=10)
     parser.add_argument('--sample_structure', type=int, default=1)
     parser.add_argument('--sample_sequence', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=4)
@@ -433,16 +433,37 @@ if __name__ == '__main__':
     checkpoint = torch.load(args.model_path)
     config = checkpoint['config']
 
+    ### adpat to old versions
+    if config.model.train_version == 'gt':
+        config.model.train_version = 'jointdiff-x'
+        config.model.embed_first = True
+    elif config.model.train_version == 'noise':
+        config.model.train_version = 'jointdiff'
+        config.model.embed_first = True
+
+    if 'seq_model_opt' in config['model']['diffusion']:
+        del config['model']['diffusion']['seq_model_opt']
+    if 'reweighting_term' in config['model']['diffusion']:
+        del config['model']['diffusion']['reweighting_term']
+    if 'decoder_version' in config['model']['diffusion']['eps_net_opt']:
+        del config['model']['diffusion']['eps_net_opt']['decoder_version']
+
+    ### define the model
     model = DiffusionSingleChainDesign(config.model).to(args.device)
     print('Number of parameters: %d' % count_parameters(model))
 
-    parameter_dict = {}
+    parameter_dict = model.state_dict()
     for key in checkpoint['model'].keys():
         if key.startswith('module'):
             key_new = key[7:]
+        else:
+            key_new = key
+
+        if key_new in parameter_dict:
             parameter_dict[key_new] = checkpoint['model'][key]
         else:
-            parameter_dict[key] = checkpoint['model'][key]
+            print('%s not found in current model.' % key_new)
+
     model.load_state_dict(parameter_dict)
 
     ###### Parallel ######

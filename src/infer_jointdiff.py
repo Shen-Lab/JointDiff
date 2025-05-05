@@ -114,10 +114,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     ###### paths ######
     parser.add_argument('--model_path', type=str, 
-        default='../Debug/checkpoints/jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm-10.0_allbbatom_micro-posi+mse-align-dist+mse-distogram-clash-gap_2025_05_01__23_47_24/checkpoints/1.pt'
+        default='../checkpoints/JointDiff_model.pt'
     )
     parser.add_argument('--result_path', type=str, 
-        default='../Debug/samples/'
+        default='../samples/'
     )
     ###### devices ######
     parser.add_argument('--device', type=str, default='cuda')
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     parser.add_argument('--sample_method', type=str, 
         default='all', help='"all" or "random"'
     )
-    parser.add_argument('--size_range', nargs='*', type=int, default=[20,200])
+    parser.add_argument('--size_range', nargs='*', type=int, default=[20, 200, 10])
     parser.add_argument('--num', type=int, default=10)
     parser.add_argument('--batch_size', type=int, default=5)
     parser.add_argument('--save_type', type=str, default='sele', help='"sele", "all" or "last"')
@@ -160,17 +160,37 @@ if __name__ == '__main__':
     checkpoint = torch.load(args.model_path)
     config = checkpoint['config']
 
+    ### adpat to old versions
+    if config.model.train_version == 'gt':
+        config.model.train_version = 'jointdiff-x'
+        config.model.embed_first = True
+    elif config.model.train_version == 'noise':
+        config.model.train_version = 'jointdiff'
+        config.model.embed_first = True
+
+    if 'seq_model_opt' in config['model']['diffusion']:
+        del config['model']['diffusion']['seq_model_opt']
+    if 'reweighting_term' in config['model']['diffusion']:
+        del config['model']['diffusion']['reweighting_term']
+    if 'decoder_version' in config['model']['diffusion']['eps_net_opt']:
+        del config['model']['diffusion']['eps_net_opt']['decoder_version']
+
+    ### define the model
     model = DiffusionSingleChainDesign(config.model).to(args.device)
     print('Number of parameters: %d' % count_parameters(model))
 
-    checkpoint = torch.load(args.model_path)
-    parameter_dict = {}
+    parameter_dict = model.state_dict()
     for key in checkpoint['model'].keys():
         if key.startswith('module'):
             key_new = key[7:]
+        else:
+            key_new = key
+
+        if key_new in parameter_dict:
             parameter_dict[key_new] = checkpoint['model'][key]
         else:
-            parameter_dict[key] = checkpoint['model'][key]
+            print('%s not found in current model.' % key_new)
+
     model.load_state_dict(parameter_dict)
 
     ### Parallel
