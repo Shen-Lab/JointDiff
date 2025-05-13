@@ -33,7 +33,8 @@ from jointdiff.modules.data.constants import ressymb_order, max_num_heavyatoms, 
 
 ### for losses 
 from jointdiff.loss import (
-    sequence_loss, structure_loss, distance_loss, distogram_loss 
+    sequence_loss, structure_loss, distance_loss, distogram_loss,
+    weighted_rigid_align
 )
 
 
@@ -337,7 +338,7 @@ class EpsilonNet(nn.Module):
 
     def forward(self, 
         v_t, p_t, s_t, beta, 
-        mask_res, mask_gen, 
+        mask_res, 
         res_feat = None, 
         pair_feat = None, 
         batch = None,
@@ -352,7 +353,6 @@ class EpsilonNet(nn.Module):
             s_t: sequence at time t; (N, L).
             beta: Beta_t; (N,).
             mask_res: mask with True for valid tokens (N, L).
-            mask_gen: mask with True for target tokens (N, L).
             res_feat: None or (N, L, res_dim).
             pair_feat: None or (N, L, L, pair_dim).
 
@@ -370,12 +370,10 @@ class EpsilonNet(nn.Module):
         #######################################################################
 
         if self.emb_first:
-            ## 050525?
-            # # s_t = s_t.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
-            # res_feat = self.res_feat_mixer(
-            #     torch.cat([res_feat, self.current_sequence_embedding(s_t)], dim=-1)
-            # ) # [Important] Incorporate sequence at the current step.
-            res_feat, p_t_backbone, R = self.res_embedding(R, p_t, s_t, batch, mask_res)
+            # s_t = s_t.clamp(min=0, max=19)  # TODO: clamping is good but ugly.
+            res_feat = self.res_feat_mixer(
+                torch.cat([res_feat, self.current_sequence_embedding(s_t)], dim=-1)
+            ) # [Important] Incorporate sequence at the current step.
 
         #######################################################################
         # monomer design only; no res_feat and pair_feat input
@@ -420,13 +418,13 @@ class EpsilonNet(nn.Module):
             eps_crd = self.eps_crd_net(in_feat)    # (N, L, 3) or (N, L, 12)
             if self.all_bb_atom:
                 eps_pos = torch.where(
-                    mask_gen[:, :, None].expand_as(eps_crd), eps_crd, torch.zeros_like(eps_crd)
+                    mask_res[:, :, None].expand_as(eps_crd), eps_crd, torch.zeros_like(eps_crd)
                 )  # (N, L, 12)
                 eps_pos = eps_pos.view(N, L, 4, 3)  # (N, L, 4, 3)
             else:
                 eps_pos = apply_rotation_to_vector(R, eps_crd)  # (N, L, 3)
                 eps_pos = torch.where(
-                    mask_gen[:, :, None].expand_as(eps_pos), eps_pos, torch.zeros_like(eps_pos)
+                    mask_res[:, :, None].expand_as(eps_pos), eps_pos, torch.zeros_like(eps_pos)
                 )  # (N, L, 3)
 
             ###### New orientation ######
@@ -435,7 +433,7 @@ class EpsilonNet(nn.Module):
                 U = quaternion_1ijk_to_rotation_matrix(eps_rot) # (N, L, 3, 3)
                 R_next = R @ U
                 v_next = rotation_to_so3vec(R_next)     # (N, L, 3)
-                v_next = torch.where(mask_gen[:, :, None].expand_as(v_next), v_next, v_t)
+                v_next = torch.where(mask_res[:, :, None].expand_as(v_next), v_next, v_t)
             else:
                 v_next, R_next = None, None 
  
@@ -616,7 +614,6 @@ class FullDPM(nn.Module):
             mask_loss = mask_res
             mask_motif = mask_gen ^ mask_res  # 1 for motif anf 0 for others
             mask_factor = mask_gen + motif_factor * mask_motif
-            #print(mask_factor.max(dim=-1))
         else:
             mask_loss = mask_gen
             mask_factor = None
@@ -832,7 +829,7 @@ class FullDPM(nn.Module):
         ############################## joint diffusion #########################
         beta = self.trans_pos.var_sched.betas[t]  # (N,)
         v_pred, R_pred, p_pred, c_denoised, pair_feat = self.eps_net(
-            v_noisy, p_noisy, s_noisy, beta, mask_res, mask_gen, 
+            v_noisy, p_noisy, s_noisy, beta, mask_res, 
             res_feat = res_feat, pair_feat = pair_feat, batch = batch
         )   
         # v_pred: dire_(t-1); (N, L, 3)
@@ -930,8 +927,11 @@ class FullDPM(nn.Module):
                 p, protein_size = protein_size
             )
 
-        ### position mask and 
-        mask_pos_gen = mask_gen[:, :, None].expand(-1, -1, 4) if self.all_bb_atom else mask_gen
+        ### position mask and motif mask 
+        mask_pos_gen = mask_gen[:, :, None].expand(
+            -1, -1, 4
+        ) if self.all_bb_atom else mask_gen
+        mask_motif = mask_gen.bool() ^ mask_res.bool()  # True for motif residues 
 
         #######################################################################
         # Initialization 
@@ -957,50 +957,74 @@ class FullDPM(nn.Module):
             pbar = lambda x: x
 
         for t in pbar(range(self.num_steps, 0, -1)): # from T to 1
+           
+            ################################################
+            # preprocee
+            ################################################
+
+            ### last states
             v_t, p_t, s_t = traj[t]
+            #### normalization
             p_t = self.normalizer._normalize_position(
                 p_t, protein_size = protein_size
             )
-           
-            ############### beta coefficient calculation ######################
+            ### scheduler: beta coefficient calculation
             beta = self.trans_pos.var_sched.betas[t + t_bias].expand([N, ])  # (N,)
             t_tensor = torch.full(
                 [N, ], fill_value=t + t_bias, dtype=torch.long, device=device
             )
 
-            ################## score prediction ###############################
+            ################################################
+            # score predcition
+            ################################################
+
             v_next, R_next, eps_p, c_denoised, _ = self.eps_net(
-                v_t, p_t, s_t, beta, mask_res = mask_res, mask_gen = mask_gen,
+                v_t, p_t, s_t, beta, mask_res = mask_res,
                 res_feat = res_feat, pair_feat = pair_feat, batch = batch
             )   # (N, L, 3), (N, L, 3, 3), (N, L, 3)
 
-            ######################## denoising ################################
+            ################################################
+            # denoising
+            ################################################
 
-            ###### structure ######
-            ### fix the structure
+            ############### structure ######################
+
+            ###### fix the structure ######
             if not sample_structure:
-                v_next = v_t 
-                p_next = p_t
-            ### jointdiff-x
+                v_next, p_next = v_t, p_t
+            ###### jointdiff-x ######
             elif self.train_version == 'jointdiff-x':
+                ### alignment
+                if mask_motif.any():
+                     eps_p, rot_mat = weighted_rigid_align(
+                         eps_p, p_t, mask = mask_motif.unsqueeze(-1), detach = True
+                     )
+                     R_next = so3vec_to_rotation(v_next)
+                     R_next = einsum(
+                         rot_mat.transpose(-1, -2), R_next, "b n i, b k i j -> b k n j"
+                     )  # (N, 3, 3) 
+                     v_next = rotation_to_so3vec(R_next)
                 ### rotation
                 if not self.all_bb_atom:
-                    v_next = self.trans_rot.denoise(v_t, v_next, t_tensor)
+                    v_next = self.trans_rot.denoise(
+                        v_t, v_next, t_tensor
+                    )
                 ### position
                 if t > 1:
                     p_next, _ = self.trans_pos.add_noise(
-                        eps_p.reshape(N, -1, 3), t_tensor - 1, mask_generate = mask_pos_gen.reshape(N, -1)
+                        eps_p.reshape(N, -1, 3), t_tensor - 1, 
+                        mask_generate = mask_pos_gen.reshape(N, -1)
                     )
                     if self.all_bb_atom:
                         p_next = p_next.reshape(N, L, -1, 3)
                 else:
                     p_next = eps_p
-            ### jointdiff
+            ###### jointdiff ######
             else:
                 v_next = self.trans_rot.denoise(v_t, v_next, t_tensor)
                 p_next = self.trans_pos.denoise(p_t, eps_p, t_tensor)
 
-            ### fix the un-targeted region
+            ###### fix the un-targeted region (motifs) ######
             if fix_motif or t > 1:
                 if not self.all_bb_atom:
                     v_next = torch.where(
@@ -1013,12 +1037,18 @@ class FullDPM(nn.Module):
                     p_next = torch.where(
                         mask_gen[:, :, None, None].expand_as(p_next), p_next, p_t
                     )
+            
+            ###### unormalization ######
+            p_next = self.normalizer._unnormalize_position(
+                p_next, protein_size = protein_size
+            )
 
-            ###### sequence ######
-            ### fix the sequence
+            ############### sequence ######################
+
+            ###### fix the sequence ######
             if not sample_sequence:
                 s_next = s_t
-            ### jointdiff-x
+            ###### jointdiff-x ######
             elif self.train_version == 'jointdiff-x':
                 s_next = aa_sampling(
                     c_denoised, seq_sample_method = seq_sample_method
@@ -1028,29 +1058,25 @@ class FullDPM(nn.Module):
                         s_next, t_tensor - 1, method = seq_sample_method,
                         mask_generate = mask_gen
                     )
-            ### jointdiff
+            ###### jointdiff ######
             else:
                 _, s_next = self.trans_seq.denoise(s_t, c_denoised, t_tensor)
 
-            ### fix the un-targeted region
+            ###### fix the un-targeted region ######
             s_next = torch.where(mask_gen, s_next, s_t)
 
-            ############################ save the states ######################
+            ################################################
+            # save the states
+            ################################################
+           
+            traj[t-1] = (v_next, p_next, s_next)
+            ### Move previous states to cpu memory
+            traj[t] = tuple(move_cpu(x) for x in traj[t])
 
-            traj[t-1] = (
-                v_next, 
-                self.normalizer._unnormalize_position(
-                    p_next, protein_size = protein_size
-                ), 
-                s_next
-            )
-
-            traj[t] = tuple(move_cpu(x) for x in traj[t])    # Move previous states to cpu memory.
-
-        #### Move last states to cpu memory.
-        traj[0] = tuple(move_cpu(x) for x in traj[0])
-        if -1 in traj:
-            traj[-1] = tuple(move_cpu(x) for x in traj[-1])
+        ####################################################
+        # summarization: move last states to cpu memory
+        ####################################################
+        traj[t-1] = tuple(move_cpu(x) for x in traj[t-1])
 
         return batch, traj
 
