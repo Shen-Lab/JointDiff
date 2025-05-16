@@ -565,8 +565,7 @@ if __name__ == '__main__':
 
             ############################## inference ###########################
 
-            #try:
-            if True:
+            try:
                 ###### inference ######
                 out_dict, traj = infer_function(
                     mask_res = batch['mask'],
@@ -618,8 +617,8 @@ if __name__ == '__main__':
 
                         sample_num += 1
            
-            #except Exception as e:
-            #    print(e)
+            except Exception as e:
+                print(e)
 
     ###### summarizing ######
     print('%d samples genrated in %.4fs.'%(sample_num, time.time() - start_time))
