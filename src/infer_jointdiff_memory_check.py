@@ -24,6 +24,8 @@ import time
 from jointdiff.model import DiffusionSingleChainDesign
 from jointdiff.trainer import inference_pdb_write, count_parameters
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "1" 
+
 ###############################################################################
 # utility functions
 ###############################################################################
@@ -52,55 +54,21 @@ def sample_for_all_size(model, args, length_pool):
 
             ###### joint sampling ######
             len_list = torch.Tensor(len_list).cuda()
-            out_dict, traj = infer_func(
-                length_list = len_list, 
-                t_bias = args.t_bias
-            )
+            print('Memory Usage (size=%d)' % size)
+            try:
+                out_dict, traj = infer_func(
+                    length_list = len_list, 
+                    t_bias = args.t_bias
+                )
 
-            ######################## Save the generated samples ###############
-
-            if args.save_type == 'last':
-                ### save the pdb file of the last reverse diffusion process (t = 0) 
-                diff_step_list = [0]
-
-            if args.save_type == 'sele':
-                diff_step_list = args.save_steps
- 
-            elif args.save_type == 'all':
-                ### save the complete trajectory
-                diff_step_list = out_dict.keys()
- 
-            else:
-                raise Exception('Error! No sampling type called %s!'%args.save_type)
-
-            ###### save the samples ######
-            for idx in range(bz_temp):
-                pdb_idx += 1
-
-                ### for different diffusion steps
-                for diff_step in diff_step_list: 
-                    if args.modality != 'sequence':
-                        ### record pdb files
-                        pdb_path = os.path.join(
-                            args.result_path, 
-                            'len%d_%d_%d.pdb'%(size, diff_step, pdb_idx)
-                        )
-            
-                        inference_pdb_write(
-                            coor = out_dict[diff_step][idx]['coor'], 
-                            path = pdb_path, 
-                            seq = out_dict[diff_step][idx]['seq']
-                        )
-                    else:
-                        ### record as a FASTA file
-                        with open(args.result_path, 'a') as wf:
-                            wf.write('>len%d_%d_%d\n' % (size, diff_step, pdb_idx))
-                            wf.write('%s\n' % out_dict[diff_step][idx]['seq'])
-
-                    sample_num += 1
-                 
-    ###### summarizing ######
-    print('%d samples genrated in %.4fs.'%(sample_num, time.time() - start_time))
+                print('  Allocated:', round(torch.cuda.memory_allocated(0) / 1024**3, 1), 'GB')
+                print('  Cached:   ', round(torch.cuda.memory_reserved(0) / 1024**3, 1), 'GB')
+                print('*******************************************')
+                del out_dict
+                del traj
+            except Exception as e:
+                print(e)
+            torch.cuda.empty_cache()
 
 
 def sample_for_random_size(model, args, length_pool):
@@ -121,14 +89,14 @@ if __name__ == '__main__':
     )
     ###### devices ######
     parser.add_argument('--device', type=str, default='cuda')
-    parser.add_argument('--multi_gpu', type=int, default=1)
+    parser.add_argument('--multi_gpu', type=int, default=0)
     ###### inference setting #####
     parser.add_argument('--sample_method', type=str, 
         default='all', help='"all" or "random"'
     )
     parser.add_argument('--size_range', nargs='*', type=int, default=[20,200])
-    parser.add_argument('--num', type=int, default=10)
-    parser.add_argument('--batch_size', type=int, default=5)
+    parser.add_argument('--num', type=int, default=1)
+    parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--save_type', type=str, default='sele', help='"sele", "all" or "last"')
     parser.add_argument('--save_steps', type=int, nargs='*', default=[0]) #, 1, 2])
     parser.add_argument('--modality', type=str, default='joint')
@@ -214,12 +182,8 @@ if __name__ == '__main__':
         length_interval = 1
 
     length_pool = range(args.size_range[0], args.size_range[1] + 1, length_interval)
+    length_pool = [300, 500, 1000, 2000, 5000]
 
     ###### sampling for the selected length ######
 
-    if args.sample_method == 'all':
-        print('Generate %d samples for %d protein sizes...' % (args.num, len(length_pool)))
-        sample_for_all_size(model, args, length_pool) 
-    else:
-        print('Generate %d samples with ramdom protein sizes...' % (args.num))
-        sample_for_random_size(model, args, length_pool) 
+    sample_for_all_size(model, args, length_pool) 

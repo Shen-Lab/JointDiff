@@ -122,6 +122,51 @@ def get_triple_contacted_mask(dist_mat, pair_mask, distance_threshold=6.0, seque
     return result_mask
 
 
+def random_masking(
+    mask, 
+    protein_size, 
+    sele_ratio = 0.7,
+    min_mask_ratio = 0.2,
+    max_mask_ratio = 1.,
+    consecutive_prob = 0.5,
+):
+
+    N = mask.shape[0]
+    device = mask.device
+
+    ### masked sample selection
+    sele_mask = torch.rand(N).to(device) < sele_ratio # (N,), True for selected samples
+
+    ### mask size
+    mask_ratio = torch.rand(N).to(device) * (
+        max_mask_ratio - min_mask_ratio
+    ) + min_mask_ratio
+    mask_len = (mask_ratio * protein_size).int() # masked length for each sample; (N,)
+
+    ### masking
+    mask_gen = mask * (~sele_mask.unsqueeze(-1)) # all False for selected samples
+
+    for i, m_len in enumerate(mask_len):
+        if not sele_mask[i]:
+            continue
+
+        ### whether consecutive
+        consecutive = (random.random() < consecutive_prob)
+
+        if consecutive:
+            ### consecutive masking
+            start_idx = np.random.choice(range(int(protein_size[i] - m_len)))
+            end_idx = start_idx + int(m_len)
+            mask_gen[i][start_idx:end_idx] = True
+        else:
+            ### random masking
+            p_len = protein_size[i] # protein size
+            idx_sele = random.sample(range(p_len), m_len)
+            mask_gen[i][idx_sele] = True
+
+    return mask_gen 
+
+
 def add_random_masking(
     batch, 
     random_mask = False,
@@ -132,6 +177,7 @@ def add_random_masking(
     seq_thre = 10,
     dist_thre = 6.,
     flanking_prob = 0.5,
+    separate_mask = False,
 ):
     """Random masking part of the protein and do the inpainting.
 
@@ -156,56 +202,30 @@ def add_random_masking(
     ################## randomly mask some regions ###################
 
     protein_size = batch['mask'].sum(dim=-1)  # (N,)
-
-    ### masked sample selection
-    sele_mask = torch.rand(N).to(device) < sele_ratio # (N,), True for selected samples
-
-    ### motif (active site)
-    # coor_sele = batch['pos_heavyatom'][:, :, 1, :]  # (N, L, 3)
-    # dist_mat = torch.cdist(coor_sele, coor_sele)  # (N, L, L)
-    # pair_mask = torch.bmm(
-    #     batch['mask'][:, :, None].float(), batch['mask'][:, None, :].float()
-    # ).bool()
-    # motif_mask = get_triple_contacted_mask(
-    #     dist_mat = dist_mat, pair_mask = pair_mask, 
-    #     distance_threshold = dist_thre, sequence_gap = seq_thre
-    # )  # (N, L)
-    # sele_mask = (motif_mask.sum(-1) >= 3) * sele_mask
-
-    ### mask size
-    mask_ratio = torch.rand(N).to(device) * (max_mask_ratio - min_mask_ratio) + min_mask_ratio
-    mask_len = (mask_ratio * protein_size).int() # masked length for each sample; (N,)
-
-    ### masking
-    mask_gen = batch['mask'] * (~sele_mask.unsqueeze(-1)) # all False for selected samples
-
-    for i, m_len in enumerate(mask_len):
-        if not sele_mask[i]:
-            continue
-         
-        ### whether consecutive
-        consecutive = (random.random() < consecutive_prob)
-
-        if consecutive:
-            ### consecutive masking
-            start_idx = np.random.choice(range(int(protein_size[i] - m_len)))
-            end_idx = start_idx + int(m_len)
-            mask_gen[i][start_idx:end_idx] = True
-        else:
-            ### random masking
-            p_len = protein_size[i] # protein size
-            idx_sele = random.sample(range(p_len), m_len)
-            mask_gen[i][idx_sele] = True
-
-        ### the motif points need to be fixed 
-        # mask_gen[motif_mask] = False
-
-    ###### summarization ######
-    batch['mask_gen'] = mask_gen
+    batch['mask_gen'] = random_masking(
+        batch['mask'], protein_size = protein_size,
+        sele_ratio = sele_ratio, 
+        min_mask_ratio = min_mask_ratio, max_mask_ratio = max_mask_ratio,
+        consecutive_prob = consecutive_prob,
+    )
+    ### fragment type
     batch['fragment_type'] = torch.ones(
         N, L, requires_grad = False, device = device
-    ) * batch['mask'] * 2
-    batch['fragment_type'] -= mask_gen.int()
+    ) * batch['mask'] * (2 + int(separate_mask))
+    batch['fragment_type'] -= batch['mask_gen'].int()
+
+    ###### separate masking for sequence and structure ######
+    if separate_mask:
+        #print('separate mask')
+        batch['mask_gen_seq'] = random_masking(
+            batch['mask'], protein_size = protein_size,
+            sele_ratio = sele_ratio, 
+            min_mask_ratio = min_mask_ratio, max_mask_ratio = max_mask_ratio,
+            consecutive_prob = consecutive_prob,
+        )
+        batch['fragment_type'] -= batch['mask_gen_seq'].int() * 2
+    else:
+        batch['mask_gen_seq'] = batch['mask_gen']
 
     return batch
 
@@ -245,7 +265,8 @@ def train(
         sele_ratio = train_args.sele_ratio, 
         min_mask_ratio = train_args.min_mask_ratio, 
         max_mask_ratio = train_args.max_mask_ratio,
-        consecutive_prob = train_args.consecutive_prob
+        consecutive_prob = train_args.consecutive_prob,
+        separate_mask = train_args.separate_mask,
     )
 
     ###### centralize the data ######
@@ -352,7 +373,8 @@ def validate(
                 sele_ratio = train_args.sele_ratio, 
                 min_mask_ratio = train_args.min_mask_ratio, 
                 max_mask_ratio = train_args.max_mask_ratio,
-                consecutive_prob = train_args.consecutive_prob
+                consecutive_prob = train_args.consecutive_prob,
+                separate_mask = train_args.separate_mask,
             )
 
             ### centralize the data

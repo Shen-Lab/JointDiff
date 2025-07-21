@@ -141,7 +141,7 @@ class DiffusionSingleChainDesign(nn.Module):
         if self.embed_first:
 
             structure_mask = ((~batch['mask_gen']) * batch['mask']).bool()
-            sequence_mask = ((~batch['mask_gen']) * batch['mask']).bool()
+            sequence_mask = ((~batch['mask_gen_seq']) * batch['mask']).bool()
 
             ### residue features, (N, L, feat_dim)
             res_feat = self.residue_embed(
@@ -207,7 +207,11 @@ class DiffusionSingleChainDesign(nn.Module):
         ###### masks ######
         mask_res = batch['mask'] # True for valid tokens other than paddings; (N, L)
         mask_gen = batch['mask_gen'] # True for target positions; (N, L)
- 
+        if 'mask_gen_seq' in batch:
+            mask_gen_seq = batch['mask_gen_seq'] # True for target positions; (N, L)
+        else:
+            mask_gen_seq = mask_gen
+
         ###### context feature embedding ######
         s_0 = batch['aa']  # amino acid index; int, 0~19, 21 for padding;  (N, L) 
         res_feat, pair_feat, v_0, p_0 = self.encode(batch)
@@ -219,7 +223,7 @@ class DiffusionSingleChainDesign(nn.Module):
         ###### diffusion loss calculation ######
         loss_dict = self.diffusion(
             v_0 = v_0, p_0 = p_0, s_0 = s_0, 
-            mask_res = mask_res, mask_gen = mask_gen,
+            mask_res = mask_res, mask_gen = mask_gen, mask_gen_seq = mask_gen_seq,
             res_feat = res_feat, pair_feat = pair_feat,
             denoise_structure = self.with_structure,
             denoise_sequence  = self.with_sequence,
@@ -246,6 +250,7 @@ class DiffusionSingleChainDesign(nn.Module):
         mask_res = None, mask_generate = None,
         batch = None,
         t_bias = -1,
+        seq_sample_method = 'multinomial', 
         sample_opt={
             'sample_structure': True,
             'sample_sequence': True,
@@ -315,6 +320,7 @@ class DiffusionSingleChainDesign(nn.Module):
             v = v_0, p = p_0, s = s_0,
             batch = batch,
             t_bias = t_bias,
+            seq_sample_method = seq_sample_method,
             **sample_opt
         )
 

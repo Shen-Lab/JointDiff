@@ -29,17 +29,17 @@ import torch.multiprocessing
 torch.multiprocessing.set_sharing_strategy('file_system') 
 import time
 
-####################################### dataset #############################################
+################################################################################
+# Dataset 
+################################################################################
+
+############################ constants ########################################
 
 resolution_to_num_atoms = {
     'backbone+CB': 5,  # N, CA, C, O, CB
     'backbone': 4, # by SZ; for single chain; N, CA, C, O
     'full': 15   # 15; N, CA, C, O, CB, CG, CD1, CD2, NE1, CE2, CE3, CZ2, CZ3, CH2, OXT
 }
-
-################ for motif-scaffolding ########################################
-
-###### constants ######
 
 ressymb_to_resindex = {
     'A': 0, 'C': 1, 'D': 2, 'E': 3, 'F': 4,
@@ -91,7 +91,7 @@ for resi in restype_to_heavyatom_names:
             continue
         restype_to_heavyatom_order[resi][atom] = i
 
-###### pdb load ######
+########################## PDB loading ########################################
 
 def pdb_info_read(pdb_path, chain_id):
     parser = PDBParser()
@@ -146,43 +146,7 @@ def pdb_info_read(pdb_path, chain_id):
         index_list             # (L, )
     )
 
-###### scaffold sampling ######
-
-def motif_shape_sele(motif_region, index_list):
-
-    ###### motif region process ######
-    motif_region = motif_region.split(',')
-    motif_list = []
-    
-    for size in motif_region:
-        if size[0] in '1234567890': 
-            ### scaffold region
-            continue
-            
-        ### motif_region
-        size = size[1:]  # discard chain ID
-        size = size.split('-')
-        size = (int(size[0]), int(size[1]))
-        motif_list.append(size)
-
-    motif_list = sorted(motif_list)
-
-    ###### mask prepare ######
-
-    mask = [1] * len(index_list) 
-
-    for i, idx in enumerate(index_list):
-        if idx >= motif_list[0][0] and i <= motif_list[0][1]:
-            mask[i] = 0
-        
-        if idx > motif_list[0][1]:
-            motif_list.pop(0)
-        if not motif_list:
-            break
-
-    return np.array(mask)
-
-###### data loader ######
+################################ dataloader ###################################
 
 class MotifScaffoldingDataset(Dataset):
     def __init__(self, 
@@ -191,11 +155,17 @@ class MotifScaffoldingDataset(Dataset):
         info_dict_path = '../../../../Documents/Data/real_experiment/motif_data.pkl',
         with_frag = True, 
         force_cover = False,
+        length_sampling = False,
     ):
         
         self.with_frag = with_frag
+        self.pdb_path = pdb_path
+        self.length_sampling = length_sampling
 
-        ###### load the preprocessed data ######
+        ####################################################
+        # load the preprocessed data
+        ####################################################
+
         if os.path.exists(info_dict_path) and (not force_cover):
             self.info_dict = dict_load(info_dict_path)
             self.max_size = self.info_dict['max_size']
@@ -203,80 +173,42 @@ class MotifScaffoldingDataset(Dataset):
                 key for key in self.info_dict.keys() if key != 'max_size'
             ])
             
-        ###### process the pdb files ######
+        ####################################################
+        # process the pdb_files based on the information
+        ####################################################
         else:
             self.info_dict = {}
             self.name_list = []
             self.max_size = 0
-            
+           
+            ###### infomation file ######
             with open(info_path, 'r') as rf:
                 for i, line in enumerate(rf):
                     if i == 0:
                         continue
 
-                    ### info
-                    line = line.strip('\n').split("\"")
-                    line = [token for token in line[0].split(',') + [line[1]] + line[2].split(',') if token != '']
-            
-                    ### name and path 
-                    name = line[1]
-                    pdb = name.split('_')[0]
-                    pdb_file = os.path.join(pdb_path, '%s.pdb' % pdb)
-                
-                    if not os.path.exists(pdb_file):
-                        print('%s not found!' % pdb_file)
-                        continue
-    
                     try:
-                        ### langth region
-                        length = line[3]
-                        if '-' in length:
-                            length = length.split('-')
-                            length_list = list(range(int(length[0]), int(length[1]) + 1))
-                        else:
-                            length = int(length)
-                            length_list = list(range(length, length + 1))
-                        self.max_size = max(self.max_size, length_list[-1])
-        
-                        ### modif region
-                        motif_region = line[2]
-                        ### chain id
-                        for token in motif_region.split(','):
-                            if token[0] not in '0123456789':
-                                chain_id = token[0]
-                                break
-                        ### read the pdb
-                        (
-                            coor_mat,   # (L, 15, 3)
-                            seq_array,  # (L, )
-                            seq,        # string; (L, )
-                            atom_mask,  # (L, 15)
-                            resi_start, # scalar
-                            index_list, # (L, )
-                        ) = pdb_info_read(pdb_file, chain_id)
-        
-                        ### save 
+                    #if True:
+                        sample_dict = self.motifscaffolding_dataprocess(line)
+                        if sample_dict is None:
+                            continue
+                        name = sample_dict['name']
+                        self.info_dict[name] = sample_dict
+                        self.max_size = max(sample_dict['length_max'], self.max_size)
                         self.name_list.append(name)
-                        self.info_dict[name] = {
-                            'coor': coor_mat, 
-                            'seq_array': seq_array, 
-                            'seq': seq, 
-                            'atom_mask': atom_mask,
-                            'motif_region': motif_region, 
-                            'length_set': length_list, 
-                            'resi_start': resi_start,
-                            'index_list': index_list
-                        }
+
                     except Exception as e:
-                        print(name, e)
+                        print(line, e)
 
             self.info_dict['max_size'] = self.max_size
             _ = dict_save(self.info_dict, info_dict_path)
 
         print('%d entries loaded. max_length=%d' %(self.__len__(), self.max_size))
 
+
     def __len__(self):
         return len(self.name_list)
+
 
     def __getitem__(self, idx):
         """
@@ -293,35 +225,117 @@ class MotifScaffoldingDataset(Dataset):
 
         name = self.name_list[idx]
         
-        ###### info ######
+        ####################################################
+        # preprocess
+        ####################################################
+
         data_info = self.info_dict[name]
 
-        coor_mat = data_info['coor']
-        seq_array = data_info['seq_array']
-        seq = data_info['seq']
-        atom_mask = data_info['atom_mask']
+        ###### motifs ######
+        motif_coor = data_info['motif_coor']
+        motif_seq = data_info['motif_seq_array']
+        motif_atom_mask = data_info['motif_atom_mask']
+        motif_size = data_info['motif_size']
 
-        # size_sele, _ = motif_shape_sele(data_info['motif_region'], data_info['length_set'])
-        #resi_start = data_info['resi_start']
-        # [int, tuple, int, ...]
+        ###### scaffolds #####
+  
+        ### sample the length of scaffolds
+        if self.length_sampling:
+            length_range = data_info['length_range']
+            length_all = random.randint(length_range[0], length_range[1])
+            scaffold_all = length_all - motif_size
 
-        index_list = data_info['index_list']
-        mask_gen = motif_shape_sele(data_info['motif_region'], index_list)
+            scaffold_len_range_list = data_info['scaffold_length']
+            scaffold_len_list = [sl_range[0] for sl_range in scaffold_len_range_list]
+            l_scaffold = sum(scaffold_len_list)
+            l_scaffold_max = sum([sl_range[1] for sl_range in scaffold_len_range_list])
 
-        fragment_type = np.ones(seq_array.shape)
+            if l_scaffold > scaffold_all or l_scaffold_max < scaffold_all:
+                raise ValueError(f"Impossible task for {name}!")
+
+            elif l_scaffold < scaffold_all:
+                diff = scaffold_all - l_scaffold
+                ### check the tolerance of each piece
+                tolerance_list = []
+                for i, sl_range in enumerate(scaffold_len_range_list):
+                    tolerance = sl_range[1] - scaffold_len_list[i]
+                    if tolerance > 0:
+                        tolerance_list.append([i, tolerance])
+                ### add residues
+                toler_p_num = len(tolerance_list)
+                for _ in range(diff):
+                    idx_local = random.randint(0, toler_p_num-1)
+                    idx = tolerance_list[idx_local][0]
+                    scaffold_len_list[idx] += 1
+                    tolerance_list[idx_local][1] -= 1
+                    if tolerance_list[idx_local][1] == 0:
+                        tolerance_list.pop(idx_local)
+                        toler_p_num -= 1
+
+        ### use the original length
+        else:
+            scaffold_len_list = data_info['scaffold_length_true']
+            length_all = data_info['length']
+
+        ###### construct the freatures ######
+        atom_num, dim = motif_coor[0].shape[-2:]
+        motif_num = len(motif_coor)
+        coor_out = []
+        seq_out = []
+        atom_mask_out = []
+        mask_gen = []
+
+        for i in range(motif_num):
+            ### scaffold
+            l = scaffold_len_list[i]
+            if l > 0:
+                mask_gen += [1] * l 
+                # 0 for scaffold coordinates
+                coor_out.append(np.zeros((l, atom_num, dim)))
+                # X (20) for scaffold tokens
+                seq_out.append(np.ones(l) * 20)
+                # 1 for scaffold atom mask (assume all atoms known)
+                atom_mask_out.append(np.ones((l, atom_num)))
+
+            ### motif
+            mask_gen += [0] * motif_coor[i].shape[0] 
+            coor_out.append(motif_coor[i])
+            seq_out.append(motif_seq[i])
+            atom_mask_out.append(motif_atom_mask[i])
+
+        ### right ter scaffold
+        if len(scaffold_len_list) > motif_num:
+            l = scaffold_len_list[motif_num]
+            if l > 0:
+                mask_gen += [1] * l 
+                # 0 for scaffold coordinates
+                coor_out.append(np.zeros((l, atom_num, dim)))
+                # X (20) for scaffold tokens
+                seq_out.append(np.ones(l) * 20)
+                # 1 for scaffold atom mask (assume all atoms known)
+                atom_mask_out.append(np.ones((l, atom_num)))
+
+        ###### summarize the features ######
+        #print([coor.shape for coor in coor_out])
+        coor_out = np.vstack(coor_out)
+        seq_out = np.hstack(seq_out)
+        atom_mask_out = np.vstack(atom_mask_out)
+        mask_gen = np.array(mask_gen)
+
+        fragment_type = np.ones(seq_out.shape)
         if self.with_frag:
             fragment_type = fragment_type * 2 - mask_gen
 
-        out = {'name': name}
-        out['aa'] = seq_array
-        out['pos_heavyatom'] = coor_mat
-        out['mask_heavyatom'] = (atom_mask == 1)
+        out = {'name': name, 'length': length_all}
+        out['aa'] = seq_out
+        out['pos_heavyatom'] = coor_out
+        out['mask_heavyatom'] = (atom_mask_out == 1)
         out['mask_gen'] = (mask_gen == 1)
         out['fragment_type'] = fragment_type
         out['length'] = out['aa'].shape[0]
-        out['chain_nb'] = np.ones(out['length'])
-        out['res_nb'] = np.arange(1, out['length'] + 1)
-        out['mask'] = (np.ones(out['length']) == 1)
+        out['chain_nb'] = np.ones(length_all)
+        out['res_nb'] = np.arange(1, length_all + 1)
+        out['mask'] = (np.ones(length_all) == 1)
 
         length_pad = self.max_size - out['length']
         if length_pad > 0:
@@ -341,6 +355,153 @@ class MotifScaffoldingDataset(Dataset):
         return out
 
 
+    def motifscaffolding_dataprocess(self, line):
+    
+        ###### info ######
+        # e.g. 
+        # "0,1PRW,\"5-20,A16-35,10-25,A52-71,5-20\",60-105\n"
+        line = line.strip('\n').split("\"")
+        # ["0,1PRW,", "5-20,A16-35,10-25,A52-71,5-20", ",60-105"]
+        #  pdb_id      motif & scaffolding               length
+        line = [token for token in line[0].split(',') + [line[1]] + line[2].split(',') if token != '']
+        # ["0", "1PRW", "5-20,A16-35,10-25,A52-71,5-20", "60-105"]
+        #  idx pdb_id      motif & scaffolding            length
+
+        ###### name and path ######
+        name = line[1]
+        pdb = name.split('_')[0]
+        pdb_file = os.path.join(self.pdb_path, '%s.pdb' % pdb)
+    
+        if not os.path.exists(pdb_file):
+            print('%s not found!' % pdb_file)
+            return None
+    
+        # motif info: e.g. "5-20,A16-35,10-25,A52-71,5-20"
+        motif_info = line[2].split(',')
+        if len(motif_info) == 0:
+            raise ValueError(f'Empty motif info for {name}!')
+
+
+        ###### read the pdb ######
+
+        ### chain id
+        for token in motif_info:
+            if token[0] not in '0123456789':
+                chain_id = token[0]
+                break
+
+        ### pdb loading 
+        (
+            coor_mat,   # (L, 15, 3)
+            seq_array,  # (L, )
+            seq,        # string; (L, )
+            atom_mask,  # (L, 15)
+            resi_start, # scalar
+            index_list, # (L, )
+        ) = pdb_info_read(pdb_file, chain_id)
+    
+        ###### overall length ######
+        L = coor_mat.shape[0]
+        l_range = tuple([int(val) for val in line[-1].split('-')])
+
+        ###### motif and scaffolding region ######
+        motif_region = []
+        scaffold_length = []
+
+        ### start
+        if motif_info[0][0] in '0123456789':
+            scaffold_length.append(tuple([int(l) for l in motif_info[0].split('-')]))
+            motif_info.pop(0)
+        else:
+            scaffold_length.append((0,0))
+
+        ### other pieces
+        scaffold_idx = 1
+        for reg in motif_info:
+            ### scaffold length
+            if reg[0] in '0123456789':
+                scaffold_length.insert(scaffold_idx, tuple([int(l) for l in reg.split('-')]))
+                scaffold_idx += 1
+            ### motif
+            else:
+                motif_region.append(tuple([int(l) for l in reg[1:].split('-')]))
+        motif_region = sorted(motif_region)
+        motif_region_copy = motif_region.copy()
+
+        ###### motif ###### 
+        motif_coor = []
+        motif_seq = []
+        motif_atom_mask = []
+        scaffold_length_true = []
+        sca_len = 0
+        motif_flag = False
+        motif_size = 0
+
+        # print(name)
+        # print(motif_region)
+        # print(index_list)
+
+        for i, idx in enumerate(index_list):
+
+            ### motif stop
+            if motif_region and idx > motif_region[0][1]:
+                motif_flag = False
+                motif_region.pop(0)
+
+                motif_coor.append(np.vstack(motif_coor_piece[0]))
+                motif_seq.append(np.array(motif_coor_piece[1]))
+                motif_atom_mask.append(np.vstack(motif_coor_piece[2]))
+                motif_coor_piece = [[], [], []]
+
+            ### motif region
+            elif motif_region and idx >= motif_region[0][0]:
+                if not motif_flag:
+                    scaffold_length_true.append(sca_len)
+                    sca_len = 0
+                    motif_coor_piece = [[], [], []]
+                motif_flag = True
+
+            if motif_flag:
+                motif_coor_piece[0].append(coor_mat[i:i+1]) # (1, 15, 3) 
+                motif_coor_piece[1].append(seq_array[i]) # (1,)
+                motif_coor_piece[2].append(atom_mask[i]) # (15,)
+                motif_size += 1
+            else:
+                sca_len += 1
+
+        if motif_coor_piece[0]: # last piece is motif
+            motif_coor.append(np.vstack(motif_coor_piece[0]))
+            motif_seq.append(np.array(motif_coor_piece[1]))
+            motif_atom_mask.append(np.vstack(motif_coor_piece[2]))
+        else: # last piece is scaffold
+            scaffold_length_true.append(sca_len)
+    
+        return {
+            ### original 
+            'coor': coor_mat,
+            'seq_array': seq_array,
+            'seq': seq,
+            'atom_mask': atom_mask,
+            'index_list': index_list,
+            ### motifs
+            'motif_region': motif_region,        # List of tuple
+            'motif_coor': motif_coor,            # List of array
+            'motif_seq_array': motif_seq,        # List of array
+            'motif_atom_mask': motif_atom_mask,  # List of array
+            'motif_size': motif_size,
+            ### scaffold 
+            'scaffold_length_true': scaffold_length_true, # List of int
+            'scaffold_length': scaffold_length,  # List of tuple; length range for sampling
+            ### others
+            'name': name,
+            'length': L,
+            'length_range': l_range,
+            'length_max': max(L, l_range[-1]),
+            'resi_start': resi_start,
+        }
+
+
+############### dataloader for self-defined datasets ##########################
 
 class FlexibleMotifScaffoldingDataset(Dataset):
     def __init__(self, 
@@ -374,35 +535,37 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     ###### paths ######
     parser.add_argument('--model_path', type=str, 
-     default='../checkpoints/JointDiff-x_model.pt'
+     default='../../Documents/TrainedModels/JointDiff/logs_jointdiff_development/jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18/checkpoints/88000.pt'
     )
     parser.add_argument('--data_path', type=str, 
-        default='../data/motif-scaffolding_design/motif.csv'
+        default='../../Documents/Data/real_experiment/motif.csv'
     )
     parser.add_argument('--pdb_path', type=str, 
-        default='../data/motif-scaffolding_design/motif_pdbs/'
+        default='../../Documents/Data/real_experiment/pdbs/'
     )
     parser.add_argument('--info_dict_path', type=str, 
-        default='../data/motif-scaffolding_design/motif_data.pkl'
+        default='../../Documents/Data/real_experiment/motif_data.pkl'
     )
     parser.add_argument('--flexible_data_path', type=str,
         default='none'
     )
     parser.add_argument('--result_path', type=str,
-        default='../samples'
+        default='../Results/debug/'
     )
     ###### devices ######
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--multi_gpu', type=int, default=1)
     ###### inference setting #####
-    parser.add_argument('--attempt', type=int, default=10)
+    parser.add_argument('--attempt', type=int, default=20)
     parser.add_argument('--sample_structure', type=int, default=1)
     parser.add_argument('--sample_sequence', type=int, default=1)
+    parser.add_argument('--sample_length', type=int, default=0)
     parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--num_workers', type=int, default=0)
     parser.add_argument('--save_type', type=str, default='sele', help='"sele", "all" or "last"')
     parser.add_argument('--save_steps', type=int, nargs='*', default=[0])
     parser.add_argument('--t_bias', type=int, default=-1)
+    parser.add_argument('--seq_sample_method', type=str, default='multinomial')
 
     args = parser.parse_args()
 
@@ -422,6 +585,7 @@ if __name__ == '__main__':
     ###### setting ######
     args.sample_structure = bool(args.sample_structure)
     args.sample_sequence = bool(args.sample_sequence)
+    args.sample_length = bool(args.sample_length)
 
     if args.save_type == 'last':
         args.save_steps = [0]
@@ -430,29 +594,16 @@ if __name__ == '__main__':
     # Model Loading 
     ###########################################################
 
-    checkpoint = torch.load(args.model_path)
+    checkpoint = torch.load(args.model_path, map_location = args.device)
     config = checkpoint['config']
 
-    ### adpat to old versions
-    if config.model.train_version == 'gt':
-        config.model.train_version = 'jointdiff-x'
-        config.model.embed_first = True
-    elif config.model.train_version == 'noise':
-        config.model.train_version = 'jointdiff'
-        config.model.embed_first = True
-
-    if 'seq_model_opt' in config['model']['diffusion']:
-        del config['model']['diffusion']['seq_model_opt']
-    if 'reweighting_term' in config['model']['diffusion']:
-        del config['model']['diffusion']['reweighting_term']
-    if 'decoder_version' in config['model']['diffusion']['eps_net_opt']:
-        del config['model']['diffusion']['eps_net_opt']['decoder_version']
-
-    ### define the model
+    ###### define the model
     model = DiffusionSingleChainDesign(config.model).to(args.device)
-    print('Number of parameters: %d' % count_parameters(model))
 
+    ###### parameters prepare ######
     parameter_dict = model.state_dict()
+    parameter_set = set(parameter_dict.keys())
+    ### map the parameters
     for key in checkpoint['model'].keys():
         if key.startswith('module'):
             key_new = key[7:]
@@ -461,10 +612,19 @@ if __name__ == '__main__':
 
         if key_new in parameter_dict:
             parameter_dict[key_new] = checkpoint['model'][key]
+            parameter_set.remove(key_new)
         else:
-            print('%s not found in current model.' % key_new)
+            print('parameter %s not needed.' % key_new)
 
+    ### load the dictionary
     model.load_state_dict(parameter_dict)
+    print('Model loaded from %s.' % args.model_path)
+    print('Number of parameters: %d' % count_parameters(model))
+
+    ### unloaded parameters
+    for name in parameter_set:
+        print('%s not loaded.' % name)
+    print('**********************************************************')
 
     ###### Parallel ######
     args.multi_gpu = bool(args.multi_gpu)
@@ -501,8 +661,10 @@ if __name__ == '__main__':
             pdb_path = args.pdb_path,
             info_dict_path = args.info_dict_path,
             with_frag = args.random_mask, 
-            force_cover = False 
+            force_cover = False,
+            length_sampling = args.sample_length  
         )
+
     else:
         dataset = FlexibleMotifScaffoldingDataset(
             info_path = args.flexible_data_path, 
@@ -566,12 +728,14 @@ if __name__ == '__main__':
             ############################## inference ###########################
 
             try:
+            #if True:
                 ###### inference ######
                 out_dict, traj = infer_function(
                     mask_res = batch['mask'],
                     mask_generate = batch['mask_gen'],
                     batch = batch, 
-                    t_bias = args.t_bias, 
+                    t_bias = args.t_bias,
+                    seq_sample_method = args.seq_sample_method,
                     sample_opt={
                         'sample_structure': args.sample_structure,
                         'sample_sequence': args.sample_sequence

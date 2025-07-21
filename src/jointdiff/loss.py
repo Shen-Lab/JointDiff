@@ -322,17 +322,6 @@ def structure_loss(
         mask_factor: weight mask for the loss function; (N, L)
         
     """
-    ################### FAPE loss ############################
-    if version == 'fape':
-        t_pred = p_pred[:, :, BBHeavyAtom.CA] if len(p_pred.shape) == 4 else p_pred
-        t_ref = p_ref[:, :, BBHeavyAtom.CA] if len(p_ref.shape) == 4 else p_ref
-
-        return None, fape(
-            coord_pred = p_pred, R_pred = R_pred, t_pred = t_pred,
-            coord_true = p_ref, R_true = R_ref, t_true = t_ref,
-            mask = mask_res, mask_factor = mask_factor,
-            micro = micro
-        )
 
     #################### denormolization ######################
     if micro:
@@ -382,8 +371,20 @@ def structure_loss(
 
     ####################### position loss #####################################
 
+    ### FAPE loss
+    if version == 'fape':
+        t_pred = p_pred[:, :, BBHeavyAtom.CA] if len(p_pred.shape) == 4 else p_pred
+        t_ref = p_ref[:, :, BBHeavyAtom.CA] if len(p_ref.shape) == 4 else p_ref
+
+        loss_pos = fape(
+            coord_pred = p_pred, R_pred = R_pred, t_pred = t_pred,
+            coord_true = p_ref, R_true = R_ref, t_true = t_ref,
+            mask = mask_res, mask_factor = mask_factor,
+            micro = micro
+        )
+
     ### MSE loss
-    if version == 'mse':
+    elif version == 'mse':
         loss_pos = F.mse_loss(p_pred, p_ref, reduction='none').sum(dim=-1)  # (N, L)
         loss_pos = loss_pos * mask_res 
 
@@ -539,7 +540,7 @@ def distance_loss(
         mask_res: 1 for valid positions; (N, L)
         with_dist: whether ref is the distance mat.
         dist_clamp: maximum clamp of the distance loss.
-        loss_version: versions of the loss functions; 'mse' of 'l1'
+        loss_version: versions of the loss functions; 'mse', 'l2' or 'l1'
     """
     N, L, _ = coor_pred.shape
     device = coor_pred.device
@@ -568,12 +569,12 @@ def distance_loss(
             dist_pred_sele, dist_ref, pair_mask 
         )
     else:
-        ### MSE loss
-        if loss_version == 'mse':
+        ### MSE loss or L2 loss
+        if loss_version == 'mse' or loss_version == 'l2':
             loss_dist = F.mse_loss(
                 dist_pred_sele, dist_ref, reduction='none'
             )  # (N, L, L)
-        ### Abs loss
+        ### Abs (l1-norm) loss
         else:
             loss_dist = F.l1_loss(
                 dist_pred_sele, dist_ref, reduction='none'
@@ -582,7 +583,10 @@ def distance_loss(
         if dist_clamp is not None:
             loss_dist = torch.clamp(loss_dist, max = dist_clamp)
         ### average
-        loss_dist = loss_dist.sum(dim=(1,2)) / denorm
+        loss_dist = loss_dist.sum(dim=(1,2)) # (N,) 
+        if loss_version == 'l2':
+            loss_dist = loss_dist.sqrt()
+        loss_dist = loss_dist / denorm
         loss_dist = loss_dist.mean()
 
     ############################ clash loss ###################################

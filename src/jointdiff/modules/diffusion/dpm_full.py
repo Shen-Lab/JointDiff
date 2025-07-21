@@ -591,7 +591,7 @@ class FullDPM(nn.Module):
 
     def loss_cal(self,
         R_pred, R_ref, p_pred, p_ref, p_ref_ori, s_noisy, c_denoised, s_ref, t, 
-        mask_res, mask_gen, protein_size = None, 
+        mask_res, mask_gen, mask_gen_seq = None, protein_size = None, 
         denoise_structure = True, denoise_sequence = True,
         micro = True, posi_loss_version = 'mse',
         ### distance loss
@@ -618,12 +618,24 @@ class FullDPM(nn.Module):
             mask_loss = mask_gen
             mask_factor = None
 
+        if mask_gen_seq is None:
+            mask_gen_seq = mask_gen
+            mask_loss_seq = mask_loss
+            mask_factor_seq = mask_factor
+        elif motif_factor > 0.0:
+            mask_loss_seq = mask_res
+            mask_motif_seq = mask_gen_seq ^ mask_res  # 1 for motif anf 0 for others
+            mask_factor_seq = mask_gen_seq + motif_factor * mask_motif_seq
+        else:
+            mask_loss_seq = mask_gen_seq
+            mask_factor_seq = None
+
         ############ sequence losses ####################
         if denoise_sequence:
             loss_dict['seq'] = sequence_loss(
-                s_noisy, s_ref, c_denoised, t, mask_loss, 
+                s_noisy, s_ref, c_denoised, t, mask_loss_seq, 
                 micro = micro, version = self.train_version, trans_seq = self.trans_seq,
-                mask_factor = mask_factor,
+                mask_factor = mask_factor_seq,
             )
 
         ########### structure losses ####################
@@ -685,7 +697,7 @@ class FullDPM(nn.Module):
 
     def forward(self, 
         v_0, p_0, s_0, 
-        mask_res, mask_gen,
+        mask_res, mask_gen, mask_gen_seq = None,
         protein_size = None,t = None, batch = None,
         res_feat = None,  pair_feat = None, 
         denoise_structure = True, denoise_sequence = True, 
@@ -724,6 +736,9 @@ class FullDPM(nn.Module):
 
         denoise_structure = denoise_structure and (self.modality in {'joint', 'structure', 'stru_pred'})
         denoise_sequence = denoise_sequence and (self.modality in {'joint', 'sequence', 'seq_pred'})
+
+        if mask_gen_seq is None:
+            mask_gen_seq = mask_gen
 
         #############################################
         # data preprocess 
@@ -800,7 +815,7 @@ class FullDPM(nn.Module):
             #     s_noise_prob = alpha_bar * onehot(s_0) + ((1 - alpha_bar) / K); 
             # s_noisy: noised sequence, s_noisy = sample(s_noise_prob); (N, L)
             s_noise_prob, s_noisy = self.trans_seq.add_noise(
-                s_0, t, method = 'multinomial', mask_generate = mask_gen
+                s_0, t, method = 'multinomial', mask_generate = mask_gen_seq
             )
 
         ###### DDPM ######
@@ -808,7 +823,7 @@ class FullDPM(nn.Module):
             s_onehot = F.one_hot(s_0, num_classes=self.token_size + 1)  # one-hot encoding: (N, L, 21)
             s_onehot = s_onehot.float() * 2 - 1
             s_emb = self.seq_ddpm_emb(s_onehot)  # (N, L, emb)
-            s_noisy, _ = self.trans_seq.add_noise(s_emb, t, mask_generate = mask_gen)
+            s_noisy, _ = self.trans_seq.add_noise(s_emb, t, mask_generate = mask_gen_seq)
            
         ###### exception
         elif denoise_sequence:
@@ -875,7 +890,8 @@ class FullDPM(nn.Module):
             R_pred = R_pred, R_ref = R_0, 
             p_pred = p_pred, p_ref = p_ref, p_ref_ori = p_ref_ori, 
             s_noisy = s_noisy, c_denoised = c_denoised, s_ref = s_0, t = t,
-            mask_res = mask_res, mask_gen = mask_gen, protein_size = protein_size, 
+            mask_res = mask_res, mask_gen = mask_gen, mask_gen_seq = mask_gen_seq,
+            protein_size = protein_size, 
             denoise_structure = denoise_structure, denoise_sequence = denoise_sequence,
             micro = micro, posi_loss_version = posi_loss_version,
             with_dist_loss = with_dist_loss, dist_loss_version = dist_loss_version,
@@ -894,7 +910,7 @@ class FullDPM(nn.Module):
 
     @torch.no_grad()
     def sample(self, 
-        mask_res, mask_gen,
+        mask_res, mask_gen, mask_gen_seq = None,
         v = None, p = None, s = None, 
         res_feat = None, pair_feat = None, 
         protein_size = None,
@@ -920,6 +936,8 @@ class FullDPM(nn.Module):
         device = mask_res.device
         if protein_size is None:
             protein_size = mask_res.sum(dim=1)  # (N,)
+        if mask_gen_seq is None:
+            mask_gen_seq = mask_gen
 
         ### normalization (for motif-scaffolding)
         if p is not None:
@@ -932,6 +950,7 @@ class FullDPM(nn.Module):
             -1, -1, 4
         ) if self.all_bb_atom else mask_gen
         mask_motif = mask_gen.bool() ^ mask_res.bool()  # True for motif residues 
+        mask_motif_seq = mask_gen_seq.bool() ^ mask_res.bool()  # True for motif residues 
 
         #######################################################################
         # Initialization 
@@ -940,6 +959,7 @@ class FullDPM(nn.Module):
         batch, traj = self.sample_init(
             mask_res = mask_res, 
             mask_generate = mask_gen, 
+            mask_generate_seq = mask_gen_seq, 
             protein_size = protein_size,
             v = v, p = p, s = s,
             sample_structure = sample_structure, 
@@ -1056,14 +1076,14 @@ class FullDPM(nn.Module):
                 if t > 1:
                     _, s_next = self.trans_seq.add_noise(
                         s_next, t_tensor - 1, method = seq_sample_method,
-                        mask_generate = mask_gen
+                        mask_generate = mask_gen_seq
                     )
             ###### jointdiff ######
             else:
                 _, s_next = self.trans_seq.denoise(s_t, c_denoised, t_tensor)
 
             ###### fix the un-targeted region ######
-            s_next = torch.where(mask_gen, s_next, s_t)
+            s_next = torch.where(mask_gen_seq, s_next, s_t)
 
             ################################################
             # save the states
@@ -1089,6 +1109,7 @@ class FullDPM(nn.Module):
         sample_structure=True, sample_sequence=True,
         batch = None,
         pbar=False, t_bias = -1,
+        seq_sample_method = 'multinomial',
     ):
         """
         Generate the backbone structure given the size.
@@ -1112,7 +1133,8 @@ class FullDPM(nn.Module):
             sample_sequence = sample_sequence,
             batch = batch,
             pbar = pbar,  
-            t_bias = t_bias
+            t_bias = t_bias,
+            seq_sample_method = seq_sample_method,
         )
 
         ###### backbone structure ######
@@ -1148,7 +1170,7 @@ class FullDPM(nn.Module):
     ###########################################################################
 
     def sample_init(self,
-        mask_res, mask_generate, protein_size,
+        mask_res, mask_generate, mask_generate_seq, protein_size,
         v = None, p = None, s = None,
         sample_structure = True, sample_sequence = True,
         batch = None,
@@ -1205,7 +1227,7 @@ class FullDPM(nn.Module):
                 s_init[~mask_res] = self.token_size
             ### motif-scaffolding  
             if s is not None:
-                s_init = torch.where(mask_generate, s_init, s)
+                s_init = torch.where(mask_generate_seq, s_init, s)
         elif s is not None:
             s_init = s
         else:

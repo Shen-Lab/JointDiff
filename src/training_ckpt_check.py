@@ -3,31 +3,7 @@ import shutil
 import argparse
 from tqdm.auto import tqdm
 from easydict import EasyDict
-
 import torch
-import torch.utils.tensorboard
-from torch.nn.utils import clip_grad_norm_
-import torch.nn as nn  
-import torch.nn.functional as F 
-from torch.utils.data import DataLoader
-import torch.multiprocessing
-
-from jointdiff.model import DiffusionSingleChainDesign
-from jointdiff.modules.utils.train import get_optimizer, get_scheduler
-from jointdiff.modules.utils.misc import (
-    BlackHole, seed_all, 
-    get_new_log_dir, get_logger, inf_iterator,
-)
-from jointdiff.modules.data.data_utils import PaddingCollate
-from jointdiff.trainer import (
-    train, validate, load_config, get_dataset, count_parameters
-)
-
-torch.backends.cuda.matmul.allow_tf32 = True
-torch.backends.cudnn.allow_tf32 = True
-torch.multiprocessing.set_sharing_strategy('file_system')
-torch.autograd.set_detect_anomaly(True)
-
 
 ######################################################################################
 # Arguments                                                                          #
@@ -348,189 +324,44 @@ def arguments():
 ######################################################################################
 
 def main(config, config_name):
-    #######################################################################
-    # Configuration and Logger
-    #######################################################################
 
-    ##### seed ######
-    seed_all(config.train.seed)
-
-    ###### Logging ######
-    if config.train.debug:
-        print('Debugging...')
-        logger = get_logger('train', None)
-        writer = BlackHole()
-
+    if config.path.resume is not None:
+        ckpt_dir = os.path.dirname(config.path.resume)
+        ckpt_dir_list = [ckpt_dir]
     else:
-        print('Model training...')
-
-        if config.path.resume is not None:
-            log_dir = os.path.dirname(
-                os.path.dirname(config.path.resume)
-            )
-        else:
-            log_dir = get_new_log_dir(
-                config.path.logdir, prefix = config_name
-            )
-            
-        ### checkpoints
-        ckpt_dir = os.path.join(log_dir, 'checkpoints')
-        if not os.path.exists(ckpt_dir):
-            os.makedirs(ckpt_dir)
-
-        logger = get_logger('train', log_dir)
-        writer = torch.utils.tensorboard.SummaryWriter(log_dir)
-        tensorboard_trace_handler = torch.profiler.tensorboard_trace_handler(
-            log_dir
-        )
-    logger.info(config)
-
-    #######################################################################
-    # Model and Optimizer
-    #######################################################################
-
-    ################## Model ########################
-    logger.info('Building model...')
-    model = DiffusionSingleChainDesign(
-        config.model
-    ).to(config.train.device)
-    logger.info('Number of parameters: %d' % count_parameters(model))
-
-    ################# Optimizer & scheduler #################
-    optimizer = get_optimizer(config.train.optimizer, model)
-    scheduler = get_scheduler(config.train.scheduler, optimizer)
-    optimizer.zero_grad()
-
-    ################# Resume #################
-    if config.path.resume is not None or config.path.finetune is not None:
-        if config.path.resume is not None:
-            ckpt_path = config.path.resume 
-        else:
-            ckpt_path = config.path.finetune
-        logger.info('Resuming from checkpoint: %s' % ckpt_path)
-
-        ckpt = torch.load(
-            ckpt_path, map_location=config.train.device #, weights_only = True
-        )
-        it_first = ckpt['iteration'] + 1
-        ckpt['model'] = {
-            ''.join(key.split('module.')[:]) : ckpt['model'][key]
-            for key in ckpt['model']
-        }
-
-        warm_ckpt = model.state_dict()
-        flag = True
-        for key in warm_ckpt:
-            if key in ckpt['model']:
-                flag = False
-                warm_ckpt[key] = ckpt['model'][key]
-        if flag:
-            print('Warning! Checkpoint does not match!')
-        model.load_state_dict(warm_ckpt)
-
-        if config.path.resume is not None:
-            logger.info('Resuming optimizer states...')
-            optimizer.load_state_dict(ckpt['optimizer'])
-            logger.info('Resuming scheduler states...')
-            scheduler.load_state_dict(ckpt['scheduler'])
-
-    else:
-        it_first = 1
-        logger.info('Starting from scratch...')
-
-    ################## Parallel ##################
-    if config.train.multi_gpu:
-        config.dataloader.batch_size *= torch.cuda.device_count()
-        model = nn.DataParallel(model)
-        logger.info('%d GPUs detected. Applying parallel training and a batch size of %d.' % 
-            (torch.cuda.device_count(), config.dataloader.batch_size)
-        )
-
-    elif config.train.device == 'cuda':
-        logger.info('Applying single GPU training with a batch size of %d.' % 
-            (config.dataloader.batch_size)
-        )
-
-    else:
-        logger.info('Applying CPU training with a batch size of %d.' %
-            (config.dataloader.batch_size)
-        )
-
-    #######################################################################
-    # Data Loading
-    #######################################################################
-    logger.info('Loading dataset...')
-
-    ###### training set ######
-    train_dataset = get_dataset(config.dataset.train)
-    train_iterator = inf_iterator(DataLoader(
-        train_dataset,
-        batch_size = config.dataloader.batch_size,
-        collate_fn = PaddingCollate(),
-        shuffle = True,
-        num_workers = config.dataloader.num_workers,
-    ))
-
-    ###### validation set ######
-    if config.dataset.__contains__('val'):
-        val_dataset = get_dataset(config.dataset.val)
-        val_loader = DataLoader(
-            val_dataset, 
-            batch_size=config.dataloader.batch_size,
-            collate_fn=PaddingCollate(), 
-            shuffle=False, 
-            num_workers=config.dataloader.num_workers,
-        )
-        logger.info('Train %d | Val %d' % (len(train_dataset), len(val_dataset)))
-    else:
-        val_loader = None
-        logger.info('Train %d | No validation set' % (len(train_dataset)))
-
-
-    #######################################################################
-    # Training
-    #######################################################################
-    try:
-        for it in range(it_first, config.train.max_iters + 1):
-            ###### train ######
-            train(
-                model, optimizer, scheduler, train_iterator, 
-                logger, writer, config, it,
-            )
-
-            ###### validation & save the checkpoints ######
-            if config.train.debug:
-                continue
-
-            if it % config.train.val_freq == 0 or it == it_first:
-                ### save the model
-                ckpt_path = os.path.join(ckpt_dir, '%d.pt' % it)
-                torch.save({
-                        'config': config,
-                        'model': model.state_dict(),
-                        'optimizer': optimizer.state_dict(),
-                        'scheduler': scheduler.state_dict(),
-                        'iteration': it,
-                    }, 
-                    ckpt_path
+        ckpt_dir_list_all = [
+            d for d in os.listdir(config.path.logdir)
+            if os.path.isdir(os.path.join(config.path.logdir, d))
+        ]
+        ckpt_dir_list = []
+        for d in ckpt_dir_list_all:
+            if d.startswith(config_name):
+                ckpt_dir_list.append(
+                    os.path.join(config.path.logdir, d, 'checkpoints')
                 )
 
-                ### validation 
-                if val_loader is None:
-                    continue
+    if not ckpt_dir_list:
+        print('No model for %s.' % config_name)
+
+    else:
+
+        for ckpt_dir in ckpt_dir_list:
+            if not os.path.isdir(ckpt_dir):
+                print(f"{ckpt_dir} does not exist!")
+                continue 
+
+            ckpt_list = [int(p.split('.')[0])
+                for p in os.listdir(ckpt_dir) if p.endswith('.pt') and (not p.startswith('point'))
+            ]
+            if not ckpt_list:
+                print(f"{ckpt_dir} is empty!")
+                continue
+
+            last_ckpt = max(ckpt_list)
+            #print(os.path.join(ckpt_dir, f'{last_ckpt}.pt'))
+            model = ckpt_dir.split('/checkpoints')[0].split('/')[-1]
+            print('%s_%d' % (model, last_ckpt))
             
-                try:
-                    avg_val_loss = validate(
-                        model, scheduler, val_loader, logger, writer, config, it,
-                    )
-                except Exception as e:
-                    avg_val_loss = torch.nan
-                    logger.info('Validation error: %s' % e)
-
-
-    except KeyboardInterrupt:
-        logger.info('Terminating...')
-
 
 ######################################################################################
 # Running the Script                                                                 #
@@ -538,6 +369,5 @@ def main(config, config_name):
 
 if __name__ == '__main__':
     config, config_name = arguments()
-    print(config_name)
     main(config, config_name)
 
