@@ -1,0 +1,234 @@
+36,37c36
+<     sequence_loss, structure_loss, distance_loss, distogram_loss,
+<     weighted_rigid_align
+---
+>     sequence_loss, structure_loss, distance_loss, distogram_loss 
+341c340
+<         mask_res, 
+---
+>         mask_res, mask_gen, 
+355a355
+>             mask_gen: mask with True for target tokens (N, L).
+421c421
+<                     mask_res[:, :, None].expand_as(eps_crd), eps_crd, torch.zeros_like(eps_crd)
+---
+>                     mask_gen[:, :, None].expand_as(eps_crd), eps_crd, torch.zeros_like(eps_crd)
+427c427
+<                     mask_res[:, :, None].expand_as(eps_pos), eps_pos, torch.zeros_like(eps_pos)
+---
+>                     mask_gen[:, :, None].expand_as(eps_pos), eps_pos, torch.zeros_like(eps_pos)
+436c436
+<                 v_next = torch.where(mask_res[:, :, None].expand_as(v_next), v_next, v_t)
+---
+>                 v_next = torch.where(mask_gen[:, :, None].expand_as(v_next), v_next, v_t)
+594c594
+<         mask_res, mask_gen, mask_gen_seq = None, protein_size = None, 
+---
+>         mask_res, mask_gen, protein_size = None, 
+616a617
+>             #print(mask_factor.max(dim=-1))
+621,632d621
+<         if mask_gen_seq is None:
+<             mask_gen_seq = mask_gen
+<             mask_loss_seq = mask_loss
+<             mask_factor_seq = mask_factor
+<         elif motif_factor > 0.0:
+<             mask_loss_seq = mask_res
+<             mask_motif_seq = mask_gen_seq ^ mask_res  # 1 for motif anf 0 for others
+<             mask_factor_seq = mask_gen_seq + motif_factor * mask_motif_seq
+<         else:
+<             mask_loss_seq = mask_gen_seq
+<             mask_factor_seq = None
+< 
+636c625
+<                 s_noisy, s_ref, c_denoised, t, mask_loss_seq, 
+---
+>                 s_noisy, s_ref, c_denoised, t, mask_loss, 
+638c627
+<                 mask_factor = mask_factor_seq,
+---
+>                 mask_factor = mask_factor,
+700c689
+<         mask_res, mask_gen, mask_gen_seq = None,
+---
+>         mask_res, mask_gen,
+740,742d728
+<         if mask_gen_seq is None:
+<             mask_gen_seq = mask_gen
+< 
+818c804
+<                 s_0, t, method = 'multinomial', mask_generate = mask_gen_seq
+---
+>                 s_0, t, method = 'multinomial', mask_generate = mask_gen
+826c812
+<             s_noisy, _ = self.trans_seq.add_noise(s_emb, t, mask_generate = mask_gen_seq)
+---
+>             s_noisy, _ = self.trans_seq.add_noise(s_emb, t, mask_generate = mask_gen)
+847c833
+<             v_noisy, p_noisy, s_noisy, beta, mask_res, 
+---
+>             v_noisy, p_noisy, s_noisy, beta, mask_res, mask_gen, 
+893,894c879
+<             mask_res = mask_res, mask_gen = mask_gen, mask_gen_seq = mask_gen_seq,
+<             protein_size = protein_size, 
+---
+>             mask_res = mask_res, mask_gen = mask_gen, protein_size = protein_size, 
+913c898
+<         mask_res, mask_gen, mask_gen_seq = None,
+---
+>         mask_res, mask_gen,
+939,940d923
+<         if mask_gen_seq is None:
+<             mask_gen_seq = mask_gen
+948,953c931,932
+<         ### position mask and motif mask 
+<         mask_pos_gen = mask_gen[:, :, None].expand(
+<             -1, -1, 4
+<         ) if self.all_bb_atom else mask_gen
+<         mask_motif = mask_gen.bool() ^ mask_res.bool()  # True for motif residues 
+<         mask_motif_seq = mask_gen_seq.bool() ^ mask_res.bool()  # True for motif residues 
+---
+>         ### position mask and 
+>         mask_pos_gen = mask_gen[:, :, None].expand(-1, -1, 4) if self.all_bb_atom else mask_gen
+962d940
+<             mask_generate_seq = mask_gen_seq, 
+980,985d957
+<            
+<             ################################################
+<             # preprocee
+<             ################################################
+< 
+<             ### last states
+987d958
+<             #### normalization
+991c962,963
+<             ### scheduler: beta coefficient calculation
+---
+>            
+>             ############### beta coefficient calculation ######################
+997,1000c969
+<             ################################################
+<             # score predcition
+<             ################################################
+< 
+---
+>             ################## score prediction ###############################
+1002c971
+<                 v_t, p_t, s_t, beta, mask_res = mask_res,
+---
+>                 v_t, p_t, s_t, beta, mask_res = mask_res, mask_gen = mask_gen,
+1006,1008c975
+<             ################################################
+<             # denoising
+<             ################################################
+---
+>             ######################## denoising ################################
+1010,1012c977,978
+<             ############### structure ######################
+< 
+<             ###### fix the structure ######
+---
+>             ###### structure ######
+>             ### fix the structure
+1014,1015c980,982
+<                 v_next, p_next = v_t, p_t
+<             ###### jointdiff-x ######
+---
+>                 v_next = v_t 
+>                 p_next = p_t
+>             ### jointdiff-x
+1017,1026d983
+<                 ### alignment
+<                 if mask_motif.any():
+<                      eps_p, rot_mat = weighted_rigid_align(
+<                          eps_p, p_t, mask = mask_motif.unsqueeze(-1), detach = True
+<                      )
+<                      R_next = so3vec_to_rotation(v_next)
+<                      R_next = einsum(
+<                          rot_mat.transpose(-1, -2), R_next, "b n i, b k i j -> b k n j"
+<                      )  # (N, 3, 3) 
+<                      v_next = rotation_to_so3vec(R_next)
+1042c999
+<             ###### jointdiff ######
+---
+>             ### jointdiff
+1047c1004
+<             ###### fix the un-targeted region (motifs) ######
+---
+>             ### fix the un-targeted region
+1060,1064d1016
+<             
+<             ###### unormalization ######
+<             p_next = self.normalizer._unnormalize_position(
+<                 p_next, protein_size = protein_size
+<             )
+1066,1068c1018,1019
+<             ############### sequence ######################
+< 
+<             ###### fix the sequence ######
+---
+>             ###### sequence ######
+>             ### fix the sequence
+1071c1022
+<             ###### jointdiff-x ######
+---
+>             ### jointdiff-x
+1079c1030
+<                         mask_generate = mask_gen_seq
+---
+>                         mask_generate = mask_gen
+1081c1032
+<             ###### jointdiff ######
+---
+>             ### jointdiff
+1085,1086c1036,1037
+<             ###### fix the un-targeted region ######
+<             s_next = torch.where(mask_gen_seq, s_next, s_t)
+---
+>             ### fix the un-targeted region
+>             s_next = torch.where(mask_gen, s_next, s_t)
+1088,1099c1039,1054
+<             ################################################
+<             # save the states
+<             ################################################
+<            
+<             traj[t-1] = (v_next, p_next, s_next)
+<             ### Move previous states to cpu memory
+<             traj[t] = tuple(move_cpu(x) for x in traj[t])
+< 
+<         ####################################################
+<         # summarization: move last states to cpu memory
+<         ####################################################
+<         traj[t-1] = tuple(move_cpu(x) for x in traj[t-1])
+---
+>             ############################ save the states ######################
+> 
+>             traj[t-1] = (
+>                 v_next, 
+>                 self.normalizer._unnormalize_position(
+>                     p_next, protein_size = protein_size
+>                 ), 
+>                 s_next
+>             )
+> 
+>             traj[t] = tuple(move_cpu(x) for x in traj[t])    # Move previous states to cpu memory.
+> 
+>         #### Move last states to cpu memory.
+>         traj[0] = tuple(move_cpu(x) for x in traj[0])
+>         if -1 in traj:
+>             traj[-1] = tuple(move_cpu(x) for x in traj[-1])
+1112d1066
+<         seq_sample_method = 'multinomial',
+1136,1137c1090
+<             t_bias = t_bias,
+<             seq_sample_method = seq_sample_method,
+---
+>             t_bias = t_bias
+1173c1126
+<         mask_res, mask_generate, mask_generate_seq, protein_size,
+---
+>         mask_res, mask_generate, protein_size,
+1230c1183
+<                 s_init = torch.where(mask_generate_seq, s_init, s)
+---
+>                 s_init = torch.where(mask_generate, s_init, s)
