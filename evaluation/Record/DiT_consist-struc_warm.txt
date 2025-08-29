@@ -1,0 +1,72 @@
+000-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_warm_updated_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.448257; micro=0.448257
+RMSD
+RMSD: macro=3.576598; micro=3.576598
+
+000-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_warm_updated_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.453730; micro=0.453730
+RMSD
+RMSD: macro=3.616598; micro=3.616598
+
+001-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_warm_updated_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.458117; micro=0.458117
+RMSD
+RMSD: macro=3.585082; micro=3.585082
+
+001-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_warm_updated_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.486769; micro=0.486769
+RMSD
+RMSD: macro=3.384242; micro=3.384242
+
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.441283; micro=0.441283
+RMSD
+RMSD: macro=3.571762; micro=3.571762
+
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.482920; micro=0.482920
+RMSD
+RMSD: macro=3.440246; micro=3.440246
+
+003-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling-smote_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.416169; micro=0.416169
+RMSD
+RMSD: macro=3.770758; micro=3.770758
+
+003-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling-smote_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.455294; micro=0.455294
+RMSD
+RMSD: macro=3.548750; micro=3.548750
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.470016; micro=0.470016
+RMSD
+RMSD: macro=3.518832; micro=3.518832
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.493198; micro=0.493198
+RMSD
+RMSD: macro=3.433238; micro=3.433238
+
+005-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling_warm_ddpm-uncon-guide_last
+TM-score
+TM-score: macro=0.487642; micro=0.487642
+RMSD
+RMSD: macro=3.379139; micro=3.379139
+
+005-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling_warm_ddpm-uncon-guide_last2
+TM-score
+TM-score: macro=0.515656; micro=0.515656
+RMSD
+RMSD: macro=3.273924; micro=3.273924
+

@@ -1,0 +1,57 @@
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_samples_last
+tensor([0.2336, 3.0676, 0.2269, 2.3779])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_samples_last2
+tensor([0.2279, 2.8586, 0.2261, 2.3521])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_samples_last
+tensor([0.2342, 2.6211, 0.2414, 2.4561])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_samples_last2
+tensor([0.2335, 2.3980, 0.2283, 2.3388])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_50_28_samples_last
+Exception: No pdb found in ../Results/jointDiff_development/jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_50_28/samples_last!
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_50_28_samples_last2
+tensor([0.2927, 2.7190, 0.3137, 2.6410])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1_2025_04_19__01_42_02_samples_last
+tensor([0.1637, 3.3472, 0.1925, 3.2347])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse_2025_04_19__01_42_02_samples_last
+tensor([0.1784, 3.1487, 0.1824, 2.7612])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_samples_last
+tensor([0.2171, 3.8169, 0.2457, 3.0195])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_samples_last2
+tensor([0.2335, 3.3077, 0.2608, 3.0533])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_samples_last
+tensor([0.2188, 3.1264, 0.2419, 3.1831])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_samples_last2
+tensor([0.2464, 3.0041, 0.2810, 2.8075])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_samples_last
+tensor([0.1657, 3.3724, 0.2225, 3.6656])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_samples_last2
+tensor([0.1830, 3.5871, 0.2413, 4.0576])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_samples_last
+tensor([0.2263, 3.3030, 0.2686, 3.4133])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_samples_last2
+tensor([0.2304, 3.2960, 0.2611, 3.0801])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt_2025_04_19__01_42_02_samples_last
+tensor([0.2157, 3.6558, 0.2584, 3.4830])
+
+jointdiff-x_joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_samples_last
+tensor([0.2078, 3.5076, 0.2655, 4.0770])
+
+jointdiff-x_joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_samples_last2
+tensor([0.1984, 3.5605, 0.2174, 3.2760])
+

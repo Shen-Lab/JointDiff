@@ -1,0 +1,176 @@
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddim.fa
+Repeating rate: 0.044174; 13.93% > 0.000000
+Longest Repeating rate: 0.06431950370746882
+
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddim_last.fa
+Repeating rate: 0.014610; 6.76% > 0.000000
+Longest Repeating rate: 0.041067183695783264
+
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddpm.fa
+Repeating rate: 0.025394; 6.15% > 0.000000
+Longest Repeating rate: 0.046853943021412284
+
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddpm_last.fa
+Repeating rate: 0.015819; 4.10% > 0.000000
+Longest Repeating rate: 0.03880394908091429
+
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddpm-uncon-guide.fa
+Repeating rate: 0.022555; 6.15% > 0.000000
+Longest Repeating rate: 0.046106438963452935
+
+../../Results/latentDiff_DiT/000-DiT-L-withLen/seq_gen_ddpm-uncon-guide_last.fa
+Repeating rate: 0.007073; 3.07% > 0.000000
+Longest Repeating rate: 0.03348711656787738
+
+../../Results/latentDiff_DiT/000-DiT-M/seq_gen_ddim.fa
+Repeating rate: 0.037133; 16.19% > 0.000000
+Longest Repeating rate: 0.055202025931872165
+
+../../Results/latentDiff_DiT/000-DiT-M/seq_gen_ddim_last.fa
+Repeating rate: 0.040924; 16.80% > 0.000000
+Longest Repeating rate: 0.059025111771035615
+
+../../Results/latentDiff_DiT/000-DiT-M/seq_gen_ddpm.fa
+Repeating rate: 0.024785; 11.07% > 0.000000
+Longest Repeating rate: 0.047573302134472514
+
+../../Results/latentDiff_DiT/000-DiT-M/seq_gen_ddpm_last.fa
+Repeating rate: 0.039889; 16.80% > 0.000000
+Longest Repeating rate: 0.05848202431079832
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddim.fa
+Repeating rate: 0.015724; 4.92% > 0.000000
+Longest Repeating rate: 0.040977912140474734
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddim_last.fa
+Repeating rate: 0.005466; 3.89% > 0.000000
+Longest Repeating rate: 0.0336789850276535
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddpm.fa
+Repeating rate: 0.004142; 1.84% > 0.000000
+Longest Repeating rate: 0.03138050616883165
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddpm_last.fa
+Repeating rate: 0.001527; 1.84% > 0.000000
+Longest Repeating rate: 0.02929141388105822
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddpm-uncon-guide.fa
+Repeating rate: 0.022194; 4.92% > 0.000000
+Longest Repeating rate: 0.046623409629777804
+
+../../Results/latentDiff_DiT/000-DiT-M-withLen/seq_gen_ddpm-uncon-guide_last.fa
+Repeating rate: 0.025857; 3.28% > 0.000000
+Longest Repeating rate: 0.05148443374212151
+
+../../Results/latentDiff_DiT/000-DiT-S/seq_gen_ddim.fa
+Repeating rate: 0.011595; 5.94% > 0.000000
+Longest Repeating rate: 0.03706012113128988
+
+../../Results/latentDiff_DiT/000-DiT-S/seq_gen_ddim_last.fa
+Repeating rate: 0.043782; 15.78% > 0.000000
+Longest Repeating rate: 0.062050622034870086
+
+../../Results/latentDiff_DiT/000-DiT-S/seq_gen_ddpm.fa
+Repeating rate: 0.014396; 7.79% > 0.000000
+Longest Repeating rate: 0.03770092111183365
+
+../../Results/latentDiff_DiT/000-DiT-S/seq_gen_ddpm_last.fa
+Repeating rate: 0.031604; 12.50% > 0.000000
+Longest Repeating rate: 0.05430789623927709
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddim.fa
+Repeating rate: 0.012353; 7.38% > 0.000000
+Longest Repeating rate: 0.03758447431625851
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddim_last.fa
+Repeating rate: 0.004897; 3.28% > 0.000000
+Longest Repeating rate: 0.0319557174399533
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddpm.fa
+Repeating rate: 0.001172; 1.64% > 0.000000
+Longest Repeating rate: 0.02850963264675259
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddpm_last.fa
+Repeating rate: 0.003137; 1.64% > 0.000000
+Longest Repeating rate: 0.03144522660753602
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddpm-uncon-guide.fa
+Repeating rate: 0.054054; 9.63% > 0.000000
+Longest Repeating rate: 0.07093785272817424
+
+../../Results/latentDiff_DiT/000-DiT-S-withLen/seq_gen_ddpm-uncon-guide_last.fa
+Repeating rate: 0.044838; 7.79% > 0.000000
+Longest Repeating rate: 0.06810466620955692
+
+../../Results/latentDiff_DiT/006-DiT-L/seq_gen_ddim.fa
+Repeating rate: 0.042465; 12.09% > 0.000000
+Longest Repeating rate: 0.06265345035413383
+
+../../Results/latentDiff_DiT/006-DiT-L/seq_gen_ddim_last.fa
+Repeating rate: 0.014371; 8.40% > 0.000000
+Longest Repeating rate: 0.035215810182792934
+
+../../Results/latentDiff_DiT/006-DiT-L/seq_gen_ddpm.fa
+Repeating rate: 0.022991; 6.97% > 0.000000
+Longest Repeating rate: 0.047996378660040785
+
+../../Results/latentDiff_DiT/006-DiT-L/seq_gen_ddpm_last.fa
+Repeating rate: 0.011982; 5.74% > 0.000000
+Longest Repeating rate: 0.036311830567043395
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddim.fa
+Repeating rate: 0.039302; 17.50% > 0.000000
+Longest Repeating rate: 0.05790211324196286
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddim_last.fa
+Repeating rate: 0.027616; 15.57% > 0.000000
+Longest Repeating rate: 0.050601539469716614
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddpm.fa
+Repeating rate: 0.050114; 12.28% > 0.000000
+Longest Repeating rate: 0.06984059960163654
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddpm_last.fa
+Repeating rate: 0.028569; 9.27% > 0.000000
+Longest Repeating rate: 0.05177404984389594
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddpm-uncon-guide.fa
+Repeating rate: 0.033703; 8.41% > 0.000000
+Longest Repeating rate: 0.05496873648134848
+
+../../Results/latentDiff_DiT/008-DiT-XL-withLen/seq_gen_ddpm-uncon-guide_last.fa
+Repeating rate: 0.039929; 7.76% > 0.000000
+Longest Repeating rate: 0.06420415755746248
+
+../../Results/latentDiff_DiT/009-DiT-M-withLen-withMask/seq_gen_ddim.fa
+Repeating rate: 0.000509; 0.61% > 0.000000
+Longest Repeating rate: 0.02829375643626219
+
+../../Results/latentDiff_DiT/009-DiT-M-withLen-withMask/seq_gen_ddim_last.fa
+Repeating rate: 0.001596; 1.23% > 0.000000
+Longest Repeating rate: 0.02801381001100651
+
+../../Results/latentDiff_DiT/009-DiT-M-withLen-withMask/seq_gen_ddpm.fa
+Repeating rate: 0.001680; 1.02% > 0.000000
+Longest Repeating rate: 0.02905824811036215
+
+../../Results/latentDiff_DiT/009-DiT-M-withLen-withMask/seq_gen_ddpm_last.fa
+Repeating rate: 0.000000; 0.00% > 0.000000
+Longest Repeating rate: 0.029474782973343164
+
+../../Results/latentDiff_DiT/009-DiT-M-withLen-withMask/seq_gen_ddpm-uncon-guide.fa
+Repeating rate: 0.008083; 2.46% > 0.000000
+Longest Repeating rate: 0.036433530451823216
+
+../../Results/latentDiff_DiT/009-DiT-M-withMask/seq_gen_ddim_last.fa
+Repeating rate: 0.002816; 0.82% > 0.000000
+Longest Repeating rate: 0.030507348092457868
+
+../../Results/latentDiff_DiT/009-DiT-M-withMask/seq_gen_ddpm.fa
+Repeating rate: 0.001515; 1.43% > 0.000000
+Longest Repeating rate: 0.029550657237979474
+
+../../Results/latentDiff_DiT/009-DiT-M-withMask/seq_gen_ddpm_last.fa
+Repeating rate: 0.000541; 0.82% > 0.000000
+Longest Repeating rate: 0.029335149005752195
+

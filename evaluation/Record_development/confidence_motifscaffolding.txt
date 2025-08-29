@@ -1,0 +1,42 @@
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram_2025_04_23__07_15_18_motifscaffolding_last
+tensor([0.2582, 4.5463, 0.2315, 4.3602])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_15_18_motifscaffolding_last
+tensor([0.2761, 3.7834, 0.2426, 3.9719])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-0.0-mc_2025_04_23__23_55_34_motifscaffolding_last
+tensor([0.2433, 4.8549, 0.2397, 4.5835])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-10.0-mc_2025_04_23__23_55_34_motifscaffolding_last
+tensor([0.2216, 4.7522, 0.2263, 4.4722])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram-clash_rm-1.0-mc_2025_04_23__23_55_34_motifscaffolding_last
+tensor([0.2488, 4.6462, 0.2431, 4.5935])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-0.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2527, 4.7480, 0.2203, 4.4393])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-10.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2269, 4.6574, 0.2468, 4.6532])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogram_rm-10.0-mc_2025_04_23__23_55_34_motifscaffolding_last
+tensor([0.2178, 5.0518, 0.2129, 4.5243])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+fape-dist+mse-distogramrm-1.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2400, 4.7375, 0.2266, 4.5231])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogram_2025_04_23__07_15_18_motifscaffolding_last
+tensor([0.2339, 4.7620, 0.2759, 4.9818])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_33_16_motifscaffolding_last
+tensor([0.2379, 5.0120, 0.3229, 5.2589])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-0.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2220, 4.5494, 0.2516, 4.9628])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-10.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2187, 4.6858, 0.2495, 5.0682])
+
+jointdiff-x_joint_multinomial_model6-128-64-step100_posi-scale-50.0_rm_micro-posi+mse-dist+mse-distogramrm-1.0_2025_04_23__17_41_15_motifscaffolding_last
+tensor([0.2290, 4.6963, 0.2515, 4.9375])
+

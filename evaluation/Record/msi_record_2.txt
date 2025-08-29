@@ -1,0 +1,75 @@
+codesign_diffab_complete_gen_share-true_step2_lr1.e-4_wd0.0_2023_12_15__00_50_03
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.0863, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0434, coverage=0.0000
+val: msi-mean=0.0437, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0271, coverage=0.0000
+test-id: msi-mean=0.0219, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0096, coverage=0.0000
+test-od: msi-mean=0.0295, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0190, coverage=0.0000
+Overall: msi-mean=0.0453, msi-min=0.0080, msi-median=0.0295, msi-max=0.2917, msi-std=0.0372, coverage=0.0000
+
+codesign_diffab_complete_gen_share-true_step5_lr1.e-4_wd0.0_2023_12_15__00_50_03
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1054, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0421, coverage=0.0002
+val: msi-mean=0.0502, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0300, coverage=0.0000
+test-id: msi-mean=0.0255, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0145, coverage=0.0059
+test-od: msi-mean=0.0314, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0177, coverage=0.0000
+Overall: msi-mean=0.0531, msi-min=0.0098, msi-median=0.0345, msi-max=0.3333, msi-std=0.0424, coverage=0.0002
+
+codesign_diffab_complete_gen_share-true_step10_lr1.e-4_wd0.0_2023_05_01__17_18_33
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1183, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0416, coverage=0.0001
+val: msi-mean=0.0529, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0286, coverage=0.0000
+test-id: msi-mean=0.0289, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0160, coverage=0.0000
+test-od: msi-mean=0.0355, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0236, coverage=0.0000
+Overall: msi-mean=0.0589, msi-min=0.0098, msi-median=0.0395, msi-max=0.3333, msi-std=0.0458, coverage=0.0001
+
+codesign_diffab_complete_gen_share-true_step50_lr1.e-4_wd0.0_2023_05_01__17_18_33
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1146, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0517, coverage=0.0001
+val: msi-mean=0.0510, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0273, coverage=0.0000
+test-id: msi-mean=0.0357, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0228, coverage=0.0000
+test-od: msi-mean=0.0396, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0260, coverage=0.0000
+Overall: msi-mean=0.0602, msi-min=0.0129, msi-median=0.0417, msi-max=0.3111, msi-std=0.0466, coverage=0.0001
+
+codesign_diffab_complete_gen_share-true_step500_lr1.e-4_wd0.0_2023_05_01__17_18_33
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.0392, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0187, coverage=0.0000
+val: msi-mean=0.0281, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0061, coverage=0.0000
+test-id: msi-mean=0.0214, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0070, coverage=0.0000
+test-od: msi-mean=0.0236, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0073, coverage=0.0000
+Overall: msi-mean=0.0281, msi-min=0.0089, msi-median=0.0258, msi-max=0.2500, msi-std=0.0130, coverage=0.0000
+

@@ -1,0 +1,224 @@
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-128_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.030959; 1.22% > 0.500000
+Longest Repeating rate: 0.052754300531799
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-320_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.103433; 2.97% > 0.500000
+Longest Repeating rate: 0.07937992163562785
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_1000steps/samples/seq_gen.fa
+Repeating rate: 0.260694; 20.68% > 0.500000
+Longest Repeating rate: 0.13390186810611623
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.094535; 4.73% > 0.500000
+Longest Repeating rate: 0.07781975665114765
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-32_withMask_noise_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.037694; 1.22% > 0.500000
+Longest Repeating rate: 0.04319454972161095
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_unet-2-64_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.008051; 0.27% > 0.500000
+Longest Repeating rate: 0.03174327445669528
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_gt_Faster/samples/seq_gen.fa
+Repeating rate: 0.114715; 7.43% > 0.500000
+Longest Repeating rate: 0.08125902076490486
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_noEnd_withMask_noise_Faster/samples/seq_gen.fa
+Repeating rate: 0.290116; 23.51% > 0.500000
+Longest Repeating rate: 0.2167545798117057
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.012479; 0.54% > 0.500000
+Longest Repeating rate: 0.03824609478842299
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_noise_Faster_100steps/samples_more/seq_gen.fa
+Repeating rate: 0.027101; 1.19% > 0.500000
+Longest Repeating rate: 0.04625750078838611
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_noise_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.027182; 1.67% > 0.500000
+Longest Repeating rate: 0.04319323925521455
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.061982; 4.05% > 0.500000
+Longest Repeating rate: 0.07284716498618553
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_gt_Faster/samples/seq_gen.fa
+Repeating rate: 0.031975; 1.89% > 0.500000
+Longest Repeating rate: 0.04946489376450585
+
+../../Results/latentDiff/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_withMask_noise_Faster/samples/seq_gen.fa
+Repeating rate: 0.549014; 62.03% > 0.500000
+Longest Repeating rate: 0.4922228286980885
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-linear_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.008797; 0.22% > 0.500000
+Longest Repeating rate: 0.027903051930287137
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-linear_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.047700; 2.87% > 0.500000
+Longest Repeating rate: 0.05965382977598838
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-mha_Faster_100steps_rm_frag_micro/samples/seq_gen.fa
+Repeating rate: 0.385178; 38.52% > 0.500000
+Longest Repeating rate: 0.30734208525116946
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-mha_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.538986; 55.47% > 0.500000
+Longest Repeating rate: 0.40629809108463333
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-mha_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.892656; 90.72% > 0.500000
+Longest Repeating rate: 0.786922155196026
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-decoder-6_withMask_gt_len-memory_Faster_100steps_rm_frag_micro/samples/seq_gen.fa
+Repeating rate: 0.053353; 3.61% > 0.500000
+Longest Repeating rate: 0.057229363566016725
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-decoder-6_withMask_gt_len-memory_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.074276; 5.52% > 0.500000
+Longest Repeating rate: 0.07786284680648246
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-decoder-6_withMask_gt_len-memory_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.162425; 14.09% > 0.500000
+Longest Repeating rate: 0.11036590326628674
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-linear_Faster_100steps/samples_backup/seq_gen.fa
+Repeating rate: 0.033028; 1.22% > 0.500000
+Longest Repeating rate: 0.050752609891422884
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-linear_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.063466; 4.86% > 0.500000
+Longest Repeating rate: 0.07275499660377877
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-linear_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.061790; 3.92% > 0.500000
+Longest Repeating rate: 0.07663312780111167
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-mha_Faster_100steps/samples_backup/seq_gen.fa
+Repeating rate: 0.732500; 77.57% > 0.500000
+Longest Repeating rate: 0.5396740503546449
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-mha_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.560151; 58.90% > 0.500000
+Longest Repeating rate: 0.43203821083492727
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-32_withMask_gt_len-mha_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.602522; 62.87% > 0.500000
+Longest Repeating rate: 0.45666705828513204
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-linear_Faster_100steps/samples_backup/seq_gen.fa
+Repeating rate: 0.019928; 1.08% > 0.500000
+Longest Repeating rate: 0.04455260972994429
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-linear_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.007241; 0.28% > 0.500000
+Longest Repeating rate: 0.03414355771892471
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-linear_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.005256; 0.17% > 0.500000
+Longest Repeating rate: 0.02327628156304046
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-mha_Faster_100steps/samples_backup/seq_gen.fa
+Repeating rate: 0.795507; 82.43% > 0.500000
+Longest Repeating rate: 0.6891892142787788
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-mha_Faster_100steps/samples_last/seq_gen.fa
+Repeating rate: 0.561298; 59.67% > 0.500000
+Longest Repeating rate: 0.4301420896980979
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2-64_withMask_gt_len-mha_Faster_100steps/samples/seq_gen.fa
+Repeating rate: 0.823232; 84.09% > 0.500000
+Longest Repeating rate: 0.6865413826124955
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-linear_Faster_100steps_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.050485; 2.30% > 0.500000
+Longest Repeating rate: 0.06555747745830748
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-linear_Faster_100steps_rm_frag_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.063206; 1.80% > 0.500000
+Longest Repeating rate: 0.07207449520595641
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-linear_Faster_100steps_rm/samples/seq_gen.fa
+Repeating rate: 0.016731; 0.82% > 0.500000
+Longest Repeating rate: 0.040406513066513196
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.262089; 25.90% > 0.500000
+Longest Repeating rate: 0.19779872720726446
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag_micro/samples/seq_gen.fa
+Repeating rate: 0.463648; 49.84% > 0.500000
+Longest Repeating rate: 0.3697004690036851
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag_micro_withSeqDecoder-1.0-10.0/samples/seq_gen.fa
+Repeating rate: 0.133371; 0.00% > 0.500000
+Longest Repeating rate: 0.0843201130007574
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.257226; 21.64% > 0.500000
+Longest Repeating rate: 0.20595806431290364
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag/samples/seq_gen.fa
+Repeating rate: 0.467744; 51.64% > 0.500000
+Longest Repeating rate: 0.36584766473322744
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm/samples/seq_gen.fa
+Repeating rate: 0.557113; 57.87% > 0.500000
+Longest Repeating rate: 0.4330080133643763
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.062733; 3.28% > 0.500000
+Longest Repeating rate: 0.07576220010683184
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_rm_frag_micro_withSeqDecoder-0.01-10.0/samples/seq_gen.fa
+Repeating rate: 0.012364; 0.00% > 0.500000
+Longest Repeating rate: 0.03973221826399982
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_rm_frag_micro_withSeqDecoder-0.1-10.0/samples/seq_gen.fa
+Repeating rate: 0.014732; 0.16% > 0.500000
+Longest Repeating rate: 0.03923562375414504
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_rm_frag_micro_withSeqDecoder-1.0-10.0/samples/seq_gen.fa
+Repeating rate: 0.111351; 4.92% > 0.500000
+Longest Repeating rate: 0.1039600771102582
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_rm_frag_micro_withSeqDecoder-1.0-1.0/samples/seq_gen.fa
+Repeating rate: 0.044989; 2.62% > 0.500000
+Longest Repeating rate: 0.06329170581130561
+
+../../Results/latentDiff_updated_eval/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-none_Faster_100steps_rm/samples/seq_gen.fa
+Repeating rate: 0.016159; 0.49% > 0.500000
+Longest Repeating rate: 0.03792199933514009
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_gt_len-linear_Faster_100steps_rm/samples/seq_gen.fa
+Repeating rate: 0.168832; 15.25% > 0.500000
+Longest Repeating rate: 0.15243548539050636
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_transformer-6_withMask_noise_len-mha_Faster_100steps_micro/samples/seq_gen.fa
+Repeating rate: 0.142361; 10.82% > 0.500000
+Longest Repeating rate: 0.12287993913437346
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag_micro_withSeqDecoder-0.01-10.0/samples/seq_gen.fa
+Repeating rate: 0.019357; 0.33% > 0.500000
+Longest Repeating rate: 0.0445892089411653
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_gt_len-mha_Faster_100steps_rm_frag_micro_withSeqDecoder-0.1-10.0/samples/seq_gen.fa
+Repeating rate: 0.025831; 0.00% > 0.500000
+Longest Repeating rate: 0.04642317772965138
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_noise_len-linear_Faster_100steps_micro/samples/seq_gen.fa
+Repeating rate: 0.151267; 2.79% > 0.500000
+Longest Repeating rate: 0.13717559783172095
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_noise_len-mha_Faster_100steps_micro/samples/seq_gen.fa
+Repeating rate: 0.253688; 18.36% > 0.500000
+Longest Repeating rate: 0.1795762761226474
+
+../../Results/latentDiff_updated/latentdiff_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_vae-0.001_NoEnd_unet-2_withMask_noise_len-none_Faster_100steps_micro/samples/seq_gen.fa
+Repeating rate: 0.012953; 0.49% > 0.500000
+Longest Repeating rate: 0.03430868840700311
+

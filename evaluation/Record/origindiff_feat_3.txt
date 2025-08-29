@@ -1,0 +1,26 @@
+codesign_multinomial_step100_posiscale10.0_6-128-64-4_structure-modal_2024_02_16__15_13_51
+450 sample dictionaries in all.
+12025 angles tuples in all.
+Clash: mean=5.9422, min=0, median=3, max=61, std=7.8376
+Size: mean=45.9202, min=20, median=48, max=64, std=12.7082
+phi: JSD=0.8592; KLD=3.5887
+psi: JSD=1.0087; KLD=4.2723
+omega: JSD=0.1322; KLD=inf
+
+codesign_multinomial_step100_posiscale10.0_6-512-256-2_structure-modal_2024_02_16__19_55_26
+0 sample dictionaries in all.
+0 angles tuples in all.
+
+codesign_multinomial_step100_posiscale17.6_6-128-64-4_structure-modal_2024_02_12__20_29_24
+0 sample dictionaries in all.
+0 angles tuples in all.
+
+codesign_multinomial_step100_posiscale17.6_6-512-256-2_structure-modal_2024_02_12__20_29_24
+1810 sample dictionaries in all.
+153283 angles tuples in all.
+Clash: mean=11.8442, min=0, median=7, max=124, std=14.7733
+Size: mean=135.4924, min=20, median=144, max=200, std=45.9014
+phi: JSD=0.9468; KLD=3.6119
+psi: JSD=1.5335; KLD=6.0762
+omega: JSD=0.2177; KLD=inf
+

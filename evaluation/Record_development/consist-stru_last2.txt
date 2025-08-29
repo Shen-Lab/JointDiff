@@ -1,0 +1,348 @@
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last_2
+TM-score
+TM-score: macro=0.338629; micro=0.338629
+RMSD
+RMSD: macro=3.868441; micro=3.868441
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_last
+TM-score
+TM-score: macro=0.376904; micro=0.376904
+RMSD
+RMSD: macro=3.633379; micro=3.633379
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram_2025_04_21__01_43_10_last2
+TM-score
+TM-score: macro=0.371628; micro=0.371628
+RMSD
+RMSD: macro=3.618490; micro=3.618490
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_last
+TM-score
+TM-score: macro=0.348271; micro=0.348271
+RMSD
+RMSD: macro=3.866922; micro=3.866922
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_21__01_45_30_last2
+TM-score
+TM-score: macro=0.333729; micro=0.333729
+RMSD
+RMSD: macro=3.941627; micro=3.941627
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape-dist+mse-distogram-clash_2025_04_23__07_50_28_last2
+TM-score
+TM-score: macro=0.360005; micro=0.360005
+RMSD
+RMSD: macro=3.646586; micro=3.646586
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.437653; micro=0.437653
+RMSD
+RMSD: macro=3.189073; micro=3.189073
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.259085; micro=0.259085
+RMSD
+RMSD: macro=4.204608; micro=4.204608
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.255459; micro=0.255459
+RMSD
+RMSD: macro=3.994289; micro=3.994289
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.298642; micro=0.298642
+RMSD
+RMSD: macro=4.012592; micro=4.012592
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.316661; micro=0.316661
+RMSD
+RMSD: macro=3.803210; micro=3.803210
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.443043; micro=0.443043
+RMSD
+RMSD: macro=3.206216; micro=3.206216
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.370619; micro=0.370619
+RMSD
+RMSD: macro=3.685960; micro=3.685960
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.360038; micro=0.360038
+RMSD
+RMSD: macro=3.362430; micro=3.362430
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.294631; micro=0.294631
+RMSD
+RMSD: macro=4.067889; micro=4.067889
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+l1_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.346838; micro=0.346838
+RMSD
+RMSD: macro=3.829439; micro=3.829439
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.419418; micro=0.419418
+RMSD
+RMSD: macro=3.148784; micro=3.148784
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_last
+TM-score
+TM-score: macro=0.414727; micro=0.414727
+RMSD
+RMSD: macro=3.425308; micro=3.425308
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram_2025_04_21__01_42_16_last2
+TM-score
+TM-score: macro=0.407162; micro=0.407162
+RMSD
+RMSD: macro=3.464037; micro=3.464037
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_last
+TM-score
+TM-score: macro=0.388358; micro=0.388358
+RMSD
+RMSD: macro=3.282803; micro=3.282803
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__01_42_16_last2
+TM-score
+TM-score: macro=0.381474; micro=0.381474
+RMSD
+RMSD: macro=3.597545; micro=3.597545
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_last
+TM-score
+TM-score: macro=0.368665; micro=0.368665
+RMSD
+RMSD: macro=3.294227; micro=3.294227
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__02_12_39_last2
+TM-score
+TM-score: macro=0.438719; micro=0.438719
+RMSD
+RMSD: macro=3.144893; micro=3.144893
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_last
+TM-score
+TM-score: macro=0.410986; micro=0.410986
+RMSD
+RMSD: macro=3.368677; micro=3.368677
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_23__07_50_28_last2
+TM-score
+TM-score: macro=0.460611; micro=0.460611
+RMSD
+RMSD: macro=3.017388; micro=3.017388
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-dist+smooth-lddt_2025_04_19__01_42_02_last
+TM-score
+TM-score: macro=0.379766; micro=0.379766
+RMSD
+RMSD: macro=3.645134; micro=3.645134
+
+joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_last
+TM-score
+TM-score: macro=0.270201; micro=0.270201
+RMSD
+RMSD: macro=3.797979; micro=3.797979
+
+joint_multinomial_model6-256-128-step100_posi-scale-50.0_micro-posi+mse-dist+mse-distogram-clash_2025_04_21__15_14_36_last2
+TM-score
+TM-score: macro=0.252941; micro=0.252941
+RMSD
+RMSD: macro=3.824538; micro=3.824538
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+fape_2025_04_08__22_17_21_last_2
+TM-score
+TM-score: macro=0.309264; micro=0.309264
+RMSD
+RMSD: macro=5.235352; micro=5.235352
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.352615; micro=0.352615
+RMSD
+RMSD: macro=4.776882; micro=4.776882
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.225150; micro=0.225150
+RMSD
+RMSD: macro=5.509670; micro=5.509670
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-detach_2025_04_07__23_31_18_last_2
+TM-score
+TM-score: macro=0.214741; micro=0.214741
+RMSD
+RMSD: macro=5.417941; micro=5.417941
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+l1_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.263064; micro=0.263064
+RMSD
+RMSD: macro=5.517615; micro=5.517615
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.278294; micro=0.278294
+RMSD
+RMSD: macro=5.362431; micro=5.362431
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.354556; micro=0.354556
+RMSD
+RMSD: macro=4.784188; micro=4.784188
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+mse-distogram-clash_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.325500; micro=0.325500
+RMSD
+RMSD: macro=5.091141; micro=5.091141
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-distogram_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.311883; micro=0.311883
+RMSD
+RMSD: macro=4.903178; micro=4.903178
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last
+TM-score
+TM-score: macro= nan; micro= nan
+RMSD
+RMSD: macro= nan; micro= nan
+
+joint_multinomial_model6-128-64-step100_posi-scale-50.0_micro-posi+mse-align-dist+smooth-lddt_2025_04_07__23_31_02_last_2
+TM-score
+TM-score: macro=0.260435; micro=0.260435
+RMSD
+RMSD: macro=5.649670; micro=5.649670
+

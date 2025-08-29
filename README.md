@@ -36,6 +36,7 @@ To train the model with you own data, please get the *.tsv file ready following 
 
 ## Training
 
+**JointDiff & JointDiff-x**
 To train JointDiff of JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
 ```
 python train_jointdiff.py \
@@ -63,10 +64,27 @@ python train_jointdiff.py \
 --with_clash 1
 ```
 
+**Confidence Net**
+To train the confidence net, run:
+
+```
+python train_confidence_net.py \
+--processed_dir <str; path of the processed data> \
+--logdir <str; path to save the checkpoints> \
+--centralize <0 or 1; 1 to centralize the input structure> \
+--binary <0 or 1; 1 for binary classication and 0 for regression> \
+--label_norm <0 or 1; 1 to normalize the labels, only valid for regression task> \
+--balance <0 or 1; 1 to balance the training process with weighted loss> \
+--max_epoch <int; maximum training epochs> 
+```
+
 ***
 
 ## Inference
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://zenodo.org/records/14517007). For unconditional sampling, go to the folder **src/** and run:
+
+**Monomer Design**
+Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). For unconditional sampling, go to the folder **src/** and run:
+
 ```
 python infer_jointdiff.py \
 --model_path <str; path of the checkpoint> \
@@ -96,6 +114,41 @@ python infer_jointdiff.py \
 --num 5 \
 --save_type 'all'
 ```
+
+**Motif-scaffolding**
+For motif-scaffolding, down load the PDB files containing the motifs and prepare a CSV file containing the motif information (e.g. for GFP, it should be '0,1QY3_GFP,"55-55,A58-71,24-24,A96-96,125-125,A222-222,7-7",227-227'). Then run:
+
+```
+python infer_motifscaffolding_jointdiff.py  \
+--model_path <str; path of the checkpoint> \
+--data_path <str; path of the CSV file indicating the motif information> \
+--pdb_path <str; path of the folder containing the pdb files> \
+--info_dict_path <str; processed loadable data; if not exists, the processed dictionary will be saved to this path> \
+--result_path <str; directory to save the samples> \
+--attempt <int; sampling amount for each task>
+```
+
+Example:
+```
+python infer_motifscaffolding_jointdiff.py  \
+--model_path ../checkpoints/JointDiff-x_model.pt \
+--data_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark.csv \
+--pdb_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/pdbs_processed/ \
+--info_dict_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark_data.pkl \
+--result_path ../samples/ \
+--attempt 10  # generate 10 samples for each motif
+```
+
+**Confidence Inference**
+
+To estimate the confidence value with our confidence net, run:
+
+"""
+python infer_confidence.py \
+--pdb_dir <str; path of the folder containing the pdb files>
+--ckpt_path <str; path of the model checkpoints> \
+--result_path <str; path to save the results>
+"""
 
 ***
 

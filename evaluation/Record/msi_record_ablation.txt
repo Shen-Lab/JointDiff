@@ -1,0 +1,60 @@
+codesign_multinomial_step100_posiscale10.0_6-128-64-4_sequence-modal_2024_02_16__15_13_51
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1249, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0916, coverage=0.0019
+val: msi-mean=0.0483, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0278, coverage=0.0000
+test-id: msi-mean=0.0401, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0289, coverage=0.0059
+test-od: msi-mean=0.0419, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0252, coverage=0.0000
+Overall: msi-mean=0.0638, msi-min=0.0098, msi-median=0.0417, msi-max=0.9185, msi-std=0.0625, coverage=0.0017
+
+codesign_multinomial_step100_posiscale10.0_6-512-256-2_sequence-modal_2024_02_16__19_55_26
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1285, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0991, coverage=0.0025
+val: msi-mean=0.0515, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0330, coverage=0.0000
+test-id: msi-mean=0.0372, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0259, coverage=0.0000
+test-od: msi-mean=0.0401, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0248, coverage=0.0000
+Overall: msi-mean=0.0643, msi-min=0.0120, msi-median=0.0405, msi-max=0.6667, msi-std=0.0667, coverage=0.0022
+
+codesign_multinomial_step100_posiscale17.6_6-128-64-4_sequence-modal_2024_02_12__20_29_24
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1377, msi-min=0, msi-median=0, msi-max=0, msi-std=0.1221, coverage=0.0025
+val: msi-mean=0.0501, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0274, coverage=0.0000
+test-id: msi-mean=0.0400, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0388, coverage=0.0059
+test-od: msi-mean=0.0420, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0273, coverage=0.0000
+Overall: msi-mean=0.0674, msi-min=0.0123, msi-median=0.0417, msi-max=0.9699, msi-std=0.0784, coverage=0.0022
+
+codesign_multinomial_step100_posiscale17.6_6-512-256-2_sequence-modal_2024_02_12__20_29_24
+18037 samples in all (18037 distinct ones).
+train: 14207 samples
+val: 1533 samples
+test-id: 170 samples
+test-od: 317 samples
+gen: 1810 samples
+Load sequence identity...
+162657666 pairs in all.
+train: msi-mean=0.1321, msi-min=0, msi-median=0, msi-max=0, msi-std=0.1004, coverage=0.0025
+val: msi-mean=0.0501, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0294, coverage=0.0000
+test-id: msi-mean=0.0470, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0612, coverage=0.0059
+test-od: msi-mean=0.0414, msi-min=0, msi-median=0, msi-max=0, msi-std=0.0281, coverage=0.0000
+Overall: msi-mean=0.0676, msi-min=0.0130, msi-median=0.0408, msi-max=0.6500, msi-std=0.0726, coverage=0.0022
+

@@ -1,0 +1,142 @@
+codesign_multinomial_step100_posiscale17.6_6-128-64_guided_2024_02_05__11_46_27_guidedDiffsmall_Fit-cosine-none
+1788 sample dictionaries in all.
+86002 angles tuples in all.
+Clash: mean=28.9620, min=0, median=22, max=182, std=25.3989
+Size: mean=137.6198, min=20, median=144, max=200, std=43.8904
+phi: JSD=0.8008; KLD=3.2252
+psi: JSD=1.3312; KLD=5.2201
+omega: JSD=0.3787; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-128-64_guided_2024_02_05__11_46_27_guidedDiffsmall_Fit-mse-none
+1789 sample dictionaries in all.
+90863 angles tuples in all.
+Clash: mean=29.0850, min=0, median=16, max=196, std=32.7249
+Size: mean=136.0426, min=20, median=143, max=200, std=44.9367
+phi: JSD=0.5461; KLD=2.1759
+psi: JSD=0.8888; KLD=3.5342
+omega: JSD=0.9107; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-128-64_guided_2024_02_05__11_47_11_guidedDiffsmall_Fit-mse-length
+1790 sample dictionaries in all.
+86088 angles tuples in all.
+Clash: mean=26.0179, min=0, median=19, max=202, std=25.5412
+Size: mean=136.7355, min=20, median=143, max=200, std=44.1954
+phi: JSD=0.8632; KLD=3.2945
+psi: JSD=1.4173; KLD=5.5446
+omega: JSD=0.4296; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-128-64_guided_2024_02_06__05_43_42_guidedDiffsmall_Fit-cosine-none_tmax20
+1788 sample dictionaries in all.
+120774 angles tuples in all.
+Clash: mean=41.7176, min=0, median=25, max=242, std=42.4680
+Size: mean=134.7949, min=20, median=143, max=200, std=46.4296
+phi: JSD=1.1001; KLD=4.6963
+psi: JSD=1.8228; KLD=7.1557
+omega: JSD=0.3326; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided-smallbatch_2024_02_05__13_53_42_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul_Fit-cosine-none
+1786 sample dictionaries in all.
+71343 angles tuples in all.
+Clash: mean=50.6663, min=2, median=46, max=168, std=28.8786
+Size: mean=127.6911, min=20, median=134, max=200, std=48.1697
+phi: JSD=0.8114; KLD=3.6881
+psi: JSD=1.6439; KLD=6.9293
+omega: JSD=1.1532; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided-smallbatch_2024_02_05__13_53_42_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul_Fit-direction-none
+1782 sample dictionaries in all.
+49271 angles tuples in all.
+Clash: mean=33.1734, min=0, median=26, max=168, std=27.7867
+Size: mean=129.9405, min=20, median=137, max=200, std=48.1351
+phi: JSD=0.6402; KLD=2.7022
+psi: JSD=0.2402; KLD=1.0693
+omega: JSD=1.3341; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided-smallbatch_2024_02_05__13_53_42_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul_Fit-gt_fitness-none
+1786 sample dictionaries in all.
+52606 angles tuples in all.
+Clash: mean=32.4462, min=0, median=27, max=145, std=24.6619
+Size: mean=131.8070, min=20, median=138, max=200, std=47.2396
+phi: JSD=0.6626; KLD=2.9585
+psi: JSD=0.5270; KLD=2.3663
+omega: JSD=0.9124; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided-smallbatch_2024_02_05__22_30_24_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul_Fit-cosine-none_tmax20
+1790 sample dictionaries in all.
+42211 angles tuples in all.
+Clash: mean=59.7039, min=0, median=52, max=267, std=42.5272
+Size: mean=134.9317, min=20, median=140, max=200, std=43.6976
+phi: JSD=0.8519; KLD=4.6588
+psi: JSD=1.2315; KLD=5.9622
+omega: JSD=1.5377; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__02_51_16_guidedDiff_Fit-direction-none
+1786 sample dictionaries in all.
+110379 angles tuples in all.
+Clash: mean=6.9636, min=0, median=4, max=102, std=9.4262
+Size: mean=132.7554, min=20, median=140, max=200, std=47.1458
+phi: JSD=1.6283; KLD=6.0086
+psi: JSD=2.5104; KLD=9.8938
+omega: JSD=0.2058; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__02_51_16_guidedDiff_Fit-gt_fitness-none
+1787 sample dictionaries in all.
+104072 angles tuples in all.
+Clash: mean=7.5853, min=0, median=4, max=156, std=11.8818
+Size: mean=133.3943, min=20, median=141, max=200, std=46.4984
+phi: JSD=1.3421; KLD=4.9476
+psi: JSD=2.0960; KLD=8.2644
+omega: JSD=0.1759; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-mse-Boltzmann-Repul
+0 sample dictionaries in all.
+0 angles tuples in all.
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__03_29_21_guidedDiff_Ene-cosine-negative-Boltzmann-Repul
+1789 sample dictionaries in all.
+42752 angles tuples in all.
+Clash: mean=34.0811, min=0, median=26, max=229, std=32.6407
+Size: mean=128.6022, min=20, median=135, max=200, std=48.0617
+phi: JSD=0.6292; KLD=3.2037
+psi: JSD=0.8967; KLD=4.1102
+omega: JSD=0.9296; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul
+1787 sample dictionaries in all.
+57369 angles tuples in all.
+Clash: mean=41.6452, min=0, median=35, max=200, std=32.4478
+Size: mean=131.1646, min=20, median=138, max=200, std=47.3506
+phi: JSD=0.9329; KLD=5.2246
+psi: JSD=1.1871; KLD=5.8300
+omega: JSD=2.1734; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-cosine-Boltzmann-Repul-withResi
+1786 sample dictionaries in all.
+94419 angles tuples in all.
+Clash: mean=71.2912, min=2, median=61, max=273, std=44.7363
+Size: mean=130.7252, min=20, median=139, max=200, std=48.5157
+phi: JSD=1.3122; KLD=5.8519
+psi: JSD=3.1011; KLD=11.5895
+omega: JSD=0.9553; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-cosine-Boltzmann-all
+1788 sample dictionaries in all.
+53652 angles tuples in all.
+Clash: mean=30.8440, min=0, median=27, max=165, std=21.4354
+Size: mean=120.0411, min=20, median=120, max=200, std=47.2958
+phi: JSD=0.7782; KLD=3.3542
+psi: JSD=1.4767; KLD=5.8600
+omega: JSD=0.7548; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-cosine-negative-Boltzmann-Repul
+1783 sample dictionaries in all.
+31442 angles tuples in all.
+Clash: mean=52.8665, min=0, median=47, max=251, std=36.6717
+Size: mean=140.8011, min=20, median=148, max=200, std=42.6072
+phi: JSD=1.3142; KLD=6.0612
+psi: JSD=2.5996; KLD=11.5640
+omega: JSD=1.0704; KLD=inf
+
+codesign_multinomial_step100_posiscale17.6_6-512-256_guided_2024_02_05__12_39_50_guidedDiffunnormed_Ene-mse-Boltzmann-Repul
+0 angles tuples in all.
+

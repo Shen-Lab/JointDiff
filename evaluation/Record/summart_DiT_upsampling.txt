@@ -1,0 +1,511 @@
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2165; macro-SR=0.2165
+### foldability
+488 samples in all: micro-SR=0.2356; macro-SR=0.2356
+### consist-struc
+TM-score
+TM-score: macro=0.441283; micro=0.441283
+RMSD
+RMSD: macro=3.571762; micro=3.571762
+### designability
+TM-score
+TM-score: macro=0.529872; micro=0.529872
+RMSD
+RMSD: macro=3.120997; micro=3.120997
+
+002-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling-smote_warm_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2379; macro-SR=0.2379
+### foldability
+488 samples in all: micro-SR=0.2629; macro-SR=0.2629
+### consist-struc
+TM-score
+TM-score: macro=0.482920; micro=0.482920
+RMSD
+RMSD: macro=3.440246; micro=3.440246
+### designability
+TM-score
+TM-score: macro=0.600943; micro=0.600943
+RMSD
+RMSD: macro=2.846033; micro=2.846033
+
+003-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling-smote_warm_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2034; macro-SR=0.2034
+### foldability
+488 samples in all: micro-SR=0.2232; macro-SR=0.2232
+### consist-struc
+TM-score
+TM-score: macro=0.416169; micro=0.416169
+RMSD
+RMSD: macro=3.770758; micro=3.770758
+
+003-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling-smote_warm_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2263; macro-SR=0.2263
+### foldability
+488 samples in all: micro-SR=0.2485; macro-SR=0.2485
+### consist-struc
+TM-score
+TM-score: macro=0.455294; micro=0.455294
+RMSD
+RMSD: macro=3.548750; micro=3.548750
+### designability
+TM-score
+TM-score: macro=0.557973; micro=0.557973
+RMSD
+RMSD: macro=2.988439; micro=2.988439
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2230; macro-SR=0.2230
+### foldability
+488 samples in all: micro-SR=0.2438; macro-SR=0.2438
+### consist-struc
+TM-score
+TM-score: macro=0.470016; micro=0.470016
+RMSD
+RMSD: macro=3.518832; micro=3.518832
+### designability
+TM-score
+TM-score: macro=0.572431; micro=0.572431
+RMSD
+RMSD: macro=2.979430; micro=2.979430
+
+004-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin5_upsampling_warm_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2242; macro-SR=0.2242
+### foldability
+488 samples in all: micro-SR=0.2473; macro-SR=0.2473
+### consist-struc
+TM-score
+TM-score: macro=0.493198; micro=0.493198
+RMSD
+RMSD: macro=3.433238; micro=3.433238
+### designability
+TM-score
+TM-score: macro=0.586890; micro=0.586890
+RMSD
+RMSD: macro=2.924872; micro=2.924872
+
+005-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling_warm_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2238; macro-SR=0.2238
+### foldability
+488 samples in all: micro-SR=0.2467; macro-SR=0.2467
+### consist-struc
+TM-score
+TM-score: macro=0.487642; micro=0.487642
+RMSD
+RMSD: macro=3.379139; micro=3.379139
+### designability
+TM-score
+TM-score: macro=0.575245; micro=0.575245
+RMSD
+RMSD: macro=2.961889; micro=2.961889
+
+005-DiT-M-withLen-withMask_diff-linear-500_warm_withLenClus_bin10_upsampling_warm_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2334; macro-SR=0.2334
+### foldability
+488 samples in all: micro-SR=0.2525; macro-SR=0.2525
+### consist-struc
+TM-score
+TM-score: macro=0.515656; micro=0.515656
+RMSD
+RMSD: macro=3.273924; micro=3.273924
+### designability
+TM-score
+TM-score: macro=0.598198; micro=0.598198
+RMSD
+RMSD: macro=2.863639; micro=2.863639
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1840; macro-SR=0.1840
+### foldability
+488 samples in all: micro-SR=0.2076; macro-SR=0.2076
+### consist-struc
+TM-score
+TM-score: macro=0.382221; micro=0.382221
+RMSD
+RMSD: macro=3.919170; micro=3.919170
+### designability
+TM-score
+TM-score: macro=0.459252; micro=0.459252
+RMSD
+RMSD: macro=3.468669; micro=3.468669
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2192; macro-SR=0.2192
+### foldability
+488 samples in all: micro-SR=0.2459; macro-SR=0.2459
+### consist-struc
+TM-score
+TM-score: macro=0.447661; micro=0.447661
+RMSD
+RMSD: macro=3.544293; micro=3.544293
+### designability
+TM-score
+TM-score: macro=0.547221; micro=0.547221
+RMSD
+RMSD: macro=3.040787; micro=3.040787
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2164; macro-SR=0.2164
+### foldability
+488 samples in all: micro-SR=0.2432; macro-SR=0.2432
+### consist-struc
+TM-score
+TM-score: macro=0.432386; micro=0.432386
+RMSD
+RMSD: macro=3.686957; micro=3.686957
+### designability
+TM-score
+TM-score: macro=0.523931; micro=0.523931
+RMSD
+RMSD: macro=3.239187; micro=3.239187
+
+006-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling-smote_ddpm-uncon-guide_last3
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2282; macro-SR=0.2282
+### consist-struc
+TM-score
+TM-score: macro=0.484253; micro=0.484253
+RMSD
+RMSD: macro=3.352777; micro=3.352777
+
+008-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling-smote_ddpm-uncon-guide
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1785; macro-SR=0.1785
+### foldability
+488 samples in all: micro-SR=0.2029; macro-SR=0.2029
+### consist-struc
+TM-score
+TM-score: macro=0.372446; micro=0.372446
+RMSD
+RMSD: macro=4.007439; micro=4.007439
+### designability
+TM-score
+TM-score: macro=0.473892; micro=0.473892
+RMSD
+RMSD: macro=3.453761; micro=3.453761
+
+008-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling-smote_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2075; macro-SR=0.2075
+### foldability
+488 samples in all: micro-SR=0.2306; macro-SR=0.2306
+### consist-struc
+TM-score
+TM-score: macro=0.429556; micro=0.429556
+RMSD
+RMSD: macro=3.713730; micro=3.713730
+### designability
+TM-score
+TM-score: macro=0.527825; micro=0.527825
+RMSD
+RMSD: macro=3.140118; micro=3.140118
+
+008-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling-smote_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2119; macro-SR=0.2119
+### foldability
+488 samples in all: micro-SR=0.2327; macro-SR=0.2327
+### consist-struc
+TM-score
+TM-score: macro=0.432577; micro=0.432577
+RMSD
+RMSD: macro=3.710789; micro=3.710789
+### designability
+TM-score
+TM-score: macro=0.534383; micro=0.534383
+RMSD
+RMSD: macro=3.180813; micro=3.180813
+
+010-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1995; macro-SR=0.1995
+### foldability
+488 samples in all: micro-SR=0.2221; macro-SR=0.2221
+### consist-struc
+TM-score
+TM-score: macro=0.401276; micro=0.401276
+RMSD
+RMSD: macro=3.898217; micro=3.898217
+### designability
+TM-score
+TM-score: macro=0.472333; micro=0.472333
+RMSD
+RMSD: macro=3.509508; micro=3.509508
+
+010-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin20_upsampling_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2142; macro-SR=0.2142
+### foldability
+488 samples in all: micro-SR=0.2355; macro-SR=0.2355
+### consist-struc
+TM-score
+TM-score: macro=0.439799; micro=0.439799
+RMSD
+RMSD: macro=3.606588; micro=3.606588
+### designability
+TM-score
+TM-score: macro=0.547793; micro=0.547793
+RMSD
+RMSD: macro=3.116289; micro=3.116289
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2014; macro-SR=0.2014
+### foldability
+488 samples in all: micro-SR=0.2248; macro-SR=0.2248
+### consist-struc
+TM-score
+TM-score: macro=0.421340; micro=0.421340
+RMSD
+RMSD: macro=3.748248; micro=3.748248
+### designability
+TM-score
+TM-score: macro=0.519217; micro=0.519217
+RMSD
+RMSD: macro=3.219279; micro=3.219279
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2244; macro-SR=0.2244
+### foldability
+488 samples in all: micro-SR=0.2456; macro-SR=0.2456
+### consist-struc
+TM-score
+TM-score: macro=0.469255; micro=0.469255
+RMSD
+RMSD: macro=3.461855; micro=3.461855
+### designability
+TM-score
+TM-score: macro=0.563370; micro=0.563370
+RMSD
+RMSD: macro=2.992780; micro=2.992780
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling_ddpm-uncon-guide_last3
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2310; macro-SR=0.2310
+### consist-struc
+TM-score
+TM-score: macro=0.478479; micro=0.478479
+RMSD
+RMSD: macro=3.537982; micro=3.537982
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1842; macro-SR=0.1842
+### foldability
+488 samples in all: micro-SR=0.2033; macro-SR=0.2033
+### consist-struc
+TM-score
+TM-score: macro=0.399152; micro=0.399152
+RMSD
+RMSD: macro=3.807664; micro=3.807664
+### designability
+TM-score
+TM-score: macro=0.497059; micro=0.497059
+RMSD
+RMSD: macro=3.280980; micro=3.280980
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2074; macro-SR=0.2074
+### foldability
+488 samples in all: micro-SR=0.2294; macro-SR=0.2294
+### consist-struc
+TM-score
+TM-score: macro=0.429318; micro=0.429318
+RMSD
+RMSD: macro=3.686619; micro=3.686619
+### designability
+TM-score
+TM-score: macro=0.532563; micro=0.532563
+RMSD
+RMSD: macro=3.170856; micro=3.170856
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2354; macro-SR=0.2354
+### foldability
+488 samples in all: micro-SR=0.2609; macro-SR=0.2609
+### consist-struc
+TM-score
+TM-score: macro=0.480728; micro=0.480728
+RMSD
+RMSD: macro=3.383320; micro=3.383320
+### designability
+TM-score
+TM-score: macro=0.602495; micro=0.602495
+RMSD
+RMSD: macro=2.765823; micro=2.765823
+
+011-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin5_upsampling-smote_ddpm-uncon-guide_last3
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2178; macro-SR=0.2178
+### consist-struc
+TM-score
+TM-score: macro=0.465847; micro=0.465847
+RMSD
+RMSD: macro=3.491230; micro=3.491230
+
+012-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2099; macro-SR=0.2099
+### foldability
+488 samples in all: micro-SR=0.2326; macro-SR=0.2326
+### consist-struc
+TM-score
+TM-score: macro=0.468827; micro=0.468827
+RMSD
+RMSD: macro=3.530379; micro=3.530379
+### designability
+TM-score
+TM-score: macro=0.554788; micro=0.554788
+RMSD
+RMSD: macro=3.078111; micro=3.078111
+
+012-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2132; macro-SR=0.2132
+### foldability
+488 samples in all: micro-SR=0.2374; macro-SR=0.2374
+### consist-struc
+TM-score
+TM-score: macro=0.479207; micro=0.479207
+RMSD
+RMSD: macro=3.445143; micro=3.445143
+### designability
+TM-score
+TM-score: macro=0.569522; micro=0.569522
+RMSD
+RMSD: macro=3.016639; micro=3.016639
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1907; macro-SR=0.1907
+### foldability
+488 samples in all: micro-SR=0.2109; macro-SR=0.2109
+### consist-struc
+TM-score
+TM-score: macro=0.431220; micro=0.431220
+RMSD
+RMSD: macro=3.766670; micro=3.766670
+### designability
+TM-score
+TM-score: macro=0.510482; micro=0.510482
+RMSD
+RMSD: macro=3.324177; micro=3.324177
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_bin10_upsampling_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2314; macro-SR=0.2314
+### foldability
+488 samples in all: micro-SR=0.2553; macro-SR=0.2553
+### consist-struc
+TM-score
+TM-score: macro=0.472025; micro=0.472025
+RMSD
+RMSD: macro=3.493443; micro=3.493443
+### designability
+TM-score
+TM-score: macro=0.571261; micro=0.571261
+RMSD
+RMSD: macro=2.991305; micro=2.991305
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.1689; macro-SR=0.1689
+### foldability
+488 samples in all: micro-SR=0.1875; macro-SR=0.1875
+### consist-struc
+TM-score
+TM-score: macro=0.374898; micro=0.374898
+RMSD
+RMSD: macro=3.993586; micro=3.993586
+### designability
+TM-score
+TM-score: macro=0.448048; micro=0.448048
+RMSD
+RMSD: macro=3.551580; micro=3.551580
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide_last
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2146; macro-SR=0.2146
+### foldability
+488 samples in all: micro-SR=0.2328; macro-SR=0.2328
+### consist-struc
+TM-score
+TM-score: macro=0.445271; micro=0.445271
+RMSD
+RMSD: macro=3.536189; micro=3.536189
+### designability
+TM-score
+TM-score: macro=0.528391; micro=0.528391
+RMSD
+RMSD: macro=3.038770; micro=3.038770
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide_last2
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2167; macro-SR=0.2167
+### foldability
+488 samples in all: micro-SR=0.2392; macro-SR=0.2392
+### consist-struc
+TM-score
+TM-score: macro=0.458358; micro=0.458358
+RMSD
+RMSD: macro=3.559119; micro=3.559119
+### designability
+TM-score
+TM-score: macro=0.555778; micro=0.555778
+RMSD
+RMSD: macro=2.963997; micro=2.963997
+
+013-DiT-M-withLen-withMask_diff-linear-500_withLenClus_upsampling-smote_ddpm-uncon-guide_last3
+*********************************************
+### consist-seq
+488 samples in all: micro-SR=0.2202; macro-SR=0.2202
+### consist-struc
+TM-score
+TM-score: macro=0.464448; micro=0.464448
+RMSD
+RMSD: macro=3.544877; micro=3.544877
+

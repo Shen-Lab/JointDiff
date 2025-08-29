@@ -1,0 +1,27 @@
+foldingdiff
+1810 sample dictionaries in all.
+169200 angles tuples in all.
+Clash: mean=7.8608, min=0, median=1, max=131, std=12.3899
+Size: mean=109.3309, min=20, median=128, max=128, std=27.8279
+phi: JSD=0.1309; KLD=0.5139
+psi: JSD=0.1600; KLD=0.6175
+omega: JSD=0.0858; KLD=inf
+
+Chroma
+1810 sample dictionaries in all.
+195480 angles tuples in all.
+Clash: mean=5.2757, min=0, median=4, max=63, std=5.7827
+Size: mean=135.2778, min=20, median=143, max=200, std=45.7278
+phi: JSD=2.4577; KLD=10.6938
+psi: JSD=2.1300; KLD=9.4616
+omega: JSD=2.1270; KLD=7.4114
+
+RFdiffusion
+1792 sample dictionaries in all.
+193022 angles tuples in all.
+Clash: mean=1.2221, min=0, median=0, max=14, std=1.8510
+Size: mean=135.2804, min=20, median=144, max=200, std=45.9968
+phi: JSD=1.8911; KLD=7.7165
+psi: JSD=2.3437; KLD=10.0731
+omega: JSD=0.9502; KLD=3.7157
+

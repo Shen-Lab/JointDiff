@@ -1,0 +1,220 @@
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_test_epo29
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9356, median=1.0000, min=0.2958, max=1.0000, std=0.1456
+TM-score (1069 samples): mean=0.8901, median=0.9388, min=0.2018, max=0.9959, std=0.1358
+RMSD (1069 samples): mean=1.3781, median=1.1800, min=0.2500, max=6.0100, std=0.8133
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.8760, median=1.0000, min=0.2982, max=1.0000, std=0.1937
+TM-score (803 samples): mean=0.7842, median=0.8629, min=0.1225, max=0.9905, std=0.1945
+RMSD (803 samples): mean=1.8802, median=1.7200, min=0.3800, max=5.7600, std=0.9240
+************************************************
+Overall
+Identity (1872 samples): mean=0.9100, median=1.0000, min=0.2958, max=1.0000, std=0.1705
+TM-score (1872 samples): mean=0.8447, median=0.9145, min=0.1225, max=0.9959, std=0.1718
+RMSD (1872 samples): mean=1.5935, median=1.3950, min=0.2500, max=6.0100, std=0.8976
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_dim16_test_epo30
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9041, median=1.0000, min=0.2000, max=1.0000, std=0.1720
+TM-score (1069 samples): mean=0.8897, median=0.9378, min=0.1863, max=0.9955, std=0.1354
+RMSD (1069 samples): mean=1.3829, median=1.1900, min=0.2600, max=5.9800, std=0.8189
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.8538, median=0.9898, min=0.2676, max=1.0000, std=0.1945
+TM-score (803 samples): mean=0.7828, median=0.8623, min=0.1156, max=0.9921, std=0.1928
+RMSD (803 samples): mean=1.8821, median=1.7400, min=0.4000, max=5.5200, std=0.9087
+************************************************
+Overall
+Identity (1872 samples): mean=0.8826, median=1.0000, min=0.2000, max=1.0000, std=0.1837
+TM-score (1872 samples): mean=0.8438, median=0.9121, min=0.1156, max=0.9955, std=0.1709
+RMSD (1872 samples): mean=1.5970, median=1.4100, min=0.2600, max=5.9800, std=0.8934
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_dim32_test_epo26
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9293, median=1.0000, min=0.1932, max=1.0000, std=0.1569
+TM-score (1069 samples): mean=0.8981, median=0.9428, min=0.1983, max=0.9964, std=0.1291
+RMSD (1069 samples): mean=1.3184, median=1.1200, min=0.2000, max=5.8500, std=0.7965
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.8986, median=1.0000, min=0.3125, max=1.0000, std=0.1717
+TM-score (803 samples): mean=0.8096, median=0.8864, min=0.1509, max=0.9898, std=0.1858
+RMSD (803 samples): mean=1.7620, median=1.6000, min=0.3500, max=6.5200, std=0.9080
+************************************************
+Overall
+Identity (1872 samples): mean=0.9161, median=1.0000, min=0.1932, max=1.0000, std=0.1641
+TM-score (1872 samples): mean=0.8601, median=0.9208, min=0.1509, max=0.9964, std=0.1620
+RMSD (1872 samples): mean=1.5087, median=1.3300, min=0.2000, max=6.5200, std=0.8741
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_dim64_test_epo28
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.3220, median=0.1918, min=0.0312, max=1.0000, std=0.2746
+TM-score (1069 samples): mean=0.9002, median=0.9458, min=0.2070, max=0.9965, std=0.1284
+RMSD (1069 samples): mean=1.2963, median=1.1100, min=0.1900, max=6.2000, std=0.7909
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1770, median=0.1717, min=0.0667, max=0.8276, std=0.0484
+TM-score (803 samples): mean=0.8161, median=0.8901, min=0.1174, max=0.9898, std=0.1858
+RMSD (803 samples): mean=1.7135, median=1.5200, min=0.3400, max=5.7700, std=0.8922
+************************************************
+Overall
+Identity (1872 samples): mean=0.2598, median=0.1818, min=0.0312, max=1.0000, std=0.2218
+TM-score (1872 samples): mean=0.8641, median=0.9244, min=0.1174, max=0.9965, std=0.1611
+RMSD (1872 samples): mean=1.4753, median=1.2900, min=0.1900, max=6.2000, std=0.8610
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_dim64_test_epo3
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1998, median=0.1628, min=0.0093, max=0.9939, std=0.1629
+TM-score (1069 samples): mean=0.7678, median=0.8332, min=0.1530, max=0.9743, std=0.1771
+RMSD (1069 samples): mean=2.2178, median=2.0700, min=0.6100, max=5.7300, std=0.8549
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1507, median=0.1538, min=0.0233, max=0.3108, std=0.0449
+TM-score (803 samples): mean=0.6115, median=0.6494, min=0.0811, max=0.9568, std=0.2142
+RMSD (803 samples): mean=2.7236, median=2.6000, min=0.4800, max=5.6000, std=0.9627
+************************************************
+Overall
+Identity (1872 samples): mean=0.1787, median=0.1587, min=0.0093, max=0.9939, std=0.1289
+TM-score (1872 samples): mean=0.7007, median=0.7734, min=0.0811, max=0.9743, std=0.2087
+RMSD (1872 samples): mean=2.4348, median=2.2700, min=0.4800, max=5.7300, std=0.9368
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_k10_test_epo2
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1381, median=0.1429, min=0.0000, max=0.9524, std=0.0553
+TM-score (1069 samples): mean=0.2904, median=0.2677, min=0.1037, max=0.8724, std=0.1113
+RMSD (1069 samples): mean=4.1983, median=4.3600, min=0.7400, max=6.8100, std=1.0041
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1381, median=0.1449, min=0.0000, max=0.2951, std=0.0516
+TM-score (803 samples): mean=0.2835, median=0.2596, min=0.0817, max=0.9077, std=0.1153
+RMSD (803 samples): mean=3.7723, median=3.7700, min=0.5000, max=6.6000, std=1.0922
+************************************************
+Overall
+Identity (1872 samples): mean=0.1381, median=0.1439, min=0.0000, max=0.9524, std=0.0537
+TM-score (1872 samples): mean=0.2874, median=0.2649, min=0.0817, max=0.9077, std=0.1131
+RMSD (1872 samples): mean=4.0155, median=4.1500, min=0.5000, max=6.8100, std=1.0639
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_k10_test_epo27
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1574, median=0.1552, min=0.0370, max=0.9939, std=0.0431
+TM-score (1069 samples): mean=0.8611, median=0.9048, min=0.1533, max=0.9934, std=0.1381
+RMSD (1069 samples): mean=1.6256, median=1.4700, min=0.2900, max=5.8700, std=0.8159
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1550, median=0.1561, min=0.0000, max=0.2951, std=0.0330
+TM-score (803 samples): mean=0.7610, median=0.8276, min=0.1861, max=0.9862, std=0.1832
+RMSD (803 samples): mean=2.1123, median=1.9500, min=0.3700, max=5.5800, std=0.8650
+************************************************
+Overall
+Identity (1872 samples): mean=0.1564, median=0.1556, min=0.0000, max=0.9939, std=0.0391
+TM-score (1872 samples): mean=0.8181, median=0.8781, min=0.1533, max=0.9934, std=0.1666
+RMSD (1872 samples): mean=1.8343, median=1.7000, min=0.2900, max=5.8700, std=0.8713
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_k5_test_epo28
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9755, median=1.0000, min=0.3258, max=1.0000, std=0.0956
+TM-score (1069 samples): mean=0.9013, median=0.9457, min=0.2265, max=0.9964, std=0.1275
+RMSD (1069 samples): mean=1.3016, median=1.1100, min=0.2000, max=5.8700, std=0.8032
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9665, median=1.0000, min=0.3285, max=1.0000, std=0.1114
+TM-score (803 samples): mean=0.8167, median=0.8907, min=0.1387, max=0.9897, std=0.1853
+RMSD (803 samples): mean=1.7159, median=1.5500, min=0.3400, max=5.7100, std=0.8839
+************************************************
+Overall
+Identity (1872 samples): mean=0.9716, median=1.0000, min=0.3258, max=1.0000, std=0.1028
+TM-score (1872 samples): mean=0.8650, median=0.9249, min=0.1387, max=0.9964, std=0.1605
+RMSD (1872 samples): mean=1.4793, median=1.2900, min=0.2000, max=5.8700, std=0.8634
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_k5_test_epo29
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9694, median=1.0000, min=0.3366, max=1.0000, std=0.1024
+TM-score (1069 samples): mean=0.9000, median=0.9446, min=0.2454, max=0.9965, std=0.1286
+RMSD (1069 samples): mean=1.3067, median=1.1100, min=0.1900, max=5.3800, std=0.7995
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9559, median=1.0000, min=0.3031, max=1.0000, std=0.1216
+TM-score (803 samples): mean=0.8162, median=0.8905, min=0.1428, max=0.9900, std=0.1852
+RMSD (803 samples): mean=1.7197, median=1.5500, min=0.3400, max=5.8300, std=0.8939
+************************************************
+Overall
+Identity (1872 samples): mean=0.9636, median=1.0000, min=0.3031, max=1.0000, std=0.1113
+TM-score (1872 samples): mean=0.8641, median=0.9246, min=0.1428, max=0.9965, std=0.1608
+RMSD (1872 samples): mean=1.4839, median=1.3000, min=0.1900, max=5.8300, std=0.8658
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_test_epo13
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9384, median=1.0000, min=0.0516, max=1.0000, std=0.1401
+TM-score (1069 samples): mean=0.8957, median=0.9415, min=0.2140, max=0.9959, std=0.1332
+RMSD (1069 samples): mean=1.3335, median=1.1600, min=0.2100, max=5.6800, std=0.8027
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9241, median=1.0000, min=0.2538, max=1.0000, std=0.1562
+TM-score (803 samples): mean=0.8114, median=0.8857, min=0.1718, max=0.9898, std=0.1853
+RMSD (803 samples): mean=1.7583, median=1.6100, min=0.3400, max=5.7100, std=0.9000
+************************************************
+Overall
+Identity (1872 samples): mean=0.9322, median=1.0000, min=0.0516, max=1.0000, std=0.1474
+TM-score (1872 samples): mean=0.8595, median=0.9217, min=0.1718, max=0.9959, std=0.1631
+RMSD (1872 samples): mean=1.5157, median=1.3300, min=0.2100, max=5.7100, std=0.8715
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_test_epo25
+*****************************************************************
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9649, median=1.0000, min=0.2215, max=1.0000, std=0.1042
+TM-score (1069 samples): mean=0.9018, median=0.9460, min=0.2183, max=0.9967, std=0.1269
+RMSD (1069 samples): mean=1.2857, median=1.1000, min=0.1900, max=5.3300, std=0.7901
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9481, median=1.0000, min=0.3270, max=1.0000, std=0.1311
+TM-score (803 samples): mean=0.8170, median=0.8955, min=0.2015, max=0.9900, std=0.1863
+RMSD (803 samples): mean=1.7136, median=1.5300, min=0.3500, max=5.7600, std=0.8978
+************************************************
+Overall
+Identity (1872 samples): mean=0.9577, median=1.0000, min=0.2215, max=1.0000, std=0.1168
+TM-score (1872 samples): mean=0.8654, median=0.9263, min=0.2015, max=0.9967, std=0.1607
+RMSD (1872 samples): mean=1.4692, median=1.2800, min=0.1900, max=5.7600, std=0.8644
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+

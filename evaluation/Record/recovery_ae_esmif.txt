@@ -1,0 +1,302 @@
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1
+mkdir: cannot create directory '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1/fasta_prepare.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1/pdb_feature_summarize.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1/pdb_oxygen_recover.py': File exists
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1549, median=0.1549, min=0.0000, max=0.8211, std=0.0443
+TM-score (1069 samples): mean=0.2177, median=0.2077, min=0.0986, max=0.9604, std=0.0838
+RMSD (1069 samples): mean=4.2160, median=4.4400, min=0.5100, max=6.9100, std=1.2512
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1526, median=0.1544, min=0.0169, max=0.2857, std=0.0384
+TM-score (803 samples): mean=0.2369, median=0.2207, min=0.0849, max=0.8955, std=0.0929
+RMSD (803 samples): mean=3.7754, median=3.6700, min=0.4900, max=6.6500, std=1.2550
+************************************************
+Overall
+Identity (1872 samples): mean=0.1539, median=0.1547, min=0.0000, max=0.8211, std=0.0419
+TM-score (1872 samples): mean=0.2259, median=0.2147, min=0.0849, max=0.9604, std=0.0883
+RMSD (1872 samples): mean=4.0270, median=4.0900, min=0.4900, max=6.9100, std=1.2716
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1549, median=0.1549, min=0.0000, max=0.8211, std=0.0443
+TM-score (1069 samples): mean=0.2177, median=0.2077, min=0.0986, max=0.9604, std=0.0838
+RMSD (1069 samples): mean=4.2160, median=4.4400, min=0.5100, max=6.9100, std=1.2512
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1526, median=0.1544, min=0.0169, max=0.2857, std=0.0384
+TM-score (803 samples): mean=0.2369, median=0.2207, min=0.0849, max=0.8955, std=0.0929
+RMSD (803 samples): mean=3.7754, median=3.6700, min=0.4900, max=6.6500, std=1.2550
+************************************************
+Overall
+Identity (1872 samples): mean=0.1539, median=0.1547, min=0.0000, max=0.8211, std=0.0419
+TM-score (1872 samples): mean=0.2259, median=0.2147, min=0.0849, max=0.9604, std=0.0883
+RMSD (1872 samples): mean=4.0270, median=4.0900, min=0.4900, max=6.9100, std=1.2716
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo1': No such file or directory
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25
+mkdir: cannot create directory '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/fasta_prepare.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/proteinmpnn_seq_for_AF2.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/self-consistency_cal.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/torch2numpy.py': File exists
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1582, median=0.1576, min=0.0278, max=0.2787, std=0.0374
+TM-score (1069 samples): mean=0.8994, median=0.9457, min=0.2389, max=0.9966, std=0.1292
+RMSD (1069 samples): mean=1.3074, median=1.1100, min=0.1900, max=6.0600, std=0.7994
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1381, median=0.1402, min=0.0000, max=0.2714, std=0.0407
+TM-score (803 samples): mean=0.8139, median=0.8895, min=0.1944, max=0.9904, std=0.1883
+RMSD (803 samples): mean=1.7319, median=1.5500, min=0.3700, max=5.6100, std=0.9153
+************************************************
+Overall
+Identity (1872 samples): mean=0.1496, median=0.1496, min=0.0000, max=0.2787, std=0.0401
+TM-score (1872 samples): mean=0.8627, median=0.9239, min=0.1944, max=0.9966, std=0.1629
+RMSD (1872 samples): mean=1.4895, median=1.2900, min=0.1900, max=6.0600, std=0.8766
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1582, median=0.1576, min=0.0278, max=0.2787, std=0.0374
+TM-score (1069 samples): mean=0.8994, median=0.9457, min=0.2389, max=0.9966, std=0.1292
+RMSD (1069 samples): mean=1.3074, median=1.1100, min=0.1900, max=6.0600, std=0.7994
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1381, median=0.1402, min=0.0000, max=0.2714, std=0.0407
+TM-score (803 samples): mean=0.8139, median=0.8895, min=0.1944, max=0.9904, std=0.1883
+RMSD (803 samples): mean=1.7319, median=1.5500, min=0.3700, max=5.6100, std=0.9153
+************************************************
+Overall
+Identity (1872 samples): mean=0.1496, median=0.1496, min=0.0000, max=0.2787, std=0.0401
+TM-score (1872 samples): mean=0.8627, median=0.9239, min=0.1944, max=0.9966, std=0.1629
+RMSD (1872 samples): mean=1.4895, median=1.2900, min=0.1900, max=6.0600, std=0.8766
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/__pycache__/utils_eval.cpython-39.pyc': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/utils_eval.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/MSI_summary.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/pdb_formatting.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/torch2numpy.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/foldability_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/pdb_feature_summarize.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/proteinmpnn_seq_for_AF2.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/fasta_prepare.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/sbm_energy_test.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/TMalign': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/autoencoder_eval.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/MSI_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/designability_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/pdb_feature_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/sample_energy_fitness_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/utils_guidance.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/sample_selection.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/pdb_oxygen_recover.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/AF2_result_check.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_noESM-IF-recover_test_epo25/self-consistency_cal.py': No such file or directory
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24
+mkdir: cannot create directory '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/SequenceIden_FixBackbone.py': File exists
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1574, median=0.1575, min=0.0316, max=0.3143, std=0.0317
+TM-score (1069 samples): mean=0.9028, median=0.9472, min=0.2318, max=0.9967, std=0.1264
+RMSD (1069 samples): mean=1.2771, median=1.1000, min=0.1900, max=5.4900, std=0.7892
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1542, median=0.1538, min=0.0222, max=0.2885, std=0.0341
+TM-score (803 samples): mean=0.8168, median=0.8930, min=0.2023, max=0.9897, std=0.1849
+RMSD (803 samples): mean=1.7156, median=1.5500, min=0.3500, max=5.4300, std=0.8976
+************************************************
+Overall
+Identity (1872 samples): mean=0.1560, median=0.1560, min=0.0222, max=0.3143, std=0.0328
+TM-score (1872 samples): mean=0.8659, median=0.9268, min=0.2023, max=0.9967, std=0.1600
+RMSD (1872 samples): mean=1.4652, median=1.2650, min=0.1900, max=5.4900, std=0.8651
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1574, median=0.1575, min=0.0316, max=0.3143, std=0.0317
+TM-score (1069 samples): mean=0.9028, median=0.9472, min=0.2318, max=0.9967, std=0.1264
+RMSD (1069 samples): mean=1.2771, median=1.1000, min=0.1900, max=5.4900, std=0.7892
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1542, median=0.1538, min=0.0222, max=0.2885, std=0.0341
+TM-score (803 samples): mean=0.8168, median=0.8930, min=0.2023, max=0.9897, std=0.1849
+RMSD (803 samples): mean=1.7156, median=1.5500, min=0.3500, max=5.4300, std=0.8976
+************************************************
+Overall
+Identity (1872 samples): mean=0.1560, median=0.1560, min=0.0222, max=0.3143, std=0.0328
+TM-score (1872 samples): mean=0.8659, median=0.9268, min=0.2023, max=0.9967, std=0.1600
+RMSD (1872 samples): mean=1.4652, median=1.2650, min=0.1900, max=5.4900, std=0.8651
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/proteinmpnn_seq_for_AF2.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/fasta_prepare.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/sbm_energy_test.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/TMalign': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/autoencoder_eval.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/MSI_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/designability_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/pdb_feature_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/sample_energy_fitness_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/utils_guidance.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/sample_selection.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/pdb_oxygen_recover.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/AF2_result_check.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo24/self-consistency_cal.py': No such file or directory
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4
+mkdir: cannot create directory '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/AF2_result_check.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/MSI_summary.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/TMscore_FixSequence.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/empty_file_check.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_feature_cal.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_formatting.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/sbm_energy_test.py': File exists
+cp: cannot create regular file '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/utils_eval.py': File exists
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.2986, median=0.2077, min=0.0504, max=0.9939, std=0.2297
+TM-score (1069 samples): mean=0.8485, median=0.9001, min=0.1789, max=0.9912, std=0.1493
+RMSD (1069 samples): mean=1.7009, median=1.5400, min=0.4400, max=5.5300, std=0.8022
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1897, median=0.1849, min=0.0444, max=0.3913, std=0.0510
+TM-score (803 samples): mean=0.7192, median=0.8018, min=0.0581, max=0.9797, std=0.2087
+RMSD (803 samples): mean=2.1980, median=2.0600, min=0.4700, max=5.5200, std=0.8701
+************************************************
+Overall
+Identity (1872 samples): mean=0.2519, median=0.1963, min=0.0444, max=0.9939, std=0.1848
+TM-score (1872 samples): mean=0.7930, median=0.8680, min=0.0581, max=0.9912, std=0.1884
+RMSD (1872 samples): mean=1.9141, median=1.7500, min=0.4400, max=5.5300, std=0.8676
+1069 samples for the id set...
+Identity (1069 samples): mean=0.2986, median=0.2077, min=0.0504, max=0.9939, std=0.2297
+TM-score (1069 samples): mean=0.8485, median=0.9001, min=0.1789, max=0.9912, std=0.1493
+RMSD (1069 samples): mean=1.7009, median=1.5400, min=0.4400, max=5.5300, std=0.8022
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1897, median=0.1849, min=0.0444, max=0.3913, std=0.0510
+TM-score (803 samples): mean=0.7192, median=0.8018, min=0.0581, max=0.9797, std=0.2087
+RMSD (803 samples): mean=2.1980, median=2.0600, min=0.4700, max=5.5200, std=0.8701
+************************************************
+Overall
+Identity (1872 samples): mean=0.2519, median=0.1963, min=0.0444, max=0.9939, std=0.1848
+TM-score (1872 samples): mean=0.7930, median=0.8680, min=0.0581, max=0.9912, std=0.1884
+RMSD (1872 samples): mean=1.9141, median=1.7500, min=0.4400, max=5.5300, std=0.8676
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/empty_file_check.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/SequenceIden_FixBackbone.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/TMscore_FixSequence.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/proteinmpnn_seq_for_AF2-multimonomer.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/sample_coor_dict.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/__pycache__/utils_eval.cpython-39.pyc': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/utils_eval.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/MSI_summary.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_formatting.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/torch2numpy.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/foldability_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_feature_summarize.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/proteinmpnn_seq_for_AF2.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/fasta_prepare.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/sbm_energy_test.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/TMalign': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/autoencoder_eval.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/MSI_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/designability_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_feature_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/sample_energy_fitness_cal.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/utils_guidance.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/sample_selection.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/pdb_oxygen_recover.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/AF2_result_check.py': No such file or directory
+rm: cannot remove '../Temp_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-learn_test_epo4/self-consistency_cal.py': No such file or directory
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_test_epo13
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9384, median=1.0000, min=0.0516, max=1.0000, std=0.1401
+TM-score (1069 samples): mean=0.8957, median=0.9415, min=0.2140, max=0.9959, std=0.1332
+RMSD (1069 samples): mean=1.3335, median=1.1600, min=0.2100, max=5.6800, std=0.8027
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9241, median=1.0000, min=0.2538, max=1.0000, std=0.1562
+TM-score (803 samples): mean=0.8114, median=0.8857, min=0.1718, max=0.9898, std=0.1853
+RMSD (803 samples): mean=1.7583, median=1.6100, min=0.3400, max=5.7100, std=0.9000
+************************************************
+Overall
+Identity (1872 samples): mean=0.9322, median=1.0000, min=0.0516, max=1.0000, std=0.1474
+TM-score (1872 samples): mean=0.8595, median=0.9217, min=0.1718, max=0.9959, std=0.1631
+RMSD (1872 samples): mean=1.5157, median=1.3300, min=0.2100, max=5.7100, std=0.8715
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-mlp-4-512_pad-zero_test_epo25
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.9649, median=1.0000, min=0.2215, max=1.0000, std=0.1042
+TM-score (1069 samples): mean=0.9018, median=0.9460, min=0.2183, max=0.9967, std=0.1269
+RMSD (1069 samples): mean=1.2857, median=1.1000, min=0.1900, max=5.3300, std=0.7901
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.9481, median=1.0000, min=0.3270, max=1.0000, std=0.1311
+TM-score (803 samples): mean=0.8170, median=0.8955, min=0.2015, max=0.9900, std=0.1863
+RMSD (803 samples): mean=1.7136, median=1.5300, min=0.3500, max=5.7600, std=0.8978
+************************************************
+Overall
+Identity (1872 samples): mean=0.9577, median=1.0000, min=0.2215, max=1.0000, std=0.1168
+TM-score (1872 samples): mean=0.8654, median=0.9263, min=0.2015, max=0.9967, std=0.1607
+RMSD (1872 samples): mean=1.4692, median=1.2800, min=0.1900, max=5.7600, std=0.8644
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-transformer-6-512_pad-learn_test_epo12
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1621, median=0.1630, min=0.0238, max=0.3415, std=0.0356
+TM-score (1069 samples): mean=0.2215, median=0.2044, min=0.1024, max=0.8329, std=0.0780
+RMSD (1069 samples): mean=4.0744, median=4.2400, min=0.7000, max=6.5800, std=1.0697
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1531, median=0.1552, min=0.0164, max=0.3000, std=0.0382
+TM-score (803 samples): mean=0.2413, median=0.2190, min=0.0839, max=0.7870, std=0.0883
+RMSD (803 samples): mean=3.6762, median=3.7200, min=0.4800, max=6.3800, std=1.0617
+************************************************
+Overall
+Identity (1872 samples): mean=0.1582, median=0.1597, min=0.0164, max=0.3415, std=0.0370
+TM-score (1872 samples): mean=0.2300, median=0.2112, min=0.0839, max=0.8329, std=0.0831
+RMSD (1872 samples): mean=3.9036, median=4.0200, min=0.4800, max=6.5800, std=1.0843
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+Output/output_files_sample_autoencoder-simple_with-ESM-IF_joint-transformer-6-512_pad-learn_test_epo2
+/home/shaowen1994/.local/lib/python3.9/site-packages/Bio/pairwise2.py:278: BiopythonDeprecationWarning: Bio.pairwise2 has been deprecated, and we intend to remove it in a future release of Biopython. As an alternative, please consider using Bio.Align.PairwiseAligner as a replacement, and contact the Biopython developers if you still need the Bio.pairwise2 module.
+  warnings.warn(
+1069 samples for the id set...
+Identity (1069 samples): mean=0.1507, median=0.1479, min=0.0236, max=0.9495, std=0.0537
+TM-score (1069 samples): mean=0.2182, median=0.2015, min=0.0914, max=0.9378, std=0.0850
+RMSD (1069 samples): mean=4.0504, median=4.1900, min=0.6600, max=6.5800, std=1.0431
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1479, median=0.1481, min=0.0000, max=0.2874, std=0.0393
+TM-score (803 samples): mean=0.2417, median=0.2185, min=0.0847, max=0.9231, std=0.0964
+RMSD (803 samples): mean=3.6470, median=3.6900, min=0.4900, max=6.2500, std=1.0563
+************************************************
+Overall
+Identity (1872 samples): mean=0.1495, median=0.1481, min=0.0000, max=0.9495, std=0.0480
+TM-score (1872 samples): mean=0.2283, median=0.2097, min=0.0847, max=0.9378, std=0.0908
+RMSD (1872 samples): mean=3.8774, median=3.9900, min=0.4900, max=6.5800, std=1.0676
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+

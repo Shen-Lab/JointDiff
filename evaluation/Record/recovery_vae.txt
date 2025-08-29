@@ -1,0 +1,93 @@
+
+vae-0.01
+1069 samples for the id set...
+Identity (1069 samples): mean=0.3466, median=0.2101, min=0.0692, max=1.0000, std=0.2761
+TM-score (1069 samples): mean=0.7866, median=0.8493, min=0.1647, max=0.9784, std=0.1742
+RMSD (1069 samples): mean=2.1144, median=1.9100, min=0.5600, max=5.7600, std=0.8817
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1866, median=0.1831, min=0.0309, max=0.4691, std=0.0463
+TM-score (803 samples): mean=0.6256, median=0.6744, min=0.1511, max=0.9673, std=0.2238
+RMSD (803 samples): mean=2.6956, median=2.6500, min=0.4800, max=5.6000, std=0.9960
+************************************************
+Overall
+Identity (1872 samples): mean=0.2780, median=0.1965, min=0.0309, max=1.0000, std=0.2252
+TM-score (1872 samples): mean=0.7175, median=0.8001, min=0.1511, max=0.9784, std=0.2125
+RMSD (1872 samples): mean=2.3637, median=2.1700, min=0.4800, max=5.7600, std=0.9758
+
+1069 samples for the id set...
+Identity (1069 samples): mean=0.3439, median=0.2105, min=0.0465, max=1.0000, std=0.2753
+TM-score (1069 samples): mean=0.7875, median=0.8500, min=0.1686, max=0.9785, std=0.1744
+RMSD (1069 samples): mean=2.1036, median=1.9100, min=0.5700, max=6.1600, std=0.8727
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1872, median=0.1818, min=0.0463, max=0.4691, std=0.0458
+TM-score (803 samples): mean=0.6248, median=0.6738, min=0.1564, max=0.9669, std=0.2235
+RMSD (803 samples): mean=2.7049, median=2.6300, min=0.4800, max=5.9200, std=0.9958
+************************************************
+Overall
+Identity (1872 samples): mean=0.2767, median=0.1954, min=0.0463, max=1.0000, std=0.2240
+TM-score (1872 samples): mean=0.7177, median=0.8016, min=0.1564, max=0.9785, std=0.2128
+RMSD (1872 samples): mean=2.3615, median=2.1850, min=0.4800, max=6.1600, std=0.9740
+
+vae-0.1
+1069 samples for the id set...
+Identity (1069 samples): mean=0.4392, median=0.2778, min=0.1103, max=1.0000, std=0.2934
+TM-score (1069 samples): mean=0.8185, median=0.8805, min=0.1862, max=0.9872, std=0.1657
+RMSD (1069 samples): mean=1.9098, median=1.7400, min=0.4800, max=5.6600, std=0.8465
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.2339, median=0.2206, min=0.0446, max=0.9608, std=0.0761
+TM-score (803 samples): mean=0.6693, median=0.7243, min=0.0885, max=0.9700, std=0.2181
+RMSD (803 samples): mean=2.5012, median=2.3500, min=0.4900, max=5.5500, std=1.0296
+************************************************
+Overall
+Identity (1872 samples): mean=0.3511, median=0.2475, min=0.0446, max=1.0000, std=0.2489
+TM-score (1872 samples): mean=0.7545, median=0.8362, min=0.0885, max=0.9872, std=0.2038
+RMSD (1872 samples): mean=2.1635, median=1.9600, min=0.4800, max=5.6600, std=0.9745
+
+1069 samples for the id set...
+Identity (1069 samples): mean=0.4443, median=0.2768, min=0.1111, max=1.0000, std=0.2969
+TM-score (1069 samples): mean=0.8177, median=0.8810, min=0.1776, max=0.9869, std=0.1653
+RMSD (1069 samples): mean=1.9140, median=1.7400, min=0.4900, max=5.7400, std=0.8556
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.2337, median=0.2230, min=0.0872, max=0.8621, std=0.0699
+TM-score (803 samples): mean=0.6673, median=0.7204, min=0.0882, max=0.9702, std=0.2185
+RMSD (803 samples): mean=2.5006, median=2.3500, min=0.4900, max=6.0800, std=1.0234
+************************************************
+Overall
+Identity (1872 samples): mean=0.3540, median=0.2463, min=0.0872, max=1.0000, std=0.2516
+TM-score (1872 samples): mean=0.7532, median=0.8353, min=0.0882, max=0.9869, std=0.2040
+RMSD (1872 samples): mean=2.1656, median=1.9600, min=0.4900, max=6.0800, std=0.9755
+
+vae-1
+1069 samples for the id set...
+Identity (1069 samples): mean=0.3098, median=0.1905, min=0.0698, max=1.0000, std=0.2621
+TM-score (1069 samples): mean=0.6031, median=0.6250, min=0.1183, max=0.9565, std=0.1908
+RMSD (1069 samples): mean=3.1514, median=3.0600, min=0.7200, max=6.3100, std=1.0235
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1782, median=0.1739, min=0.0294, max=0.8276, std=0.0464
+TM-score (803 samples): mean=0.4776, median=0.4273, min=0.0850, max=0.9416, std=0.1940
+RMSD (803 samples): mean=3.4470, median=3.4600, min=0.4800, max=6.3300, std=1.0793
+************************************************
+Overall
+Identity (1872 samples): mean=0.2533, median=0.1825, min=0.0294, max=1.0000, std=0.2107
+TM-score (1872 samples): mean=0.5493, median=0.5511, min=0.0850, max=0.9565, std=0.2020
+RMSD (1872 samples): mean=3.2782, median=3.2300, min=0.4800, max=6.3300, std=1.0580
+
+1069 samples for the id set...
+Identity (1069 samples): mean=0.3103, median=0.1913, min=0.0659, max=1.0000, std=0.2604
+TM-score (1069 samples): mean=0.6016, median=0.6262, min=0.1161, max=0.9544, std=0.1911
+RMSD (1069 samples): mean=3.1579, median=3.1000, min=0.7200, max=5.9800, std=1.0242
+************************************************
+803 samples for the od set...
+Identity (803 samples): mean=0.1787, median=0.1754, min=0.0333, max=0.8276, std=0.0466
+TM-score (803 samples): mean=0.4768, median=0.4164, min=0.0850, max=0.9422, std=0.1934
+RMSD (803 samples): mean=3.4268, median=3.4600, min=0.4800, max=6.1100, std=1.0559
+************************************************
+Overall
+Identity (1872 samples): mean=0.2539, median=0.1833, min=0.0333, max=1.0000, std=0.2095
+TM-score (1872 samples): mean=0.5481, median=0.5528, min=0.0850, max=0.9544, std=0.2018
+RMSD (1872 samples): mean=3.2733, median=3.2300, min=0.4800, max=6.1100, std=1.0464
