@@ -54,7 +54,11 @@ def sample_for_all_size(model, args, length_pool):
             len_list = torch.Tensor(len_list).cuda()
             out_dict, traj = infer_func(
                 length_list = len_list, 
-                t_bias = args.t_bias
+                t_bias = args.t_bias,
+                sample_method = args.sample_func,
+                num_sampling_steps = args.num_sampling_steps,
+                with_edm_scheduler = args.with_edm_scheduler,
+                alignment_reverse_diff = args.alignment_reverse_diff,
             )
 
             ######################## Save the generated samples ###############
@@ -133,6 +137,10 @@ if __name__ == '__main__':
     parser.add_argument('--save_steps', type=int, nargs='*', default=[0]) #, 1, 2])
     parser.add_argument('--modality', type=str, default='joint')
     parser.add_argument('--t_bias', type=int, default=-1)
+    parser.add_argument('--sample_func', type=str, default='default')
+    parser.add_argument('--num_sampling_steps', type=str, default='None')
+    parser.add_argument('--with_edm_scheduler', type=int, default=1)
+    parser.add_argument('--alignment_reverse_diff', type=int, default=1)
 
     args = parser.parse_args()
 
@@ -152,6 +160,13 @@ if __name__ == '__main__':
         print('GPUs are not available! Use CPU instead.')
         args.device = 'cpu'
         args.multi_gpu = 0
+
+    if args.num_sampling_steps is None or args.num_sampling_steps.upper() == 'NONE':
+        args.num_sampling_steps = None
+    else:
+        args.num_sampling_steps = int(args.num_sampling_steps)
+    args.with_edm_scheduler = bool(args.with_edm_scheduler)
+    args.alignment_reverse_diff = bool(args.alignment_reverse_diff)
 
     ###########################################################
     # Model Loading 

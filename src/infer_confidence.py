@@ -157,8 +157,8 @@ def inference(model, dataloader, args):
 
     for i, batch in tqdm(enumerate(dataloader)):
 
-        if i >= 100: # for debugging
-            break
+        #if i >= 100: # for debugging
+        #    break
 
         # for key in batch:
         #     print(key, batch[key].shape)
@@ -305,8 +305,8 @@ if __name__ == '__main__':
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--multi_gpu', type=int, default=1)
     ###### data ######
-    parser.add_argument('--batch_size', type=int, default=2)
-    parser.add_argument('--num_workers', type=int, default=8)
+    parser.add_argument('--batch_size', type=int, default=1)
+    parser.add_argument('--num_workers', type=int, default=1)
     ###### for label process ######
     ### label threshold
     parser.add_argument('--consist_seq_thre', type=float, default=0.3)

@@ -207,11 +207,8 @@ class DiffusionSingleChainDesign(nn.Module):
         ###### masks ######
         mask_res = batch['mask'] # True for valid tokens other than paddings; (N, L)
         mask_gen = batch['mask_gen'] # True for target positions; (N, L)
-        if 'mask_gen_seq' in batch:
-            mask_gen_seq = batch['mask_gen_seq'] # True for target positions; (N, L)
-        else:
-            mask_gen_seq = mask_gen
-
+        mask_gen_seq = batch['mask_gen_seq'] # True for target positions; (N, L)
+ 
         ###### context feature embedding ######
         s_0 = batch['aa']  # amino acid index; int, 0~19, 21 for padding;  (N, L) 
         res_feat, pair_feat, v_0, p_0 = self.encode(batch)
@@ -250,11 +247,15 @@ class DiffusionSingleChainDesign(nn.Module):
         mask_res = None, mask_generate = None,
         batch = None,
         t_bias = -1,
-        seq_sample_method = 'multinomial', 
+        seq_sample_method = 'multinomial',
+        sample_method: str = 'default',
         sample_opt={
             'sample_structure': True,
             'sample_sequence': True,
-        }
+        },
+        num_sampling_steps=None,
+        with_edm_scheduler=True,
+        alignment_reverse_diff=False,
     ):
         """
         Sample generation from scratch (by SZ):
@@ -321,6 +322,10 @@ class DiffusionSingleChainDesign(nn.Module):
             batch = batch,
             t_bias = t_bias,
             seq_sample_method = seq_sample_method,
+            sample_method = sample_method,
+            num_sampling_steps = num_sampling_steps,
+            with_edm_scheduler = with_edm_scheduler,
+            alignment_reverse_diff = alignment_reverse_diff,
             **sample_opt
         )
 

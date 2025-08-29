@@ -186,12 +186,6 @@ def arguments():
     else:
         args.multi_gpu = False
 
-    if args.position_scale[0] == -1:
-        args.position_scale == 'adapt'
-        position_scale_token = args.position_scale
-    else:
-        position_scale_token = '-'.join([str(val) for val in args.position_scale])
-
     ###### arguments summarization ######
     args_dict = {
         ###### paths ######
@@ -310,8 +304,7 @@ def arguments():
         args.args_name = '%s_%s_%s_model%d-%d-%d-step%d_posi-scale-%s' % (
             args.train_version, args.modality, args.seq_diff_version,
             args.num_layers, args.res_feat_dim, args.pair_feat_dim, args.num_steps,
-            position_scale_token
-            #'-'.join([str(val) for val in args.position_scale])
+            '-'.join([str(val) for val in args.position_scale])
         )
         ### random masking
         if args.random_mask:

@@ -566,6 +566,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_steps', type=int, nargs='*', default=[0])
     parser.add_argument('--t_bias', type=int, default=-1)
     parser.add_argument('--seq_sample_method', type=str, default='multinomial')
+    parser.add_argument('--sample_method', type=str, default='default')
 
     args = parser.parse_args()
 
@@ -736,6 +737,7 @@ if __name__ == '__main__':
                     batch = batch, 
                     t_bias = args.t_bias,
                     seq_sample_method = args.seq_sample_method,
+                    sample_method = args.sample_method,
                     sample_opt={
                         'sample_structure': args.sample_structure,
                         'sample_sequence': args.sample_sequence
