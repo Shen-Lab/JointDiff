@@ -223,6 +223,7 @@ def fape(
     mask = None,
     Z = 10.0,
     clamp_distance=10.0, 
+    clamp_distance_inter=30.0, 
     eps=1e-4,
     mask_factor = None,
     micro = True
@@ -244,7 +245,10 @@ def fape(
     errors = torch.norm(pred_aligned - true_aligned, dim=-1)  # (B, L, *)
 
     ### Apply clamping to stabilize large errors
+    # monomer
     errors = torch.clamp(errors, max=clamp_distance) / Z # (B, L, *)
+    # multimer
+
 
     ### Compute mean FAPE per structure, then take the batch mean
     if mask_factor is None and (mask is not None):
