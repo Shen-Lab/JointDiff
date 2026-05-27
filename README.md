@@ -183,7 +183,7 @@ python train_jointdiff.py \
 --with_clash 1
 ```
 
-### Confidence Net**
+### Confidence Net
 To train the confidence net, run:
 
 ```
