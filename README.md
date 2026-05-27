@@ -9,19 +9,28 @@ Computational design of functional proteins is of fundamental and applied intere
 Benchmark evaluations indicate that resulting JointDiff simultaneously generates protein sequence-structure pairs of better functional consistency compared to popular two-stage protein designers   Chroma (structure first) and ProteinGenerator (sequence first), while being more than $10$-times faster.  Meanwhile, they show room to improve in certain self- and cross-consistency. 
 
 ![architecture](/Architecture_JointDiff.png)
+[paper](https://onlinelibrary.wiley.com/doi/10.1002/pro.70340)
 
 ***
 
 ## Environment
 
-The packages used for this project are listed in **environment.yml**. The environment can be constructed with:
+### Conda
+
+The packages used for this project are listed in [environments/environment.yml](https://github.com/Shen-Lab/JointDiff/blob/main/environments/environment.yml). The environment can be constructed with:
 ```
-conda env create -f environment.yml
+conda env create -f environments/environment.yml
 ```
 
 To activate the environment, run:
 ```
 conda activate jointdiff
+```
+
+### PIP
+For other environment manage tools, we also provide [environments/requirements.txt](https://github.com/Shen-Lab/JointDiff/blob/main/environments/requirements.txt):
+```
+pip install -r environments/requirements.txt
 ```
 
 ***
@@ -34,11 +43,106 @@ To train the model with you own data, please get the *.tsv file ready following 
 
 ***
 
+## Inference
+
+We restructured the project during the revision process to improve readability and facilitate future development. We also reduced model redundancy to improve efficiency. The latest scripts can be found in [src/](https://github.com/Shen-Lab/JointDiff/tree/main/src), which support all JointDiff-x models, confidence models and all retrained models (including retrained JointDiff). The released JointDiff models were developed using our original version (v0) based on [DiffAb](https://github.com/luost26/diffab), and the corresponding inference code is provided in [src_v0/](https://github.com/Shen-Lab/JointDiff/tree/main/src_v0). We are currently working on merging the two implementations into a unified framework.
+
+### Checkpoints
+We released our major checkpoints [here](), including:
+
+* **monomer design**
+  * **JointDiff**: JointDiff_model.pt
+  * **JointDiff-x (MSE)**: JointDiff-x_MSE-dist-distogram.pt
+  * **JointDiff-x (FAPE)**: JointDiff-x_FAPE-distmse-distogram.pt
+* **motif scaffolding**
+  * **JointDiff-x (MSE)**: JointDiff-x_rm_mse-dist-disto.pt
+  * **JointDiff-x (FAPE)**: JointDiff-x_rm_fape-dist-disto.pt
+  * **JointDiff-x (FAPE; finetuned for GFP)**: JointDiff-x_rm_GFP-range50-fape-weighted.pt
+* **confidence net**
+  * **Regression-based confidence net**: confidence.pt
+  * **Binary-classification-based confidence net**: confidence_binary.pt
+
+To apply our released models, please download the models and move them to the desired path (default path: checkpoints/).
+
+
+### Monomer Design
+
+Go to [src_v0/](https://github.com/Shen-Lab/JointDiff/tree/main/src_v0) for JointDiff, and go to [src/](https://github.com/Shen-Lab/JointDiff/tree/main/src/) for JointDiff-x or your retrained JointDiff. Then run: 
+
+```
+python infer_jointdiff.py \
+--model_path <str; path of the checkpoint> \
+--result_path <str; path to save the samples> \
+--size_range <list of length_min, length_max, length_interval> \
+--num <int; sampling amount for each length> \
+--save_type <str; 'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
+```
+
+You may refer to [example_jointdiff_unconditional_sampling.sh](https://github.com/Shen-Lab/JointDiff/blob/main/src_v0/illustation/example_jointdiff_unconditional_sampling.sh) and [example_jointdiff-x_unconditional_sampling.sh](https://github.com/Shen-Lab/JointDiff/blob/main/src/illustation/example_jointdiff-x_unconditional_sampling.sh), or the example below:
+```
+mkdir ../samples/
+
+# Inference with our JointDiff-x;
+# for each protein size in {100, 120, 140, 160, 180, 200}, get 5 samples;
+# save the last sample (t=0) of the trajectory;
+# the samples will be saved as ../samples/len<l>_<t>_<idx>.pdb, while l is the length,
+# t is the diffusion step and idx is the sample index;
+# e.g. len100_0_1.pdb refers to sample #1 of protein size 100 at t=0.
+
+python infer_jointdiff.py \
+--model_path ../checkpoints/JointDiff-x_model.pt \
+--result_path ../samples/ \
+--size_range [100, 200, 20] \
+--num 5 \
+--save_type 'last'
+```
+
+### Motif-scaffolding
+
+For motif-scaffolding, please down load the PDB files containing the motifs and prepare a CSV file containing the motif information (e.g. for GFP, it should be '0,1QY3_GFP,"55-55,A58-71,24-24,A96-96,125-125,A222-222,7-7",227-227'). Then run:
+
+```
+python infer_motifscaffolding_jointdiff.py  \
+--model_path <str; path of the checkpoint> \
+--data_path <str; path of the CSV file indicating the motif information> \
+--pdb_path <str; path of the folder containing the pdb files> \
+--info_dict_path <str; processed loadable data; if not exists, the processed dictionary will be saved to this path> \
+--result_path <str; directory to save the samples> \
+--attempt <int; sampling amount for each task>
+```
+
+Example:
+```
+python infer_motifscaffolding_jointdiff.py  \
+--model_path ../checkpoints/JointDiff-x_model.pt \
+--data_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark.csv \
+--pdb_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/pdbs_processed/ \
+--info_dict_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark_data.pkl \
+--result_path ../samples/ \
+--attempt 10  # generate 10 samples for each motif
+```
+
+### Confidence Inference
+
+To estimate the confidence value with our confidence net, run:
+
+"""
+python infer_confidence.py \
+--pdb_dir <str; path of the folder containing the pdb files>
+--ckpt_path <str; path of the model checkpoints> \
+--result_path <str; path to save the results>
+"""
+
+***
+
 ## Training
 
-**JointDiff & JointDiff-x**
-To train JointDiff of JointDiff-x, go to the folder **src/** and run (the texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts):
+### JointDiff & JointDiff-x
+To train JointDiff of JointDiff-x, go to [src/](https://github.com/Shen-Lab/JointDiff/tree/main/src/) and run:
+
 ```
+# The texts in the angled bracket refer to the indication rather than true values; users need to define them to run the scripts.
+
 python train_jointdiff.py \
 --config <str; path of the configuration file> \
 --logdir <str; path to save the checkoints> \
@@ -64,7 +168,7 @@ python train_jointdiff.py \
 --with_clash 1
 ```
 
-**Confidence Net**
+### Confidence Net**
 To train the confidence net, run:
 
 ```
@@ -80,80 +184,8 @@ python train_confidence_net.py \
 
 ***
 
-## Inference
-
-**Monomer Design**
-Our pretrained models (two *.pt files for JointDiff and JoinDiff-x) can be downloaded with this [link](https://drive.google.com/drive/folders/1wVBigdhMDL3FTX_u1--g1a4gkYAFjiG1?usp=drive_link). For unconditional sampling, go to the folder **src/** and run:
-
-```
-python infer_jointdiff.py \
---model_path <str; path of the checkpoint> \
---result_path <str; path to save the samples> \
---size_range <list of length_min, length_max, length_interval> \
---num <int; sampling amount for each length> \
---save_type <str; 'last' for saving the sample of t=0; 'all' for saving the whole reverse trajectory> 
-```
-
-Example:
-```
-mkdir ../checkpoints/
-# then download the models and save them in the folder ../checkpoints/
-mkdir ../samples/
-
-# Inference with our JointDiff-x;
-# for each protein size in {100, 120, 140, 160, 180, 200}, get 5 samples;
-# save the while trajectory, i.e. (T+1) pdb files for each sample;
-# the samples will be saved as ../samples/len<l>_<t>_<idx>.pdb, while l is the length,
-# t is the diffusion step and idx is the sample index;
-# e.g. len100_0_1.pdb refers to sample #1 of protein size 100 at t=0.
-
-python infer_jointdiff.py \
---model_path ../checkpoints/JointDiff-x_model.pt \
---result_path ../samples/ \
---size_range [100, 200, 20] \
---num 5 \
---save_type 'all'
-```
-
-**Motif-scaffolding**
-For motif-scaffolding, down load the PDB files containing the motifs and prepare a CSV file containing the motif information (e.g. for GFP, it should be '0,1QY3_GFP,"55-55,A58-71,24-24,A96-96,125-125,A222-222,7-7",227-227'). Then run:
-
-```
-python infer_motifscaffolding_jointdiff.py  \
---model_path <str; path of the checkpoint> \
---data_path <str; path of the CSV file indicating the motif information> \
---pdb_path <str; path of the folder containing the pdb files> \
---info_dict_path <str; processed loadable data; if not exists, the processed dictionary will be saved to this path> \
---result_path <str; directory to save the samples> \
---attempt <int; sampling amount for each task>
-```
-
-Example:
-```
-python infer_motifscaffolding_jointdiff.py  \
---model_path ../checkpoints/JointDiff-x_model.pt \
---data_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark.csv \
---pdb_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/pdbs_processed/ \
---info_dict_path ../../PublicRepo/JointDiff/data/motif-scaffolding_benchmark/benchmark_data.pkl \
---result_path ../samples/ \
---attempt 10  # generate 10 samples for each motif
-```
-
-**Confidence Inference**
-
-To estimate the confidence value with our confidence net, run:
-
-"""
-python infer_confidence.py \
---pdb_dir <str; path of the folder containing the pdb files>
---ckpt_path <str; path of the model checkpoints> \
---result_path <str; path to save the results>
-"""
-
-***
-
 ## Evaluation
-To evaluate model performance with our published metrics, go to the folder **src/** and follow the instructions below:
+To evaluate model performance with our published metrics, go to [src/evaluation](https://github.com/Shen-Lab/JointDiff/tree/main/src/evaluation) and follow the instructions below:
 
 ### Biological features (torsional angles and clashes)
 ```
