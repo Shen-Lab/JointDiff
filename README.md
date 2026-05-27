@@ -126,12 +126,12 @@ python infer_motifscaffolding_jointdiff.py  \
 
 To estimate the confidence value with our confidence net, run:
 
-"""
+```
 python infer_confidence.py \
 --pdb_dir <str; path of the folder containing the pdb files>
 --ckpt_path <str; path of the model checkpoints> \
 --result_path <str; path to save the results>
-"""
+```
 
 ***
 
