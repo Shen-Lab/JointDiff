@@ -9,7 +9,8 @@ Computational design of functional proteins is of fundamental and applied intere
 Benchmark evaluations indicate that resulting JointDiff simultaneously generates protein sequence-structure pairs of better functional consistency compared to popular two-stage protein designers   Chroma (structure first) and ProteinGenerator (sequence first), while being more than $10$-times faster.  Meanwhile, they show room to improve in certain self- and cross-consistency. 
 
 ![architecture](/Architecture_JointDiff.png)
-[Paper](https://onlinelibrary.wiley.com/doi/10.1002/pro.70340) [Zenodo](https://zenodo.org/records/20371097)
+[Paper](https://onlinelibrary.wiley.com/doi/10.1002/pro.70340) 
+[Zenodo](https://zenodo.org/records/20371097)
 
 ***
 
