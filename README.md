@@ -9,7 +9,7 @@ Computational design of functional proteins is of fundamental and applied intere
 Benchmark evaluations indicate that resulting JointDiff simultaneously generates protein sequence-structure pairs of better functional consistency compared to popular two-stage protein designers   Chroma (structure first) and ProteinGenerator (sequence first), while being more than $10$-times faster.  Meanwhile, they show room to improve in certain self- and cross-consistency. 
 
 ![architecture](/Architecture_JointDiff.png)
-[paper](https://onlinelibrary.wiley.com/doi/10.1002/pro.70340)
+[paper](https://onlinelibrary.wiley.com/doi/10.1002/pro.70340) [Zenodo](https://zenodo.org/records/20371097)
 
 ***
 
@@ -37,7 +37,7 @@ pip install -r environments/requirements.txt
 
 ## Data Process 
 
-Our processed training data (3 *.lmdb files) can be downloaded with this [link](https://zenodo.org/records/14517007). To train JointDiff with our data, please download the files and move them to the folder **data/**.
+Our processed training data (3 *.lmdb files) can be downloaded with this [link](https://zenodo.org/records/20371097). To train JointDiff with our data, please download the files and move them to the folder **data/**.
 
 To train the model with you own data, please get the *.tsv file ready following the format of **data/cath_summary_all.tsv**, and then update the paths of the dataset in the configuration file (e.g. **configs/jointdiff-x_dim-128-64-4_step100_lr1.e-4_wd0._posiscale50.0.yml**).
 
@@ -48,7 +48,7 @@ To train the model with you own data, please get the *.tsv file ready following 
 We restructured the project during the revision process to improve readability and facilitate future development. We also reduced model redundancy to improve efficiency. The latest scripts can be found in [src/](https://github.com/Shen-Lab/JointDiff/tree/main/src), which support all JointDiff-x models, confidence models and all retrained models (including retrained JointDiff). The released JointDiff models were developed using our original version (v0) based on [DiffAb](https://github.com/luost26/diffab), and the corresponding inference code is provided in [src_v0/](https://github.com/Shen-Lab/JointDiff/tree/main/src_v0). We are currently working on merging the two implementations into a unified framework.
 
 ### Checkpoints
-We released our major checkpoints [here](), including:
+We released our major checkpoints to [Zenodo](https://zenodo.org/records/20371097), including:
 
 * **monomer design**
   * **JointDiff**: JointDiff_model.pt
