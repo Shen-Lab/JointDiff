@@ -167,16 +167,20 @@ class MotifScaffoldingDataset(Dataset):
         ####################################################
 
         if os.path.exists(info_dict_path) and (not force_cover):
+
             self.info_dict = dict_load(info_dict_path)
             self.max_size = self.info_dict['max_size']
             self.name_list = list([
                 key for key in self.info_dict.keys() if key != 'max_size'
             ])
             
+            print("Pre-processed data has been loaded from %s." % info_dict_path)
+
         ####################################################
         # process the pdb_files based on the information
         ####################################################
         else:
+            print("Data preprocessing...")
             self.info_dict = {}
             self.name_list = []
             self.max_size = 0
@@ -188,7 +192,6 @@ class MotifScaffoldingDataset(Dataset):
                         continue
 
                     try:
-                    #if True:
                         sample_dict = self.motifscaffolding_dataprocess(line)
                         if sample_dict is None:
                             continue
@@ -202,6 +205,7 @@ class MotifScaffoldingDataset(Dataset):
 
             self.info_dict['max_size'] = self.max_size
             _ = dict_save(self.info_dict, info_dict_path)
+            print("Pre-processed data has been saved at %s." % info_dict_path)
 
         print('%d entries loaded. max_length=%d' %(self.__len__(), self.max_size))
 
@@ -239,10 +243,17 @@ class MotifScaffoldingDataset(Dataset):
 
         ###### scaffolds #####
   
+        ### whether sample the length or use the original length
+        length_sampling_flag = self.length_sampling
+
         ### sample the length of scaffolds
-        if self.length_sampling:
+        if length_sampling_flag:
             length_range = data_info['length_range']
-            length_all = random.randint(length_range[0], length_range[1])
+            #print(name, length_range)
+            if len(length_range) == 2:
+                length_all = random.randint(length_range[0], length_range[1])
+            else:
+                length_all = length_range[0]
             scaffold_all = length_all - motif_size
 
             scaffold_len_range_list = data_info['scaffold_length']
@@ -251,7 +262,9 @@ class MotifScaffoldingDataset(Dataset):
             l_scaffold_max = sum([sl_range[1] for sl_range in scaffold_len_range_list])
 
             if l_scaffold > scaffold_all or l_scaffold_max < scaffold_all:
-                raise ValueError(f"Impossible task for {name}!")
+                #raise ValueError(f"Impossible task for {name}!")
+                print(f"Impossible task for {name}! Appling the orginal protein size.")
+                length_sampling_flag = False
 
             elif l_scaffold < scaffold_all:
                 diff = scaffold_all - l_scaffold
@@ -273,7 +286,7 @@ class MotifScaffoldingDataset(Dataset):
                         toler_p_num -= 1
 
         ### use the original length
-        else:
+        if not length_sampling_flag:
             scaffold_len_list = data_info['scaffold_length_true']
             length_all = data_info['length']
 

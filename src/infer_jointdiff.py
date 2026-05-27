@@ -67,7 +67,7 @@ def sample_for_all_size(model, args, length_pool):
                 ### save the pdb file of the last reverse diffusion process (t = 0) 
                 diff_step_list = [0]
 
-            if args.save_type == 'sele':
+            elif args.save_type == 'sele':
                 diff_step_list = args.save_steps
  
             elif args.save_type == 'all':

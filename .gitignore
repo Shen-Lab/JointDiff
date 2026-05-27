@@ -1,9 +1,21 @@
+### local test and backup
+backup/
+src_local/
+
+### environment  
+environments/jointdiff/
+
+### data
 data/cath-domain-list-v4_2_0.txt
 data/structures.lmdb
 data/structures.lmdb-ids
 data/structures.lmdb-lock
-checkpoints/
-Logs/
-oracles/
-samples/
 data/ProteinMPNN/
+
+### models
+checkpoints/
+oracles/
+
+### logs and results
+Logs/
+samples/
