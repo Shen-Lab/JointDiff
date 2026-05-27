@@ -11,19 +11,19 @@ ckpt_path="../checkpoints/JointDiff-x_rm_fape-dist-disto.pt"
 # original length
 ############################################################
 
-# sample_length=0
-# out_path="../samples/motifscaffolding_jointdiff-x_samelength/"
-# mkdir -p -v ${out_path}
-# 
-# python infer_motifscaffolding_jointdiff.py \
-# --data_path ${data_path} \
-# --info_dict_path ${info_dict_path} \
-# --pdb_path ${pdb_path}  \
-# --model_path ${ckpt_path} \
-# --result_path ${out_path} \
-# --attempt 5 \
-# --sample_length ${sample_length} \
-# --save_type 'last'
+sample_length=0
+out_path="../samples/motifscaffolding_jointdiff-x_samelength/"
+mkdir -p -v ${out_path}
+
+python infer_motifscaffolding_jointdiff.py \
+--data_path ${data_path} \
+--info_dict_path ${info_dict_path} \
+--pdb_path ${pdb_path}  \
+--model_path ${ckpt_path} \
+--result_path ${out_path} \
+--attempt 5 \
+--sample_length ${sample_length} \
+--save_type 'last'
 
 ############################################################
 # sampling length
