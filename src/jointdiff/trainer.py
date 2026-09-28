@@ -23,7 +23,10 @@ from jointdiff.modules.utils.train import (
     recursive_to, sum_weighted_losses, log_losses, ValidationLossTape
 )
 from jointdiff.modules.data import get_transform
-from jointdiff.dataset import SingleChainDataset
+from jointdiff.dataset import (
+    SingleChainDataset,
+    ProteinMPNNDataset,
+)
 
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
@@ -57,12 +60,17 @@ def load_config(config_path):
 # data
 ###############################################################################
 
-def get_dataset(cfg):
-    transform = get_transform(cfg.transform) if 'transform' in cfg else None
-    return SingleChainDataset(
-        transform = transform,
-        **cfg
-    )
+def get_dataset(cfg, version = 'monomer'):
+    ### monomer dataloader
+    if version is None or version == 'monomer':
+        transform = get_transform(cfg.transform) if 'transform' in cfg else None
+        return SingleChainDataset(
+            transform = transform,
+            **cfg
+        )
+    ### multimer dataloader
+    else:
+        return ProteinMPNNDataset(**cfg)
 
 
 ###############################################################################
