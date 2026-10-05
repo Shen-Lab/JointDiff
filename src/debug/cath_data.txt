@@ -1,0 +1,14 @@
+Features...
+id 4 1AEP_A6-158
+chain 4 A
+region 4 6-158
+chain_id 160 ('A', 'A', 'B', 'A')
+resseq torch.Size([4, 160])
+icode 160 (' ', ' ', ' ', ' ')
+res_nb torch.Size([4, 160])
+aa torch.Size([4, 160])
+pos_heavyatom torch.Size([4, 160, 15, 3])
+mask_heavyatom torch.Size([4, 160, 15])
+idx torch.Size([4])
+chain_nb torch.Size([4, 160])
+mask torch.Size([4, 160])
