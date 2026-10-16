@@ -1,11 +1,19 @@
-backup/
+### environment
+env/.venv/
+
+### models and logs
 checkpoints/
+Logs/
+
+### data
 data/cath-domain-list-v4_2_0.txt
 data/structures.lmdb
 data/structures.lmdb-ids
 data/structures.lmdb-lock
 data/ProteinMPNN/
-Logs/
+
+### others
+backup/
 oracles/
 samples/
 src/debug/
