@@ -16,4 +16,4 @@ data/ProteinMPNN/
 backup/
 oracles/
 samples/
-src/debug/
+src_debug/
