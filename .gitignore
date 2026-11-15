@@ -1,5 +1,6 @@
 ### environment
 env/.venv/
+env/jointdiff/
 
 ### models and logs
 checkpoints/
@@ -16,4 +17,3 @@ data/ProteinMPNN/
 backup/
 oracles/
 samples/
-src_debug/
