@@ -245,3 +245,17 @@ python protrek_similarity.py \
 --struc_emb  <str; path of the dictionary containing structure embeddings> \
 --out_path <str; path to save the output pickle dictionary>
 ```
+
+## How to cite our paper:  
+```
+@article{zhu2025multimodal,
+  title={Multimodal diffusion for joint design of protein sequence and structure},
+  author={Zhu, Shaowen and Gulati, Siddhant and Liu, Yuxuan and Kotnis, Siddhi and Sun, Qing and Shen, Yang},
+  journal={Protein Science},
+  volume={34},
+  number={12},
+  pages={e70340},
+  year={2025},
+  publisher={Wiley Online Library}
+}
+```
